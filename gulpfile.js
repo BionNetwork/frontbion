@@ -33,37 +33,44 @@ gulp.task('less', function () {
     .src(paths.less)
     .pipe(less())
     .pipe(concat(paths.distStylesFilename))
-    .pipe(gulp.dest(paths.distLess));
+    .pipe(gulp.dest(paths.distLess))
+    .pipe(connect.reload());
 });
 
 gulp.task('scripts', function() {
   return gulp
     .src(paths.scripts)
     .pipe(concat(paths.distScriptFilename))
-    .pipe(gulp.dest(paths.distScript));
+    .pipe(gulp.dest(paths.distScript))
+    .pipe(connect.reload());
 });
 
 gulp.task('css', function () {
   return gulp.src(paths.css)
-    .pipe(gulp.dest(paths.distCSS));
+    .pipe(gulp.dest(paths.distCSS))
+    .pipe(connect.reload());
 });
 
 gulp.task('templates', function() {
   return gulp
     .src(paths.templates)
-    .pipe(gulp.dest(paths.distTemplates));
+    .pipe(gulp.dest(paths.distTemplates))
+    .pipe(connect.reload())
+    .pipe(connect.reload());
 });
 
 gulp.task('fonts', function() {
   return gulp
     .src(paths.fonts)
-    .pipe(gulp.dest(paths.distFonts));
+    .pipe(gulp.dest(paths.distFonts))
+    .pipe(connect.reload());
 });
 
 gulp.task('images', function() {
   return gulp
     .src(paths.images)
-    .pipe(gulp.dest(paths.distImages));
+    .pipe(gulp.dest(paths.distImages))
+    .pipe(connect.reload());
 });
 
 // gulp.task('html-lint', function() {
@@ -84,7 +91,8 @@ gulp.task('images', function() {
 gulp.task('js', function() {
   return gulp
     .src(paths.js)
-    .pipe(gulp.dest(paths.distJs));
+    .pipe(gulp.dest(paths.distJs))
+    .pipe(connect.reload());
 });
 
 gulp.task('build', ['fonts', 'images', 'less', 'css', 'js', 'templates', 'scripts']);
@@ -106,4 +114,4 @@ gulp.task('watch', function() {
   gulp.watch([paths.js], ['js']);
 });
 
-gulp.task('default', ['build', 'connect', 'watch']);
+gulp.task('default', ['build', 'watch', 'connect']);

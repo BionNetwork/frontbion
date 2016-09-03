@@ -1,0 +1,31 @@
+;(function() {
+  'use strict';
+  angular
+    .module('HotelApp')
+    .config(['$stateProvider', '$urlRouterProvider',
+  function($stateProvider, $urlRouterProvider) {
+
+    $stateProvider
+      .state('root', {
+        abstract: true,
+        url: '',
+        templateUrl: 'main.html',
+        controller: ['$scope', function($scope) {
+
+        }]
+      })
+      .state('not-found', {
+        url: '/not-found',
+        template: ''
+      });
+
+    $urlRouterProvider.otherwise(function($injector, $location){
+      if (($location.path() === '/') || ($location.path() === '')) {
+        return '/dashboard';
+      }
+      return '/not-found';
+    });
+
+  }]);
+
+})();
