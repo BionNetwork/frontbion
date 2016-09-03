@@ -1,0 +1,21 @@
+{
+  "name": "hp",
+  "version": "1.0.0",
+  "description": ".gitignore",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.etton.ru:mingazov.i/Hotel-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-concat-css": "^2.3.0"
+  }
+}
