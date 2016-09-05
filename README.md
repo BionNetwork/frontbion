@@ -2,5 +2,6 @@
 
 ### Начало работы?
 1. bower install
-2. npm start
-3. profit!)
+2. npm install
+3. npm start
+4. profit!)
