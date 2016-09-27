@@ -5,7 +5,7 @@ angular.module('HotelApp')
 
   $stateProvider
     .state('root.dashboard', {
-      url: '/dashboard',
+      url: '/',
       templateUrl: 'routes/app/dashboard/dashboard/dashboard.html',
       controller: ['$scope', function($scope) {
 
