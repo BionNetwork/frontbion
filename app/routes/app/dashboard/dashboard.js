@@ -6,7 +6,7 @@ angular.module('BIONApp')
   $stateProvider
     .state('root.dashboard', {
       url: '/',
-      templateUrl: 'routes/app/dashboard/dashboard/dashboard.html',
+      templateUrl: 'routes/app/dashboard/dashboard.html',
       controller: ['$scope', function($scope) {
 
       }]
