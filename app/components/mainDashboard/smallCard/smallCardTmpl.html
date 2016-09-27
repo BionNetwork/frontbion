@@ -1,5 +1,8 @@
 <div class="smallCard">
-  <!-- <high-chart-line data='data'></high-chart-line> -->
+  <high-chart-line data='data'
+                    ng-show="index == 2 || index == 4"
+  ></high-chart-line>
   <high-chart-pie pie-data='pieData'
-                  title="name"></high-chart-pie>
+                  title="name"
+                  ng-show="index == 1 || index == 3"></high-chart-pie>
 </div>
