@@ -1,7 +1,7 @@
 ;(function() {
   'use strict';
   angular
-    .module('HotelApp')
+    .module('BIONApp')
     .config(['$stateProvider', '$urlRouterProvider',
   function($stateProvider, $urlRouterProvider) {
 

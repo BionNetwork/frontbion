@@ -1,7 +1,7 @@
 (function() {
   'use strict';
   angular
-  .module('HotelApp')
+  .module('BIONApp')
   .controller('menuTopCtrl', ['$scope', menuTopCtrl]);
 
   function menuTopCtrl($scope) {

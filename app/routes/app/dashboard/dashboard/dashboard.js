@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('HotelApp')
+angular.module('BIONApp')
       .config(['$stateProvider', function($stateProvider) {
 
   $stateProvider

@@ -1,7 +1,7 @@
 (function() {
   'use strict';
   angular
-  .module('HotelApp')
+  .module('BIONApp')
   .directive('menuTop', menuTop);
 
   function menuTop() {
