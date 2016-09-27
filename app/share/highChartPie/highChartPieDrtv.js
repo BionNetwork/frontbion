@@ -8,33 +8,20 @@
     return {
       scope: {
         pieData: '=?',
-        title: '@'
+        title: '@',
+        legend: '=?',
       },
       restrict: 'E',
       controller: 'highChartPieCtrl',
       templateUrl: 'share/highChartPie/highChartPieTmpl.html',
       link: function (scope, element) {
+        console.log(scope.legend);
         Highcharts.chart(element[0], {
           title: {
               y: -10,
               text: scope.title
           },
-          legend: {
-              layout: 'vertical',
-              verticalAlign: 'middle',
-              align: 'right',
-              width: 90,
-              margin: 5,
-              symbolWidth: 10,
-              symbolHeight: 10,
-              // symbolRadius: 6,
-              itemStyle: {
-                  fontWeight: 'normal',
-                  fontSize: '10px',
-                  color: '#727272'
-              },
-              itemMarginBottom: 5
-          },
+          legend: scope.legend,
           chart: {
               plotBackgroundColor: null,
               plotBorderWidth: null,

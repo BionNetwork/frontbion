@@ -1,3 +1,17 @@
 <div class="showCard">
-
+  <div class="showCard_header">
+    <span>Chart name</span>
+    <a ng-href="#/" class="click">
+    </a>
+  </div>
+  <high-chart-line data='data'
+                  style="height: 530px;  width: 800px;"
+                  ng-show="params == 2 || params == 4"
+  ></high-chart-line>
+  <high-chart-pie pie-data='pieData'
+                  title="name"
+                  legend='legend'
+                  style="height: 530px;  width: 800px;"
+                  ng-show="params == 1 || params == 3"
+  ></high-chart-pie>
 </div>

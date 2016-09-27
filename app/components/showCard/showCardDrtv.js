@@ -7,7 +7,7 @@
   function showCard() {
     return {
       scope: {
-
+        params: '=?'
       },
       restrict: 'E',
       controller: 'showCardCtrl',

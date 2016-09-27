@@ -7,8 +7,8 @@ angular.module('BIONApp')
     .state('root.show', {
       url: '/show/:id',
       templateUrl: 'routes/app/show/show.html',
-      controller: ['$scope', function($scope) {
-
+      controller: ['$scope', '$state', function($scope, $state) {
+        $scope.params = $state.params.id;
       }]
     });
 
