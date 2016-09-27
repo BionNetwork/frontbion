@@ -38,7 +38,10 @@
                       }, {
                           name: "Proprietary or Undetectable",
                           y: 0.2
-                  }]
+                  }];
+      $scope.changeGrath = function functionName(index) {
+        $scope.index = 2;
+      }
 
   }
 
