@@ -26,8 +26,6 @@
                       }, {
                           name: "Chrome",
                           y: 24.03,
-                          sliced: true,
-                          selected: true
                       }, {
                           name: "Firefox",
                           y: 10.38

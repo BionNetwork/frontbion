@@ -8,26 +8,60 @@
     return {
       scope: {
         pieData: '=?',
-        title: '=?'
+        title: '@'
       },
       restrict: 'E',
       controller: 'highChartPieCtrl',
       templateUrl: 'share/highChartPie/highChartPieTmpl.html',
       link: function (scope, element) {
         Highcharts.chart(element[0], {
-            chart: {
-                type: 'pie'
-            },
-            title: {
-                text: scope.title
+          title: {
+              y: -10,
+              text: scope.title
+          },
+          legend: {
+              layout: 'vertical',
+              verticalAlign: 'middle',
+              align: 'right',
+              width: 90,
+              margin: 5,
+              symbolWidth: 10,
+              symbolHeight: 10,
+              // symbolRadius: 6,
+              itemStyle: {
+                  fontWeight: 'normal',
+                  fontSize: '10px',
+                  color: '#727272'
+              },
+              itemMarginBottom: 5
+          },
+          chart: {
+              plotBackgroundColor: null,
+              plotBorderWidth: null,
+              plotShadow: false,
+              type: 'pie',
+              spacing: [0,0,0,0],
+              animation: false,
+              width: null,
+              height: null
             },
             plotOptions: {
+                series: {
+                    animation: false
+                },
                 pie: {
                     allowPointSelect: true,
                     cursor: 'pointer',
                     dataLabels: {
-                        enabled: true,
-                        format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                        enabled: false
+                    },
+                    innerSize: '60%',
+                    showInLegend: true,
+                    minSize: 176,
+                    states: {
+                        hover: {
+                            halo: {size: 2}
+                        }
                     }
                 }
             },

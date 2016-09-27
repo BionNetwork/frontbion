@@ -1,4 +1,7 @@
-<div class="smallCard">
+<div class="smallCard" ng-style="{width: index == 2 || index == 4 ? '610px' : '300px'}">
+  <div class="chart_name">
+    <span>Chart Title</span>
+  </div>
   <high-chart-line data='data'
                     ng-show="index == 2 || index == 4"
   ></high-chart-line>
