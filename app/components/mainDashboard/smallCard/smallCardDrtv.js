@@ -7,7 +7,7 @@
   function mainDashboardSmallCard() {
     return {
       scope: {
-
+        data: '='
       },
       restrict: 'E',
       controller: 'mainDashboardSmallCardCtrl',
