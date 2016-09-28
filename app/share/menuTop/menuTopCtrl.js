@@ -5,7 +5,7 @@
   .controller('menuTopCtrl', ['$scope', menuTopCtrl]);
 
   function menuTopCtrl($scope) {
-    console.log('menuTopCtrl');
+    // console.log('menuTopCtrl');
   }
 
 })();

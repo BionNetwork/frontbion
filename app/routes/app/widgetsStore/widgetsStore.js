@@ -4,9 +4,9 @@ angular.module('BIONApp')
       .config(['$stateProvider', function($stateProvider) {
 
   $stateProvider
-    .state('root.myWidgets', {
-      url: '/mywidgets',
-      templateUrl: 'routes/app/myWidgets/myWidgets.html',
+    .state('root.widgetsStore', {
+      url: '/cardshop',
+      templateUrl: 'routes/app/widgetsStore/widgetsStore.html',
       controller: ['$scope', function($scope) {
 
       }]

@@ -5,7 +5,7 @@
   .controller('loginPageCtrl', ['$scope', loginPageCtrl]);
 
   function loginPageCtrl($scope) {
-    console.log('loginPageCtrl');
+    // console.log('loginPageCtrl');
 
     $scope.onLoginPage = function (user, pass) {
       if (user && pass) {

@@ -5,7 +5,7 @@
   .controller('highChartLineCtrl', ['$scope', highChartLineCtrl]);
 
   function highChartLineCtrl($scope) {
-    console.log('highChartLineCtrl');
+    // console.log('highChartLineCtrl');
   }
 
 })();

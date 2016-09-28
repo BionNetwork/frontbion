@@ -15,7 +15,6 @@
       controller: 'highChartPieCtrl',
       templateUrl: 'share/highChartPie/highChartPieTmpl.html',
       link: function (scope, element) {
-        console.log(scope.legend);
         Highcharts.chart(element[0], {
           title: {
               y: -10,

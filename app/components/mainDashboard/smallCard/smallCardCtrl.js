@@ -5,7 +5,7 @@
   .controller('mainDashboardSmallCardCtrl', ['$scope', mainDashboardSmallCardCtrl]);
 
   function mainDashboardSmallCardCtrl($scope) {
-    console.log('mainDashboardSmallCardCtrl');
+    // console.log('mainDashboardSmallCardCtrl');
 
     $scope.data = {
           title: {

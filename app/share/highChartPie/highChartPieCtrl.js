@@ -5,7 +5,7 @@
   .controller('highChartPieCtrl', ['$scope', highChartPieCtrl]);
 
   function highChartPieCtrl($scope) {
-    console.log('highChartPieCtrl');
+    // console.log('highChartPieCtrl');
   }
 
 })();
