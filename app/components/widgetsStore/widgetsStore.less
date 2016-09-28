@@ -1,0 +1,78 @@
+widgets-store{
+  .widgets_store{
+    margin: 20px;
+    position: relative;
+    margin-top: 90px;
+      .card{
+        width: 255px;
+        height: 320px;
+        background: #fff;
+        padding-top: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: 0 10px 10px 0;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        border: 1px solid #e6e6e6;
+        border-radius: 1px;
+        transition: box-shadow .2s linear;
+          .name{
+            font-size: 14px;
+            line-height: 17px;
+            min-height: 34px;
+            font-weight: 400;
+            letter-spacing: .56px;
+            margin-bottom: 8px;
+            margin-top: 0;
+            margin-right: -5px;
+          }
+          .discription{
+            font-size: 12px;
+            line-height: 14px;
+            color: #adadad;
+            font-weight: 400;
+            max-height: 42px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            margin-top: 8px;
+          }
+          .card_image{
+            height: 127px;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            left: 0;
+            margin: 0 10px;
+            transform: translateY(-30%);
+              img{
+                display: block;
+                width: auto;
+                height: 127px;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+              }
+          }
+          .card_footer{
+            position: absolute;
+            bottom: 0px;
+            .stars{
+              width: 167px;
+              height: 40px;
+              display: inline-block;
+            }
+            .price{
+              width: 47px;
+              height: 40px;
+              display: inline-block;
+            }
+          }
+      }
+      .card:hover{
+        box-shadow: 2px 2px 2px 1px rgba(0,0,0,.2);
+      }
+  }
+}

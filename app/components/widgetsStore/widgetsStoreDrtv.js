@@ -7,7 +7,7 @@
   function widgetsStore() {
     return {
       scope: {
-
+        allCards: '=?'
       },
       restrict: 'E',
       controller: 'widgetsStoreCtrl',
