@@ -4,17 +4,18 @@ angular.module('BIONApp')
       .config(['$stateProvider', function($stateProvider) {
 
   $stateProvider
-    .state('root.widgetsStore.view', {
-      url: '/view',
-      templateUrl: 'routes/app/widgetsStore/view/view.html',
-      controller: ['$scope', '$http', function($scope, $http) {
+    .state('root.widgetsStore.item', {
+      url: '/item/:id',
+      templateUrl: 'routes/app/widgetsStore/viewItem/viewItem.html',
+      controller: ['$scope', '$http', '$state', function($scope, $http, $state) {
 
+        var cardId = $state.params.id;
         $scope.token = window.localStorage.getItem('token');
         var cards = {
           get: {
             success: function(response) {
-              $scope.allCards = response.data.data;
-              // console.log($scope.allCards);
+              $scope.cardKey = response.data.data;
+              console.log($scope.cardKey);
             },
             error: function(response) {
             }
@@ -26,6 +27,9 @@ angular.module('BIONApp')
           url: '/api/v1/cards',
           headers: {
             'X-AUTHORIZE-TOKEN': $scope.token
+          },
+          params: {
+            id: cardId
           }
         }).then(cards.get.success, cards.get.error);
 

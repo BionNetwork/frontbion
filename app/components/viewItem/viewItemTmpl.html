@@ -1,0 +1,24 @@
+<div class="view_item">
+  <div class="breadcrumbs">
+    Мои приложения > {{cardData.name}}
+  </div>
+  <div class="page_content">
+    <div class="item_header">
+      <h3 class='name'>{{cardData.name}}</h3>
+      <a href="#" class="load_data">Подключить данные</a>
+      <div class="buttons" ng-init="selectedTab = 'description'">
+        <span ng-class="{'noBg':selectedTab === 'description'}" ng-click="selectedTab = 'description'">Подробнее</span>
+        <span ng-class="{'noBg':selectedTab === 'review'}" ng-click="selectedTab = 'review'">Отзывы</span>
+        <span ng-class="{'noBg':selectedTab === 'same'}" ng-click="selectedTab = 'same'">Похожие</span>
+      </div>
+    </div>
+    <div class="item_inner">
+
+      <span ng-show="selectedTab === 'description'">{{cardData.description_long}}</span>
+
+      <span ng-show="selectedTab === 'review'"></span>
+
+      <span ng-show="selectedTab === 'same'"></span>
+    </div>
+  </div>
+</div>

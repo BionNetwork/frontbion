@@ -5,7 +5,7 @@
   .controller('widgetsStoreCtrl', ['$scope', widgetsStoreCtrl]);
 
   function widgetsStoreCtrl($scope) {
-    console.log('widgetsStoreCtrl');
+    // console.log('widgetsStoreCtrl');
   }
 
 })();
