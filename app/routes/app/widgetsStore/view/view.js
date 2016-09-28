@@ -4,10 +4,9 @@ angular.module('BIONApp')
       .config(['$stateProvider', function($stateProvider) {
 
   $stateProvider
-    .state('root.widgetsStore', {
-      abstract: true,
-      url: '/cardshop',
-      templateUrl: 'routes/app/widgetsStore/widgetsStore.html',
+    .state('root.widgetsStore.view', {
+      url: '/view',
+      templateUrl: 'routes/app/widgetsStore/view/view.html',
       controller: ['$scope', '$http', function($scope, $http) {
 
         $scope.token = window.localStorage.getItem('token');
