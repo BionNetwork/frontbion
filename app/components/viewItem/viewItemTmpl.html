@@ -5,7 +5,7 @@
   <div class="page_content">
     <div class="item_header">
       <h3 class='name'>{{cardData.name}}</h3>
-      <a href="#" class="load_data">Подключить данные</a>
+      <a ng-href="#/cardshop/connect-data/arguments/{{cardData.id}}" class="load_data">Подключить данные</a>
       <div class="buttons" ng-init="selectedTab = 'description'">
         <span ng-class="{'noBg':selectedTab === 'description'}" ng-click="selectedTab = 'description'">Подробнее</span>
         <span ng-class="{'noBg':selectedTab === 'review'}" ng-click="selectedTab = 'review'">Отзывы</span>
@@ -13,7 +13,6 @@
       </div>
     </div>
     <div class="item_inner">
-
       <span ng-show="selectedTab === 'description'">{{cardData.description_long}}</span>
 
       <span ng-show="selectedTab === 'review'"></span>

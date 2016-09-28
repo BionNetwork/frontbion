@@ -1,0 +1,23 @@
+<div class="connect_data">
+  <div class="breadcrumbs">
+    Мои приложения > {{cardKey[0].name}}
+  </div>
+  <div class="page_content">
+    <div class="header_content">
+      <h3>{{cardKey[0].name}}</h3>
+      <span>ШАГ 1. Выберите параметр к которому хотите подключить источник данных.</span>
+      <div class="step_list" ng-init="selectedTab = 'arguments'">
+        <a ng-class="{'active':selectedTab === 'arguments'}" ng-click="selectedTab = 'arguments'">Аргументы</a>
+        <a ng-class="{'active':selectedTab === 'connect-data'}" ng-click="selectedTab = 'connect-data'">Подключить данные</a>
+        <a ng-class="{'active':selectedTab === 'graphic'}" ng-click="selectedTab = 'graphic'">График</a>
+      </div>
+    </div>
+    <div class="inner_content">
+      <ul>
+        <li ng-repeat="argument in allArguments"><span>Добавьте колонку со значением {{argument.name}}</span>
+            <a href="#/cardshop/connect-data/toplug/{{cardKey[0].id}}?agumentId={{argument.id}}"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
