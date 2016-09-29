@@ -8,7 +8,8 @@
     return {
       scope: {
         allArguments: '=?',
-        cardKey: '=?'
+        cardKey: '=?',
+        allResources: '=?'
       },
       restrict: 'E',
       controller: 'toPlugCtrl',

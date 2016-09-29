@@ -4,7 +4,7 @@
   </div>
   <div class="page_content">
     <div class="header_content">
-      
+
       <span>ШАГ 2. Подключить источник данных.</span>
       <div class="step_list" ng-init="selectedTab = 'arguments'">
         <a ng-class="{'active':selectedTab === 'arguments'}" ng-click="selectedTab = 'arguments'">Аргументы</a>
@@ -13,7 +13,17 @@
       </div>
     </div>
     <div class="inner_content">
+        <div class="loaded">
+          <div class="list">
+              <span>Загруженные файлы</span>
+              <ul>
+                <li ng-repeat="resources in allResources">{{resources.path.substring(21)}}</li>
+              </ul>
+          </div>
+        </div>
+        <div class="">
 
+        </div>
     </div>
   </div>
 </div>
