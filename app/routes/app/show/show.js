@@ -9,6 +9,7 @@ angular.module('BIONApp')
       templateUrl: 'routes/app/show/show.html',
       controller: ['$scope', '$state', function($scope, $state) {
         $scope.params = $state.params.id;
+        $scope.currentUrl = '/'
       }]
     });
 
