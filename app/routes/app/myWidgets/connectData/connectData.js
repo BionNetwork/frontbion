@@ -4,18 +4,19 @@ angular.module('BIONApp')
       .config(['$stateProvider', function($stateProvider) {
 
   $stateProvider
-    .state('root.widgetsStore', {
+    .state('root.myWidgets.connectData', {
       abstract: true,
-      url: '/cardshop',
-      templateUrl: 'routes/app/widgetsStore/widgetsStore.html',
-      controller: ['$scope', '$http', function($scope, $http) {
-        $scope.currentUrl = '/cardshop'
+      url: '/connect-data',
+      templateUrl: 'routes/app/myWidgets/connectData/connectData.html',
+      controller: ['$scope', '$http', '$state', function($scope, $http, $state) {
+
+        // var cardId = $state.params.id;
         // $scope.token = window.localStorage.getItem('token');
         // var cards = {
         //   get: {
         //     success: function(response) {
-        //       $scope.allCards = response.data.data;
-        //       console.log($scope.allCards);
+        //       $scope.cardKey = response.data.data;
+        //       console.log($scope.cardKey);
         //     },
         //     error: function(response) {
         //     }
@@ -27,6 +28,9 @@ angular.module('BIONApp')
         //   url: '/api/v1/cards',
         //   headers: {
         //     'X-AUTHORIZE-TOKEN': $scope.token
+        //   },
+        //   params: {
+        //     id: cardId
         //   }
         // }).then(cards.get.success, cards.get.error);
 

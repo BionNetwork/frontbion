@@ -7,7 +7,7 @@
   function menuTop() {
     return {
       scope: {
-
+        currentUrl: '=?'
       },
       restrict: 'E',
       controller: 'menuTopCtrl',

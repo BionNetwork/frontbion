@@ -8,7 +8,7 @@ angular.module('BIONApp')
       url: '/',
       templateUrl: 'routes/app/dashboard/dashboard.html',
       controller: ['$scope', function($scope) {
-
+        $scope.currentUrl = '/'
       }]
     });
 
