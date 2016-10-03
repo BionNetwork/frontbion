@@ -1,10 +1,19 @@
 <div class="header">
-  <span class="glyphicon glyphicon-align-justify menu_button"></span>
-  <div class="navigation">
-    <ul>
-      <li><a ng-class="{'active':currentUrl === '/'}" ng-href="#/">Рабочий стол</a></li>
-      <li><a ng-class="{'active':currentUrl === '/mywidgets'}" ng-href="#/mywidgets/view">Мои приложения</a></li>
-      <li><a ng-class="{'active':currentUrl === '/cardshop'}" ng-href="#/cardshop/view">Магазин приложений</a></li>
-    </ul>
-  </div>
+	<span class="glyphicon glyphicon-align-justify menu_button" data-toggle="popover" data-placement="bottom" title="Меню" data-html="true"></span>
+
+	<div id="test1" class="hide popover-content">
+		<ul>
+			<li>lorem</li>
+			<li>lorem</li>
+			<li>lorem</li>
+		</ul>
+	</div>
+	
+	<div class="navigation">
+		<ul>
+			<li><a ng-class="{'active':currentUrl === '/'}" ng-href="#/">Рабочий стол</a></li>
+			<li><a ng-class="{'active':currentUrl === '/mywidgets'}" ng-href="#/mywidgets/view">Мои приложения</a></li>
+			<li><a ng-class="{'active':currentUrl === '/cardshop'}" ng-href="#/cardshop/view">Магазин приложений</a></li>
+		</ul>
+	</div>
 </div>
