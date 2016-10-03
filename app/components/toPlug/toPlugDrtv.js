@@ -9,7 +9,8 @@
       scope: {
         allArguments: '=?',
         cardKey: '=?',
-        allResources: '=?'
+        allResources: '=?',
+        onLoadTable: '=?'
       },
       restrict: 'E',
       controller: 'toPlugCtrl',

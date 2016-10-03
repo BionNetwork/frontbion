@@ -95,7 +95,9 @@ angular.module('BIONApp')
           }
         }).then(activations.get.success, activations.get.error);
 
-
+        $scope.loadTable = function() {
+          console.log('defined')
+        }
 
       }]
     });
