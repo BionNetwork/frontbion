@@ -96,7 +96,9 @@ angular.module('BIONApp')
         }).then(activations.get.success, activations.get.error);
 
         $scope.loadTable = function() {
-          console.log('defined')
+          // console.log('defined');
+          // if we want to use route
+          // another version with directive
         }
 
       }]
