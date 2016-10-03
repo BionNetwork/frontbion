@@ -1,6 +1,6 @@
 ;(function() {
   'use strict';
-    angular.module('BIONApp', ['ui.router'])
+    angular.module('BIONApp', ['ui.router', 'ngFileUpload'])
            .config(['$httpProvider', function ($httpProvider) {
               // window.location.hash = '/';
            }]);

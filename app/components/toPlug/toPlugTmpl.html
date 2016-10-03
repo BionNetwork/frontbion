@@ -31,10 +31,20 @@
               <li><span class="glyphicon glyphicon-film"></span></li>
             </ul>
           </div>
-          <div class="loaded_table" loadtable>
+<!--           <div class="loaded_table" loadtable>
             123
             <input type="file" id='loadTable' style='display: none;'>
+          </div> -->
+          Drop File:
+          <div ngf-drop ngf-select ng-model="files" class="drop-box" 
+              ngf-drag-over-class="'dragover'" ngf-multiple="true" ngf-allow-dir="true"
+              accept="image/*,application/pdf" 
+              ngf-pattern="'image/*,application/pdf'">Drop pdfs or images here or click to upload
           </div>
+          Files:
+          <ul>
+              <li ng-repeat="f in files" style="font:smaller">{{f.name}} {{f.$error}} {{f.$errorParam}}</li>
+          </ul>
         </div>
     </div>
   </div>
