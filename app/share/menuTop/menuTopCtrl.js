@@ -5,10 +5,20 @@
   .controller('menuTopCtrl', ['$scope', '$state', menuTopCtrl]);
 
   function menuTopCtrl($scope, $state) {
-    $scope.url = $state.$current.parent.url.prefix
-    $scope.url2 = $state.current.url
-    console.log($state.$current.parent);
-    // console.log('menuTopCtrl');
+    $scope.contentFirst = [
+        {name: "Рабочий стол"},
+        {name: "Мои приложения"},
+        {name: "Магазин"}
+    ];
+
+    $scope.contentSecond = [
+        {name: "Рабочий стол2"},
+        {name: "Мои приложения2"},
+        {name: "Магазин2"}
+    ];
+    // console.log($scope.contentSecond);
+
+
   }
 
 })();

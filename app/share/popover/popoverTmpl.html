@@ -1,0 +1,12 @@
+
+<!-- <div class=""> -->
+	<span class="menu_button" ng-class="showIcon ? 'glyphicon glyphicon-align-justify' : ''"
+				data-toggle="popover" data-html="true"
+	><span ng-hide="showIcon">{{content[0].name}}</span></span>
+
+	<div class="hide popover-{{name}}">
+		<ul>
+			<li ng-repeat="item in content">{{item.name}}</li>
+		</ul>
+	</div>
+<!-- </div> -->
