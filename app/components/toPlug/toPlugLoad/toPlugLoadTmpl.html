@@ -1,0 +1,11 @@
+Drop File:
+<div ngf-drop ngf-select ng-model="files" class="drop-box" 
+    ngf-drag-over-class="'dragover'" ngf-multiple="true" ngf-allow-dir="true"
+    accept="image/*,application/pdf" 
+    ngf-pattern="'image/*,application/pdf'"
+    style='border: 1px solid red;'>Drop pdfs or images here or click to upload
+</div>
+Files:
+<ul>
+    <li ng-repeat="f in files" style="font:smaller">{{f.name}} {{f.$error}} {{f.$errorParam}}</li>
+</ul>
