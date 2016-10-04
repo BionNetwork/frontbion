@@ -4,6 +4,10 @@ var gulp = require('gulp'),
     htmllint = require('gulp-htmllint'),
     gutil = require('gulp-util'),
     less = require('gulp-less'),
+    svgSymbols = require('gulp-svg-symbols'),
+    svgmin = require('gulp-svgmin'),
+    cheerio = require('gulp-cheerio'),
+    replace = require('gulp-replace'),
     paths = {
       static: 'dist',
       less: ['app/**/*.less', 'app/*.less'], distLess: 'dist/css', distStyles: 'dist',
@@ -71,6 +75,27 @@ gulp.task('images', function() {
     .src(paths.images)
     .pipe(gulp.dest(paths.distImages))
     .pipe(connect.reload());
+});
+
+gulp.task('sprite', function () {
+  return gulp.src('app/assets/img/icons/*.svg')
+    .pipe(svgmin({
+        js2svg: {
+            pretty: true
+        }
+    }))
+    .pipe(cheerio({
+      run: function ($) {
+        $('[fill]').removeAttr('fill');
+        $('[style]').removeAttr('style');
+      },
+      parserOptions: { xmlMode: true }
+    }))
+    .pipe(replace('&gt;', '>'))
+    .pipe(svgSymbols({
+        svgClassname: 'svg-icon'
+    }))
+    .pipe(gulp.dest('app/assets/img'));
 });
 
 // gulp.task('html-lint', function() {
