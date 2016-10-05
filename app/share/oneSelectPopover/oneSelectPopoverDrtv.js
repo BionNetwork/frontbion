@@ -4,29 +4,28 @@
   .module('BIONApp')
   .directive('oneSelectPopover', oneSelectPopover);
 
-  function oneSelectPopover() {
+  function oneSelectPopover($compile) {
     return {
       scope: {
-        // name: '@',
-        // title: '@',
-        // placement: '@',
-        // toggleName: '@',
-        // content: '=?',
-        // iconName: '@'
+        name: '@',
+        title: '@',
+        placement: '@',
+        content: '=?'
       },
       restrict: 'E',
       controller: 'oneSelectPopoverCtrl',
       templateUrl: 'share/oneSelectPopover/oneSelectPopoverTmpl.html',
-      // link: function(scope, element, attrs){
-      //       $('[data-toggle="'+scope.toggleName+'"]').popover({
-      //         	html: true,
-      //           title: scope.title,
-      //           placement: scope.placement,
-      //           content: function() {
-      //                 return $('.'+scope.toggleName+'-name').html();
-      //               }
-      //         });
-  		// 	}
+      link: function(scope, element, attrs){
+            $(element).popover({
+              	html: true,
+                title: scope.title,
+                placement: scope.placement,
+                content: function() {
+                      // return $('#popover-'+scope.name+'').html();
+                      return $('#popover-'+scope.name+'').html();
+                    }
+              });
+  			}
     };
   }
 })();

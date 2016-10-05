@@ -6,7 +6,12 @@
 
   function oneSelectPopoverCtrl($scope, $state) {
     console.log('oneSelectPopoverCtrl');
+    $scope.selectedItem = $scope.content[0].name;
 
+    $scope.onClickItem = function (item) {
+      // $scope.selectedItem = item.name;
+      console.log(item);
+    };
 
   }
 
