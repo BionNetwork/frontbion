@@ -2,11 +2,19 @@
 	<!-- <popover content="contentFirst" name="first" title="Меню" placement="bottom"
 						show-icon='true'
 						></popover> -->
-	<span class="menu_button glyphicon glyphicon-align-justify"
-			 data-toggle="main-menu" data-html="true"
- ><simple-popover name="name" toggle-name='main-menu'
-								 title="Menu" placement="bottom"
-								 content="contentFirst"></simple-popover></span>
+	
+	<i class="icon" data-toggle="main-menu" data-html="true">
+		<svg role="img" class="hamburger-menu">
+		  <use xlink:href="img/svg-symbols.svg#hamburger-menu"></use>
+		</svg>
+		<simple-popover 
+			toggle-name='main-menu'
+			title="Menu" 
+			placement="bottom"
+			content="contentFirst" 
+			icon-name="hamburger-menu"
+		></simple-popover>
+	</i>
 
 	<div class="navigation">
 		<ul>
@@ -15,9 +23,6 @@
 			<li><a ng-class="{'active':currentUrl === '/cardshop'}" ng-href="#/cardshop/view">Магазин приложений</a></li>
 		</ul>
 	</div>
-	<!-- <svg role="img" class="ar-down">
-	  <use xlink:href="img/svg-symbols.svg#ar-down"></use>
-	</svg> -->
 
 	<popover content="contentSecond" name="second" title="Рабочие столы" placement="right"
 						show-icon='false'

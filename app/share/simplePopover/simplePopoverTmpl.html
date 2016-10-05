@@ -1,5 +1,12 @@
-<div class="hide {{toggleName}}-{{name}}">
+<div class="hide {{toggleName}}-name">
 	<ul>
-		<li ng-repeat="item in content">{{item.name}}</li>
+		<li ng-repeat="item in content">
+			<i class="icon">
+				<svg role="img">
+				  <use  ng-href=" img/svg-symbols.svg#{{ iconName }}"></use>
+				</svg>
+			</i>
+			{{item.name}}
+		</li>
 	</ul>
 </div>

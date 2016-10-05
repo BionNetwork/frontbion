@@ -11,7 +11,8 @@
         title: '@',
         placement: '@',
         toggleName: '@',
-        content: '=?'
+        content: '=?',
+        iconName: '@'
       },
       restrict: 'E',
       controller: 'simplePopoverCtrl',
@@ -22,7 +23,7 @@
                 title: scope.title,
                 placement: scope.placement,
                 content: function() {
-                      return $('.'+scope.toggleName+'-'+scope.name).html();
+                      return $('.'+scope.toggleName+'-name').html();
                     }
               });
   			}
