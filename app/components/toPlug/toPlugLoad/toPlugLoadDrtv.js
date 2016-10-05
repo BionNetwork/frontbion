@@ -7,6 +7,7 @@
   function toPlugLoad() {
     return {
       scope: {
+        
       },
       restrict: 'E',
       controller: 'toPlugLoadCtrl',
