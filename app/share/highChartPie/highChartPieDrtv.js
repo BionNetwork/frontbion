@@ -33,7 +33,7 @@
             },
             plotOptions: {
                 series: {
-                    animation: false
+                    animation: true
                 },
                 pie: {
                     allowPointSelect: true,
