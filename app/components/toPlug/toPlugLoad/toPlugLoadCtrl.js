@@ -2,9 +2,9 @@
   'use strict';
   angular
   .module('BIONApp')
-  .controller('toPlugLoadCtrl', ['$scope', 'Upload', '$timeout', toPlugLoadCtrl]);
+  .controller('toPlugLoadCtrl', ['$scope', 'Upload', '$timeout', '$http', toPlugLoadCtrl]);
 
-  function toPlugLoadCtrl($scope, Upload, $timeout) {
+  function toPlugLoadCtrl($scope, Upload, $timeout, $http) {
     $scope.$watch('files', function () {
         $scope.upload($scope.files);
     });
@@ -15,34 +15,26 @@
     });
     $scope.log = '';
 
-    $scope.upload = function (files) {
-        if (files && files.length) {
-            for (var i = 0; i < files.length; i++) {
-              var file = files[i];
-              if (!file.$error) {
-                Upload.upload({
-                    url: 'https://angular-file-upload-cors-srv.appspot.com/upload',
-                    data: {
-                      username: $scope.username,
-                      file: file  
-                    }
-                }).then(function (resp) {
-                    $timeout(function() {
-                        $scope.log = 'file: ' +
-                        resp.config.data.file.name +
-                        ', Response: ' + JSON.stringify(resp.data) +
-                        '\n' + $scope.log;
-                    });
-                }, null, function (evt) {
-                    var progressPercentage = parseInt(100.0 *
-                        evt.loaded / evt.total);
-                    $scope.log = 'progress: ' + progressPercentage + 
-                      '% ' + evt.config.data.file.name + '\n' + 
-                      $scope.log;
-                });
-              }
-            }
+    var resource = {
+      post: {
+        success: function(response) {
+        },
+        error: function(response) {
+          console.log(response, 'error');
         }
+      }
+    };
+
+    $scope.upload = function (files) {
+        console.log(files);
+        $http({
+          method: 'POST',
+          url: '/api/v1/resource/add',
+          headers: {
+            'X-AUTHORIZE-TOKEN': window.localStorage.getItem('token')
+          },
+          data: files
+        }).then(resource.post.success, resource.post.error);
     };
   }
 
