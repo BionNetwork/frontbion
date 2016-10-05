@@ -1,7 +1,12 @@
 <div class="header">
-	<popover content="contentFirst" name="first" title="Меню" placement="bottom"
+	<!-- <popover content="contentFirst" name="first" title="Меню" placement="bottom"
 						show-icon='true'
-						></popover>
+						></popover> -->
+	<span class="menu_button glyphicon glyphicon-align-justify"
+			 data-toggle="main-menu" data-html="true"
+ ><simple-popover name="name" toggle-name='main-menu'
+								 title="Menu" placement="bottom"
+								 content="contentFirst"></simple-popover></span>
 
 	<div class="navigation">
 		<ul>
@@ -13,7 +18,7 @@
 	<!-- <svg role="img" class="ar-down">
 	  <use xlink:href="img/svg-symbols.svg#ar-down"></use>
 	</svg> -->
-	
+
 	<popover content="contentSecond" name="second" title="Рабочие столы" placement="right"
 						show-icon='false'
 	></popover>
