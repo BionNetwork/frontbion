@@ -1,0 +1,337 @@
+.ar-down {
+  width: 15px;
+  height: 15px;
+}
+.cls-1{fill:#303f9f}
+
+.ar-left {
+  width: 15px;
+  height: 26.5px;
+}
+.cls-1{fill:#989898}
+
+.ar-right {
+  width: 15px;
+  height: 26.5px;
+}
+.cls-1{fill:#989898}
+
+.ar-up {
+  width: 15px;
+  height: 15px;
+}
+.cls-1{fill:#b2b2b2}
+
+.buy {
+  width: 500px;
+  height: 500px;
+}
+.st0{fill:#b2b2b2}
+
+.cancel {
+  width: 18px;
+  height: 18px;
+}
+.cls-1{fill:#b6b6b6}
+
+.checked-bold {
+  width: 15px;
+  height: 15px;
+}
+.cls-1{fill:#303f9f}
+
+.checked-light {
+  width: 14.53px;
+  height: 10.4px;
+}
+.cls-1{fill:#39b44a}
+
+.checked {
+  width: 15px;
+  height: 15px;
+}
+.cls-1{fill:#303f9f}
+
+.close {
+  width: 14.16px;
+  height: 14.16px;
+}
+.cls-1{fill:gray}
+
+.column-chart {
+  width: 22.94px;
+  height: 23.22px;
+}
+.cls-1{fill:#999}
+
+.currency {
+  width: 467.891px;
+  height: 467.891px;
+}
+.cls-1{fill:#3b309f}
+
+.db {
+  width: 390.351px;
+  height: 500px;
+}
+.st0{fill:#b2b2b2}
+
+.deffered {
+  width: 543.738px;
+  height: 500px;
+}
+.st0{fill:#b2b2b2}
+
+.diagram-chart {
+  width: 23.23px;
+  height: 23.8px;
+}
+.cls-1{fill:#999}
+
+.dnd {
+  width: 500px;
+  height: 500px;
+}
+.st0{fill:#fff}
+
+.down-fill {
+  width: 500px;
+  height: 500px;
+}
+.cls-1{fill:#b71c1c}
+
+.dropbox {
+  width: 38.38px;
+  height: 35.7px;
+}
+.cls-1{fill:#b2b2b2}
+
+.expand {
+  width: 472.068px;
+  height: 465.029px;
+}
+.cls-1{fill:#303f9f}
+
+.eye {
+  width: 890px;
+  height: 500px;
+}
+
+.file {
+  width: 392px;
+  height: 500px;
+}
+.st0{fill:#b2b2b2}
+
+.folder {
+  width: 557px;
+  height: 500px;
+}
+
+.funnel-chart {
+  width: 428.04px;
+  height: 422.554px;
+}
+.cls-1{fill:#3b309f}
+
+.google-drive {
+  width: 568px;
+  height: 500px;
+}
+.st0{fill:#5f73b6}
+.st1{fill:#f3d44f}
+.st2{fill:#41b670}
+.st3{fill:#5f72ba}
+
+.hamburger-menu {
+  width: 20px;
+  height: 15px;
+}
+.cls-1{fill:#303f9f}
+
+.home {
+  width: 500px;
+  height: 500px;
+}
+.st0{fill:#aeaeae}
+
+.info {
+  width: 500px;
+  height: 500px;
+}
+.st0{fill:#b2b2b2}
+
+.jpg {
+  width: 543px;
+  height: 500px;
+}
+
+.left {
+  width: 15px;
+  height: 32px;
+}
+.st0{fill:#cbcbcb}
+
+.line-chart {
+  width: 23.95px;
+  height: 23px;
+}
+.cls-1{fill:#999}
+
+.list {
+  width: 801px;
+  height: 500px;
+}
+
+.map {
+  width: 389.221px;
+  height: 475.474px;
+}
+.cls-1{fill:#3b309f;fill-rule:evenodd}
+
+.pie-chart {
+  width: 500px;
+  height: 500px;
+}
+.st0{fill:#999}
+
+.ready {
+  width: 500px;
+  height: 500px;
+}
+.st0{fill:#b2b2b2}
+
+.right {
+  width: 15px;
+  height: 32px;
+}
+.st0{fill:#cbcbcb}
+
+.search {
+  width: 500px;
+  height: 500px;
+}
+.st0{fill:#303f9f}
+
+.settings {
+  width: 500px;
+  height: 500px;
+}
+.st0{fill:#303f9f}
+
+.share-new {
+  width: 18.2px;
+  height: 26px;
+}
+.st0{fill:#303f9f}
+
+.share {
+  width: 500px;
+  height: 500px;
+}
+.st0{fill:#303f9f;stroke:#303f9f;stroke-miterlimit:10}
+
+.sign {
+  width: 467.891px;
+  height: 467.891px;
+}
+.cls-1{fill:#3b309f}
+
+.source-edit {
+  width: 500px;
+  height: 500px;
+}
+.st0{fill:#ccc}
+
+.source-info {
+  width: 500px;
+  height: 500px;
+}
+.st0{fill:#ccc}
+
+.source-remove {
+  width: 500px;
+  height: 500px;
+}
+.st0{fill:#ccc}
+
+.space-matrix {
+  width: 422.885px;
+  height: 463.927px;
+}
+.cls-1{fill:#3b309f}
+
+.star-empty {
+  width: 17.87px;
+  height: 17px;
+}
+.cls-1{fill:#fb8c00}
+
+.star {
+  width: 17.87px;
+  height: 17px;
+}
+.cls-1{fill:#cbcbcb}
+
+.table {
+  width: 20.92px;
+  height: 20.92px;
+}
+.cls-1{fill:#999}
+
+.tile {
+  width: 499px;
+  height: 499px;
+}
+
+.txt {
+  width: 456px;
+  height: 500px;
+}
+
+.up-circle {
+  width: 500px;
+  height: 500px;
+}
+.cls-1{fill:#b2b2b2}
+
+.up-fill {
+  width: 499.16px;
+  height: 249.75px;
+}
+.cls-1{fill:#689f38}
+
+.updates {
+  width: 500px;
+  height: 500px;
+}
+.st0{fill:#b2b2b2}
+
+.uploaded {
+  width: 541.443px;
+  height: 500px;
+}
+.st0{fill:#b2b2b2}
+
+.url {
+  width: 478.673px;
+  height: 478.238px;
+}
+.cls-1{fill:#303f9f}
+
+.user {
+  width: 500px;
+  height: 500px;
+}
+
+.xls {
+  width: 428px;
+  height: 500px;
+}
+
+.yandex-drive {
+  width: 820.178px;
+  height: 500px;
+}
+.st0{fill:#b2b2b2}
+
