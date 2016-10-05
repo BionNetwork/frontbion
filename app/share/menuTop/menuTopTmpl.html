@@ -1,33 +1,25 @@
 <div class="header">
-	<!-- <popover content="contentFirst" name="first" title="Меню" placement="bottom"
-						show-icon='true'
-						></popover> -->
 
-	<i class="icon" data-toggle="main-menu" data-html="true">
-		<svg role="img" class="hamburger-menu">
-		  <use xlink:href="img/svg-symbols.svg#hamburger-menu"></use>
-		</svg>
-		<simple-popover
-			toggle-name='main-menu'
-			title="Menu"
-			placement="bottom"
-			content="contentFirst"
-			icon-name="hamburger-menu"
-			show-icon="false"
-		></simple-popover>
-	</i>
-
-	<div class="navigation">
-		<ul>
-			<li><a ng-class="{'active':currentUrl === '/'}" ng-href="#/">Рабочий стол</a></li>
-			<li><a ng-class="{'active':currentUrl === '/mywidgets'}" ng-href="#/mywidgets/view">Мои приложения</a></li>
-			<li><a ng-class="{'active':currentUrl === '/cardshop'}" ng-href="#/cardshop/view">Магазин приложений</a></li>
-		</ul>
+	<div class="menuBttn">
+		<i class="icon" data-toggle="main-menu" data-html="true">
+			<svg role="img" class="hamburger-menu">
+			  <use xlink:href="img/svg-symbols.svg#hamburger-menu"></use>
+			</svg>
+			<simple-popover 
+				toggle-name='main-menu'
+				title="Menu" 
+				placement="bottom"
+				content="contentFirst" 
+				icon-name="hamburger-menu"
+				show-icon="false"
+			></simple-popover>
+		</i>
 	</div>
 
-	<!-- <popover content="contentSecond" name="second" title="Рабочие столы" placement="right"
-						show-icon='false'
-	></popover> -->
-	<one-select-popover name="personal-name" title="Dashboards"
-											 placement="bottom" content="contentFirst"></one-select-popover>
+	<div class="linkGroup">
+		<a class="bttn" ng-class="{'active':currentUrl === '/'}" ng-href="#/">Рабочий стол</a>
+		<a class="bttn" ng-class="{'active':currentUrl === '/mywidgets'}" ng-href="#/mywidgets/view">Мои приложения</a>
+		<a class="bttn" ng-class="{'active':currentUrl === '/cardshop'}" ng-href="#/cardshop/view">Магазин приложений</a>
+	</div>
+
 </div>
