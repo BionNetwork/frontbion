@@ -12,7 +12,8 @@
         placement: '@',
         toggleName: '@',
         content: '=?',
-        iconName: '@'
+        iconName: '@',
+        showIcon: '='
       },
       restrict: 'E',
       controller: 'simplePopoverCtrl',
