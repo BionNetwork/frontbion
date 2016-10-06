@@ -5,13 +5,15 @@
     </a>
   </div>
   <high-chart-line data='data'
-                  style="height: 530px;  width: 800px;"
-                  ng-show="params == 2 || params == 4"
+                  style="height: 530px;  width: 800px;display: inline-block;"
+                  ng-show="chart == 'line'"
   ></high-chart-line>
   <high-chart-pie pie-data='pieData'
                   title="name"
                   legend='legend'
-                  style="height: 530px;  width: 800px;"
-                  ng-show="params == 1 || params == 3"
+                  style="height: 530px;  width: 800px; display: inline-block;"
+                  ng-show="chart == 'pie'"
   ></high-chart-pie>
+  <span style="position:absolute;" ng-click="changeChart('pie')">pie</span>
+  <span style="position:absolute; margin-left: 50px;" ng-click="changeChart('line')">line</span>
 </div>

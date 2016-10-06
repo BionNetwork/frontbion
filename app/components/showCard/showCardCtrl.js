@@ -5,7 +5,11 @@
   .controller('showCardCtrl', ['$scope', showCardCtrl]);
 
   function showCardCtrl($scope) {
-    console.log('showCardCtrl');
+    // console.log('showCardCtrl');
+    $scope.chart = 'pie';
+    $scope.changeChart = function (type) {
+      $scope.chart = type;
+    }
     $scope.data = {
           title: {
               text: 'Temperature data'
