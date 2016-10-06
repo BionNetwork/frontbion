@@ -1,0 +1,45 @@
+<div class="dropmodal" ng-class="{'dropmodal--active': openContent==true}">
+
+		<span ng-click="openDropContent()">All products
+
+				<i class="icon" ng-hide="upAndDown">
+					<svg role="img">
+						<use xlink:href="" ng-href="img/svg-symbols.svg#ar-down"></use>
+					</svg>
+				</i>
+
+				<i class="icon" ng-show="upAndDown">
+					<svg role="img">
+						<use xlink:href="" ng-href="img/svg-symbols.svg#ar-up"></use>
+					</svg>
+				</i>
+
+		</span>
+
+		<div class="dropmodal__content">
+			<i class="dropmodal__content_cancel icon" ng-click="closeDropContent()">
+				<svg role="img"><use xlink:href="img/svg-symbols.svg#close"></use></svg>
+			</i>
+			<h4 class="dropmodal__content_header">{{title}}</h4>
+			<ul class="dropmodal__content_item">
+				<li>
+					<span ng-click="clickedDefault(content)">All projects</span>
+					<i class="icon" ng-show="haveClicked">
+						<svg role="img">
+							<use xlink:href="" ng-href="img/svg-symbols.svg#checked"></use>
+						</svg>
+					</i>
+				</li>
+				<li ng-repeat="item in content">
+					<span ng-click="clickedItems(item)">{{item.name}}</span>
+					<i class="icon not_show" ng-class="{'selected': item.selected}">
+						<svg role="img">
+							<use xlink:href="" ng-href="img/svg-symbols.svg#checked"></use>
+						</svg>
+					</i>
+				</li>
+			</ul>
+			<span class="dropmodal__content_arrow"></span>
+		</div>
+
+</div>
