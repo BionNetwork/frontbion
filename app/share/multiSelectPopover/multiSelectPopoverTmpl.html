@@ -1,6 +1,6 @@
-<div class="dropmodal dropmodal--{{placement}}" ng-class="{'dropmodal--active': openContent==true}">
+<div class="dropmodal" ng-class="{'dropmodal--active': openContent==true}">
 
-		<span ng-click="openDropContent()">{{popoverHeadName}}
+		<span ng-click="openDropContent()">All products
 
 				<i class="icon" ng-hide="upAndDown">
 					<svg role="img">
@@ -22,13 +22,22 @@
 			</i>
 			<h4 class="dropmodal__content_header">{{title}}</h4>
 			<ul class="dropmodal__content_item">
-				<li ng-repeat="item in content" ng-click="changePopoverHead(item)">
-					{{item.name}}
-					<i class="icon" ng-show="popoverHeadName == item.name">
+				<li>
+					<span ng-click="clickedDefault(content)">All projects</span>
+					<i class="icon" ng-show="haveClicked">
 						<svg role="img">
 							<use xlink:href="" ng-href="img/svg-symbols.svg#checked"></use>
 						</svg>
 					</i>
+				</li>
+				<li ng-repeat="item in content">
+					<span ng-click="clickedItems(item)">{{item.name}}</span>
+					<i class="icon not_show" ng-class="{'selected': item.selected}">
+						<svg role="img">
+							<use xlink:href="" ng-href="img/svg-symbols.svg#checked"></use>
+						</svg>
+					</i>
+				</li>
 			</ul>
 			<span class="dropmodal__content_arrow"></span>
 		</div>

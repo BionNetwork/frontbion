@@ -2,19 +2,17 @@
   'use strict';
   angular
   .module('BIONApp')
-  .directive('oneSelectPopover', oneSelectPopover);
+  .directive('multiSelectPopover', multiSelectPopover);
 
-  function oneSelectPopover($document) {
+  function multiSelectPopover($document) {
     return {
       scope: {
-        title: '@',
-        placement: '@',
         content: '=?',
-        iconName: '@'
+        title: '@'
       },
       restrict: 'E',
-      controller: 'oneSelectPopoverCtrl',
-      templateUrl: 'share/oneSelectPopover/oneSelectPopoverTmpl.html',
+      controller: 'multiSelectPopoverCtrl',
+      templateUrl: 'share/multiSelectPopover/multiSelectPopoverTmpl.html',
       link: function(scope, element, attrs){
             scope.openContent = false;
 

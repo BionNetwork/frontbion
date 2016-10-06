@@ -6,6 +6,11 @@
 
   function showCardCtrl($scope) {
     // console.log('showCardCtrl');
+    $scope.contentSecond = [
+        {name: "Etton"},
+        {name: "Etton center"},
+        {name: "Etton grupp"}
+    ];
     $scope.chart = 'pie';
     $scope.changeChart = function (type) {
       $scope.chart = type;

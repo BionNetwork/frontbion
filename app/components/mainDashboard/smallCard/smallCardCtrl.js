@@ -43,6 +43,7 @@
       $scope.legend = {
           layout: 'vertical',
           verticalAlign: 'middle',
+          animation: false,
           align: 'right',
           width: 90,
           margin: 5,

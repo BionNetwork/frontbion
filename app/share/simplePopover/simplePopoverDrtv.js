@@ -4,7 +4,7 @@
   .module('BIONApp')
   .directive('simplePopover', simplePopover);
 
-  function simplePopover($document, $window) {
+  function simplePopover($document) {
     return {
       scope: {
         title: '@',
@@ -14,7 +14,6 @@
         showIcon: '='
       },
       restrict: 'E',
-      require: '?ngModel',
       controller: 'simplePopoverCtrl',
       templateUrl: 'share/simplePopover/simplePopoverTmpl.html',
       link: function(scope, element, attrs){
@@ -29,7 +28,7 @@
           scope.closeDropContent = function () {
             scope.openContent = false;
           };
-          
+
           element.bind('click', function(event) {
              event.stopPropagation();
           });
