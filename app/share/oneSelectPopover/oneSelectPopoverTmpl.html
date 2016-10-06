@@ -1,17 +1,19 @@
-<div class="menuBttn">
-	<div class="dropmodal" ng-class="{'dropmodal--active': openContent==true}">
+<div class="dropmodal dropmodal--{{placement}}" ng-class="{'dropmodal--active': openContent==true}">
 
 		<span ng-click="openDropContent()">{{popoverHeadName}}
+
 				<i class="icon" ng-hide="upAndDown">
 					<svg role="img">
 						<use xlink:href="" ng-href="img/svg-symbols.svg#ar-down"></use>
 					</svg>
 				</i>
+
 				<i class="icon" ng-show="upAndDown">
 					<svg role="img">
 						<use xlink:href="" ng-href="img/svg-symbols.svg#ar-up"></use>
 					</svg>
 				</i>
+
 		</span>
 
 		<div class="dropmodal__content">
@@ -31,5 +33,4 @@
 			<span class="dropmodal__content_arrow"></span>
 		</div>
 
-	</div>
 </div>
