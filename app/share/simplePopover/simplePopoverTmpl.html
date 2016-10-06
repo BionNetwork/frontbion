@@ -1,12 +1,21 @@
-<div class="hide {{toggleName}}-name">
-	<ul>
-		<li ng-repeat="item in content">
-			<i class="icon" ng-show='showIcon'>
-				<svg role="img">
-				  <use  ng-href=" img/svg-symbols.svg#{{ iconName }}"></use>
-				</svg>
+<div class="menuBttn">
+	<div class="dropmodal" ng-class="{'dropmodal--active': openContent==true}">
+		<i class="dropmodal__trigger icon" ng-click="openDropContent()">
+			<svg role="img">
+				<use xlink:href="" ng-href="img/svg-symbols.svg#{{iconName}}"></use>
+			</svg>
+		</i>
+		<div class="dropmodal__content">
+			<i class="dropmodal__content_cancel icon" ng-click="closeDropContent()">
+				<svg role="img"><use xlink:href="img/svg-symbols.svg#close"></use></svg>
 			</i>
-			{{item.name}}
-		</li>
-	</ul>
+			<h4 class="dropmodal__content_header">{{title}}</h4>
+			<ul class="dropmodal__content_item">
+				<li>Рабочие столы</li>
+				<li>Мои приложения</li>
+				<li>Магазин приложений</li>
+			</ul>
+			<span class="dropmodal__content_arrow"></span>
+		</div>
+	</div>
 </div>

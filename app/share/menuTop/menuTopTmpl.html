@@ -1,6 +1,6 @@
 <div class="header">
 
-	<div class="menuBttn hide">
+	<!-- <div class="menuBttn hide">
 		<i class="icon" data-toggle="main-menu" data-html="true">
 			<svg role="img" class="hamburger-menu">
 			  <use xlink:href="img/svg-symbols.svg#hamburger-menu"></use>
@@ -14,29 +14,10 @@
 				show-icon="false"
 			></simple-popover>
 		</i>
-	</div>
+	</div> -->
 
-	<!-- new popover -->
-
-	<div class="menuBttn">
-		<div class="dropmodal dropmodal--active">
-			<i class="dropmodal__trigger icon">
-				<svg role="img"><use xlink:href="img/svg-symbols.svg#hamburger-menu"></use></svg>
-			</i>
-			<div class="dropmodal__content">
-				<i class="dropmodal__content_cancel icon">
-					<svg role="img"><use xlink:href="img/svg-symbols.svg#close"></use></svg>
-				</i>
-				<h4 class="dropmodal__content_header">Меню</h4>
-				<ul class="dropmodal__content_item">
-					<li>Рабочие столы</li>
-					<li>Мои приложения</li>
-					<li>Магазин приложений</li>
-				</ul>
-				<span class="dropmodal__content_arrow"></span>
-			</div>
-		</div>
-	</div>
+	<simple-popover title="Меню" placement="left" content="content"
+									icon-name="hamburger-menu" show-icon="false"></simple-popover>
 
 	<div class="linkGroup">
 		<a class="bttn" ng-class="{'active':currentUrl === '/dashboard'}" ng-href="#/dashboard">Рабочий стол</a>
@@ -44,8 +25,8 @@
 		<a class="bttn" ng-class="{'active':currentUrl === '/cardshop'}" ng-href="#/cardshop/view">Магазин приложений</a>
 	</div>
 
-	<div class="pull-right">
-		<div class="dropmodal dropmodal--right">
+	<!-- <div class="pull-right">
+		<div class="dropmodal dropmodal">
 			<i class="dropmodal__trigger icon">
 				<svg role="img"><use xlink:href="img/svg-symbols.svg#list"></use></svg>
 			</i>
@@ -62,7 +43,7 @@
 				<span class="dropmodal__content_arrow"></span>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<!-- end of new popover -->
 

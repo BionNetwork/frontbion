@@ -4,29 +4,37 @@
   .module('BIONApp')
   .directive('simplePopover', simplePopover);
 
-  function simplePopover() {
+  function simplePopover($document, $window) {
     return {
       scope: {
-        name: '@',
         title: '@',
         placement: '@',
-        toggleName: '@',
         content: '=?',
         iconName: '@',
         showIcon: '='
       },
       restrict: 'E',
+      require: '?ngModel',
       controller: 'simplePopoverCtrl',
       templateUrl: 'share/simplePopover/simplePopoverTmpl.html',
       link: function(scope, element, attrs){
-            $('[data-toggle="'+scope.toggleName+'"]').popover({
-              	html: true,
-                title: scope.title,
-                placement: scope.placement,
-                content: function() {
-                      return $('.'+scope.toggleName+'-name').html();
-                    }
-              });
+          scope.openContent = false;
+
+          scope.openDropContent = function () {
+            scope.openContent = !scope.openContent;
+
+
+          };
+
+          scope.closeDropContent = function () {
+            scope.openContent = false;
+          };
+
+          scope.doSth = function () {
+            console.log('123');
+          };
+
+
   			}
     };
   }
