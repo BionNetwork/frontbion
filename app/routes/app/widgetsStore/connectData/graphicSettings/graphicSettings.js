@@ -4,9 +4,9 @@ angular.module('BIONApp')
       .config(['$stateProvider', function($stateProvider) {
 
   $stateProvider
-    .state('root.widgetsStore.connectData.creatingGraphic', {
+    .state('root.widgetsStore.connectData.graphicSettings', {
       url: '/graphic/:id',
-      templateUrl: 'routes/app/widgetsStore/connectData/creatingGraphic/creatingGraphic.html',
+      templateUrl: 'routes/app/widgetsStore/connectData/graphicSettings/graphicSettings.html',
       controller: ['$scope', '$http', '$state', '$location', function($scope, $http, $state, $location) {
           // console.log($location.search().agumentId);
         $scope.token = window.localStorage.getItem('token');

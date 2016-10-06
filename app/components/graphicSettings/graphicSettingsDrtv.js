@@ -2,9 +2,9 @@
   'use strict';
   angular
   .module('BIONApp')
-  .directive('creatingGraphic', creatingGraphic);
+  .directive('graphicSettings', graphicSettings);
 
-  function creatingGraphic() {
+  function graphicSettings() {
     return {
       scope: {
         // allArguments: '=?',
@@ -12,8 +12,8 @@
         // allResources: '=?'
       },
       restrict: 'E',
-      controller: 'creatingGraphicCtrl',
-      templateUrl: 'components/creatingGraphic/creatingGraphicTmpl.html'
+      controller: 'graphicSettingsCtrl',
+      templateUrl: 'components/graphicSettings/graphicSettingsTmpl.html'
     };
   }
 })();
