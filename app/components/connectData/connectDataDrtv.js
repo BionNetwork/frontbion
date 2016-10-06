@@ -8,7 +8,8 @@
     return {
       scope: {
         allArguments: '=?',
-        cardKey: '=?'
+        cardKey: '=?',
+        parentUrl: '@'
       },
       restrict: 'E',
       controller: 'connectDataCtrl',
