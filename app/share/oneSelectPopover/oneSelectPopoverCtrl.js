@@ -5,13 +5,15 @@
   .controller('oneSelectPopoverCtrl', ['$scope', '$state', oneSelectPopoverCtrl]);
 
   function oneSelectPopoverCtrl($scope, $state) {
-    console.log('oneSelectPopoverCtrl');
-    $scope.selectedItem = $scope.content[0].name;
+        $scope.popoverHeadName = $scope.content[0].name;
 
-    $scope.onClickItem = function (item) {
-      // $scope.selectedItem = item.name;
-      console.log(item);
-    };
+
+        $scope.changePopoverHead = function (item) {
+          $scope.popoverHeadName = item.name;
+          $scope.openContent = false;
+          $scope.upAndDown = false;
+        };
+
 
   }
 
