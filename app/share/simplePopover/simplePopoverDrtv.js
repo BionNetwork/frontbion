@@ -29,11 +29,14 @@
           scope.closeDropContent = function () {
             scope.openContent = false;
           };
-
-          scope.doSth = function () {
-            console.log('123');
-          };
-
+          
+          element.bind('click', function(event) {
+             event.stopPropagation();
+          });
+          $document.bind('click', function(){
+              scope.openContent = false;
+              scope.$apply();
+          });
 
   			}
     };

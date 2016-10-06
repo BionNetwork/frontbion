@@ -5,8 +5,10 @@
   .controller('simplePopoverCtrl', ['$scope', '$state', simplePopoverCtrl]);
 
   function simplePopoverCtrl($scope, $state) {
-    console.log('simplePopoverCtrl');
-
+    // console.log('simplePopoverCtrl');
+    $scope.click = function (name) {
+        console.log(name);
+    }
 
   }
 
