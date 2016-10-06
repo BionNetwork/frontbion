@@ -5,11 +5,11 @@
 			<svg role="img" class="hamburger-menu">
 			  <use xlink:href="img/svg-symbols.svg#hamburger-menu"></use>
 			</svg>
-			<simple-popover 
+			<simple-popover
 				toggle-name='main-menu'
-				title="Menu" 
+				title="Menu"
 				placement="bottom"
-				content="contentFirst" 
+				content="contentFirst"
 				icon-name="hamburger-menu"
 				show-icon="false"
 			></simple-popover>
@@ -17,7 +17,7 @@
 	</div>
 
 	<div class="linkGroup">
-		<a class="bttn" ng-class="{'active':currentUrl === '/'}" ng-href="#/">Рабочий стол</a>
+		<a class="bttn" ng-class="{'active':currentUrl === '/dashboard'}" ng-href="#/dashboard">Рабочий стол</a>
 		<a class="bttn" ng-class="{'active':currentUrl === '/mywidgets'}" ng-href="#/mywidgets/view">Мои приложения</a>
 		<a class="bttn" ng-class="{'active':currentUrl === '/cardshop'}" ng-href="#/cardshop/view">Магазин приложений</a>
 	</div>

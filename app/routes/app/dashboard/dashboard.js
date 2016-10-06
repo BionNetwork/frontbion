@@ -5,10 +5,11 @@ angular.module('BIONApp')
 
   $stateProvider
     .state('root.dashboard', {
+      abstract: true,
       url: '/',
       templateUrl: 'routes/app/dashboard/dashboard.html',
       controller: ['$scope', function($scope) {
-        $scope.currentUrl = '/'
+        $scope.currentUrl = '/dashboard';
       }]
     });
 

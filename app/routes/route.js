@@ -39,7 +39,7 @@
 
     $urlRouterProvider.otherwise(function($injector, $location){
       if (($location.path() === '/') || ($location.path() === '')) {
-        return '/';
+        return '/dashboard';
       }
       return '/not-found';
     });

@@ -17,7 +17,7 @@
               success: function(response) {
                 var token = response.data.data.token;
                 window.localStorage.setItem('token', token);
-                $window.location.href = "#/";
+                $window.location.href = "#/dashboard";
               },
               error: function(response) {
                 console.log(response, 'error');
