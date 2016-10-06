@@ -1,21 +1,37 @@
-<div class="connect_data">
+<div class="main-container">
   <div class="breadcrumbs">
-    Мои приложения > {{cardKey[0].name}}
+    <span><a href="">Мои приложения</a><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#ar-right"></use></svg></i></span>
+    <span><a href="">{{cardKey[0].name}}</a></span>
   </div>
-  <div class="page_content">
-    <div class="header_content">
-      <h3>{{cardKey[0].name}}</h3>
-      <span>ШАГ 1. Выберите параметр к которому хотите подключить источник данных.</span>
-      <div class="step_list" ng-init="selectedTab = 'arguments'">
+  <div class="page-container">
+    <div class="topBlock">
+      <h1 class="topBlock__name">{{cardKey[0].name}}</h1>
+      <div class="topBlock__description">
+        <span>ШАГ 1. Выберите параметр к которому хотите подключить источник данных.</span>
+      </div>
+      <div class="linkStep" ng-init="selectedTab = 'arguments'">
         <a ng-class="{'active':selectedTab === 'arguments'}" ng-click="selectedTab = 'arguments'">Аргументы</a>
         <a ng-class="{'active':selectedTab === 'connect-data'}" ng-click="selectedTab = 'connect-data'">Подключить данные</a>
         <a ng-class="{'active':selectedTab === 'graphic'}" ng-click="selectedTab = 'graphic'">График</a>
       </div>
     </div>
-    <div class="inner_content">
-      <ul>
-        <li ng-repeat="argument in allArguments"><span>Добавьте колонку со значением {{argument.name}}</span>
+    <div class="series">
+      <h2 class="series__head">ОСНОВНЫЕ ПАРАМЕТРЫ</h2>
+      <ul class="series__variabless">
+        <li ng-repeat="argument in allArguments">
+            <i class="icon series__variabless_checked"><svg role="img"><use xlink:href="img/svg-symbols.svg#checked-light"></use></svg></i>
+            <span>Добавьте колонку со значением {{argument.name}}</span>
             <a href="#/cardshop/connect-data/toplug/{{cardKey[0].id}}?agumentId={{argument.id}}"></a>
+            <div class="icon series__variabless_info">
+              <simple-popover 
+                title="Описание аргумента" 
+                placement="right" 
+                content="content"
+                icon-name="info"
+                show-icon="false"
+              ></simple-popover>
+            </div>
+            <i class="icon series__variabless_ar-right"><svg role="img"><use xlink:href="img/svg-symbols.svg#ar-right"></use></svg></i>
         </li>
       </ul>
     </div>

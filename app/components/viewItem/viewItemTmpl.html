@@ -5,7 +5,7 @@
   </div>
   <div class="page-container">
     <div class="topBlock">
-      <h3 class="topBlock__name">{{cardData.name}}</h3>
+      <h1 class="topBlock__name">{{cardData.name}}</h1>
       <a ng-href="#{{url}}/connect-data/arguments/{{cardData.id}}" class="bttn bttn--blue">Подключить данные</a>
       <div class="linkGroup" ng-init="selectedTab = 'description'">
         <span class="bttn bttn--grey" ng-class="{'active':selectedTab === 'description'}" ng-click="selectedTab = 'description'">Подробнее</span>
@@ -13,7 +13,7 @@
         <span class="bttn bttn--grey" ng-class="{'active':selectedTab === 'same'}" ng-click="selectedTab = 'same'">Похожие</span>
       </div>
     </div>
-    <div class="item_inner">
+    <div class="">
       <span ng-show="selectedTab === 'description'">{{cardData.description_long}}</span>
       <span ng-show="selectedTab === 'review'"></span>
       <span ng-show="selectedTab === 'same'"></span>
