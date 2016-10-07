@@ -2,10 +2,10 @@
   'use strict';
   angular
   .module('BIONApp')
-  .controller('loadedTablesCtrl', ['$scope', '$state', '$timeout', loadedTablesCtrl]);
+  .controller('toPlagLoadedTablesCtrl', ['$scope', '$state', '$timeout', toPlagLoadedTablesCtrl]);
 
-  function loadedTablesCtrl($scope, $state, $timeout) {
-    
+  function toPlagLoadedTablesCtrl($scope, $state, $timeout) {
+
         $scope.getResourcesTables($scope.resourseId).then(function(items) {
           $scope.items = JSON.parse(JSON.stringify(items));
         });

@@ -22,7 +22,10 @@
               <ul>
                 <li ng-repeat="item in allResources">
                   {{item.path.substring(21)}}
-                    <loaded-tables resourse-id="item.id" get-resources-tables="getResourcesTables"></loaded-tables>
+                    <to-plag-loaded-tables 
+                        resourse-id="item.id"
+                        get-resources-tables="getResourcesTables"
+                    ></to-plag-loaded-tables>
                 </li>
               </ul>
           </div>
