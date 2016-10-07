@@ -8,7 +8,8 @@
     return {
       scope: {
         getResourcesTables: '=?',
-        resourseId: '=?'
+        resourseId: '=?',
+        onShowTable: '=?'
       },
       restrict: 'E',
       controller: 'toPlagLoadedTablesCtrl',

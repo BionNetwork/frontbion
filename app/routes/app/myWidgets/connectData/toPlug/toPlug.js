@@ -122,6 +122,10 @@ angular.module('BIONApp')
           }).then(preview.get.success, preview.get.error);
         }
 
+        $scope.showTable = function() {
+          console.log('defined');
+        }
+
         $http({
           method: 'GET',
           url: '/api/v1/card/'+ $state.params.id +'/arguments',
