@@ -12,10 +12,6 @@
         allResources: '=?',
         activationId: '=?',
         getResources: '=?',
-        onShowRes: '=?',
-        table: '=?',
-        onGetPreview: '=?',
-        resId: '=?',
         getResourcesTables: '=?',
         onShowTable: '=?'
       },
