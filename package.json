@@ -1,7 +1,7 @@
 {
-  "name": "hp",
+  "name": "bion-project",
   "version": "1.0.0",
-  "description": ".gitignore",
+  "description": "bion-project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,9 +9,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.etton.ru:mingazov.i/Hotel-Project.git"
+    "url": "git@gitlab.etton.ru:bi/BION-Front.git"
   },
-  "author": "",
+  "author": "Etton developers",
   "license": "ISC",
   "devDependencies": {
     "bower": "^1.7.9",
