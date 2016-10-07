@@ -9,14 +9,27 @@
         $scope.selectedObject = [];
 
         $scope.clickedItems = function (item) {
-          $scope.selectedObject.push(item)
+          // $scope.selectedObject.forEach(function (value) {
+          //   if (item != value) item.push(value);
+          // });
+          // $scope.selectedObject.push(item)
           item.selected = !item.selected;
+          if ($scope.selectedObject.indexOf(item.name) == -1 && item.selected) {
+            $scope.selectedObject.push(item.name)
+          }
+          if (!item.selected) {
+            var index = $scope.selectedObject.indexOf(item.name);
+            $scope.selectedObject.splice(index, 1);
+          }
         };
 
         $scope.clickedDefault = function (content) {
           // console.log($scope.defaultItems);
           console.log($scope.selectedObject);
         };
+
+        
+
   }
 
 })();

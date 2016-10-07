@@ -1,7 +1,8 @@
 <div class="dropmodal dropmodal--{{placement}}" ng-class="{'dropmodal--active': openContent==true}">
 
-		<span ng-click="openDropContent()">All products
-
+		<span ng-click="openDropContent()">
+					<span ng-show="selectedObject.length == 0">All products</span>
+					<span ng-show="selectedObject.length > 0" ng-repeat="item in selectedObject">{{item}}{{$last ? '' : ', '}}</span>
 				<i class="icon" ng-hide="upAndDown">
 					<svg role="img">
 						<use xlink:href="" ng-href="img/svg-symbols.svg#ar-down"></use>
