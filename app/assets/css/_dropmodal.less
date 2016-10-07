@@ -20,7 +20,19 @@
     	}
     }
     &__trigger {
+    	color: @blue;
     	cursor: pointer;
+    	font-weight: 600;
+    	white-space: nowrap;
+    	letter-spacing: .5px;
+    	.icon {
+    		width: 15px;
+    		height: 13px;
+    		vertical-align: sub;
+    		svg {
+    			fill: @blue;
+    		}
+    	}
     }
 	&__content {
 	    display: none;
