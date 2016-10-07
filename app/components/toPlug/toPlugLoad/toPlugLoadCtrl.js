@@ -10,7 +10,7 @@
     });
     $scope.$watch('file', function () {
         if ($scope.file != null) {
-            $scope.files = [$scope.file]; 
+            $scope.files = [$scope.file];
         }
     });
 
@@ -24,6 +24,9 @@
         $toPlugLoadSrv.addFiles(files, $scope.activationId, $scope.getResources);
       }
     };
+
+
+
   }
 
 })();

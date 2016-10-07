@@ -15,7 +15,32 @@
     Drop pdfs or images here or click to upload
 </div>
 <div ng-show="tablePreview">
-  <table>
-    
+  <table style="width: 100%;">
+    <thead>
+      <tr>
+        <th ng-repeat="(key, value) in tablePreview[0]">
+          {{key}}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="(key, value) in tablePreview">
+        <td >
+          {{value['Date']}}
+        </td>
+        <td >
+          {{value['Organization']}}
+        </td>
+        <td >
+          {{value['The remainder of the']}}
+        </td>
+        <td >
+          {{value['The Contracting Party']}}
+        </td>
+        <td >
+          {{value['id']}}
+        </td>
+      </tr>
+    </tbody>
   </table>
 </div>
