@@ -43,7 +43,6 @@ angular.module('BIONApp')
         var resources = {
           get: {
             success: function(response) {
-              console.log(response.data.data);
               $scope.allResources = response.data.data;
             },
             error: function(response) {
