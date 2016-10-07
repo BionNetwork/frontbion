@@ -1,12 +1,15 @@
-<div class="to_plug">
+<div class="main-container">
   <div class="breadcrumbs">
-    Мои приложения > {{cardKey[0].name}}
+    <span><a href="">Мои приложения</a><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#ar-right"></use></svg></i></span>
+    <span><a href="">{{cardKey[0].name}}</a></span>
   </div>
-  <div class="page_content">
-    <div class="header_content">
+  <div class="page-container">
+    <div class="topBlock">
 
-      <span>ШАГ 2. Подключить источник данных.</span>
-      <div class="step_list" ng-init="selectedTab = 'arguments'">
+      <div class="topBlock__description">
+        <span>ШАГ 2. Подключить источник данных.</span>
+      </div>
+      <div class="linkStep" ng-init="selectedTab = 'arguments'">
         <a ng-class="{'active':selectedTab === 'arguments'}" ng-click="selectedTab = 'arguments'">Аргументы</a>
         <a ng-class="{'active':selectedTab === 'connect-data'}" ng-click="selectedTab = 'connect-data'">Подключить данные</a>
         <a ng-class="{'active':selectedTab === 'graphic'}" ng-click="selectedTab = 'graphic'">График</a>
