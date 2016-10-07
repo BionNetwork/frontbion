@@ -1,4 +1,4 @@
-<div class="dropmodal" ng-class="{'dropmodal--active': openContent==true}">
+<div class="dropmodal dropmodal--{{placement}}" ng-class="{'dropmodal--active': openContent==true}">
 		<i class="dropmodal__trigger icon" ng-click="openDropContent()">
 			<svg role="img">
 				<use xlink:href="" ng-href="img/svg-symbols.svg#{{iconName}}"></use>

@@ -7,68 +7,6 @@ connect-data {
         &__name {
           margin-bottom: 10px;
         }
-        .linkStep {
-          position: absolute;
-          right: 40px;
-          top: 5px;
-          a + a {
-            border-left: none;
-            padding-left: 30px;
-          }
-          a {
-            float: left;
-            font-size: 12px;
-            height: 32px;
-            line-height: 28px;
-            cursor: pointer;
-            color: @grey-text;
-            padding: 0 10px;
-            border-right: 0;
-            position: relative;
-            text-decoration: none;
-            border: 1px solid @grey-text;
-            min-width: 30px;
-            min-height: 30px;
-            &:first-child {
-              border-top-left-radius: @radius;
-              border-bottom-left-radius: @radius;
-            }
-            &:after,
-            &:before {
-              content: '';
-              height: 0;
-              width: 0;
-              position: absolute;
-              top: 0;
-              left: auto;
-            }
-            &:before {
-              right: -32px;
-              z-index: 1;
-              border: 16px solid transparent;
-              border-left-color: @grey-text;
-              margin-top: -1px;
-              margin-left: -.5px;
-            }
-            &:after {
-              right: -30px;
-              z-index: 2;
-              border: 15px solid transparent;
-              border-left-color: #fff;
-            }
-            &.active {
-              color: #fff;
-              background: @blue;
-              border-color: @blue;
-              &:before {
-                border-left-color: @blue;
-              }
-              &:after {
-                border-left-color: @blue;
-              }
-            }
-          }
-        }  
       }
       .series {
         &__head {
@@ -85,7 +23,7 @@ connect-data {
           list-style: none;
           padding: 0;
           margin: 0;
-          li {
+          &>li {
             padding: 16px 0;
             margin: 0 -20px;
             padding-left: 65px;
@@ -104,10 +42,8 @@ connect-data {
               text-decoration: none;
             }
           }
-          .icon {
-            position: absolute;
-          }
           &_checked {
+            position: absolute;
             left: 20px;
             top: 50%;
             width: 28px;
@@ -118,16 +54,22 @@ connect-data {
             }
           }
           &_info {
+            position: absolute;
             right: 45px;
             top: 50%;
             width: 20px;
             height: 20px;
             margin-top: -10px;
-            svg {
-              fill: @blue;
+            .dropmodal__trigger {
+              width: 20px;
+              height: 20px;
+              svg {
+                fill: @blue;
+              }
             }
           }
           &_ar-right {
+            position: absolute;
             right: 20px;
             top: 50%;
             width: 10px;
