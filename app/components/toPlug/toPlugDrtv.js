@@ -12,7 +12,10 @@
         allResources: '=?',
         activationId: '=?',
         getResources: '=?',
-        onShowRes: '=?'
+        onShowRes: '=?',
+        table: '=?',
+        onGetPreview: '=?',
+        resId: '=?'
       },
       restrict: 'E',
       controller: 'toPlugCtrl',

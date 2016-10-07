@@ -10,6 +10,14 @@
       console.error('Define onShowRes function in toPlug route');
     }
 
+    $scope.onGetPreview = $scope.onGetPreview || function() {
+      console.error('Define onGetPreview function in toPlug route');
+    }
+
+    $scope.onGetResourcesTables = function (id) {
+      
+    }
+
   }
 
 })();

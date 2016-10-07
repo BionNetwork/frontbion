@@ -49,6 +49,25 @@ angular.module('BIONApp')
             }
           }
         };
+        var resource = {
+          get: {
+            success: function(response) {
+              console.log(response.data.data)
+              // $scope.table = response.data.data[0].name;
+              $scope.table = response.data.data;
+            },
+            error: function(response) {
+            }
+          }
+        };
+        var preview = {
+          get: {
+            success: function(response) {
+            },
+            error: function(response) {
+            }
+          }
+        };
         // functions
         $scope.getResources = function (id) {
           $http({
@@ -63,8 +82,30 @@ angular.module('BIONApp')
           }).then(resources.get.success, resources.get.error);
         };
 
-        $scope.showResource = function() {
-          console.log('defined')
+        $scope.showResource = function(res) {
+          $scope.resId = res.id;
+
+          $http({
+            method: 'GET',
+            url: '/api/v1/resources/' + res.id + '/tables',
+            headers: {
+              'X-AUTHORIZE-TOKEN': $scope.token
+            }
+          }).then(resource.get.success, resource.get.error);
+        }
+
+        $scope.getPreview = function(resId, table) {
+          console.log(resId, table)
+          $http({
+            method: 'GET',
+            url: '/api/v1/resources/' + resId + '/preview',
+            headers: {
+              'X-AUTHORIZE-TOKEN': $scope.token
+            },
+            params: {
+              table_name: table
+            }
+          }).then(preview.get.success, preview.get.error);
         }
 
         $http({
