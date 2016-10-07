@@ -6,7 +6,7 @@
 
   function toPlugLoadSrv($http) {
 
-    this.addFiles = function(files, activationId) {
+    this.addFiles = function(files, activationId, getResources) {
       var fileData = files[0];
       var myData = new FormData();
       myData.append('resource_file', fileData);
@@ -18,6 +18,10 @@
           'X-Authorize-Token': window.localStorage.getItem('token')
         },
         body: myData
+      }).then(function(response){
+        if (response.status == 201) {
+          getResources(activationId);
+        }
       })
 
     };

@@ -16,11 +16,12 @@
 
     $scope.log = '';
 
+    // console.log($scope.getResources);
     $scope.upload = function(files) {
       if (!files) {
         return;
       } else {
-        $toPlugLoadSrv.addFiles(files, $scope.activationId);
+        $toPlugLoadSrv.addFiles(files, $scope.activationId, $scope.getResources);
       }
     };
   }

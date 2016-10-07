@@ -10,7 +10,8 @@
         allArguments: '=?',
         cardKey: '=?',
         allResources: '=?',
-        activationId: '=?'
+        activationId: '=?',
+        getResources: '=?'
       },
       restrict: 'E',
       controller: 'toPlugCtrl',
