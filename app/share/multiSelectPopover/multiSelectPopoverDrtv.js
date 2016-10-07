@@ -8,7 +8,8 @@
     return {
       scope: {
         content: '=?',
-        title: '@'
+        title: '@',
+        onChange: '=?'
       },
       restrict: 'E',
       controller: 'multiSelectPopoverCtrl',
