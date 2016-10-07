@@ -11,7 +11,8 @@
         cardKey: '=?',
         allResources: '=?',
         activationId: '=?',
-        getResources: '=?'
+        getResources: '=?',
+        onShowRes: '=?'
       },
       restrict: 'E',
       controller: 'toPlugCtrl',

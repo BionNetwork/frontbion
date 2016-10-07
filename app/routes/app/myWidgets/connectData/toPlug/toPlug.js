@@ -63,6 +63,10 @@ angular.module('BIONApp')
           }).then(resources.get.success, resources.get.error);
         };
 
+        $scope.showResource = function() {
+          console.log('defined')
+        }
+
         $http({
           method: 'GET',
           url: '/api/v1/card/'+ $state.params.id +'/arguments',

@@ -20,7 +20,7 @@
           <div class="list">
               <span>Загруженные файлы</span>
               <ul>
-                <li ng-repeat="resources in allResources">{{resources.path.substring(21)}}</li>
+                <li ng-repeat="resources in allResources" ng-click='onShowRes(resources)'>{{resources.path.substring(21)}}</li>
               </ul>
           </div>
         </div>
