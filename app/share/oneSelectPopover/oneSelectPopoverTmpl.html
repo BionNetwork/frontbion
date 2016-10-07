@@ -21,15 +21,18 @@
 				<svg role="img"><use xlink:href="img/svg-symbols.svg#close"></use></svg>
 			</i>
 			<h4 class="dropmodal__content_header">{{title}}</h4>
-			<ul class="dropmodal__content_item">
+			<ol class="dropmodal__content_item">
 				<li ng-repeat="item in content" ng-click="changePopoverHead(item)">
-					{{item.name}}
-					<i class="icon" ng-show="popoverHeadName == item.name">
-						<svg role="img">
-							<use xlink:href="" ng-href="img/svg-symbols.svg#checked"></use>
-						</svg>
-					</i>
-			</ul>
+					<a href="">
+						<span>{{item.name}}</span>
+						<i class="icon icon-checked" ng-show="popoverHeadName == item.name">
+							<svg role="img">
+								<use xlink:href="" ng-href="img/svg-symbols.svg#checked"></use>
+							</svg>
+						</i>
+					</a>
+				</li>
+			</ol>
 			<span class="dropmodal__content_arrow"></span>
 		</div>
 

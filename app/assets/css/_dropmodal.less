@@ -8,6 +8,12 @@
     	.dropmodal__content {
     		display: block;
     	}
+    	.dropmodal__trigger {
+    		color: @grey-text !important;
+    		svg {
+    			fill: @grey-text !important;
+    		}
+    	}
     }
     &--right {
     	.dropmodal__content {
@@ -25,13 +31,13 @@
     	font-weight: 600;
     	white-space: nowrap;
     	letter-spacing: .5px;
+    	svg {
+			fill: @blue;
+		}
     	.icon {
     		width: 15px;
     		height: 13px;
     		vertical-align: sub;
-    		svg {
-    			fill: @blue;
-    		}
     	}
     }
 	&__content {
@@ -70,6 +76,45 @@
 	    	padding-left: 0;
 	    	margin-bottom: 0;
 	    	list-style-type: none;
+	    	li {
+	    		line-height: 34px;
+			    position: relative;
+			    padding-left: 17px;
+			    &:after {
+				    content: '';
+			    	display: block;
+				    border-bottom: 1px solid #e5e5e5;
+			    }
+			    &:last-child:after {
+			    	border-bottom: none;
+			    }
+			    a {
+			    	font-size: 14px;
+				    font-weight: 400;
+				    letter-spacing: .14px;
+				    color: #1a1a1a;
+				    text-decoration: none;
+				    display: block;
+				    padding-right: 10px;
+				    white-space: nowrap;
+				    overflow: hidden;
+				    text-overflow: ellipsis;
+				    cursor: pointer;
+				    &:hover {
+				    	color: @blue;
+				    }
+			    }
+			    .icon-checked {
+			    	width: 16px;
+				    height: 22px;
+				    position: absolute;
+				    right: 10px;
+				    top: 6px;
+				    svg {
+				    	fill: @blue;
+				    }
+			    }
+	    	}
 	    }
 	    &_arrow {
 		    width: 25px;

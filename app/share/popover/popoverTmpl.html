@@ -5,8 +5,12 @@
 	><span ng-hide="showIcon">{{content[0].name}}</span></span>
 
 	<div class="hide popover-{{name}}">
-		<ul>
-			<li ng-repeat="item in content">{{item.name}}</li>
-		</ul>
+		<ol>
+			<li ng-repeat="item in content">
+				<a href="">
+					<span>{{item.name}}</span>
+				</a>
+			</li>
+		</ol>
 	</div>
 <!-- </div> -->
