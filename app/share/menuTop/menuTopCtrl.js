@@ -12,9 +12,7 @@
     ];
 
     $scope.contentSecond = [
-        {name: "Рабочий стол1"},
-        {name: "Рабочий стол2"},
-        {name: "Рабочий стол3"}
+        {name: "Прибыль по проектам"}
     ];
     // console.log($scope.contentSecond);
 
