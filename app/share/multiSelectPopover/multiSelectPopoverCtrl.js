@@ -25,10 +25,14 @@
 
         $scope.clickedDefault = function (content) {
           // console.log($scope.defaultItems);
-          console.log($scope.selectedObject);
+          // console.log($scope.selectedObject);
+          for (var i = 0; i < content.length; i++) {
+            content[i].selected = false;
+          }
+          $scope.selectedObject = []
         };
 
-        
+
 
   }
 

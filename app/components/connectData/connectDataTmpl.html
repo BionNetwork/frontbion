@@ -22,11 +22,11 @@
         <li ng-repeat="argument in allArguments">
             <i class="icon series__variabless_checked"><svg role="img"><use xlink:href="img/svg-symbols.svg#checked-light"></use></svg></i>
             <span>Добавьте колонку со значением {{argument.name}}</span>
-            <a href="#/cardshop/connect-data/toplug/{{cardKey[0].id}}?agumentId={{argument.id}}"></a>
+            <a href="#{{ parentUrl }}/connect-data/toplug/{{cardKey[0].id}}?agumentId={{argument.id}}"></a>
             <div class="icon series__variabless_info">
-              <simple-popover 
-                title="Описание аргумента" 
-                placement="right" 
+              <simple-popover
+                title="Описание аргумента"
+                placement="right"
                 content="content"
                 icon-name="info"
                 show-icon="false"

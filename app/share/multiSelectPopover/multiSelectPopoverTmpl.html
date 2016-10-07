@@ -2,7 +2,8 @@
 
 		<span ng-click="openDropContent()">
 					<span ng-show="selectedObject.length == 0">All products</span>
-					<span ng-show="selectedObject.length > 0" ng-repeat="item in selectedObject">{{item}}{{$last ? '' : ', '}}</span>
+					<span ng-show="selectedObject.length > 0 && selectedObject.length <= 2" ng-repeat="item in selectedObject">{{item}}{{$last ? '' : ', '}}</span>
+					<span ng-show="selectedObject.length > 2">Choosed {{selectedObject.length}} parametrs</span>
 				<i class="icon" ng-hide="upAndDown">
 					<svg role="img">
 						<use xlink:href="" ng-href="img/svg-symbols.svg#ar-down"></use>
@@ -23,14 +24,16 @@
 			</i>
 			<h4 class="dropmodal__content_header">{{title}}</h4>
 			<ul class="dropmodal__content_item">
+				<!-- default -->
 				<li>
 					<span ng-click="clickedDefault(content)">All projects</span>
-					<i class="icon" ng-show="haveClicked">
+					<i class="icon" ng-show="selectedObject.length == 0">
 						<svg role="img">
 							<use xlink:href="" ng-href="img/svg-symbols.svg#checked"></use>
 						</svg>
 					</i>
 				</li>
+				<!-- not default -->
 				<li ng-repeat="item in content">
 					<span ng-click="clickedItems(item)">{{item.name}}</span>
 					<i class="icon not_show" ng-class="{'selected': item.selected}">
@@ -39,6 +42,7 @@
 						</svg>
 					</i>
 				</li>
+
 			</ul>
 			<span class="dropmodal__content_arrow"></span>
 		</div>

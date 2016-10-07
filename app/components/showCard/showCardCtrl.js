@@ -9,7 +9,10 @@
     $scope.contentSecond = [
         {name: "Etton"},
         {name: "Etton center"},
-        {name: "Etton grupp"}
+        {name: "Etton grupp"},
+        {name: "Etton grupp1"},
+        {name: "Etton grupp2"},
+        {name: "Etton grupp3"}
     ];
     $scope.chart = 'pie';
     $scope.changeChart = function (type) {
