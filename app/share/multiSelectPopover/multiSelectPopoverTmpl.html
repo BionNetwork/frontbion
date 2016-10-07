@@ -25,9 +25,9 @@
 			<h4 class="dropmodal__content_header">{{title}}</h4>
 			<ol class="dropmodal__content_item">
 				<!-- default -->
-				<li>
+				<li ng-click="clickedDefault(content)">
 					<a href="">
-						<span ng-click="clickedDefault(content)">All projects</span>
+						<span>All projects</span>
 						<i class="icon icon-checked" ng-show="selectedObject.length == 0">
 							<svg role="img">
 								<use xlink:href="" ng-href="img/svg-symbols.svg#checked"></use>
@@ -36,9 +36,9 @@
 					</a>
 				</li>
 				<!-- not default -->
-				<li ng-repeat="item in content">
+				<li ng-repeat="item in content" ng-click="clickedItems(item)">
 					<a href="">
-						<span ng-click="clickedItems(item)">{{item.name}}</span>
+						<span>{{item.name}}</span>
 						<i class="icon not_show icon-checked" ng-class="{'selected': item.selected}">
 							<svg role="img">
 								<use xlink:href="" ng-href="img/svg-symbols.svg#checked"></use>
