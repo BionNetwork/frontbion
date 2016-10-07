@@ -20,19 +20,10 @@
           <div class="list">
               <span>Загруженные файлы</span>
               <ul>
-                <li ng-repeat="resources in allResources">
-                  {{resources.path.substring(21)}} 
-                  <b style='float: right;'ng-click='onShowRes(resources)'>+</b>
-                  <ul>
-                    <li>{{onGetResourcesTables(resources.id)}}</li>
-                  </ul>
-                  <div ng-if='table'>
-                    <div ng-repeat='t in table' ng-click='onGetPreview(resId, t.name)'>{{t.name}}</div>
-                  </div>
+                <li ng-repeat="item in allResources">
+                  {{item.path.substring(21)}}
+                    <loaded-tables resourse-id="item.id" get-resources-tables="getResourcesTables"></loaded-tables>
                 </li>
-<!--                 <li ng-if='table'>
-                  <div ng-click='onGetPreview(resId, table)'>{{table}}</div>
-                </li> -->
               </ul>
           </div>
         </div>

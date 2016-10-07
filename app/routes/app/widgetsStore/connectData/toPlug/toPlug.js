@@ -63,6 +63,20 @@ angular.module('BIONApp')
           }).then(resources.get.success, resources.get.error);
         };
 
+        $scope.getResourcesTables = function (id) {
+          return $http({
+            method: 'GET',
+            url: '/api/v1/resources/'+ id +'/tables',
+            headers: {
+              'X-AUTHORIZE-TOKEN': $scope.token
+            }
+          }).then(function (response) {
+            return response.data.data;
+          }, function(error) {
+            console.log('error', error);
+          });
+        };
+
         $http({
           method: 'GET',
           url: '/api/v1/card/'+ $state.params.id +'/arguments',

@@ -15,7 +15,8 @@
         onShowRes: '=?',
         table: '=?',
         onGetPreview: '=?',
-        resId: '=?'
+        resId: '=?',
+        getResourcesTables: '=?'
       },
       restrict: 'E',
       controller: 'toPlugCtrl',
