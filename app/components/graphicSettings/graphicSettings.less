@@ -1,3 +1,282 @@
 graphic-settings{
-  
+  .ico {
+    &_addfilter {
+
+    }
+    &_graph1 {
+      background: url("/img/icons/graphic/ico_1001.svg") no-repeat 2px 2px;
+      background-size: 30px;
+      &:focus,&:active, &:hover {
+      background: url("/img/icons/graphic/ico_graph.svg") no-repeat 2px 2px;
+      background-size: 30px;
+      }
+    }
+    &_graph2 {
+      background: url("/img/icons/graphic/ico_1002.svg") no-repeat 4px 3px;
+      background-size: 30px;
+      &:focus,&:active, &:hover {
+      background: url("/img/icons/graphic/ico_pkbal.svg") no-repeat 4px 3px;
+      background-size: 30px;
+      }
+    }
+    &_graph3 {
+      background: url("/img/icons/graphic/ico_1003.svg") no-repeat 2px 2px;
+      background-size: 30px;
+      &:focus,&:active, &:hover {
+      background: url("/img/icons/graphic/ico_diag.svg") no-repeat 2px 2px;
+      background-size: 30px;
+      }
+    }
+    &_graph4 {
+      background: url("/img/icons/graphic/ico_1004.svg") no-repeat 2px 2px;
+      background-size: 30px;
+      &:focus,&:active, &:hover {
+      background: url("/img/icons/graphic/ico-diag2.svg") no-repeat 2px 2px;
+      background-size: 30px;
+      }
+    }
+    &_graph5 {
+      background: url("/img/icons/graphic/ico_1005.svg") no-repeat 2px 2px;
+      background-size: 30px;
+      &:focus,&:active, &:hover {
+      background: url("/img/icons/graphic/ico-table.svg") no-repeat 2px 2px;
+      background-size: 30px;
+      }
+    }
+    &_graph6 {
+      background: url("/img/icons/graphic/ico_1006.svg") no-repeat 2px 2px;
+      background-size: 30px;
+      &:focus,&:active, &:hover {
+      background: url("/img/icons/graphic/ico_123.svg") no-repeat 2px 2px;
+      background-size: 30px;
+      }
+    }
+    &_graph7 {
+      background: url("/img/icons/graphic/ico_1007.svg") no-repeat 2px 2px;
+      background-size: 30px;
+      &:focus,&:active, &:hover {
+      background: url("/img/icons/graphic/ico_diag3.svg") no-repeat 2px 2px;
+      background-size: 30px;
+      }
+    }
+    &_graph8 {
+      background: url("/img/icons/graphic/ico_1008.svg") no-repeat 2px 2px;
+      background-size: 30px;
+      &:focus,&:active, &:hover {
+      background: url("/img/icons/graphic/ico-diag4.svg") no-repeat 2px 2px;
+      background-size: 30px;
+      }
+    }
+    &_graph9 {
+      background: url("/img/icons/graphic/ico_1009.svg") no-repeat 2px 2px;
+      background-size: 30px;
+      &:focus,&:active, &:hover {
+      background: url("/img/icons/graphic/ico_currency.svg") no-repeat 2px 2px;
+      background-size: 30px;
+      }
+    }
+    &_graph10 {
+      background: url("/img/icons/graphic/ico_1010.svg") no-repeat 2px 2px;
+      background-size: 30px;
+      &:focus,&:active, &:hover {
+      background: url("/img/icons/graphic/ico_globe.svg") no-repeat 2px 2px;
+      background-size: 30px;
+      }
+    }
+    &_tool1 {
+      background: url("/img/icons/graphic/ico_!x.svg") no-repeat 2px 2px;
+    }
+    &_tool2 {
+      background: url("/img/icons/graphic/ico_!y.svg") no-repeat 2px 2px;
+    }
+    &_tool3 {
+      background: url("/img/icons/graphic/ico_!legend.svg") no-repeat 2px 2px;
+    }
+  }
+  .graphic-set {
+    &_breadcrumbs {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-top: 70px;
+      height: 50px;
+      .crumbs {
+        position: relative;
+        left: -65px;
+        list-style-type: none;
+        list-style-position: inside;
+        li {
+          float: left;
+          margin-left: 30px;
+          font-weight: 500;
+          &:after {
+            position: absolute;
+            content: "";
+            margin-left: 10px;
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-left: 10px solid #303f9f;
+            border-bottom: 10px solid transparent;
+            border-right: 10px solid transparent;
+          }
+          &:last-child {
+            &:after {
+                border-left: none;
+              }
+            }
+          a {
+            color: #303f9f;
+            font-weight: 500;
+            }
+          }
+        }
+      }
+    &_bg {
+      position: relative;
+      background: #ffffff;
+      margin-top: 5px;
+      &.title {
+        border-bottom: 1px solid #bfbfbf;
+        padding-bottom: 10px;
+        h1 {
+          font-size: 21px;
+        }
+        p {
+          color: #a4a4a4;
+          .step {
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+    &_main {
+      background: #ffffff;
+      .panel {
+        &_right {
+          height: 100px;
+          // margin-left: 5px;
+        }
+        &_left {
+          padding-top: 15px;
+          height: 100%;
+          // margin-left: 5px;
+          .panel_button {
+            width: 100%;
+            background: #253da1;
+            color: #ffffff;
+            text-transform: uppercase;
+            height: 40px;
+            border: none;
+            transition: 0.2s linear;
+            &:hover {
+              background: #15308a;
+            }
+          }
+        p {
+          margin-top: 5px;
+          margin-bottom: 7px;
+          color: #bfbfbf;
+        }
+        .ddrop {
+          width: 100%;
+          height: 80px;
+          border: 2px solid #bfbfbf;
+          background: #e5e5e5;
+          }
+          .data-list {
+            margin-top: 20px;
+            ul li {
+              margin-right: 30px;
+              padding-top:5px;
+              color: #a4a4a4;
+              padding-bottom: 5px;
+              padding-left: 40px;
+              margin-left: -40px;
+              list-style-type: none;
+              border-top: 2px solid #f1f1f1;
+              border-left: 2px solid #f1f1f1;
+              border-right: 2px solid #f1f1f1;
+              &:last-child {
+                border-bottom: 2px solid #f1f1f1;
+              }
+            }
+          }
+        }
+        &_tools {
+          padding-top: 15px;
+          height: 70px;
+          .dropdown1 {
+            right: 0;
+            top: 75px;
+            position: absolute;
+            z-index: 10;
+            width: 400px;
+            height: 500px;
+            background: #fafafa;
+            -webkit-box-shadow: 10px 10px 46px -16px rgba(0,0,0,0.63);
+            -moz-box-shadow: 10px 10px 46px -16px rgba(0,0,0,0.63);
+            box-shadow: 10px 10px 46px -16px rgba(0,0,0,0.63);
+            &:after {
+              content: "";
+              width: 0;
+              height: 0;
+              border-top: 20px solid transparent;
+              border-left: 20px solid transparent;
+              border-bottom: 20px solid #fafafa;
+              border-right: 20px solid transparent;
+              position: absolute;
+              top: -40px;
+              right: 7px;
+            }
+            &:before {
+              content: "";
+              width: 0;
+              height: 0;
+              border-top: 20px solid transparent;
+              border-left: 20px solid transparent;
+              border-bottom: 20px solid #d0d0d0;
+              border-right: 20px solid transparent;
+              position: absolute;
+              top: -40px;
+              right: 7px;
+            }
+          }
+          &-button {
+            margin-right: 10px;
+            width: 40px;
+            height: 40px;
+            border: 1px solid transparent;
+            transition: 0.2s linear;
+            // &:hover {
+            //   border: 1px solid #15308a;
+            //
+            // }
+          }
+          &-filter {
+            .filter-title {
+              color: #253da1;
+              font-size: 18px;
+            }
+            &_filters {
+              p {
+                color: #b1b1b1;
+                padding-left: 20px;
+                background: url("/img/icons/close.svg") no-repeat 0px 5px;
+                background-size: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+    &_center {
+      border-left: 2px solid #f1f1f1;
+      // border-right: 2px solid #f1f1f1;
+      &_graphic {
+        height: 600px;
+        background: #fcfcfc;
+        margin-bottom: 15px;
+      }
+    }
+  }
 }
