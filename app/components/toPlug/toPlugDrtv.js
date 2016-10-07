@@ -13,7 +13,8 @@
         activationId: '=?',
         getResources: '=?',
         getResourcesTables: '=?',
-        onShowTable: '=?'
+        showTablePreview: '=?',
+        tablePreview: '=?'
       },
       restrict: 'E',
       controller: 'toPlugCtrl',

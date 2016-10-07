@@ -14,9 +14,7 @@
       console.error('Define onGetPreview function in toPlug route');
     }
 
-    $scope.onGetResourcesTables = function (id) {
-      
-    }
+    // console.log($scope.tablePreview);
 
   }
 

@@ -8,7 +8,8 @@
     return {
       scope: {
         activationId: '=?',
-        getResources: '=?'
+        getResources: '=?',
+        tablePreview: '=?'
       },
       restrict: 'E',
       controller: 'toPlugLoadCtrl',

@@ -21,19 +21,23 @@
               <span>Загруженные файлы</span>
               <ul>
                 <li ng-repeat="item in allResources">
-                  {{item.path.substring(21)}}
+                  {{item.path.substring(21, 30)}}
+                  <i style="margin-left: 30px; cursor: pointer; font-size: 14px;">+</i>
                     <to-plag-loaded-tables
                         resourse-id="item.id"
                         get-resources-tables="getResourcesTables"
-                        on-show-table=onShowTable
+                        show-table-preview=showTablePreview
                     ></to-plag-loaded-tables>
                 </li>
               </ul>
           </div>
         </div>
         <div class="load_content">
-          <to-plug-load activation-id=activationId
-                        get-resources=getResources></to-plug-load>
+          <to-plug-load
+                activation-id=activationId
+                get-resources=getResources
+                table-preview='tablePreview'
+          ></to-plug-load>
         </div>
     </div>
   </div>

@@ -10,9 +10,10 @@
       $scope.items = JSON.parse(JSON.stringify(items));
     });
 
-    $scope.onShowTable = $scope.onShowTable || function() {
-    	console.error('Define onShowtable function in to plug route');
-    }
+    $scope.onShowTablePreview = function (tableName) {
+      $scope.showTablePreview(tableName, $scope.resourseId);
+    };
+
   }
 
 })();

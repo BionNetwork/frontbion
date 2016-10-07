@@ -9,7 +9,7 @@
       scope: {
         getResourcesTables: '=?',
         resourseId: '=?',
-        onShowTable: '=?'
+        showTablePreview: '=?',
       },
       restrict: 'E',
       controller: 'toPlagLoadedTablesCtrl',
