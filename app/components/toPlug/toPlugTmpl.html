@@ -22,7 +22,7 @@
               <ul>
                 <li ng-repeat="item in allResources">
                   {{item.path.substring(21)}}
-                    <to-plag-loaded-tables 
+                    <to-plag-loaded-tables
                         resourse-id="item.id"
                         get-resources-tables="getResourcesTables"
                     ></to-plag-loaded-tables>
@@ -31,15 +31,6 @@
           </div>
         </div>
         <div class="load_content">
-          <div class="list_sources">
-            <ul>
-              <li><span class="glyphicon glyphicon-film"></span></li>
-              <li><span class="glyphicon glyphicon-film"></span></li>
-              <li><span class="glyphicon glyphicon-film"></span></li>
-              <li><span class="glyphicon glyphicon-film"></span></li>
-              <li><span class="glyphicon glyphicon-film"></span></li>
-            </ul>
-          </div>
           <to-plug-load activation-id=activationId
                         get-resources=getResources></to-plug-load>
         </div>
