@@ -33,7 +33,7 @@ angular.module('BIONApp')
         var activations = {
           get: {
             success: function(response) {
-              // console.log(response.data.data[0]);
+              $scope.activationId = response.data.data[0].id;
               $scope.getResources(response.data.data[0].id);
             },
             error: function(response) {

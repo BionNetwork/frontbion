@@ -9,7 +9,8 @@
       scope: {
         allArguments: '=?',
         cardKey: '=?',
-        allResources: '=?'
+        allResources: '=?',
+        activationId: '=?'
       },
       restrict: 'E',
       controller: 'toPlugCtrl',

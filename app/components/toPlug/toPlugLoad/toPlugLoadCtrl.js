@@ -13,13 +13,14 @@
             $scope.files = [$scope.file]; 
         }
     });
+
     $scope.log = '';
 
     $scope.upload = function(files) {
       if (!files) {
         return;
       } else {
-        $toPlugLoadSrv.addFiles(files);
+        $toPlugLoadSrv.addFiles(files, $scope.activationId);
       }
     };
   }

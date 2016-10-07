@@ -6,12 +6,11 @@
 
   function toPlugLoadSrv($http) {
 
-    this.addFiles = function(files) {
-
+    this.addFiles = function(files, activationId) {
       var fileData = files[0];
       var myData = new FormData();
       myData.append('resource_file', fileData);
-      myData.append('activation_id', '185');
+      myData.append('activation_id', activationId);
 
       fetch('/api/v1/resource/add', {
         method: "POST",

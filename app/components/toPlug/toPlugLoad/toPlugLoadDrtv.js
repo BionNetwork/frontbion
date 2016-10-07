@@ -7,7 +7,7 @@
   function toPlugLoad() {
     return {
       scope: {
-        
+        activationId: '=?'
       },
       restrict: 'E',
       controller: 'toPlugLoadCtrl',
