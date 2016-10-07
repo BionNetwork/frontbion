@@ -24,21 +24,9 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="(key, value) in tablePreview">
-        <td >
-          {{value['Date']}}
-        </td>
-        <td >
-          {{value['Organization']}}
-        </td>
-        <td >
-          {{value['The remainder of the']}}
-        </td>
-        <td >
-          {{value['The Contracting Party']}}
-        </td>
-        <td >
-          {{value['id']}}
+      <tr ng-repeat="items in tablePreview">
+        <td ng-repeat="item in items">
+          {{item}}
         </td>
       </tr>
     </tbody>
