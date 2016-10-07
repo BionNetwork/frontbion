@@ -2,9 +2,9 @@
   'use strict';
   angular
   .module('BIONApp')
-  .directive('connectData', connectData);
+  .directive('argumentsList', argumentsList);
 
-  function connectData() {
+  function argumentsList() {
     return {
       scope: {
         allArguments: '=?',
@@ -12,8 +12,8 @@
         parentUrl: '@'
       },
       restrict: 'E',
-      controller: 'connectDataCtrl',
-      templateUrl: 'components/connectData/connectDataTmpl.html'
+      controller: 'argumentsListCtrl',
+      templateUrl: 'components/argumentsList/argumentsListTmpl.html'
     };
   }
 })();
