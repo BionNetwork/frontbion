@@ -101,6 +101,27 @@ angular.module('BIONApp')
           }).then(tablePreview.get.success, tablePreview.get.error);
         };
 
+        $scope.argumentBound = function (activationId, choosedTableResourceId, agumentId, choosedTableName, selectedColumnName) {
+          $http({
+            method: 'POST',
+            url: '/api/v1/activation/'+ activationId +'/resource/' + choosedTableResourceId +'/argument/'+ agumentId,
+            headers: {
+              'X-AUTHORIZE-TOKEN': $scope.token,
+              'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            data: $.param({
+                  'table_name': choosedTableName,
+                  'column_name': selectedColumnName
+                })
+          }).then(function (response) {
+            return response.data.data;
+          }, function(error) {
+            console.log('error', error);
+          });
+        };
+
+        // end functions
+
         $http({
           method: 'GET',
           url: '/api/v1/card/'+ $state.params.id +'/arguments',

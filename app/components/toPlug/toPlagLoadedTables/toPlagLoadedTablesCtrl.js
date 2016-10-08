@@ -16,6 +16,7 @@
 
     $scope.onShowTablePreview = function (tableName) {
       $scope.showTablePreview(tableName, $scope.resourseId);
+      $scope.getTableName(tableName, $scope.resourseId);
     };
 
   }

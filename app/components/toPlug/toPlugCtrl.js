@@ -14,6 +14,11 @@
       console.error('Define onGetPreview function in toPlug route');
     }
 
+    $scope.getTableName = function (tableName, resourseId) {
+      $scope.choosedTableName = tableName;
+      $scope.choosedTableResourceId = resourseId;
+    }
+
     // console.log($scope.tablePreview);
 
   }

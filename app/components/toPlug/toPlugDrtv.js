@@ -14,7 +14,8 @@
         getResources: '=?',
         getResourcesTables: '=?',
         showTablePreview: '=?',
-        tablePreview: '=?'
+        tablePreview: '=?',
+        argumentBound: '=?'
       },
       restrict: 'E',
       controller: 'toPlugCtrl',

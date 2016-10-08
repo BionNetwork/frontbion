@@ -9,7 +9,10 @@
       scope: {
         activationId: '=?',
         getResources: '=?',
-        tablePreview: '=?'
+        tablePreview: '=?',
+        choosedTableName: '=?',
+        choosedTableResourceId: '=?',
+        argumentBound: '=?'
       },
       restrict: 'E',
       controller: 'toPlugLoadCtrl',

@@ -10,7 +10,8 @@
         getResourcesTables: '=?',
         resourseId: '=?',
         showTablePreview: '=?',
-        downloadTableNames: '='
+        downloadTableNames: '=',
+        getTableName: '=?'
       },
       restrict: 'E',
       controller: 'toPlagLoadedTablesCtrl',

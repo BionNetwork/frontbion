@@ -30,6 +30,7 @@
                         get-resources-tables="getResourcesTables"
                         show-table-preview=showTablePreview
                         download-table-names='showDetails'
+                        get-table-name=getTableName
                     ></to-plag-loaded-tables>
                 </li>
               </ul>
@@ -37,9 +38,12 @@
         </div>
         <div class="load_content">
           <to-plug-load
-                activation-id=activationId
+                activation-id='activationId'
                 get-resources=getResources
                 table-preview='tablePreview'
+                choosed-table-name="choosedTableName"
+                choosed-table-resource-id='choosedTableResourceId'
+                argument-bound=argumentBound
           ></to-plug-load>
         </div>
     </div>
