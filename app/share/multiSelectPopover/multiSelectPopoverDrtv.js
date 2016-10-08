@@ -15,29 +15,27 @@
       controller: 'multiSelectPopoverCtrl',
       templateUrl: 'share/multiSelectPopover/multiSelectPopoverTmpl.html',
       link: function(scope, element, attrs){
-            scope.openContent = false;
+            // scope.openContent = false;
+            // console.log(element[0].querySelector('.dropmodal--active'));
 
             scope.openDropContent = function () {
-                setTimeout(function () {
-                  let allModals = document.getElementsByClassName('dropmodal');
-                  for (var i = 0; i < allModals.length; i++) {
-                      console.log(allModals[i].classList.length);
-                      if (allModals[i].classList.length == 3) {
-                        allModals[i].className = 'dropmodal'
-                      }
-                    }
-                }, 0)
-                setTimeout(function () {
-                  scope.openContent = !scope.openContent;
-                  scope.upAndDown = !scope.upAndDown;
-                }, 1)
-                $timeout(function () {
 
-                }, 1)
+                // scope.openContent = !scope.openContent;
+                element[0].querySelector('.dropmodal').classList.toggle("dropmodal--active");
+                scope.upAndDown = !scope.upAndDown;
+                let allModals = document.getElementsByClassName('dropmodal');
+                for (var i = 0; i < allModals.length; i++) {
+                  // console.log(allModals[i]);
+                  if (allModals[i].classList.length == 3 && element[0].querySelector('.dropmodal') != allModals[i]) {
+                    allModals[i].classList.remove("dropmodal--active");
+                  }
+
+                }
             };
 
             scope.closeDropContent = function () {
-              scope.openContent = false;
+              // scope.openContent = false;
+              element[0].querySelector('.dropmodal').classList.remove("dropmodal--active");
               scope.upAndDown = false;
             };
 
@@ -46,7 +44,8 @@
             });
 
             $document.bind('click', function(){
-                scope.openContent = false;
+                // scope.openContent = false;
+                element[0].querySelector('.dropmodal').classList.remove("dropmodal--active");
                 scope.upAndDown = false;
                 scope.$apply();
             });

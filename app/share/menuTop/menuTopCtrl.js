@@ -6,9 +6,11 @@
 
   function menuTopCtrl($scope, $state) {
     $scope.contentFirst = [
-        {name: "Рабочий стол"},
-        {name: "Мои приложения"},
-        {name: "Магазин"}
+        {name: "Рабочий стол", url: '/dashboard'},
+        {name: "Мои приложения", url: '/mywidgets/view'},
+        {name: "Магазин", url: '/cardshop/view'},
+        {name: "English", url: ''},
+        {name: "Выход", url: '/login'}
     ];
 
     $scope.contentSecond = [

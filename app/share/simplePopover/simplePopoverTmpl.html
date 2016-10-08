@@ -1,4 +1,4 @@
-<div class="dropmodal dropmodal--{{placement}}" ng-class="{'dropmodal--active': openContent==true}">
+<div class="dropmodal dropmodal--{{placement}}">
 		<i class="dropmodal__trigger icon" ng-click="openDropContent()">
 			<svg role="img">
 				<use xlink:href="" ng-href="img/svg-symbols.svg#{{iconName}}"></use>
@@ -10,19 +10,9 @@
 			</i>
 			<h4 class="dropmodal__content_header">{{title}}</h4>
 			<ol class="dropmodal__content_item">
-				<li ng-click="click('123')">
-					<a href="">
-						<span>Рабочие столы</span>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<span>Мои приложения</span>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<span>Магазин приложений</span>
+				<li ng-click="click('123')" ng-repeat="item in content">
+					<a ng-href="#{{item.url}}">
+						<span>{{item.name}}</span>
 					</a>
 				</li>
 			</ol>
