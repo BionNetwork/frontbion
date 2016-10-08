@@ -6,8 +6,12 @@
 
   function toPlagLoadedTablesCtrl($scope, $state, $timeout) {
 
-    $scope.getResourcesTables($scope.resourseId).then(function(items) {
-      $scope.items = JSON.parse(JSON.stringify(items));
+    $scope.$watch('downloadTableNames', function() {
+      if ($scope.downloadTableNames && !$scope.items) {
+        $scope.getResourcesTables($scope.resourseId).then(function(items) {
+          $scope.items = JSON.parse(JSON.stringify(items));
+        });
+      }
     });
 
     $scope.onShowTablePreview = function (tableName) {

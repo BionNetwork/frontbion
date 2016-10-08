@@ -53,7 +53,7 @@ angular.module('BIONApp')
         var tablePreview = {
           get: {
             success: function(response) {
-              console.log(response.data.data)
+              // console.log(response.data.data)
               $scope.tablePreview = response.data.data;
             },
             error: function(response) {

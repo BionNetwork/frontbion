@@ -5,7 +5,7 @@
   .controller('myWidgetsCtrl', ['$scope', myWidgetsCtrl]);
 
   function myWidgetsCtrl($scope) {
-    console.log('myWidgetsCtrl');
+    // console.log('myWidgetsCtrl');
   }
 
 })();

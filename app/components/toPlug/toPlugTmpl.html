@@ -22,11 +22,14 @@
               <ul>
                 <li ng-repeat="item in allResources">
                   {{item.path.substring(21, 30)}}
-                  <i style="margin-left: 30px; cursor: pointer; font-size: 14px;">+</i>
+                  <i style="margin-left: 30px; cursor: pointer; font-size: 14px;"
+                      ng-click="showDetails = !showDetails" ng-init="showDetails=$first">+</i>
                     <to-plag-loaded-tables
+                        ng-show="showDetails"
                         resourse-id="item.id"
                         get-resources-tables="getResourcesTables"
                         show-table-preview=showTablePreview
+                        download-table-names='showDetails'
                     ></to-plag-loaded-tables>
                 </li>
               </ul>
