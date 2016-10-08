@@ -10,6 +10,7 @@ angular.module('BIONApp')
       templateUrl: 'routes/app/dashboard/dashboard.html',
       controller: ['$scope', function($scope) {
         $scope.currentUrl = '/dashboard';
+        $scope.showDashboardList = true;
       }]
     });
 

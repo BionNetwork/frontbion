@@ -10,6 +10,7 @@ angular.module('BIONApp')
       templateUrl: 'routes/app/myWidgets/myWidgets.html',
       controller: ['$scope', function($scope) {
         $scope.currentUrl = '/mywidgets';
+        $scope.showDashboardList = false;
       }]
     });
 

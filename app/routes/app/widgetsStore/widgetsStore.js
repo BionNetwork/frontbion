@@ -10,6 +10,7 @@ angular.module('BIONApp')
       templateUrl: 'routes/app/widgetsStore/widgetsStore.html',
       controller: ['$scope', '$http', function($scope, $http) {
         $scope.currentUrl = '/cardshop'
+        $scope.showDashboardList = false;
         // $scope.token = window.localStorage.getItem('token');
         // var cards = {
         //   get: {

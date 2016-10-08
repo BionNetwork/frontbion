@@ -16,7 +16,8 @@
 		<a class="bttn" ng-class="{'active':currentUrl === '/cardshop'}" ng-href="#/cardshop/view">Магазин приложений</a>
 	</div>
 
-	<div class="pageMenu">
+	<!-- showDashboardList -->
+	<div class="pageMenu" ng-show="showDashboardList">
 		<div class="pageMenu__drop">
 			<one-select-popover
 				title="Рабочие столы"
@@ -25,6 +26,11 @@
 				icon-name="hamburger-menu"
 			></one-select-popover>
 		</div>
+	</div>
+
+	<!-- headerSearch -->
+	<div class="pageMenu" ng-hide="showDashboardList">
+		headerSearch
 	</div>
 
 </div>
