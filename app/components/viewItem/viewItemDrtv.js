@@ -11,7 +11,11 @@
       },
       restrict: 'E',
       controller: 'viewItemCtrl',
-      templateUrl: 'components/viewItem/viewItemTmpl.html'
+      templateUrl: 'components/viewItem/viewItemTmpl.html',
+      link: function (scope, element, attr) {
+          $('.your-class').slick();
+          // element[0].querySelector('.your-class').slick();
+      }
     };
   }
 })();

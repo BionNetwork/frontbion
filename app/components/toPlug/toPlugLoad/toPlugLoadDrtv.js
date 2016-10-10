@@ -16,7 +16,10 @@
       },
       restrict: 'E',
       controller: 'toPlugLoadCtrl',
-      templateUrl: 'components/toPlug/toPlugLoad/toPlugLoadTmpl.html'
+      templateUrl: 'components/toPlug/toPlugLoad/toPlugLoadTmpl.html',
+      link: function (scope, element, attr) {
+            $(".table").niceScroll();
+      }
     };
   }
 })();
