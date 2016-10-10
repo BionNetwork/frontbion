@@ -194,7 +194,7 @@ graphic-settings{
             margin-top: 20px;
             ul li {
               // margin-right: 30px;
-              padding-top:5px;
+              padding-top:2px;
               color: #a4a4a4;
               padding-bottom: 5px;
               // padding-left: 40px;
@@ -205,11 +205,26 @@ graphic-settings{
               border-right: 2px solid #f1f1f1;
               cursor: pointer;
               transition: 0.2s linear;
+              i {
+                position: relative;
+                top: 5px;
+                width: 30px;
+                height: 20px;
+                svg {
+                  transition: 0.2s linear;
+                  fill: #b5b5b5;
+                }
+              }
               &:last-child {
                 border-bottom: 2px solid #f1f1f1;
               }
               &:hover {
                 color: #303030;
+                i {
+                  svg {
+                    fill: #303030;
+                  }
+                }
               }
             }
           }
@@ -217,6 +232,16 @@ graphic-settings{
         &_tools {
           padding-top: 15px;
           height: 70px;
+          .dropbutton {
+            button {
+              i {
+                position: relative;
+                top: -2px;
+                width: 40px;
+                height: 40px;
+              }
+            }
+          }
           .dropdown3 {
             right: 100px;
             display: none;
@@ -230,7 +255,7 @@ graphic-settings{
           }
           .dropdown1,.dropdown2,.dropdown3 {
             padding: 15px;
-            top: 75px;
+            top: 85px;
             position: absolute;
             z-index: 10;
             width: 350px;
@@ -535,6 +560,24 @@ graphic-settings{
             height: 40px;
             border: 1px solid transparent;
             transition: 0.2s linear;
+            background: none;
+            i {
+              position: relative;
+              top: 2px;
+              width: 28px;
+              height: 28px;
+              svg {
+                transition: 0.2s linear;
+                fill: #b5b5b5;
+              }
+            }
+            &:hover, &:active, &:focus {
+              i {
+                svg {
+                  fill: @deep-blue;
+                }
+              }
+            }
           }
           &-filter {
             .filter-title {
