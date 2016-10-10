@@ -7,7 +7,8 @@
   function viewItem() {
     return {
       scope: {
-        cardKey: '=?'
+        cardKey: '=?',
+        breadcrumbs: '=?'
       },
       restrict: 'E',
       controller: 'viewItemCtrl',

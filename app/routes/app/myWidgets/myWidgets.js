@@ -14,6 +14,11 @@ angular.module('BIONApp')
         $scope.token = window.localStorage.getItem('token');
         $scope.language = window.localStorage.getItem('lang') ? window.localStorage.getItem('lang') : 'ru';
 
+        $scope.breadcrumbs = {
+          url: '/mywidgets',
+          name: 'Мои приложения'
+        };
+
 
         var strings = {
           get: {

@@ -14,6 +14,10 @@ angular.module('BIONApp')
         $scope.token = window.localStorage.getItem('token');
         $scope.language = window.localStorage.getItem('lang') ? window.localStorage.getItem('lang') : 'ru';
 
+        $scope.breadcrumbs = {
+          url: '/cardshop',
+          name: 'Магазин приложений'
+        };
 
         var strings = {
           get: {

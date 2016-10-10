@@ -5,7 +5,7 @@
   .controller('toPlugCtrl', ['$scope', toPlugCtrl]);
 
   function toPlugCtrl($scope) {
-    console.log($scope.parentUrl);
+    // console.log($scope.parentUrl);
 
     $scope.onShowRes = $scope.onShowRes || function() {
       console.error('Define onShowRes function in toPlug route');

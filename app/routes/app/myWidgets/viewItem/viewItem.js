@@ -11,6 +11,7 @@ angular.module('BIONApp')
 
         var cardId = $state.params.id;
         $scope.token = window.localStorage.getItem('token');
+
         var cards = {
           get: {
             success: function(response) {

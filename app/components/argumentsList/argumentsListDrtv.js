@@ -9,7 +9,8 @@
       scope: {
         allArguments: '=?',
         cardKey: '=?',
-        parentUrl: '@'
+        parentUrl: '@',
+        breadcrumbs: '=?'
       },
       restrict: 'E',
       controller: 'argumentsListCtrl',
