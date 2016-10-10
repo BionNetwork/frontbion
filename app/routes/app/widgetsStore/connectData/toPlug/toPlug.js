@@ -10,6 +10,7 @@ angular.module('BIONApp')
       controller: ['$scope', '$http', '$state', '$location', function($scope, $http, $state, $location) {
           // console.log($location.search().agumentId);
         $scope.token = window.localStorage.getItem('token');
+        $scope.language = window.localStorage.getItem('lang') ? window.localStorage.getItem('lang') : 'ru';
 
         $scope.parentUrl = '/cardshop';
 
@@ -69,7 +70,8 @@ angular.module('BIONApp')
             method: 'GET',
             url: '/api/v1/resources',
             headers: {
-              'X-AUTHORIZE-TOKEN': $scope.token
+              'X-AUTHORIZE-TOKEN': $scope.token,
+              'Accept-Language' : $scope.language
             },
             params: {
               activation_id: id
@@ -129,7 +131,8 @@ angular.module('BIONApp')
           method: 'GET',
           url: '/api/v1/card/'+ $state.params.id +'/arguments',
           headers: {
-            'X-AUTHORIZE-TOKEN': $scope.token
+            'X-AUTHORIZE-TOKEN': $scope.token,
+            'Accept-Language' : $scope.language
           }
         }).then(arguments.get.success, arguments.get.error);
 
@@ -137,7 +140,8 @@ angular.module('BIONApp')
           method: 'GET',
           url: '/api/v1/cards',
           headers: {
-            'X-AUTHORIZE-TOKEN': $scope.token
+            'X-AUTHORIZE-TOKEN': $scope.token,
+            'Accept-Language' : $scope.language
           },
           params: {
             id: $state.params.id

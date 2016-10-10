@@ -10,6 +10,8 @@ angular.module('BIONApp')
       controller: ['$scope', '$http', '$state', function($scope, $http, $state) {
 
         $scope.token = window.localStorage.getItem('token');
+        $scope.language = window.localStorage.getItem('lang') ? window.localStorage.getItem('lang') : 'ru';
+        
         var arguments = {
           get: {
             success: function(response) {
@@ -36,7 +38,8 @@ angular.module('BIONApp')
           method: 'GET',
           url: '/api/v1/card/'+ $state.params.id +'/arguments',
           headers: {
-            'X-AUTHORIZE-TOKEN': $scope.token
+            'X-AUTHORIZE-TOKEN': $scope.token,
+            'Accept-Language' : $scope.language
           }
         }).then(arguments.get.success, arguments.get.error);
 
@@ -44,7 +47,8 @@ angular.module('BIONApp')
           method: 'GET',
           url: '/api/v1/cards',
           headers: {
-            'X-AUTHORIZE-TOKEN': $scope.token
+            'X-AUTHORIZE-TOKEN': $scope.token,
+            'Accept-Language' : $scope.language
           },
           params: {
             id: $state.params.id
