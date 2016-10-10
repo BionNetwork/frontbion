@@ -22,6 +22,24 @@
 }
 .cls-1{fill:#b2b2b2}
 
+.axis-x {
+  width: 500px;
+  height: 500px;
+}
+.cls-1{fill:#999}
+
+.axis-y {
+  width: 500px;
+  height: 500px;
+}
+.cls-1{fill:#999}
+
+.bol {
+  width: 500px;
+  height: 500px;
+}
+.cls-1{fill:#989898}
+
 .buy {
   width: 500px;
   height: 500px;
@@ -69,6 +87,20 @@
   height: 467.891px;
 }
 .cls-1{fill:#3b309f}
+
+.date {
+  width: 500px;
+  height: 500px;
+}
+.cls-1{fill:#989898}
+.cls-2{fill:#fff}
+
+.datetime {
+  width: 500px;
+  height: 500px;
+}
+.cls-1{fill:#989898}
+.cls-2{fill:#fff}
 
 .db {
   width: 390.351px;
@@ -172,6 +204,13 @@
 }
 .st0{fill:#cbcbcb}
 
+.legend {
+  width: 500px;
+  height: 500px;
+}
+.cls-1,.cls-2{fill:#999}
+.cls-1{fill-rule:evenodd}
+
 .line-chart {
   width: 23.95px;
   height: 23px;
@@ -189,11 +228,29 @@
 }
 .cls-1{fill:#3b309f;fill-rule:evenodd}
 
+.minus {
+  width: 500px;
+  height: 500px;
+}
+.cls-1{fill:#999}
+
+.number {
+  width: 500px;
+  height: 500px;
+}
+.cls-1{fill:#989898}
+
 .pie-chart {
   width: 500px;
   height: 500px;
 }
 .st0{fill:#999}
+
+.plus {
+  width: 500px;
+  height: 500px;
+}
+.cls-1{fill:#999}
 
 .ready {
   width: 500px;
@@ -279,10 +336,22 @@
 }
 .cls-1{fill:#999}
 
+.text {
+  width: 500px;
+  height: 500px;
+}
+.cls-1{fill:#989898}
+
 .tile {
   width: 499px;
   height: 499px;
 }
+
+.time {
+  width: 500px;
+  height: 500px;
+}
+.cls-1{fill:#989898}
 
 .txt {
   width: 456px;
