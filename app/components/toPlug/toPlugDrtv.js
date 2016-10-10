@@ -7,6 +7,7 @@
   function toPlug() {
     return {
       scope: {
+        breadcrumbs: '=?',
         parentUrl: '=?',
         allArguments: '=?',
         cardKey: '=?',
