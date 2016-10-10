@@ -1,7 +1,8 @@
 graphic-settings{
+  @deep-blue: #253da1;
   .ico {
     &_addfilter {
-
+      //noicon
     }
     &_graph1 {
       background: url("/img/icons/graphic/ico_1001.svg") no-repeat 2px 2px;
@@ -92,6 +93,25 @@ graphic-settings{
     &_tool3 {
       background: url("/img/icons/graphic/ico_!legend.svg") no-repeat 2px 2px;
     }
+    &_abc {
+    background: url("/img/icons/graphic/ico_text.svg") no-repeat 0px 0px;
+    }
+    &_date {
+      background: url("/img/icons/graphic/ico_date.svg") no-repeat 0px 0px;
+    }
+    &_datetime {
+      background: url("/img/icons/graphic/ico_datetime.svg") no-repeat 3px 2px;
+      background-size: 28px;
+    }
+    &_num {
+      background: url("/img/icons/graphic/ico_number.svg") no-repeat 0px 0px;
+    }
+    &_bol {
+      background: url("/img/icons/graphic/ico_bol.svg") no-repeat 2px 0px;
+    }
+    &_time {
+      background: url("/img/icons/graphic/ico_time.svg") no-repeat 1px 0px;
+    }
   }
   .graphic-set {
     &_breadcrumbs {
@@ -112,16 +132,13 @@ graphic-settings{
             position: absolute;
             content: "";
             margin-left: 10px;
-            width: 0;
-            height: 0;
-            border-top: 10px solid transparent;
-            border-left: 10px solid #303f9f;
-            border-bottom: 10px solid transparent;
-            border-right: 10px solid transparent;
+            width: 20px;
+            height: 20px;
+            background: url("/img/icons/right.svg") no-repeat 0px 0px;
           }
           &:last-child {
             &:after {
-                border-left: none;
+                background: none;
               }
             }
           a {
@@ -196,8 +213,13 @@ graphic-settings{
               border-top: 2px solid #f1f1f1;
               border-left: 2px solid #f1f1f1;
               border-right: 2px solid #f1f1f1;
+              cursor: pointer;
+              transition: 0.2s linear;
               &:last-child {
                 border-bottom: 2px solid #f1f1f1;
+              }
+              &:hover {
+                color: #303030;
               }
             }
           }
@@ -205,17 +227,278 @@ graphic-settings{
         &_tools {
           padding-top: 15px;
           height: 70px;
+          .dropdown3 {
+            right: 100px;
+          }
+          .dropdown2 {
+            right: 50px;
+            display: none;
+          }
           .dropdown1 {
             right: 0;
+            display: none;
+          }
+          .dropdown1,.dropdown2,.dropdown3 {
+            padding: 15px;
             top: 75px;
             position: absolute;
             z-index: 10;
-            width: 400px;
-            height: 500px;
+            width: 350px;
+            height: 400px;
             background: #fafafa;
             -webkit-box-shadow: 10px 10px 46px -16px rgba(0,0,0,0.63);
             -moz-box-shadow: 10px 10px 46px -16px rgba(0,0,0,0.63);
             box-shadow: 10px 10px 46px -16px rgba(0,0,0,0.63);
+            .dropright {
+              float: left;
+              width: 220px;
+              .titler_line {
+                width: 43%;
+              }
+              .colors-input {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                margin-bottom: 30px;
+                .col {
+                &-input {
+                  width: 100%;
+                  float: left;
+                  input {
+                    background: none;
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                    width: 80%;
+                    float: left;
+                    box-sizing: border-box;
+                    padding: 5px;
+                  }
+                }
+                &-indicator {
+                  position: relative;
+                  top: 0;
+                  width: 30px;
+                  height: 30px;
+                  background: red;
+                  float: right;
+                }
+              }
+            }
+          }
+            .dropleft {
+              float: right;
+              width: 100px;
+              height: 90%;
+              display: inline-table;
+              padding-left: 20px;
+              .vertagn {
+                display: table-cell;
+                vertical-align: middle;
+              }
+              .col-paint {
+                margin-left: 10px;
+                margin-bottom: 10px;
+                width: 25px;
+                height: 25px;
+                float: left;
+                border: 2px solid transparent;
+                outline: none;
+                &.current {
+                  border: 2px solid #353d88;
+                }
+                &.gentle-pink {
+                  background: #f15347;
+                }
+                &.chritsmas-tree {
+                  background: #1fa89e;
+                }
+                &.pink {
+                  background: #e24187;
+                }
+                &.green {
+                  background: #9ccd64;
+                }
+                &.grass {
+                  background: #6bb76c;
+                }
+                &.purple {
+                  background: #b540c5;
+                }
+                &.violet {
+                  background: #7e58bd;
+                }
+                &.gentle-green {
+                  background: #d7e246;
+                }
+                &.night {
+                  background: #5c6db2;
+                }
+                &.yellow {
+                  background: #fdf054;
+                }
+                &.sky {
+                  background: #48a5ea;
+                }
+                &.orange {
+                  background: #f6cc22;
+                }
+                &.blue {
+                  background: #21bbef;
+                }
+                &.mandarin {
+                  background: #ffa42c;
+                }
+                &.cyanogen {
+                  background: #2fc5c3;
+                }
+                &.sunrise {
+                  background: #fa7147;
+                }
+              }
+            }
+            &_save {
+              width: 100%;
+              left: 0;
+              padding-top: 15px;
+              padding-left: 15px;
+              position: absolute;
+              bottom: 15px;
+              border-top: 1px solid #dedede;
+              .button {
+                &_saver {
+                  background: none;
+                  border: none;
+                  color: @deep-blue;
+                  font-weight: 800;
+                  font-size: 16px;
+                  text-transform: uppercase;
+                  margin-right: 20px;
+                }
+                &_canceler {
+                  background: none;
+                  border: none;
+                  color: @deep-blue;
+                  font-size: 16px;
+                  text-transform: uppercase;
+                }
+              }
+            }
+            .period {
+              margin-top: 15px;
+              height: 40px;
+              margin-bottom: 15px;
+              &_active {
+                  height: 40px;
+                .plusminus, .plusminus-left, .plusminus-right {
+                  .plusminus-indicator {
+                    color: #000000;
+                  }
+                  .button_minus {
+                    background: url("/img/icons/graphic/ico_minus.svg") no-repeat 0px 0px;
+                  }
+                  .button_plus {
+                    background: url("/img/icons/graphic/ico_plus.svg") no-repeat 0px 0px;
+                  }
+                }
+              }
+            }
+            &_input {
+              width: 50%;
+              float: left;
+              background: none;
+              border-top: none;
+              border-left: none;
+              border-right: none;
+              border-bottom: 1px solid #dcdcdc;
+              margin-right: 20px;
+            }
+            .button_minus, .button_plus {
+              width: 30px;
+              height: 30px;
+              border: none;
+            }
+            .button_minus {
+              background: url("/img/icons/graphic/ico_-.svg") no-repeat 0px 0px;
+            }
+            .button_plus {
+              background: url("/img/icons/graphic/ico_+.svg") no-repeat 0px 0px;
+            }
+            .plusminus-left {
+              width: 45%;
+              float: left;
+            }
+            .plusminus-right {
+              position: relative;
+              float: right;
+              right: -25px;
+            }
+            .plusminus {
+              position: relative;
+              left: 0px;
+              height: 30px;
+              &-center {
+                right: 0;
+                margin: 0px auto;
+              }
+              &-indicator {
+                position: relative;
+                top: -9px;
+                font-weight: 600;
+                color: #d0d0d0;
+              }
+            }
+            .titler {
+              text-transform: uppercase;
+              font-size: 12px;
+              height: 30px;
+              &_active {
+                height: 30px;
+                .titler_name {
+                  font-weight: 700;
+                  font-size: 12px;
+                  color: #000000;
+                  text-transform: uppercase;
+                }
+                .titler_line {
+                  height: 2px;
+                  border: 1px solid transparent;
+                  background: #000000;
+                }
+                .titler_eye {
+                  background: url("/img/icons/graphic/ico_!eye.svg") no-repeat 0px 0px;
+                }
+              }
+              &_name {
+                float: left;
+                color: #acacac;
+                transition: 0.2s linear;
+              }
+              &_line {
+                position: relative;
+                left: 80px;
+                top:7px;
+                width: 200px;
+                height: 3px;
+                border-top: 1px solid #dcdcdc;
+                border-left: 1px solid #dcdcdc;
+                border-right: 1px solid #dcdcdc;
+                border-bottom: 1px solid #fdfdfd;
+                transition: 0.2s linear;
+              }
+              &_eye {
+                width: 30px;
+                border: none;
+                height: 30px;
+                background: url("/img/icons/graphic/ico_eye.svg") no-repeat 0px 0px;
+                position: relative;
+                float: right;
+                top: -10px;
+                transition: 0.2s linear;
+                &:hover, &:focus, &:active {
+                  background: url("/img/icons/graphic/ico_!eye.svg") no-repeat 0px 0px;
+                }
+              }
+            }
             &:after {
               content: "";
               width: 0;
@@ -247,10 +530,6 @@ graphic-settings{
             height: 40px;
             border: 1px solid transparent;
             transition: 0.2s linear;
-            // &:hover {
-            //   border: 1px solid #15308a;
-            //
-            // }
           }
           &-filter {
             .filter-title {
