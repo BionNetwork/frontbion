@@ -8,28 +8,32 @@ angular.module('BIONApp')
       abstract: true,
       url: '/cardshop',
       templateUrl: 'routes/app/widgetsStore/widgetsStore.html',
-      controller: ['$scope', '$http', function($scope, $http) {
+      controller: ['$scope', '$http', '$state', function($scope, $http, $state) {
         $scope.currentUrl = '/cardshop'
         $scope.showDashboardList = false;
-        // $scope.token = window.localStorage.getItem('token');
-        // var cards = {
-        //   get: {
-        //     success: function(response) {
-        //       $scope.allCards = response.data.data;
-        //       console.log($scope.allCards);
-        //     },
-        //     error: function(response) {
-        //     }
-        //   }
-        // };
-        //
-        // $http({
-        //   method: 'GET',
-        //   url: '/api/v1/cards',
-        //   headers: {
-        //     'X-AUTHORIZE-TOKEN': $scope.token
-        //   }
-        // }).then(cards.get.success, cards.get.error);
+        $scope.token = window.localStorage.getItem('token');
+        $scope.language = window.localStorage.getItem('lang') ? window.localStorage.getItem('lang') : 'ru';
+
+
+        var strings = {
+          get: {
+            success: function(response) {
+              $scope.allStrings = response.data.data;
+              // console.log($scope.menuStrings);
+            },
+            error: function(response) {
+            }
+          }
+        };
+
+        $http({
+          method: 'GET',
+          url: '/api/v1/config/strings',
+          headers: {
+            'X-AUTHORIZE-TOKEN': $scope.token,
+            'Accept-Language' : 'ru'
+          }
+        }).then(strings.get.success, strings.get.error);
 
 
 

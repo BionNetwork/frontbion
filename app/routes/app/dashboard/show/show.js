@@ -10,6 +10,7 @@ angular.module('BIONApp')
       controller: ['$scope', '$state', function($scope, $state) {
         $scope.params = $state.params.id;
         // $scope.currentUrl = '/'
+        console.log($scope.allStrings);
       }]
     });
 

@@ -8,9 +8,33 @@ angular.module('BIONApp')
       abstract: true,
       url: '/mywidgets',
       templateUrl: 'routes/app/myWidgets/myWidgets.html',
-      controller: ['$scope', function($scope) {
+      controller: ['$scope', '$http', '$state', function($scope, $http, $state) {
         $scope.currentUrl = '/mywidgets';
         $scope.showDashboardList = false;
+        $scope.token = window.localStorage.getItem('token');
+        $scope.language = window.localStorage.getItem('lang') ? window.localStorage.getItem('lang') : 'ru';
+
+
+        var strings = {
+          get: {
+            success: function(response) {
+              $scope.allStrings = response.data.data;
+              // console.log($scope.menuStrings);
+            },
+            error: function(response) {
+            }
+          }
+        };
+
+        $http({
+          method: 'GET',
+          url: '/api/v1/config/strings',
+          headers: {
+            'X-AUTHORIZE-TOKEN': $scope.token,
+            'Accept-Language' : 'ru'
+          }
+        }).then(strings.get.success, strings.get.error);
+
       }]
     });
 

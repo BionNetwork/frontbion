@@ -5,6 +5,7 @@
   .controller('menuTopCtrl', ['$scope', '$state', menuTopCtrl]);
 
   function menuTopCtrl($scope, $state) {
+    // console.log($scope.allStrings.header.menu.desktop);
     $scope.contentFirst = [
         {name: "Рабочий стол", url: '/dashboard'},
         {name: "Мои приложения", url: '/mywidgets/view'},

@@ -8,7 +8,8 @@
     return {
       scope: {
         currentUrl: '=?',
-        showDashboardList: '='
+        showDashboardList: '=',
+        allStrings: '=?'
       },
       restrict: 'E',
       controller: 'menuTopCtrl',
