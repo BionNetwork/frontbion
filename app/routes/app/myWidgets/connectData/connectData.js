@@ -9,7 +9,7 @@ angular.module('BIONApp')
       url: '/connect-data',
       templateUrl: 'routes/app/myWidgets/connectData/connectData.html',
       controller: ['$scope', '$http', '$state', function($scope, $http, $state) {
-
+        
         // var cardId = $state.params.id;
         // $scope.token = window.localStorage.getItem('token');
         // var cards = {

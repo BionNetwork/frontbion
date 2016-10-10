@@ -6,10 +6,11 @@
 
   function argumentsListCtrl($scope) {
 
-
-
-
-
+    $scope.$watch('allStrings', function () {
+      if ($scope.allStrings) {
+        console.log($scope.allStrings);
+      }
+    });
   }
 
 })();

@@ -14,10 +14,14 @@ angular.module('BIONApp')
         $scope.token = window.localStorage.getItem('token');
         $scope.language = window.localStorage.getItem('lang') ? window.localStorage.getItem('lang') : 'ru';
 
-        $scope.breadcrumbs = {
-          url: '/cardshop',
-          name: 'Магазин приложений'
-        };
+        $scope.$watch('allStrings', function () {
+          if ($scope.allStrings) {
+            $scope.breadcrumbs = {
+              url: '/mywidgets',
+              name: $scope.allStrings.header.menu.widgetsStore
+            };
+          }
+        });
 
 
 

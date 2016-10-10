@@ -11,6 +11,7 @@ angular.module('BIONApp')
 
         var cardId = $state.params.id;
         $scope.token = window.localStorage.getItem('token');
+        $scope.language = window.localStorage.getItem('lang') ? window.localStorage.getItem('lang') : 'ru';
 
         var cards = {
           get: {
@@ -27,7 +28,8 @@ angular.module('BIONApp')
           method: 'GET',
           url: '/api/v1/cards',
           headers: {
-            'X-AUTHORIZE-TOKEN': $scope.token
+            'X-AUTHORIZE-TOKEN': $scope.token,
+            'Accept-Language' : $scope.language
           },
           params: {
             id: cardId
