@@ -6,6 +6,8 @@
 
   function toPlugLoadCtrl($scope, $state, $location, $toPlugLoadSrv) {
 
+    $scope.cardId = $state.params.id;
+
     $scope.showChooseColumn = false;
 
     $scope.$watch('files', function () {

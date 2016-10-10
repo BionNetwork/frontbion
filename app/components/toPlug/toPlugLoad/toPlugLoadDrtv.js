@@ -7,12 +7,13 @@
   function toPlugLoad() {
     return {
       scope: {
+        parentUrl: '=?',
         activationId: '=?',
         getResources: '=?',
         tablePreview: '=?',
         choosedTableName: '=?',
         choosedTableResourceId: '=?',
-        argumentBound: '=?'
+        argumentBound: '=?',
       },
       restrict: 'E',
       controller: 'toPlugLoadCtrl',

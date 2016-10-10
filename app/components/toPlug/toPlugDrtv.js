@@ -7,6 +7,7 @@
   function toPlug() {
     return {
       scope: {
+        parentUrl: '=?',
         allArguments: '=?',
         cardKey: '=?',
         allResources: '=?',
@@ -15,7 +16,7 @@
         getResourcesTables: '=?',
         showTablePreview: '=?',
         tablePreview: '=?',
-        argumentBound: '=?'
+        argumentBound: '=?',
       },
       restrict: 'E',
       controller: 'toPlugCtrl',

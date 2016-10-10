@@ -10,6 +10,9 @@ angular.module('BIONApp')
       controller: ['$scope', '$http', '$state', '$location', function($scope, $http, $state, $location) {
           // console.log($location.search().agumentId);
         $scope.token = window.localStorage.getItem('token');
+
+        $scope.parentUrl = '/mywidgets';
+
         var arguments = {
           get: {
             success: function(response) {
