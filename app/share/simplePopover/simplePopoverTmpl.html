@@ -10,7 +10,7 @@
 			</i>
 			<h4 class="dropmodal__content_header">{{title}}</h4>
 			<ol class="dropmodal__content_item">
-				<li ng-click="click('123')" ng-repeat="item in content">
+				<li ng-click="click(item.name)" ng-repeat="item in content">
 					<a ng-href="#{{item.url}}">
 						<span>{{item.name}}</span>
 					</a>

@@ -10,10 +10,10 @@ angular.module('BIONApp')
       controller: ['$scope', '$http', function($scope, $http) {
 
         $scope.token = window.localStorage.getItem('token');
-        var cards = {
+        var myCards = {
           get: {
             success: function(response) {
-              $scope.allCards = response.data.data;
+              $scope.myAllCards = response.data.data;
               // console.log($scope.allCards);
             },
             error: function(response) {
@@ -23,11 +23,11 @@ angular.module('BIONApp')
 
         $http({
           method: 'GET',
-          url: '/api/v1/cards',
+          url: '/api/v1/purchases',
           headers: {
             'X-AUTHORIZE-TOKEN': $scope.token
           }
-        }).then(cards.get.success, cards.get.error);
+        }).then(myCards.get.success, myCards.get.error);
 
 
 

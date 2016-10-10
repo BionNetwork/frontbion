@@ -20,26 +20,6 @@ angular.module('BIONApp')
         };
 
 
-        var strings = {
-          get: {
-            success: function(response) {
-              $scope.allStrings = response.data.data;
-              // console.log($scope.menuStrings);
-            },
-            error: function(response) {
-            }
-          }
-        };
-
-        $http({
-          method: 'GET',
-          url: '/api/v1/config/strings',
-          headers: {
-            'X-AUTHORIZE-TOKEN': $scope.token,
-            'Accept-Language' : 'ru'
-          }
-        }).then(strings.get.success, strings.get.error);
-
       }]
     });
 

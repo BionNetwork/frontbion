@@ -7,11 +7,12 @@
   function simplePopover($document) {
     return {
       scope: {
-        title: '@',
+        title: '=?',
         placement: '@',
         content: '=?',
         iconName: '@',
-        showIcon: '='
+        showIcon: '=',
+        onChange: '=?'
       },
       restrict: 'E',
       controller: 'simplePopoverCtrl',

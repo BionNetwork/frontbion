@@ -7,7 +7,9 @@
   function simplePopoverCtrl($scope, $state) {
     // console.log('simplePopoverCtrl');
     $scope.click = function (name) {
-        console.log(name);
+      if ($scope.onChange) {
+          return $scope.onChange(name);
+      }
     }
 
   }

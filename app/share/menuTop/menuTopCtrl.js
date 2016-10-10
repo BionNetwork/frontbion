@@ -2,21 +2,36 @@
   'use strict';
   angular
   .module('BIONApp')
-  .controller('menuTopCtrl', ['$scope', '$state', menuTopCtrl]);
+  .controller('menuTopCtrl', ['$scope', '$state', '$window', menuTopCtrl]);
 
-  function menuTopCtrl($scope, $state) {
+  function menuTopCtrl($scope, $state, $window) {
     // console.log($scope.allStrings.header.menu.desktop);
-    $scope.contentFirst = [
-        {name: "Рабочий стол", url: '/dashboard'},
-        {name: "Мои приложения", url: '/mywidgets/view'},
-        {name: "Магазин", url: '/cardshop/view'},
-        {name: "English", url: ''},
-        {name: "Выход", url: '/login'}
-    ];
+    $scope.$watch('allStrings' ,function () {
+      if ($scope.allStrings) {
+        $scope.menuPopoverContent = [
+            {name: $scope.allStrings.header.menu.desktop, url: '/dashboard'},
+            {name: $scope.allStrings.header.menu.myWidgets, url: '/mywidgets/view'},
+            {name: $scope.allStrings.header.menu.widgetsStore, url: '/cardshop/view'},
+            {name: $scope.allStrings.header.menu.language, url: ''},
+            {name: "Выход", url: '/login'}
+        ];
 
+      }
+    });
     $scope.contentSecond = [
         {name: "Прибыль по проектам"}
     ];
+    // functions
+    $scope.onChange = function (item) {
+      if (item == 'English' || item == 'Русский') {
+        if (window.localStorage.getItem('lang') == 'ru') {
+          window.localStorage.setItem('lang', 'en');
+        }else if(window.localStorage.getItem('lang') == 'en'){
+          window.localStorage.setItem('lang', 'ru');
+        }
+        $window.location.reload();
+      };
+    };
     // console.log($scope.contentSecond);
 
 

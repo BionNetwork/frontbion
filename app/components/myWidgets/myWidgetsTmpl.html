@@ -1,21 +1,21 @@
 <div class="my_widgets">
-  <div class="card" ng-repeat="card in allCards">
-    <a class='href' ng-href="#/mywidgets/item/{{card.id}}"></a>
+  <div class="card" ng-repeat="card in myAllCards">
+    <a class='href' ng-href="#/mywidgets/item/{{card.card.id}}"></a>
     <div class="name">
-      {{card.name}}
+      {{card.card.name}}
     </div>
     <div class="discription">
-      {{card.description}}
+      {{card.card.description}}
     </div>
     <div class="card_image">
-      <img ng-src="/img/cards/4-2.png" alt="" />
+      <img ng-src="/img/cards/4-{{$index+1}}.png" alt="" />
     </div>
     <div class="card_footer">
       <div class="stars">
         Эттон
       </div>
       <div class="price">
-        {{card.rating}}руб
+        {{card.card.rating}}руб
       </div>
     </div>
   </div>
