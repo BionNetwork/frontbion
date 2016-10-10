@@ -1,118 +1,126 @@
+@import "../../assets/css/_variables.less";
 graphic-settings{
   @deep-blue: #253da1;
-  .ico {
-    &_addfilter {
-      //noicon
-    }
-    &_graph1 {
-      background: url("/img/icons/graphic/ico_1001.svg") no-repeat 2px 2px;
-      background-size: 30px;
-      &:focus,&:active, &:hover {
-      background: url("/img/icons/graphic/ico_graph.svg") no-repeat 2px 2px;
-      background-size: 30px;
+  .page-container {
+    .topBlock {
+      &__name {
+        margin-bottom: 10px!important;
       }
-    }
-    &_graph2 {
-      background: url("/img/icons/graphic/ico_1002.svg") no-repeat 4px 3px;
-      background-size: 30px;
-      &:focus,&:active, &:hover {
-      background: url("/img/icons/graphic/ico_pkbal.svg") no-repeat 4px 3px;
-      background-size: 30px;
-      }
-    }
-    &_graph3 {
-      background: url("/img/icons/graphic/ico_1003.svg") no-repeat 2px 2px;
-      background-size: 30px;
-      &:focus,&:active, &:hover {
-      background: url("/img/icons/graphic/ico_diag.svg") no-repeat 2px 2px;
-      background-size: 30px;
-      }
-    }
-    &_graph4 {
-      background: url("/img/icons/graphic/ico_1004.svg") no-repeat 2px 2px;
-      background-size: 30px;
-      &:focus,&:active, &:hover {
-      background: url("/img/icons/graphic/ico-diag2.svg") no-repeat 2px 2px;
-      background-size: 30px;
-      }
-    }
-    &_graph5 {
-      background: url("/img/icons/graphic/ico_1005.svg") no-repeat 2px 2px;
-      background-size: 30px;
-      &:focus,&:active, &:hover {
-      background: url("/img/icons/graphic/ico-table.svg") no-repeat 2px 2px;
-      background-size: 30px;
-      }
-    }
-    &_graph6 {
-      background: url("/img/icons/graphic/ico_1006.svg") no-repeat 2px 2px;
-      background-size: 30px;
-      &:focus,&:active, &:hover {
-      background: url("/img/icons/graphic/ico_123.svg") no-repeat 2px 2px;
-      background-size: 30px;
-      }
-    }
-    &_graph7 {
-      background: url("/img/icons/graphic/ico_1007.svg") no-repeat 2px 2px;
-      background-size: 30px;
-      &:focus,&:active, &:hover {
-      background: url("/img/icons/graphic/ico_diag3.svg") no-repeat 2px 2px;
-      background-size: 30px;
-      }
-    }
-    &_graph8 {
-      background: url("/img/icons/graphic/ico_1008.svg") no-repeat 2px 2px;
-      background-size: 30px;
-      &:focus,&:active, &:hover {
-      background: url("/img/icons/graphic/ico-diag4.svg") no-repeat 2px 2px;
-      background-size: 30px;
-      }
-    }
-    &_graph9 {
-      background: url("/img/icons/graphic/ico_1009.svg") no-repeat 2px 2px;
-      background-size: 30px;
-      &:focus,&:active, &:hover {
-      background: url("/img/icons/graphic/ico_currency.svg") no-repeat 2px 2px;
-      background-size: 30px;
-      }
-    }
-    &_graph10 {
-      background: url("/img/icons/graphic/ico_1010.svg") no-repeat 2px 2px;
-      background-size: 30px;
-      &:focus,&:active, &:hover {
-      background: url("/img/icons/graphic/ico_globe.svg") no-repeat 2px 2px;
-      background-size: 30px;
-      }
-    }
-    &_tool1 {
-      background: url("/img/icons/graphic/ico_!x.svg") no-repeat 2px 2px;
-    }
-    &_tool2 {
-      background: url("/img/icons/graphic/ico_!y.svg") no-repeat 2px 2px;
-    }
-    &_tool3 {
-      background: url("/img/icons/graphic/ico_!legend.svg") no-repeat 2px 2px;
-    }
-    &_abc {
-    background: url("/img/icons/graphic/ico_text.svg") no-repeat 0px 0px;
-    }
-    &_date {
-      background: url("/img/icons/graphic/ico_date.svg") no-repeat 0px 0px;
-    }
-    &_datetime {
-      background: url("/img/icons/graphic/ico_datetime.svg") no-repeat 3px 2px;
-      background-size: 28px;
-    }
-    &_num {
-      background: url("/img/icons/graphic/ico_number.svg") no-repeat 0px 0px;
-    }
-    &_bol {
-      background: url("/img/icons/graphic/ico_bol.svg") no-repeat 2px 0px;
-    }
-    &_time {
-      background: url("/img/icons/graphic/ico_time.svg") no-repeat 1px 0px;
     }
   }
+  // .ico {
+  //   &_addfilter {
+  //     //noicon
+  //   }
+  //   &_graph1 {
+  //     background: url("/img/icons/graphic/ico_1001.svg") no-repeat 2px 2px;
+  //     background-size: 30px;
+  //     &:focus,&:active, &:hover {
+  //     background: url("/img/icons/graphic/ico_graph.svg") no-repeat 2px 2px;
+  //     background-size: 30px;
+  //     }
+  //   }
+  //   &_graph2 {
+  //     background: url("/img/icons/graphic/ico_1002.svg") no-repeat 4px 3px;
+  //     background-size: 30px;
+  //     &:focus,&:active, &:hover {
+  //     background: url("/img/icons/graphic/ico_pkbal.svg") no-repeat 4px 3px;
+  //     background-size: 30px;
+  //     }
+  //   }
+  //   &_graph3 {
+  //     background: url("/img/icons/graphic/ico_1003.svg") no-repeat 2px 2px;
+  //     background-size: 30px;
+  //     &:focus,&:active, &:hover {
+  //     background: url("/img/icons/graphic/ico_diag.svg") no-repeat 2px 2px;
+  //     background-size: 30px;
+  //     }
+  //   }
+  //   &_graph4 {
+  //     background: url("/img/icons/graphic/ico_1004.svg") no-repeat 2px 2px;
+  //     background-size: 30px;
+  //     &:focus,&:active, &:hover {
+  //     background: url("/img/icons/graphic/ico-diag2.svg") no-repeat 2px 2px;
+  //     background-size: 30px;
+  //     }
+  //   }
+  //   &_graph5 {
+  //     background: url("/img/icons/graphic/ico_1005.svg") no-repeat 2px 2px;
+  //     background-size: 30px;
+  //     &:focus,&:active, &:hover {
+  //     background: url("/img/icons/graphic/ico-table.svg") no-repeat 2px 2px;
+  //     background-size: 30px;
+  //     }
+  //   }
+  //   &_graph6 {
+  //     background: url("/img/icons/graphic/ico_1006.svg") no-repeat 2px 2px;
+  //     background-size: 30px;
+  //     &:focus,&:active, &:hover {
+  //     background: url("/img/icons/graphic/ico_123.svg") no-repeat 2px 2px;
+  //     background-size: 30px;
+  //     }
+  //   }
+  //   &_graph7 {
+  //     background: url("/img/icons/graphic/ico_1007.svg") no-repeat 2px 2px;
+  //     background-size: 30px;
+  //     &:focus,&:active, &:hover {
+  //     background: url("/img/icons/graphic/ico_diag3.svg") no-repeat 2px 2px;
+  //     background-size: 30px;
+  //     }
+  //   }
+  //   &_graph8 {
+  //     background: url("/img/icons/graphic/ico_1008.svg") no-repeat 2px 2px;
+  //     background-size: 30px;
+  //     &:focus,&:active, &:hover {
+  //     background: url("/img/icons/graphic/ico-diag4.svg") no-repeat 2px 2px;
+  //     background-size: 30px;
+  //     }
+  //   }
+  //   &_graph9 {
+  //     background: url("/img/icons/graphic/ico_1009.svg") no-repeat 2px 2px;
+  //     background-size: 30px;
+  //     &:focus,&:active, &:hover {
+  //     background: url("/img/icons/graphic/ico_currency.svg") no-repeat 2px 2px;
+  //     background-size: 30px;
+  //     }
+  //   }
+  //   &_graph10 {
+  //     background: url("/img/icons/graphic/ico_1010.svg") no-repeat 2px 2px;
+  //     background-size: 30px;
+  //     &:focus,&:active, &:hover {
+  //     background: url("/img/icons/graphic/ico_globe.svg") no-repeat 2px 2px;
+  //     background-size: 30px;
+  //     }
+  //   }
+  //   &_tool1 {
+  //     background: url("/img/icons/graphic/ico_!x.svg") no-repeat 2px 2px;
+  //   }
+  //   &_tool2 {
+  //     background: url("/img/icons/graphic/ico_!y.svg") no-repeat 2px 2px;
+  //   }
+  //   &_tool3 {
+  //     background: url("/img/icons/graphic/ico_!legend.svg") no-repeat 2px 2px;
+  //   }
+  //   &_abc {
+  //   background: url("/img/icons/graphic/ico_text.svg") no-repeat 0px 0px;
+  //   }
+  //   &_date {
+  //     background: url("/img/icons/graphic/ico_date.svg") no-repeat 0px 0px;
+  //   }
+  //   &_datetime {
+  //     background: url("/img/icons/graphic/ico_datetime.svg") no-repeat 3px 2px;
+  //     background-size: 28px;
+  //   }
+  //   &_num {
+  //     background: url("/img/icons/graphic/ico_number.svg") no-repeat 0px 0px;
+  //   }
+  //   &_bol {
+  //     background: url("/img/icons/graphic/ico_bol.svg") no-repeat 2px 0px;
+  //   }
+  //   &_time {
+  //     background: url("/img/icons/graphic/ico_time.svg") no-repeat 1px 0px;
+  //   }
+  // }
   .graphic-set {
     &_breadcrumbs {
       padding-top: 20px;
@@ -148,24 +156,6 @@ graphic-settings{
           }
         }
       }
-    &_bg {
-      position: relative;
-      background: #ffffff;
-      margin-top: 5px;
-      &.title {
-        border-bottom: 1px solid #bfbfbf;
-        padding-bottom: 10px;
-        h1 {
-          font-size: 21px;
-        }
-        p {
-          color: #a4a4a4;
-          .step {
-            text-transform: uppercase;
-          }
-        }
-      }
-    }
     &_main {
       background: #ffffff;
       .panel {
@@ -203,11 +193,11 @@ graphic-settings{
           .data-list {
             margin-top: 20px;
             ul li {
-              margin-right: 30px;
+              // margin-right: 30px;
               padding-top:5px;
               color: #a4a4a4;
               padding-bottom: 5px;
-              padding-left: 40px;
+              // padding-left: 40px;
               margin-left: -40px;
               list-style-type: none;
               border-top: 2px solid #f1f1f1;
@@ -229,6 +219,7 @@ graphic-settings{
           height: 70px;
           .dropdown3 {
             right: 100px;
+            display: none;
           }
           .dropdown2 {
             right: 50px;
@@ -236,7 +227,6 @@ graphic-settings{
           }
           .dropdown1 {
             right: 0;
-            display: none;
           }
           .dropdown1,.dropdown2,.dropdown3 {
             padding: 15px;
@@ -288,10 +278,25 @@ graphic-settings{
             .dropleft {
               float: right;
               width: 100px;
-              height: 90%;
+              height: 85%;
               display: inline-table;
               padding-left: 20px;
+              &:before {
+                content: "";
+                width: 0;
+                height: 0;
+                margin-left: -30px;
+                top: 38%;
+                position: absolute;
+                border-top: 20px solid transparent;
+                border-left: 20px solid transparent;
+                border-bottom: 20px solid transparent;
+                border-right: 15px solid #ffffff;
+              }
               .vertagn {
+                border-radius: 3px;
+                padding-top: 10px;
+                background: #ffffff;
                 display: table-cell;
                 vertical-align: middle;
               }

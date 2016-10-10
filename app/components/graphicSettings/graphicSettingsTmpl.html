@@ -1,23 +1,22 @@
 <div class="graphic_settings">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12 graphic-set_breadcrumbs">
-        <ul class="crumbs">
-          <li><a href="">Мои карточки</a></li>
-          <li><a href="">Незаполненные</a></li>
-          <li><a href="">Читая приведенная стоимость (NPV план/факт)</a></li>
-        </ul>
+  <div class="main-container">
+      <div class="breadcrumbs">
+        <span><a href="">Мои приложения</a><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#ar-right"></use></svg></i></span>
+        <span><a href="">fgsedfgs</a></span>
       </div>
-      <div class="col-xs-12">
-        <div class="col-xs-12 graphic-set_bg title">
-          <div class="row">
-            <div class="col-xs-12">
-              <h1>Чистая приведенная стоимость (NPV план/факт)</h1>
-              <p><span class="step">Шаг 3.</span> Настройте внешний вид карточки для отображения на рабочем столе.</p>
+      <div class="page-container">
+          <div class="topBlock">
+            <h1 class="topBlock__name">gsdfsdf</h1>
+            <div class="topBlock__description">
+              <span>ШАГ 1. Выберите параметр к которому хотите подключить источник данных.</span>
+            </div>
+            <div class="linkStep" ng-init="selectedTab = 'arguments'">
+              <a ng-class="{'active':selectedTab === 'arguments'}" ng-click="selectedTab = 'arguments'">Аргументы</a>
+              <a ng-class="{'active':selectedTab === 'connect-data'}" ng-click="selectedTab = 'connect-data'">Подключить данные</a>
+              <a ng-class="{'active':selectedTab === 'graphic'}" ng-click="selectedTab = 'graphic'">График</a>
             </div>
           </div>
-        </div>
-        <div class="col-xs-12 graphic-set_main">
+        <div class="graphic-set_main">
           <div class="row">
             <div class="col-xs-2 panel_left">
               <button class="panel_button">Данные</button>
@@ -29,16 +28,16 @@
               </div>
               <div class="data-list">
                 <ul>
-                  <li class="ico_abc">Аэропорты</li>
-                  <li class="ico_date">Аэропорты</li>
-                  <li class="ico_datetime">Аэропорты</li>
-                  <li class="ico_num">Аэропорты</li>
-                  <li class="ico_bol">Аэропорты</li>
-                  <li class="ico_time">Аэропорты</li>
-                  <li class="ico_datetime">Аэропорты</li>
-                  <li class="ico_num">Аэропорты</li>
-                  <li class="ico_abc">Аэропорты</li>
-                  <li class="ico_date">Аэропорты</li>
+                  <li><i class="icon"></i>Аэропорты</li>
+                  <li><i class="icon"></i>Аэропорты</li>
+                  <li><i class="icon"></i>Аэропорты</li>
+                  <li><i class="icon"></i>Аэропорты</li>
+                  <li><i class="icon"></i>Аэропорты</li>
+                  <li><i class="icon"></i>Аэропорты</li>
+                  <li><i class="icon"></i>Аэропорты</li>
+                  <li><i class="icon"></i>Аэропорты</li>
+                  <li><i class="icon"></i>Аэропорты</li>
+                  <li><i class="icon"></i>Аэропорты</li>
                 </ul>
               </div>
             </div>
@@ -67,6 +66,94 @@
                   <div class="dropbutton">
                     <button class="panel_tools-button ico_tool3 pull-right"></button>
                     <div class="dropdown1">
+                      <div class="dropright">
+                        <div class="titler">
+                          <div class="titler_name">
+                            <span>Легенда</span>
+                          </div>
+                          <div class="titler_line">
+                          </div>
+                          <button class="titler_eye">
+                          </button>
+                        </div>
+                        <div class="colors-input">
+                          <div class="col-input">
+                            <input placeholder="Color"/>
+                            <div class="col-indicator">
+                              <!-- indicator-->
+                            </div>
+                          </div>
+                        </div>
+                        <div class="colors-input">
+                          <div class="col-input">
+                            <input placeholder="Color"/>
+                            <div class="col-indicator">
+                              <!-- indicator-->
+                            </div>
+                          </div>
+                        </div>
+                        <div class="colors-input">
+                          <div class="col-input">
+                            <input placeholder="Color"/>
+                            <div class="col-indicator">
+                              <!-- indicator-->
+                            </div>
+                          </div>
+                        </div>
+                        <div class="colors-input">
+                          <div class="col-input">
+                            <input placeholder="Color"/>
+                            <div class="col-indicator">
+                              <!-- indicator-->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="dropleft">
+                        <div class="vertagn">
+                          <button class="col-paint gentle-pink">
+                          </button>
+                          <button class="col-paint chritsmas-tree">
+                          </button>
+                          <button class="col-paint pink">
+                          </button>
+                          <button class="col-paint grass">
+                          </button>
+                          <button class="col-paint green">
+                          </button>
+                          <button class="col-paint purple">
+                          </button>
+                          <button class="col-paint violet">
+                          </button>
+                          <button class="col-paint gentle-green ">
+                          </button>
+                          <button class="col-paint night">
+                          </button>
+                          <button class="col-paint yellow current">
+                          </button>
+                          <button class="col-paint sky">
+                          </button>
+                          <button class="col-paint orange">
+                          </button>
+                          <button class="col-paint blue">
+                          </button>
+                          <button class="col-paint mandarin">
+                          </button>
+                          <button class="col-paint cyanogen">
+                          </button>
+                          <button class="col-paint sunrise">
+                          </button>
+                        </div>
+                      </div>
+                      <div class="dropdown1_save">
+                        <button class="button_saver">Сохранить</button>
+                        <button class="button_canceler">Отмена</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dropbutton">
+                    <button class="panel_tools-button ico_tool2 pull-right"></button>
+                    <div class="dropdown2">
                       <div class="titler">
                         <div class="titler_name">
                           <span>Заголовок</span>
@@ -140,178 +227,77 @@
                     </div>
                   </div>
                   <div class="dropbutton">
-                    <button class="panel_tools-button ico_tool2 pull-right"></button>
-                    <div class="dropdown2">
-                      <div class="dropright">
-                        <div class="titler">
-                          <div class="titler_name">
-                            <span>Легенда</span>
-                          </div>
-                          <div class="titler_line">
-                          </div>
-                          <button class="titler_eye">
-                          </button>
-                        </div>
-                        <div class="colors-input">
-                          <div class="col-input">
-                            <input placeholder="Color"/>
-                            <div class="col-indicator">
-                              <!-- indicator-->
-                            </div>
-                          </div>
-                        </div>
-                        <div class="colors-input">
-                          <div class="col-input">
-                            <input placeholder="Color"/>
-                            <div class="col-indicator">
-                              <!-- indicator-->
-                            </div>
-                          </div>
-                        </div>
-                        <div class="colors-input">
-                          <div class="col-input">
-                            <input placeholder="Color"/>
-                            <div class="col-indicator">
-                              <!-- indicator-->
-                            </div>
-                          </div>
-                        </div>
-                        <div class="colors-input">
-                          <div class="col-input">
-                            <input placeholder="Color"/>
-                            <div class="col-indicator">
-                              <!-- indicator-->
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="dropleft">
-                        <div class="vertagn">
-                          <button class="col-paint gentle-pink">
-                          </button>
-                          <button class="col-paint chritsmas-tree">
-                          </button>
-                          <button class="col-paint pink">
-                          </button>
-                          <button class="col-paint grass">
-                          </button>
-                          <button class="col-paint green">
-                          </button>
-                          <button class="col-paint purple">
-                          </button>
-                          <button class="col-paint violet">
-                          </button>
-                          <button class="col-paint gentle-green ">
-                          </button>
-                          <button class="col-paint night">
-                          </button>
-                          <button class="col-paint yellow current">
-                          </button>
-                          <button class="col-paint sky">
-                          </button>
-                          <button class="col-paint orange">
-                          </button>
-                          <button class="col-paint blue">
-                          </button>
-                          <button class="col-paint mandarin">
-                          </button>
-                          <button class="col-paint cyanogen">
-                          </button>
-                          <button class="col-paint sunrise">
-                          </button>
-                        </div>
-                      </div>
-                      <div class="dropdown1_save">
-                        <button class="button_saver">Сохранить</button>
-                        <button class="button_canceler">Сохранить</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="dropbutton">
                     <button class="panel_tools-button ico_tool1 pull-right"></button>
                     <div class="dropdown3">
-                      <div class="dropright">
-                        <div class="titler">
-                          <div class="titler_name">
-                            <span>Легенда</span>
-                          </div>
-                          <div class="titler_line">
-                          </div>
-                          <button class="titler_eye">
-                          </button>
+                      <div class="titler">
+                        <div class="titler_name">
+                          <span>Заголовок</span>
                         </div>
-                        <div class="colors-input">
-                          <div class="col-input">
-                            <input placeholder="Color"/>
-                            <div class="col-indicator">
-                              <!-- indicator-->
-                            </div>
-                          </div>
+                        <div class="titler_line">
                         </div>
-                        <div class="colors-input">
-                          <div class="col-input">
-                            <input placeholder="Color"/>
-                            <div class="col-indicator">
-                              <!-- indicator-->
-                            </div>
-                          </div>
-                        </div>
-                        <div class="colors-input">
-                          <div class="col-input">
-                            <input placeholder="Color"/>
-                            <div class="col-indicator">
-                              <!-- indicator-->
-                            </div>
-                          </div>
-                        </div>
-                        <div class="colors-input">
-                          <div class="col-input">
-                            <input placeholder="Color"/>
-                            <div class="col-indicator">
-                              <!-- indicator-->
-                            </div>
+                        <button class="titler_eye">
+                        </button>
+                      </div>
+                      <div class="period">
+                        <input class="dropdown1_input" placeholder="Период"></input>
+                        <div class="plusminus">
+                          <div class="pluminus-center">
+                            <span class="plusminus-indicator">Текст:</span>
+                            <button class="button_minus"></button>
+                            <span class="plusminus-indicator">1.2s</span>
+                            <button class="button_plus"></button>
                           </div>
                         </div>
                       </div>
-                      <div class="dropleft">
-                        <div class="vertagn">
-                          <button class="col-paint gentle-pink">
-                          </button>
-                          <button class="col-paint chritsmas-tree">
-                          </button>
-                          <button class="col-paint pink">
-                          </button>
-                          <button class="col-paint grass">
-                          </button>
-                          <button class="col-paint green">
-                          </button>
-                          <button class="col-paint purple">
-                          </button>
-                          <button class="col-paint violet">
-                          </button>
-                          <button class="col-paint gentle-green ">
-                          </button>
-                          <button class="col-paint night">
-                          </button>
-                          <button class="col-paint yellow current">
-                          </button>
-                          <button class="col-paint sky">
-                          </button>
-                          <button class="col-paint orange">
-                          </button>
-                          <button class="col-paint blue">
-                          </button>
-                          <button class="col-paint mandarin">
-                          </button>
-                          <button class="col-paint cyanogen">
-                          </button>
-                          <button class="col-paint sunrise">
-                          </button>
+                      <div class="titler_active">
+                        <div class="titler_name">
+                          <span>Шкала</span>
+                        </div>
+                        <div class="titler_line">
+                        </div>
+                        <button class="titler_eye">
+                        </button>
+                      </div>
+                      <div class="period_active">
+                        <div class="plusminus-left">
+                          <div class="pluminus-center">
+                            <span class="plusminus-indicator">Шаг:</span>
+                            <button class="button_minus"></button>
+                            <span class="plusminus-indicator">1.2s</span>
+                            <button class="button_plus"></button>
+                          </div>
+                        </div>
+                        <div class="plusminus-right">
+                          <div class="pluminus-center">
+                              <span class="plusminus-indicator">Текст:</span>
+                            <button class="button_minus"></button>
+                            <span class="plusminus-indicator">1.2s</span>
+                            <button class="button_plus"></button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="titler_active">
+                        <div class="titler_name">
+                          <span>Ось</span>
+                        </div>
+                        <div class="titler_line">
+                        </div>
+                        <button class="titler_eye">
+                        </button>
+                      </div>
+                      <div class="period_active">
+                        <div class="plusminus">
+                          <div class="pluminus-center">
+                            <span class="plusminus-indicator">Толщина линии:</span>
+                            <button class="button_minus"></button>
+                            <span class="plusminus-indicator">1.2s</span>
+                            <button class="button_plus"></button>
+                          </div>
                         </div>
                       </div>
                       <div class="dropdown1_save">
                         <button class="button_saver">Сохранить</button>
-                        <button class="button_canceler">Сохранить</button>
+                        <button class="button_canceler">Отмена</button>
                       </div>
                     </div>
                   </div>
@@ -340,7 +326,6 @@
               </div>
             </div>
           </div>
-        </div>
       </div>
     </div>
   </div>
