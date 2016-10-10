@@ -9,7 +9,7 @@
 
     $scope.data = {
           title: {
-              text: 'Temperature data'
+              text: ''
           },
           xAxis: {
               categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',

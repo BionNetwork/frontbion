@@ -1,16 +1,26 @@
-<div class="smallCard" ng-style="{width: index == 2 || index == 4 ? '610px' : '300px'}">
-  <div class="chart_name">
-    <span>Chart Title</span>
-  </div>
-  <a ng-href="#/show/{{index}}" class="click">
-
-  </a>
-  <high-chart-line data='data'
-                    ng-show="index == 2 || index == 4"
-  ></high-chart-line>
-  <high-chart-pie pie-data='pieData'
-                  legend='legend'
-                  title="name"
-                  ng-show="index == 1 || index == 3">
-  </high-chart-pie>
+<div class="cardWrap" ng-style="{width: index == 2 || index == 4 ? '610px' : '300px'}" ng-class="{cardOpen : resize}">
+    <div class="card" ng-style="{width: index == 2 || index == 4 ? '610px' : '300px'}">
+        <div class="card__container">
+            <div class="card__container_head">
+                <span>Chart Title</span>
+            </div>
+            <a class="resizeBttn" ng-click="resize = !resize">
+                <i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#expand"></use></svg></i>
+            </a>
+            <div class="card__container_chart">
+                <div class="chart">
+                    <high-chart-line 
+                        data='data'
+                        ng-show="index == 2 || index == 4"
+                    ></high-chart-line>
+                    <high-chart-pie 
+                        pie-data='pieData'
+                        legend='legend'
+                        title="name"
+                        ng-show="index == 1 || index == 3"
+                    ></high-chart-pie>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

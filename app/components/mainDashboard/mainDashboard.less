@@ -1,7 +1,17 @@
 main-dashboard {
-  .content {
-    width: 1256px;
+  .cardPanel {
+    width: 100%;
     margin: 0 auto;
-    margin-top: 90px;
+    position: relative;
+    height: calc(~"100vh - 115px");
+    @media (min-width: 1300px) {
+    	width: 1256px;
+    }
+    @media (max-width: 1300px) {
+    	width: 942px;
+    }
+    @media (max-width: 970px) {
+    	width: 628px;
+    }
   }
 }
