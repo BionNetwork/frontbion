@@ -56,6 +56,17 @@
           },
           itemMarginBottom: 5
       };
+      $scope.legend2 = {
+          margin: 5,
+          symbolWidth: 10,
+          symbolHeight: 10,
+          itemStyle: {
+              fontWeight: 'normal',
+              fontSize: '10px',
+              color: '#727272'
+          },
+          itemMarginBottom: 5
+      };
 
       $scope.changeGrath = function functionName(index) {
         $scope.index = 2;
