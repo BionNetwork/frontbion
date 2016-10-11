@@ -170,7 +170,7 @@ label {
 .bttnForm {
     border: none;
     color: #303f9f;
-    font-weight: 400;
+    font-weight: 600;
     padding: 9px 18px;
     cursor: pointer;
     border-radius: 1px;
@@ -225,6 +225,16 @@ label {
         position: relative;
         z-index: 10;
         background: transparent;
+        &:valid ~ label,
+        &:focus ~ label {
+            top: -13px;
+            font-size: 11px;
+            color: @blue;
+        }
+        &:focus ~ span:after,
+        &:focus ~ span:before {
+            width: 50%;
+        }
     }
     label {
         color: #adadad;
@@ -248,7 +258,7 @@ label {
             width: 0;
             bottom: 1px;
             position: absolute;
-            background: #303f9f;
+            background: @blue;
             transition: @speed;
         }
         &:before {
@@ -256,6 +266,19 @@ label {
         }
         &:after {
             right: 50%;
+        }
+    }
+    .icon-eye {
+        width: 28px;
+        height: 20px;
+        fill: @grey-text;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top: 8px;
+        z-index: 20;
+        &:hover {
+            fill: @blue;
         }
     }
 }
