@@ -25,6 +25,17 @@ angular.module('BIONApp')
             }
           }
         };
+        var activations = {
+          get: {
+            success: function(response) {
+              $scope.activationId = response.data.data[0].id;
+              // console.log(response.data.data);
+              // $scope.getResources(response.data.data[0].id);
+            },
+            error: function(response) {
+            }
+          }
+        };
 
         $http({
           method: 'GET',
@@ -38,6 +49,18 @@ angular.module('BIONApp')
           //   id: $state.params.id
           // }
         }).then(card.get.success, card.get.error);
+
+        $http({
+          method: 'GET',
+          url: '/api/v1/activations',
+          headers: {
+            'X-AUTHORIZE-TOKEN': $scope.token
+          },
+          params: {
+            card_id: $state.params.id,
+            activation_status: 'pending'
+          }
+        }).then(activations.get.success, activations.get.error);
 
 
 

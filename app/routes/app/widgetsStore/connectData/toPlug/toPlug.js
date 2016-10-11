@@ -14,16 +14,12 @@ angular.module('BIONApp')
 
         $scope.parentUrl = '/cardshop';
 
-        var activations = {
-          get: {
-            success: function(response) {
-              $scope.activationId = response.data.data[0].id;
-              $scope.getResources(response.data.data[0].id);
-            },
-            error: function(response) {
-            }
+        $scope.$watch('activationId', function () {
+          if ($scope.activationId) {
+            $scope.getResources($scope.activationId);
           }
-        };
+        });
+
         var resources = {
           get: {
             success: function(response) {
@@ -107,17 +103,6 @@ angular.module('BIONApp')
 
         // end functions
 
-        $http({
-          method: 'GET',
-          url: '/api/v1/activations',
-          headers: {
-            'X-AUTHORIZE-TOKEN': $scope.token
-          },
-          params: {
-            card_id: $state.params.id,
-            activation_status: 'pending'
-          }
-        }).then(activations.get.success, activations.get.error);
 
       }]
     });
