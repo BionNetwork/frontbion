@@ -1,14 +1,14 @@
 <div class="cardWrap" ng-style="{width: index == 2 || index == 4 ? '610px' : '300px'}" ng-class="{cardOpen : resize}">
     <div class="card" ng-style="{width: index == 2 || index == 4 ? '610px' : '300px'}">
-        <div class="card__container">
-            <div class="card__container_head">
+        <div class="cardContainer">
+            <div class="card__head">
                 <span>Chart Title</span>
             </div>
-            <a class="resizeBttn" ng-click="resize = !resize">
+            <a ng-href="#/show/{{index}}" class="resizeBttn">
                 <i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#expand"></use></svg></i>
             </a>
-            <div class="card__container_chart">
-                <div class="chart">
+            <div class="card__chart">
+                <div class="card__chart_wrap">
                     <high-chart-line
                         data='data'
                         ng-show="index == 2 || index == 4"

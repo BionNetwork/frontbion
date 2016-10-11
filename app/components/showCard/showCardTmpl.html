@@ -1,30 +1,119 @@
-<div class="showCard">
-  <div class="showCard_header">
-    <span>Chart name</span>
-    <a ng-href="#/dashboard" class="click">
-    </a>
-  </div>
-  <high-chart-line data='data'
-                  style="height: 530px;  width: 800px;display: inline-block;"
-                  ng-show="chart == 'line'"
-  ></high-chart-line>
-  <high-chart-pie pie-data='pieData'
-                  title="name"
-                  legend='legend'
-                  style="height: 530px;  width: 800px; display: inline-block;"
-                  ng-show="chart == 'pie'"
-  ></high-chart-pie>
-  <span style="position:absolute;" ng-click="changeChart('pie')">pie</span>
-  <span style="position:absolute; margin-left: 50px;" ng-click="changeChart('line')">line</span>
+<div class="main-container">
+    <div class="cardPanel">
+        <div class="card cardOpen">
+            <div class="cardContainer">
+                <div class="card__head">
+                    <span>Chart name</span>
+                </div>
+                <a ng-href="#/dashboard" class="resizeBttn">
+                    <i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#expand"></use></svg></i>
+                </a>
 
-  <div style="position:absolute; margin-left: 150px; display: inline-block;">
-    <multi-select-popover content='contentSecond' title="Organization"
-                          on-change=showClickedItems
-    ></multi-select-popover>
-  </div>
-  <div style="position:absolute; margin-left: 250px; display: inline-block;">
-    <multi-select-popover content='contentThird' title="Project"
-                          on-change=showClickedItems
-    ></multi-select-popover>
-  </div>
+                <div class="card__chart">
+                   <div class="card__chart_wrap">
+                        <high-chart-line 
+                           data='data'
+                           style="height: 530px;  width: 800px;display: inline-block;"
+                           ng-show="chart == 'line'"
+                       ></high-chart-line>
+                       <high-chart-pie 
+                           pie-data='pieData'
+                           title="name"
+                           legend='legend'
+                           style="height: 530px;  width: 800px; display: inline-block;"
+                           ng-show="chart == 'pie'"
+                       ></high-chart-pie>
+                   </div>
+                </div>
+                
+                <div class="card__filter">
+                    <div class="filterList">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a ng-click="changeChart('pie')" class="active">
+                                    <i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#pie-chart"></use></svg></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a ng-click="changeChart('line')">
+                                    <i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#line-chart"></use></svg></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <form action="">
+                        <div class="filterControl">
+                            <div class="filterControl__item">
+                                <lable class="lable">Проект</lable>
+                                <span class="selectBttn">
+                                    <label class="selectBttn__checkbox">
+                                        <input type="checkbox" checked name="name">
+                                        <i class="input"></i>
+                                        <span>Все проекты</span>
+                                    </label>
+                                    <label class="selectBttn__checkbox">
+                                        <input type="checkbox" name="name">
+                                        <i class="input"></i>
+                                        <span>Альт</span>
+                                    </label>
+                                    <label class="selectBttn__checkbox">
+                                        <input type="checkbox" name="name">
+                                        <i class="input"></i>
+                                        <span>Базис</span>
+                                    </label>
+                                    <label class="selectBttn__checkbox">
+                                        <input type="checkbox" name="name">
+                                        <i class="input"></i>
+                                        <span>Мегаполис</span>
+                                    </label>
+                                </span>
+                            </div>
+                            <div class="filterControl__item">
+                                <lable class="lable">Продукты</lable>
+                                <span class="selectBttn">
+                                    <label class="selectBttn__radio">
+                                        <input type="checkbox" checked name="name">
+                                        <i class="input"></i>
+                                        <span>Все продукты</span>
+                                    </label>
+                                    <label class="selectBttn__radio">
+                                        <input type="checkbox" name="name">
+                                        <i class="input"></i>
+                                        <span>Электроника</span>
+                                    </label>
+                                    <label class="selectBttn__radio">
+                                        <input type="checkbox" name="name">
+                                        <i class="input"></i>
+                                        <span>Одежда</span>
+                                    </label>
+                                    <label class="selectBttn__radio">
+                                        <input type="checkbox" name="name">
+                                        <i class="input"></i>
+                                        <span>Бижутерия</span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <div class="hide">
+                        <multi-select-popover 
+                            content='contentSecond' 
+                            title="Organization"
+                            on-change=showClickedItems
+                        ></multi-select-popover>
+                                            
+                        <multi-select-popover 
+                            content='contentThird' 
+                            title="Project"
+                            on-change=showClickedItems
+                        ></multi-select-popover>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
 </div>
