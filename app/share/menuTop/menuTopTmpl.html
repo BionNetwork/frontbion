@@ -1,4 +1,4 @@
-<div class="headerWrap" ng-class="{'searchOpen' : in}">
+<div class="headerWrap" ng-class="{'searchOpen' : searchOpen}">
 	<div class="header">
 	
 		<div class="menuBttn">
@@ -55,7 +55,7 @@
 		</div>
 	
 		<div ng-hide="showDashboardList">
-			<a href="" class="searchBttn" ng-click="in = !in">
+			<a href="" class="searchBttn" ng-click="searchOpen = !searchOpen">
 				<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#search"></use></svg></i>
 			</a>
 				
