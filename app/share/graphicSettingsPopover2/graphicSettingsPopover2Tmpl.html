@@ -17,12 +17,12 @@
 					</div>
 					<div class="period" ng-class="{ 'period_active' : showTitle}">
 						<input type="text" class="dropdown1_input" placeholder="Период"></input>
-						<div class="plusminus">
-							<div class="pluminus-center">
+						<div class="plusminus-low">
+							<div class="plusminus-center">
 								<span class="plusminus-indicator">Текст:</span>
-								<button class="button_minus" ng-click="minusNumber('periodNumber')"></button>
+								<button class="button_minus" ng-click="minusNumber('periodNumber')"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#minus"></use></svg></i></button>
 								<span class="plusminus-indicator">{{periodNumber}}s</span>
-								<button class="button_plus" ng-click="addNumber('periodNumber')"></button>
+								<button class="button_plus" ng-click="addNumber('periodNumber')"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#plus"></use></svg></i></button>
 							</div>
 						</div>
 					</div>
@@ -37,19 +37,19 @@
 					</div>
 					<div class="period" ng-class="{ 'period_active' : showScale}">
 						<div class="plusminus-left">
-							<div class="pluminus-center">
+							<div class="plusminus-center">
 								<span class="plusminus-indicator">Шаг:</span>
-								<button class="button_minus" ng-click="minusNumber('footNumber')"></button>
+								<button class="button_minus" ng-click="minusNumber('footNumber')"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#minus"></use></svg></i></button>
 								<span class="plusminus-indicator">{{footNumber}}s</span>
-								<button class="button_plus" ng-click="addNumber('footNumber')"></button>
+								<button class="button_plus" ng-click="addNumber('footNumber')"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#plus"></use></svg></i></button>
 							</div>
 						</div>
 						<div class="plusminus-right">
-							<div class="pluminus-center">
+							<div class="plusminus-center">
 									<span class="plusminus-indicator">Текст:</span>
-								<button class="button_minus" ng-click="minusNumber('footNumberText')"></button>
+								<button class="button_minus" ng-click="minusNumber('footNumberText')"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#minus"></use></svg></i></button>
 								<span class="plusminus-indicator">{{footNumberText}}s</span>
-								<button class="button_plus" ng-click="addNumber('footNumberText')"></button>
+								<button class="button_plus" ng-click="addNumber('footNumberText')"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#plus"></use></svg></i></button>
 							</div>
 						</div>
 					</div>
@@ -63,14 +63,12 @@
 						</button>
 					</div>
 					<div class="period" ng-class="{ 'period_active' : showOs}">
-						<div class="plusminus">
-							<div class="pluminus-center">
+							<div class="plusminus">
 								<span class="plusminus-indicator">Толщина линии:</span>
-								<button class="button_minus" ng-click="minusNumber('osNumber')"></button>
+								<button class="button_minus" ng-click="minusNumber('osNumber')"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#minus"></use></svg></i></button>
 								<span class="plusminus-indicator">{{osNumber}}s</span>
-								<button class="button_plus" ng-click="addNumber('osNumber')"></button>
+								<button class="button_plus" ng-click="addNumber('osNumber')"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#plus"></use></svg></i></button>
 							</div>
-						</div>
 					</div>
 					<div class="dropdown1_save">
 						<button class="button_saver">Сохранить</button>

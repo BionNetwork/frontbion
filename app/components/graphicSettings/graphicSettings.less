@@ -276,6 +276,9 @@ graphic-settings{
                     float: left;
                     box-sizing: border-box;
                     padding: 5px;
+                    &:active, &:focus {
+                      border-bottom: 2px solid @deep-blue;
+                    }
                   }
                 }
                 &-indicator {
@@ -428,15 +431,30 @@ graphic-settings{
               margin-bottom: 15px;
               &_active {
                   height: 40px;
-                .plusminus, .plusminus-left, .plusminus-right {
+                  .plusminus-low {
+                    float: right;
+                    height: 30px;
+                    width: 43.7%;
+                  }
+                .plusminus, .plusminus-left, .plusminus-right, .plusminus-low {
                   .plusminus-indicator {
                     color: #000000;
                   }
-                  .button_minus {
-                    background: url("/img/icons/graphic/ico_minus.svg") no-repeat 0px 0px;
-                  }
-                  .button_plus {
-                    background: url("/img/icons/graphic/ico_plus.svg") no-repeat 0px 0px;
+                  // .button_minus {
+                  //   background: url("/img/icons/graphic/ico_minus.svg") no-repeat 0px 0px;
+                  // }
+                  // .button_plus {
+                  //   background: url("/img/icons/graphic/ico_plus.svg") no-repeat 0px 0px;
+                  // }
+                }
+                .button_minus, .button_plus {
+                  i {
+                    svg {
+                      fill: @deep-blue;
+                      &:hover {
+                        fill: @deep-blue - (@deep-blue/2);
+                      }
+                    }
                   }
                 }
               }
@@ -450,18 +468,36 @@ graphic-settings{
               border-right: none;
               border-bottom: 1px solid #dcdcdc;
               margin-right: 20px;
+              -webkit-user-select: none;  /* Chrome all / Safari all */
+              -moz-user-select: none;     /* Firefox all */
+              -ms-user-select: none;      /* IE 10+ */
+              user-select: none;          /* Likely future */
+              &:active, &:focus {
+                border-bottom: 2px solid @deep-blue;
+              }
             }
             .button_minus, .button_plus {
               width: 30px;
               height: 30px;
               border: none;
+              background: none;
+              i {
+                width: 30px;
+                height: 30px;
+                position: relative;
+                left: -5px;
+                top: 1px;
+                svg {
+                  fill: #acacac;
+                }
+              }
             }
-            .button_minus {
-              background: url("/img/icons/graphic/ico_-.svg") no-repeat 0px 0px;
-            }
-            .button_plus {
-              background: url("/img/icons/graphic/ico_+.svg") no-repeat 0px 0px;
-            }
+            // .button_minus {
+            //   background: url("/img/icons/graphic/ico_-.svg") no-repeat 0px 0px;
+            // }
+            // .button_plus {
+            //   background: url("/img/icons/graphic/ico_+.svg") no-repeat 0px 0px;
+            // }
             .plusminus-left {
               width: 45%;
               float: left;
@@ -469,10 +505,10 @@ graphic-settings{
             .plusminus-right {
               position: relative;
               float: right;
-              right: -25px;
+              right: 15px;
             }
             .plusminus {
-              position: relative;
+              // position: relative;
               left: 0px;
               height: 30px;
               &-center {
@@ -533,9 +569,9 @@ graphic-settings{
                 float: right;
                 top: -10px;
                 transition: 0.2s linear;
-                &:hover, &:focus, &:active {
-                  background: url("/img/icons/graphic/ico_!eye.svg") no-repeat 0px 0px;
-                }
+                // &:hover, {
+                //   background: url("/img/icons/graphic/ico_!eye.svg") no-repeat 0px 0px;
+                // }
               }
             }
             &:after {
