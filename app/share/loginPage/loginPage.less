@@ -1,16 +1,55 @@
-login-page{
-  .loginPage {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-      .login_form{
-          width: 420px;
-          background: #fff;
-          border-radius: 1px;
-          padding: 40px 60px 30px;
-          border: 1px solid #e6e6e6;
-          box-shadow: 2px 2px 2px 1px rgba(0,0,0,.2);
-      }
-  }
+@import "../../assets/css/_variables.less";
+@import "../../assets/css/_mixins.less";
+
+login-page {
+    .loginPage {
+        &__lang {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            ins {
+                color: #adadad;
+                font-size: 14px;
+                margin-right: 10px;
+                text-decoration: none;
+            }
+        }
+        &__content {
+            .block-center;
+            position: fixed;
+        }
+        &__logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        &__form {
+            width: 450px;
+            background: #fff;
+            border-radius: 1px;
+            padding: 40px 60px 30px;
+            border: 1px solid rgb(230,230,230);
+            box-shadow: 0px 1px 15px 0px rgba(0,0,0,.1);
+            h2 {
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 50px;
+                position: relative;
+                .icon {
+                    fill: @green;
+                    position: absolute;
+                    left: -40px;
+                    top: -3px;
+                }
+            }
+        }
+        &__link {
+            padding: 23px 0;
+            text-align: center;
+            a {
+                margin: 0 20px;
+                text-decoration: none;
+                border-bottom: 1px solid;
+            }
+        }
+    }
 }

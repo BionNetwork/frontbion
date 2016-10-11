@@ -167,6 +167,21 @@ label {
         }
     }
 }
+.bttnForm {
+    border: none;
+    color: #303f9f;
+    font-weight: 400;
+    padding: 9px 18px;
+    cursor: pointer;
+    border-radius: 1px;
+    display: inline-block;
+    background: transparent;
+    text-transform: uppercase;
+    transition: @speed;
+    &:hover {
+        background: #f8f8f8;
+    }
+}
 
 .linkGroup {
     display: inline-block;
@@ -191,6 +206,58 @@ label {
     vertical-align: sub;
     fill: @grey-text;
   }
+}
+
+.actionsField {
+    margin-top: 40px;
+    text-align: center;
+}
+.textField {
+    position: relative;
+    margin-top: 20px;
+    border-bottom: 1px solid #ccc;
+    input {
+        border: none;
+        font-size: 16px;
+        display: block;
+        height: 34px;
+        width: 100%;
+        position: relative;
+        z-index: 10;
+        background: transparent;
+    }
+    label {
+        color: #adadad;
+        font-size: 14px;
+        position: absolute;
+        pointer-events: none;
+        left: 0;
+        top: 10px;
+        transition: @speed;
+    }
+    span {
+        position: relative;
+        display: block;
+        width: 100%;
+        top: 2px;
+        z-index: 10;
+        &:after,
+        &:before {
+            content: '';
+            height: 2px;
+            width: 0;
+            bottom: 1px;
+            position: absolute;
+            background: #303f9f;
+            transition: @speed;
+        }
+        &:before {
+            left: 50%;
+        }
+        &:after {
+            right: 50%;
+        }
+    }
 }
 
 /* helper */

@@ -1,10 +1,43 @@
 <div class="loginPage">
-  <div class="etton_logo">
-
-  </div>
-  <div class="login_form">
-    user: <input type="text" name="name" ng-model="user"><br>
-    pass: <input type="text" name="name" ng-model="pass"><br>
-    <button type="button" name="button" ng-click='onLoginPage(user, pass)'>Login</button>
-  </div>
+	<div class="loginPage__lang">
+		<ins>Язык интерфейса</ins>
+		<one-select-popover
+			title="Язык интерфейса"
+			placement="right"
+			content="contentLang"
+		></one-select-popover>
+	</div>
+	<div class="loginPage__content">
+		<div class="loginPage__logo">
+			<img src="img/logo.png" alt="">
+		</div>
+		<div class="loginPage__form">
+			<form action="">
+				<h2>
+                  Для входа укажите ваш логин и пароль
+                  <i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#user"></use></svg></i>
+                </h2>
+                <div class="textField">
+                    <input type="text" name="name" ng-model="user" required>
+                    <span></span>
+                    <label>Ваш логин</label>
+                </div>
+                <div class="textField">
+                	<input type="password" name="name" ng-model="pass" required>
+                    <span></span>
+                    <i class="icon icon-eye"><svg role="img"><use xlink:href="img/svg-symbols.svg#eye"></use></svg></i>
+                  <label>Ваш пароль</label>
+                </div>
+                <div class="actionsField">
+                	<button class="bttnForm" type="submit" name="button" ng-click='onLoginPage(user, pass)'>ВОЙТИ</button>
+                </div>
+			</form>
+		</div>
+		<div class="loginPage__link">
+			<a href="">Забыли пароль</a>
+			<a href="">Новый пользователь</a>
+		</div>
+	</div>
 </div>
+
+       

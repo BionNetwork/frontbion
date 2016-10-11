@@ -13,6 +13,10 @@
       }
     };
 
+    $scope.contentLang = [
+        {name: "Русский"}
+    ];
+
 
 
   }
