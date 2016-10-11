@@ -279,40 +279,60 @@ graphic-settings{
                   }
                 }
                 &-indicator {
-                  position: relative;
-                  top: 0;
                   width: 30px;
                   height: 30px;
                   background: red;
                   float: right;
+                  .col-wrapper {
+                    top: 0;
+                    position: absolute;
+                    right: 0;
+                    padding-left: 15px;
+                    visibility: hidden;
+                    opacity: 0;
+                    height: 340px;
+                    transition: 0.2s linear;
+                    display: inline-table;
+                  }
+                  &:hover {
+                    .col-wrapper {
+                      opacity: 1;
+                      visibility: visible;
+                    }
+                  }
                 }
               }
             }
           }
             .dropleft {
-              float: right;
               width: 100px;
               height: 85%;
-              display: inline-table;
-              padding-left: 20px;
-              &:before {
-                content: "";
-                width: 0;
-                height: 0;
-                margin-left: -30px;
-                top: 38%;
-                position: absolute;
-                border-top: 20px solid transparent;
-                border-left: 20px solid transparent;
-                border-bottom: 20px solid transparent;
-                border-right: 15px solid #ffffff;
-              }
+              display: table-cell;
+              padding-left: 0px;
+              padding-right: 20px;
+              transition: 0.2s linear;
+              vertical-align: middle;
+              // &:before {
+              //   content: "";
+              //   width: 0;
+              //   height: 0;
+              //   margin-left: -30px;
+              //   top: 38%;
+              //   position: absolute;
+              //   border-top: 20px solid transparent;
+              //   border-left: 20px solid transparent;
+              //   border-bottom: 20px solid transparent;
+              //   border-right: 15px solid #ffffff;
+              // }
               .vertagn {
+                width: 80px;
+                transition: 0.2s linear;
                 border-radius: 3px;
                 padding-top: 10px;
                 background: #ffffff;
                 display: table-cell;
                 vertical-align: middle;
+                padding-right: 10px;
               }
               .col-paint {
                 margin-left: 10px;
