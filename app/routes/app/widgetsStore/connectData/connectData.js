@@ -18,7 +18,7 @@ angular.module('BIONApp')
             success: function(response) {
               $scope.cardKey = response.data.data;
               // console.log(response.data.data);
-              $scope.allArguments = response.data.data[0].argument;
+              $scope.allArguments = response.data.data[0].arguments;
               // console.log($scope.allCards);
             },
             error: function(response) {

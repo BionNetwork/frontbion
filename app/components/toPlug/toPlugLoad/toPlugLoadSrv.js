@@ -18,7 +18,7 @@
       myData.append('resource_file', fileData);
       myData.append('activation_id', activationId);
 
-      fetch('/api/v1/resource/add', {
+      fetch('/api/v1/resources', {
         method: "POST",
         headers: {
           'X-Authorize-Token': window.localStorage.getItem('token')
