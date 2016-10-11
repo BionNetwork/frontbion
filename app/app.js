@@ -5,11 +5,11 @@
              $httpProvider.interceptors.push(['$q', function($q) {
                 return {
                   responseError: function(response) {
-                    if (response.config.url.indexOf("/api/v1/config/strings") !== -1) {
+                    if (response.config.url.indexOf("/api/v1/cards") !== -1) {
                       return response;
                     }
                     if (response.status === 403) {
-
+                      
                       window.location.hash = 'login';
                     }
                     return response;
