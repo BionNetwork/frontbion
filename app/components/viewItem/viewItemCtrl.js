@@ -8,11 +8,11 @@
     $scope.url = $state.$current.parent.url.prefix
     $scope.$watch('cardKey', function () {
       if ($scope.cardKey) {
-        $scope.cardData = $scope.cardKey[0];
+        $scope.cardData = $scope.cardKey;
       }
     });
 
-    
+
     $scope.slickConfig = {
         enabled: true,
         autoplay: true,

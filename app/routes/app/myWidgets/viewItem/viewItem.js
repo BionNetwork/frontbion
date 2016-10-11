@@ -26,13 +26,10 @@ angular.module('BIONApp')
 
         $http({
           method: 'GET',
-          url: '/api/v1/cards',
+          url: '/api/v1/cards/'+ $state.params.id,
           headers: {
             'X-AUTHORIZE-TOKEN': $scope.token,
             'Accept-Language' : $scope.language
-          },
-          params: {
-            id: cardId
           }
         }).then(cards.get.success, cards.get.error);
 

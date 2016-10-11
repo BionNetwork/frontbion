@@ -1,11 +1,11 @@
 <div class="main-container">
   <div class="breadcrumbs">
     <span><a ng-href="#{{breadcrumbs.url}}/view">{{breadcrumbs.name}}</a><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#ar-right"></use></svg></i></span>
-    <span><a href="">{{cardKey[0].name}}</a></span>
+    <span><a href="">{{cardKey.name}}</a></span>
   </div>
   <div class="page-container">
     <div class="topBlock">
-      <h1 class="topBlock__name">{{cardKey[0].name}}</h1>
+      <h1 class="topBlock__name">{{cardKey.name}}</h1>
       <div class="topBlock__description">
         <span>ШАГ 1. Выберите параметр к которому хотите подключить источник данных.</span>
       </div>
@@ -16,7 +16,7 @@
         <a >
             Подключить данные
         </a>
-        <a ng-href="#{{breadcrumbs.url}}/connect-data/graphic/{{cardKey[0].id}}">
+        <a ng-href="#{{breadcrumbs.url}}/connect-data/graphic/{{cardKey.id}}">
             График
         </a>
       </div>
@@ -28,7 +28,7 @@
         <li ng-repeat="argument in allArguments">
             <i class="icon series__variabless_checked"><svg role="img"><use xlink:href="img/svg-symbols.svg#checked-light"></use></svg></i>
             <span>Добавьте колонку со значением {{argument.name}}</span>
-            <a href="#{{ parentUrl }}/connect-data/toplug/{{cardKey[0].id}}?agumentId={{argument.id}}"></a>
+            <a href="#{{ parentUrl }}/connect-data/toplug/{{cardKey.id}}?agumentId={{argument.id}}"></a>
             <div class="icon series__variabless_info">
               <simple-popover
                 title="allStrings.header.menu.menu"
