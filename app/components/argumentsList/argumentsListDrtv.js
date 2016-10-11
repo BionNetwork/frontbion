@@ -10,7 +10,8 @@
         allArguments: '=?',
         cardKey: '=?',
         parentUrl: '@',
-        breadcrumbs: '=?'
+        breadcrumbs: '=?',
+        allBoundedArguments: '=?'
       },
       restrict: 'E',
       controller: 'argumentsListCtrl',

@@ -26,7 +26,9 @@
       <h2 class="series__head">ОСНОВНЫЕ ПАРАМЕТРЫ</h2>
       <ul class="series__variabless">
         <li ng-repeat="argument in allArguments">
-            <i class="icon series__variabless_checked"><svg role="img"><use xlink:href="img/svg-symbols.svg#checked-light"></use></svg></i>
+            <i class="icon series__variabless_checked" ng-show="argument.id == isArgumentBound(allBoundedArguments, argument.id)">
+              <svg role="img"><use xlink:href="img/svg-symbols.svg#checked-light"></use></svg>
+            </i>
             <span>Добавьте колонку со значением {{argument.name}}</span>
             <a href="#{{ parentUrl }}/connect-data/toplug/{{cardKey.id}}?agumentId={{argument.id}}"></a>
             <div class="icon series__variabless_info">
