@@ -26,10 +26,11 @@
       if (item == 'English' || item == 'Русский') {
         if (window.localStorage.getItem('lang') == 'ru') {
           window.localStorage.setItem('lang', 'en');
-        }else if(window.localStorage.getItem('lang') == 'en'){
+          $window.location.reload();
+        }else if(window.localStorage.getItem('lang') == 'en' || !window.localStorage.getItem('lang')){
           window.localStorage.setItem('lang', 'ru');
+          $window.location.reload();
         }
-        $window.location.reload();
       };
     };
     // console.log($scope.contentSecond);
