@@ -21,6 +21,12 @@
     $scope.contentSecond = [
         {name: "Прибыль по проектам"}
     ];
+    $scope.contentThird = [
+        {name: "Все типы приложений"}
+    ];
+    $scope.contentFourth = [
+        {name: "Любая цена"}
+    ];
     // functions
     $scope.onChange = function (item) {
       if (item == 'English' || item == 'Русский') {

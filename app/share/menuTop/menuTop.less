@@ -2,21 +2,28 @@
 @import "../../assets/css/_mixins.less";
 
 menu-top {
+  @header-height: 74px;
+  .headerWrap {
+    height: @header-height;
+    position: relative;
+    transition: @speed;
+  }
   .header {
     background: #fff;
-    border-bottom: 1px solid #b3b3b3;
-    height: 74px;
+    border-bottom: 1px solid lighten(@grey-border, 5%);
+    height: @header-height;
     padding: 0 20px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 200;
+    z-index: 300;
     .menuBttn{
       .vertical-center;
       left: 20px;
       width: 24px;
       height: 22px;
+      z-index: 200;
       .dropmodal__trigger {
         width: 24px;
         height: 22px;
@@ -29,8 +36,104 @@ menu-top {
     .pageMenu {
       .vertical-center;
       right: 55px;
+      z-index: 200;
       &__drop {
-        margin: 10px 0;
+        margin-left: 15px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      &__filter {
+        padding-top: 2px;
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+        a {
+          margin-left: 15px;
+          display: inline-block;
+          color: @grey-text;
+          &:hover {
+            color: @blue;
+            .icon {
+              fill: @blue;
+            }
+          }
+        }
+        .icon {
+          width: 30px;
+          height: 30px;
+          fill: @grey-text;
+        }
+        span {
+          display: block;
+          text-align: center;
+          font-size: 10px;
+          line-height: 1px;
+        }
+      }
+    }
+    .searchBttn {
+      position: absolute;
+      right: 20px;
+      top: 25px;
+      .icon {
+        width: 25px;
+        height: 25px;
+        fill: @blue;
+      }
+    }
+    .searchPanel {
+      text-align: right;
+      position: absolute;
+      top: @header-height;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: @header-height;
+      background: #fff;
+      padding: 0 20px;
+      z-index: 100;
+      transition: @speed;
+      border-bottom: 1px solid lighten(@grey-border, 5%);
+      .bttn {
+        position: absolute;
+        left: 20px;
+        top: 23px;
+      }
+      &__drop {
+        display: inline-block;
+        margin-right: 15px;
+      }
+      &__input {
+        width: 400px;
+        height: 33px;
+        font-size: 14px;
+        margin: 20px 0;
+        border-radius: @radius;
+        position: relative;
+        display: inline-block;
+        border: 1px solid lighten(@grey-border, 5%);
+        input {
+          display: block;
+          width: 100%;
+          height: 100%;
+          outline: none;
+          border: 0;
+          background: none;
+          padding: 6px 20px 8px 35px;
+        }
+        .icon {
+          width: 16px;
+          height: 16px;
+          position: absolute;
+          top: 8px;
+          fill: lighten(@grey-border, 5%);
+          &-search {
+            left: 10px;
+          }
+          &-cancel {
+            right: 10px;
+          }
+        }
       }
     }
     
