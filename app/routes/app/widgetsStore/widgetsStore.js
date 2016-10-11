@@ -10,7 +10,7 @@ angular.module('BIONApp')
       templateUrl: 'routes/app/widgetsStore/widgetsStore.html',
       controller: ['$scope', '$http', '$state', function($scope, $http, $state) {
         $scope.currentUrl = '/cardshop'
-        $scope.showDashboardList = false;
+        $scope.showSearch = true;
         $scope.token = window.localStorage.getItem('token');
         $scope.language = window.localStorage.getItem('lang') ? window.localStorage.getItem('lang') : 'ru';
 
@@ -23,7 +23,11 @@ angular.module('BIONApp')
           }
         });
 
+        // functions
 
+        $scope.changeVisibility = function (item) {
+          $scope.showSearch = item;
+        };
 
 
       }]

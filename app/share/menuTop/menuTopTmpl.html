@@ -1,6 +1,6 @@
 <div class="headerWrap" ng-class="{'searchOpen' : searchOpen}">
 	<div class="header">
-	
+
 		<div class="menuBttn">
 			<simple-popover
 				title="allStrings.header.menu.menu"
@@ -11,13 +11,13 @@
 				on-change="onChange"
 			></simple-popover>
 		</div>
-	
+
 		<div class="linkGroup">
 			<a class="bttn" ng-class="{'active':currentUrl === '/dashboard'}" ng-href="#/dashboard">{{allStrings.header.menu.desktop}}</a>
 			<a class="bttn" ng-class="{'active':currentUrl === '/mywidgets'}" ng-href="#/mywidgets/view">{{allStrings.header.menu.myWidgets}}</a>
 			<a class="bttn" ng-class="{'active':currentUrl === '/cardshop'}" ng-href="#/cardshop/view">{{allStrings.header.menu.widgetsStore}}</a>
 		</div>
-	
+
 		<!-- showDashboardList -->
 		<div class="pageMenu" ng-show="showDashboardList">
 			<div class="pageMenu__drop">
@@ -28,9 +28,9 @@
 				></one-select-popover>
 			</div>
 		</div>
-	
+
 		<!-- headerSearch -->
-		<div class="pageMenu" ng-hide="showDashboardList">
+		<div class="pageMenu" ng-show="showSearch">
 			<div class="pageMenu__filter">
 				<a href="">
 					<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#ready"></use></svg></i>
@@ -53,12 +53,12 @@
 				></one-select-popover>
 			</div>
 		</div>
-	
-		<div ng-hide="showDashboardList">
+
+		<div ng-show="showSearch">
 			<a href="" class="searchBttn" ng-click="searchOpen = !searchOpen">
 				<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#search"></use></svg></i>
 			</a>
-				
+
 			<div class="searchPanel">
 				<form action="">
 					<a href="" class="bttn bttn--blue">Сбросить фильтры</a>
@@ -77,6 +77,6 @@
 				</form>
 			</div>
 		</div>
-	
+
 	</div>
 </div>

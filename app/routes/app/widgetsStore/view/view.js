@@ -11,7 +11,7 @@ angular.module('BIONApp')
 
         $scope.token = window.localStorage.getItem('token');
         $scope.language = window.localStorage.getItem('lang') ? window.localStorage.getItem('lang') : 'ru';
-        
+
         var cards = {
           get: {
             success: function(response) {
@@ -32,7 +32,12 @@ angular.module('BIONApp')
           }
         }).then(cards.get.success, cards.get.error);
 
-
+        // functions
+        $scope.$watch('changeVisibility', function () {
+          if ($scope.changeVisibility) {
+            $scope.changeVisibility(true);
+          }
+        });
 
       }]
     });

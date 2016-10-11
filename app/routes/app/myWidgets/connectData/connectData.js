@@ -67,6 +67,11 @@ angular.module('BIONApp')
         //   }
         // }).then(boundedArguments.get.success, boundedArguments.get.error);
 
+        $scope.$watch('changeVisibility', function () {
+          if ($scope.changeVisibility) {
+            $scope.changeVisibility(false);
+          }
+        });
 
 
       }]

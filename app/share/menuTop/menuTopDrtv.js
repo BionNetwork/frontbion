@@ -9,7 +9,8 @@
       scope: {
         currentUrl: '=?',
         showDashboardList: '=',
-        allStrings: '=?'
+        allStrings: '=?',
+        showSearch: '='
       },
       restrict: 'E',
       controller: 'menuTopCtrl',

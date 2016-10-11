@@ -34,6 +34,13 @@ angular.module('BIONApp')
         }).then(cards.get.success, cards.get.error);
 
 
+        // functions
+        $scope.$watch('changeVisibility', function () {
+          if ($scope.changeVisibility) {
+            $scope.changeVisibility(false);
+          }
+        });
+
 
       }]
     });

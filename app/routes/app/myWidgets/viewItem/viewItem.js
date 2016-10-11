@@ -8,7 +8,7 @@ angular.module('BIONApp')
       url: '/item/:id',
       templateUrl: 'routes/app/myWidgets/viewItem/viewItem.html',
       controller: ['$scope', '$http', '$state', function($scope, $http, $state) {
-
+        $scope.showDashboardList = true;
         var cardId = $state.params.id;
         $scope.token = window.localStorage.getItem('token');
         $scope.language = window.localStorage.getItem('lang') ? window.localStorage.getItem('lang') : 'ru';
@@ -33,7 +33,12 @@ angular.module('BIONApp')
           }
         }).then(cards.get.success, cards.get.error);
 
-
+        // functions
+        $scope.$watch('changeVisibility', function () {
+          if ($scope.changeVisibility) {
+            $scope.changeVisibility(false);
+          }
+        });
 
       }]
     });
