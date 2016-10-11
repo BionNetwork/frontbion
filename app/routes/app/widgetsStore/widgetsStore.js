@@ -17,7 +17,7 @@ angular.module('BIONApp')
         $scope.$watch('allStrings', function () {
           if ($scope.allStrings) {
             $scope.breadcrumbs = {
-              url: '/mywidgets',
+              url: '/cardshop',
               name: $scope.allStrings.header.menu.widgetsStore
             };
           }

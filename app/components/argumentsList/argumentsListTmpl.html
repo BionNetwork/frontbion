@@ -9,10 +9,16 @@
       <div class="topBlock__description">
         <span>ШАГ 1. Выберите параметр к которому хотите подключить источник данных.</span>
       </div>
-      <div class="linkStep" ng-init="selectedTab = 'arguments'">
-        <a ng-class="{'active':selectedTab === 'arguments'}" ng-click="selectedTab = 'arguments'">Аргументы</a>
-        <a ng-class="{'active':selectedTab === 'connect-data'}" ng-click="selectedTab = 'connect-data'">Подключить данные</a>
-        <a ng-class="{'active':selectedTab === 'graphic'}" ng-click="selectedTab = 'graphic'">График</a>
+      <div class="linkStep">
+        <a class="active">
+            Аргументы
+        </a>
+        <a >
+            Подключить данные
+        </a>
+        <a ng-href="#{{breadcrumbs.url}}/connect-data/graphic/{{cardKey[0].id}}">
+            График
+        </a>
       </div>
     </div>
 

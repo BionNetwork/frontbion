@@ -1,7 +1,7 @@
 <div class="graphic_settings">
   <div class="main-container">
       <div class="breadcrumbs">
-        <span><a href="">Мои приложения</a><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#ar-right"></use></svg></i></span>
+        <span><a href="#{{breadcrumbs.url}}/view">{{breadcrumbs.name}}</a><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#ar-right"></use></svg></i></span>
         <span><a href="">fgsedfgs</a></span>
       </div>
       <div class="page-container">
@@ -10,10 +10,10 @@
             <div class="topBlock__description">
               <span>ШАГ 1. Выберите параметр к которому хотите подключить источник данных.</span>
             </div>
-            <div class="linkStep" ng-init="selectedTab = 'arguments'">
-              <a ng-class="{'active':selectedTab === 'arguments'}" ng-click="selectedTab = 'arguments'">Аргументы</a>
-              <a ng-class="{'active':selectedTab === 'connect-data'}" ng-click="selectedTab = 'connect-data'">Подключить данные</a>
-              <a ng-class="{'active':selectedTab === 'graphic'}" ng-click="selectedTab = 'graphic'">График</a>
+            <div class="linkStep">
+              <a ng-href="#{{breadcrumbs.url}}/connect-data/arguments/">Аргументы</a>
+              <a>Подключить данные</a>
+              <a class="active">График</a>
             </div>
           </div>
         <div class="graphic-set_main">

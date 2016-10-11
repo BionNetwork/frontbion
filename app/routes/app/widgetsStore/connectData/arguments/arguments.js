@@ -12,49 +12,6 @@ angular.module('BIONApp')
         $scope.token = window.localStorage.getItem('token');
         $scope.language = window.localStorage.getItem('lang') ? window.localStorage.getItem('lang') : 'ru';
         
-        var arguments = {
-          get: {
-            success: function(response) {
-              $scope.allArguments = response.data.data;
-              // console.log($scope.allCards);
-            },
-            error: function(response) {
-            }
-          }
-        };
-        var card = {
-          get: {
-            success: function(response) {
-              $scope.cardKey = response.data.data;
-              // console.log($scope.allCards);
-            },
-            error: function(response) {
-            }
-          }
-        };
-
-
-        $http({
-          method: 'GET',
-          url: '/api/v1/card/'+ $state.params.id +'/arguments',
-          headers: {
-            'X-AUTHORIZE-TOKEN': $scope.token,
-            'Accept-Language' : $scope.language
-          }
-        }).then(arguments.get.success, arguments.get.error);
-
-        $http({
-          method: 'GET',
-          url: '/api/v1/cards',
-          headers: {
-            'X-AUTHORIZE-TOKEN': $scope.token,
-            'Accept-Language' : $scope.language
-          },
-          params: {
-            id: $state.params.id
-          }
-        }).then(card.get.success, card.get.error);
-
 
 
       }]

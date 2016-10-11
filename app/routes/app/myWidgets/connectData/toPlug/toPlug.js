@@ -14,26 +14,6 @@ angular.module('BIONApp')
 
         $scope.parentUrl = '/mywidgets';
 
-        var arguments = {
-          get: {
-            success: function(response) {
-              $scope.allArguments = response.data.data;
-              // console.log($scope.allCards);
-            },
-            error: function(response) {
-            }
-          }
-        };
-        var card = {
-          get: {
-            success: function(response) {
-              $scope.cardKey = response.data.data;
-              // console.log($scope.allCards);
-            },
-            error: function(response) {
-            }
-          }
-        };
         var activations = {
           get: {
             success: function(response) {
@@ -126,27 +106,6 @@ angular.module('BIONApp')
         };
 
         // end functions
-
-        $http({
-          method: 'GET',
-          url: '/api/v1/card/'+ $state.params.id +'/arguments',
-          headers: {
-            'X-AUTHORIZE-TOKEN': $scope.token,
-            'Accept-Language' : $scope.language
-          }
-        }).then(arguments.get.success, arguments.get.error);
-
-        $http({
-          method: 'GET',
-          url: '/api/v1/cards',
-          headers: {
-            'X-AUTHORIZE-TOKEN': $scope.token,
-            'Accept-Language' : $scope.language
-          },
-          params: {
-            id: $state.params.id
-          }
-        }).then(card.get.success, card.get.error);
 
         $http({
           method: 'GET',

@@ -7,9 +7,7 @@
   function graphicSettings() {
     return {
       scope: {
-        // allArguments: '=?',
-        // cardKey: '=?',
-        // allResources: '=?'
+        breadcrumbs: '=?'
       },
       restrict: 'E',
       controller: 'graphicSettingsCtrl',
