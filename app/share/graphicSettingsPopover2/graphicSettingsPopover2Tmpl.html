@@ -6,75 +6,75 @@
 		</i>
 		<div class="dropmodal__content">
 				<div class="dropdown2">
-					<div class="titler">
+					<div class="titler" ng-class="{ 'titler_active' : showTitle}">
 						<div class="titler_name">
-							<span>Заголовок</span>
+							<span>{{title}}</span>
 						</div>
 						<div class="titler_line">
 						</div>
-						<button class="titler_eye">
+						<button class="titler_eye" ng-click="showTitle = !showTitle">
 						</button>
 					</div>
-					<div class="period">
-						<input class="dropdown1_input" placeholder="Период"></input>
+					<div class="period" ng-class="{ 'period_active' : showTitle}">
+						<input type="text" class="dropdown1_input" placeholder="Период"></input>
 						<div class="plusminus">
 							<div class="pluminus-center">
 								<span class="plusminus-indicator">Текст:</span>
-								<button class="button_minus"></button>
-								<span class="plusminus-indicator">1.2s</span>
-								<button class="button_plus"></button>
+								<button class="button_minus" ng-click="minusNumber('periodNumber')"></button>
+								<span class="plusminus-indicator">{{periodNumber}}s</span>
+								<button class="button_plus" ng-click="addNumber('periodNumber')"></button>
 							</div>
 						</div>
 					</div>
-					<div class="titler_active">
+					<div class="titler" ng-class="{ 'titler_active' : showScale}">
 						<div class="titler_name">
 							<span>Шкала</span>
 						</div>
 						<div class="titler_line">
 						</div>
-						<button class="titler_eye">
+						<button class="titler_eye" ng-click="showScale = !showScale">
 						</button>
 					</div>
-					<div class="period_active">
+					<div class="period" ng-class="{ 'period_active' : showScale}">
 						<div class="plusminus-left">
 							<div class="pluminus-center">
 								<span class="plusminus-indicator">Шаг:</span>
-								<button class="button_minus"></button>
-								<span class="plusminus-indicator">1.2s</span>
-								<button class="button_plus"></button>
+								<button class="button_minus" ng-click="minusNumber('footNumber')"></button>
+								<span class="plusminus-indicator">{{footNumber}}s</span>
+								<button class="button_plus" ng-click="addNumber('footNumber')"></button>
 							</div>
 						</div>
 						<div class="plusminus-right">
 							<div class="pluminus-center">
 									<span class="plusminus-indicator">Текст:</span>
-								<button class="button_minus"></button>
-								<span class="plusminus-indicator">1.2s</span>
-								<button class="button_plus"></button>
+								<button class="button_minus" ng-click="minusNumber('footNumberText')"></button>
+								<span class="plusminus-indicator">{{footNumberText}}s</span>
+								<button class="button_plus" ng-click="addNumber('footNumberText')"></button>
 							</div>
 						</div>
 					</div>
-					<div class="titler_active">
+					<div class="titler" ng-class="{ 'titler_active' : showOs}">
 						<div class="titler_name">
 							<span>Ось</span>
 						</div>
 						<div class="titler_line">
 						</div>
-						<button class="titler_eye">
+						<button class="titler_eye" ng-click="showOs = !showOs">
 						</button>
 					</div>
-					<div class="period_active">
+					<div class="period" ng-class="{ 'period_active' : showOs}">
 						<div class="plusminus">
 							<div class="pluminus-center">
 								<span class="plusminus-indicator">Толщина линии:</span>
-								<button class="button_minus"></button>
-								<span class="plusminus-indicator">1.2s</span>
-								<button class="button_plus"></button>
+								<button class="button_minus" ng-click="minusNumber('osNumber')"></button>
+								<span class="plusminus-indicator">{{osNumber}}s</span>
+								<button class="button_plus" ng-click="addNumber('osNumber')"></button>
 							</div>
 						</div>
 					</div>
 					<div class="dropdown1_save">
 						<button class="button_saver">Сохранить</button>
-						<button class="button_canceler">Отмена</button>
+						<button class="button_canceler" ng-click="closeDropContent()">Отмена</button>
 					</div>
 				</div>
 			<!-- <span class="dropmodal__content_arrow"></span> -->

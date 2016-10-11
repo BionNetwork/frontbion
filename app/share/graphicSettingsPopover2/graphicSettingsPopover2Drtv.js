@@ -7,7 +7,7 @@
   function graphicSettingsPopover2($document) {
     return {
       scope: {
-        title: '=?',
+        title: '@',
         placement: '@',
         content: '=?',
         iconName: '@',

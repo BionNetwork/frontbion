@@ -9,7 +9,7 @@
                       return response;
                     }
                     if (response.status === 403) {
-                      
+
                       window.location.hash = 'login';
                     }
                     return response;
