@@ -540,7 +540,12 @@ graphic-settings{
                   background: #000000;
                 }
                 .titler_eye {
-                  background: url("/img/icons/ico_!eye.svg") no-repeat 0px 0px;
+                  background: none;
+                  i {
+                    svg {
+                      fill: @deep-blue;
+                    }
+                  }
                 }
               }
               &_name {
@@ -564,11 +569,16 @@ graphic-settings{
                 width: 30px;
                 border: none;
                 height: 30px;
-                background: url("/img/icons/ico_eye.svg") no-repeat 0px 0px;
+                background: none;
                 position: relative;
                 float: right;
                 top: -10px;
                 transition: 0.2s linear;
+                i {
+                  svg {
+                    fill: #acacac;
+                  }
+                }
                 // &:hover, {
                 //   background: url("/img/icons/graphic/ico_!eye.svg") no-repeat 0px 0px;
                 // }
