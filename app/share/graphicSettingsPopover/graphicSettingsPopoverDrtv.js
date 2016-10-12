@@ -19,7 +19,16 @@
       controller: 'graphicSettingsPopoverCtrl',
       templateUrl: 'share/graphicSettingsPopover/graphicSettingsPopoverTmpl.html',
       link: function(scope, element, attrs){
+          scope.click = function() {
+            // console.log(element[0].getElementsByClassName('col-indicator').style);
+            var a = element[0].getElementsByClassName('col-indicator');
+            var l = [];
+            for (var i = 0; i < a.length; i++) {
 
+              l.push(a[i].style.backgroundColor)
+            }
+            console.log(l);
+          };
 
           scope.openDropContent = function () {
 

@@ -10,9 +10,9 @@
       console.log(item);
     };
 
-    $scope.catchChanges = function() {
-      
-    };
+    // $scope.click = function() {
+    //   console.log(document.getElementsByClassName('col-indicator'));
+    // };
 
   }
 
