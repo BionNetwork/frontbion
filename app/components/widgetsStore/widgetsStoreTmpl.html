@@ -1,22 +1,23 @@
-<div class="widgets_store">
-  <div class="card" ng-repeat="card in allCards">
-    <a class='href' ng-href="#/cardshop/item/{{card.id}}"></a>
-    <div class="name">
-      {{card.name}}
+<div class="main-container">
+    <div class="cardWidget" ng-repeat="card in allCards">
+        <a class='cardWidget__href' ng-href="#/cardshop/item/{{card.id}}"></a>
+        <div class="cardWidget__head">
+            <h2 class="name">
+                {{card.name}}
+            </h2>
+            <p class="discription">
+                {{card.description}}
+            </p>
+        </div>
+        <div class="cardWidget__img">
+            <img ng-src="/img/cards/4-2.png" alt="" />
+        </div>
+        <div class="cardWidget__author">
+            Эттон
+        </div>
+        <div class="cardWidget__price">
+            {{card.rating}}
+            <span class="currency"> ₽</span>
+        </div>
     </div>
-    <div class="discription">
-      {{card.description}}
-    </div>
-    <div class="card_image">
-      <img ng-src="/img/cards/4-2.png" alt="" />
-    </div>
-    <div class="card_footer">
-      <div class="stars">
-        Эттон
-      </div>
-      <div class="price">
-        {{card.rating}}руб
-      </div>
-    </div>
-  </div>
 </div>
