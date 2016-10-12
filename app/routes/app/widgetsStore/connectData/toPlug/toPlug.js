@@ -58,7 +58,7 @@ angular.module('BIONApp')
         $scope.getResourcesTables = function (id) {
           return $http({
             method: 'GET',
-            url: '/api/v1/resources/'+ id +'/tables',
+            url: '/api/v1/resources/'+ id,
             headers: {
               'X-AUTHORIZE-TOKEN': $scope.token
             }
