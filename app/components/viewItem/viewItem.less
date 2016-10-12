@@ -13,84 +13,76 @@ view-item {
                   vertical-align: top;
                 }  
             }
+            .innerBlock {
+                position: absolute;
+                top: 116px;
+                bottom: 0;
+                left: 30px;
+                right: 30px;
+            }
         }
     }
-    .innerBlock {
-        position: absolute;
-        top: 116px;
-        bottom: 0;
-        left: 30px;
-        right: 30px;
-        .cardInfo {
-            adding-right: 643px;
-            height: 100%;
-            &__description {
-                overflow-y: auto;
-                position: absolute;
-                left: 0;
-                top: 0;
-                bottom: 10px;
-                right: 625px;
-                padding-right: 13px;
-                .item {
-                    margin-bottom: 24px;
-                    .head {
-                        font-size: 18px;
-                        line-height: 18px;
-                        font-weight: 100;
-                        color: #adadad;
-                        margin: 0;
-                        margin-bottom: 10px;
-                        margin-left: 3px;
-                        text-transform: uppercase;
-                        overflow: hidden;
-                        span {
-                            background: #fff;
-                            position: relative;
-                            z-index: 2;
-                            padding-right: 13px;
-                            display: inline-block;
-                            letter-spacing: 0;
-                        }
-                        &:after {
-                            display: block;
-                            content: ' ';
-                            border-top: 1px solid #e1e1e1;
-                            position: relative;
-                            top: -8px;
-                        }
+    .cardInfo {
+        adding-right: 643px;
+        height: 100%;
+        &__description {
+            overflow-y: auto;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 10px;
+            right: 625px;
+            padding-right: 13px;
+            .item {
+                margin-bottom: 24px;
+                .head {
+                    font-size: 18px;
+                    line-height: 18px;
+                    font-weight: 100;
+                    color: #adadad;
+                    margin: 0;
+                    margin-bottom: 10px;
+                    margin-left: 3px;
+                    text-transform: uppercase;
+                    overflow: hidden;
+                    span {
+                        background: #fff;
+                        position: relative;
+                        z-index: 2;
+                        padding-right: 13px;
+                        display: inline-block;
+                        letter-spacing: 0;
                     }
-                    .text {
-                        font-size: 12px;
-                        color: #000;
-                        font-weight: 400;
-                        letter-spacing: .3px;
-                        line-height: 15px;
-                        margin-top: 0;
-                        white-space: pre-line;
+                    &:after {
+                        display: block;
+                        content: ' ';
+                        border-top: 1px solid #e1e1e1;
+                        position: relative;
+                        top: -8px;
                     }
+                }
+                .text {
+                    font-size: 12px;
+                    color: #000;
+                    font-weight: 400;
+                    letter-spacing: .3px;
+                    line-height: 15px;
+                    margin-top: 0;
+                    white-space: pre-line;
                 }
             }
-            &__img {
-                width: 600px;
-                min-height: 314px;
-                position: absolute;
-                right: 0;
-                top: 0;
-                bottom: 10px;
-                padding: 0 16px;
-                margin-bottom: 40px;
-                &_helper {
-                    height: 100%;
-                    .slick-slider {
-                        height: 100%;
-                        overflow: visible;
-                    }
-                    .slick-list,
-                    .slick-slide {
-                        height: 100%;
-                    }
-                }
+        }
+        &__img {
+            width: 600px;
+            min-height: 314px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 10px;
+            padding: 0 16px;
+            margin-bottom: 40px;
+            .slick-slider {
+                width: 100%;
             }
         }
     }
