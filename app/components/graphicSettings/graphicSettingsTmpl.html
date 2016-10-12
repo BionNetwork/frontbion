@@ -54,7 +54,7 @@
                       <svg role="img"><use xlink:href="img/svg-symbols.svg#pie-chart"></use></svg>
                     </i>
                   </button>
-                  <button class="panel_tools-button">
+                  <button class="panel_tools-button" ng-click="changeChart('column')">
                     <i class="icon">
                       <svg role="img"><use xlink:href="img/svg-symbols.svg#column-chart"></use></svg>
                     </i>
@@ -64,24 +64,24 @@
                       <svg role="img"><use xlink:href="img/svg-symbols.svg#line-chart"></use></svg>
                     </i>
                   </button>
-                  <button class="panel_tools-button">
+                  <!-- <button class="panel_tools-button">
                     <i class="icon">
                       <svg role="img"><use xlink:href="img/svg-symbols.svg#table"></use></svg>
                     </i>
-                  </button>
-                  <button class="panel_tools-button">
+                  </button> -->
+                  <!-- <button class="panel_tools-button">
                     <i class="icon">
                       <svg role="img"><use xlink:href="img/svg-symbols.svg#sign"></use></svg>
                     </i>
-                  </button>
-                  <button class="panel_tools-button">
+                  </button> -->
+                  <!-- <button class="panel_tools-button">
                     <i class="icon">
                       <svg role="img">
                         <use xlink:href="img/svg-symbols.svg#space-matrix"></use>
                       </svg>
                     </i>
-                  </button>
-                  <button class="panel_tools-button">
+                  </button> -->
+                  <!-- <button class="panel_tools-button">
                     <i class="icon">
                       <svg role="img"><use xlink:href="img/svg-symbols.svg#funnel-chart"></use></svg>
                     </i>
@@ -90,8 +90,8 @@
                     <i class="icon">
                       <svg role="img"><use xlink:href="img/svg-symbols.svg#currency"></use></svg>
                     </i>
-                  </button>
-                  <button class="panel_tools-button">
+                  </button> -->
+                  <button class="panel_tools-button" ng-click="changeChart('map')">
                     <i class="icon">
                       <svg role="img"><use xlink:href="img/svg-symbols.svg#map"></use></svg>
                     </i>
@@ -115,6 +115,11 @@
                    style="height: 100%;  width: 100%; display: inline-block;"
                    ng-show="choosedChart == 'line'"
                ></high-chart-line>
+                <high-chart-column
+                   data='data'
+                   style="height: 100%;  width: 100%; display: inline-block;"
+                   ng-show="choosedChart == 'column'"
+               ></high-chart-column>
               </div>
             </div>
             <div class="col-xs-3 panel_right">
