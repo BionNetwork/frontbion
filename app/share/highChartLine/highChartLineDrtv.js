@@ -13,7 +13,9 @@
       controller: 'highChartLineCtrl',
       templateUrl: 'share/highChartLine/highChartLineTmpl.html',
       link: function (scope, element) {
-          Highcharts.chart(element[0], scope.data);
+          Highcharts.chart(element[0],
+            scope.data
+          );
       }
     };
   }

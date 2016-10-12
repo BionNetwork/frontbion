@@ -78,7 +78,7 @@
           size: $scope.osNumber
         },
       };
-      console.log(value);
+      console.log(value, key);
       // $scope.sendGraphSettings(activeActivationId, key, value);
     };
 

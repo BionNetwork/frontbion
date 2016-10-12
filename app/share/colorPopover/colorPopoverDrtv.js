@@ -7,7 +7,7 @@
   function colorPopover() {
     return {
       scope: {
-        
+        onColorChange: '=?'
       },
       restrict: 'E',
       controller: 'colorPopoverCtrl',

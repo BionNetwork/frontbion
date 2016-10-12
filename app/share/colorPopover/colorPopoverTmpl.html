@@ -4,7 +4,8 @@
       <div class="vertagn">
         <button
                 ng-repeat='item in chooseColorsObj' class="col-paint {{item.name}}"
-                ng-click="chooseColors(item.color)"
+                ng-class="{'current' : currentIndex == $index }"
+                ng-click="chooseColors(item.color, $index)"
         ></button>
       </div>
     </div>

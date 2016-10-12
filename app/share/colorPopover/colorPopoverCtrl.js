@@ -20,7 +20,7 @@
       {name: 'violet', color: '#7e58bd'},
       {name: 'gentle-green', color: '#d7e246'},
       {name: 'night', color: '#5c6db2'},
-      {name: 'yellow current', color: '#fdf054'},
+      {name: 'yellow', color: '#fdf054'},
       {name: 'sky', color: '#48a5ea'},
       {name: 'orange', color: '#f6cc22'},
       {name: 'blue', color: '#21bbef'},
@@ -29,10 +29,12 @@
       {name: 'sunrise', color: '#fa7147'},
     ];
 
-    $scope.chooseColors = function (color) {
+    $scope.chooseColors = function (color, index) {
       $scope.color = {
         "background-color" : color
       }
+      $scope.currentIndex = index;
+      $scope.onColorChange(color)
     };
 
   }

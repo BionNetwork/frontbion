@@ -16,6 +16,7 @@
       templateUrl: 'share/highChartPie/highChartPieTmpl.html',
       link: function (scope, element) {
         Highcharts.chart(element[0], {
+          // colors: ['#395C9B', '#923532', '#7B972E', '#6A538D', '#3B83A1', '#CB7221', '#F2E200'],
           title: {
               y: -10,
               text: scope.title
