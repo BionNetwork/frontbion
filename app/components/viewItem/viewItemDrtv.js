@@ -14,7 +14,7 @@
       controller: 'viewItemCtrl',
       templateUrl: 'components/viewItem/viewItemTmpl.html',
       link: function (scope, element, attr) {
-          $('.your-class').slick();
+          $('.slick-slider').slick();
           // element[0].querySelector('.your-class').slick();
       }
     };

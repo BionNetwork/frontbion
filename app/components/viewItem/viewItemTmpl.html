@@ -13,19 +13,29 @@
         <span class="bttn bttn--grey" ng-class="{'active':selectedTab === 'same'}" ng-click="selectedTab = 'same'">Похожие</span>
       </div>
     </div>
-    <div class="">
-      <span ng-show="selectedTab === 'description'">{{cardData.description_long}}</span>
-      <span ng-show="selectedTab === 'review'"></span>
-      <span ng-show="selectedTab === 'same'"></span>
-    </div>
-
-    <!-- <div>
-       <div class="your-class">
-        <div>your content</div>
-        <div>your content</div>
-        <div>your content</div>
+    <div class="innerBlock">
+      <div class="cardInfo">
+        <div class="cardInfo__description">
+          <div class="item">
+            <h2 class="head"><span>Описание</span></h2>
+            <p class="text" ng-show="selectedTab === 'description'">{{cardData.description_long}}</p>
+            <!-- <span ng-show="selectedTab === 'review'"></span> -->
+            <!-- <span ng-show="selectedTab === 'same'"></span> -->
+          </div>
+        </div>
+        <div class="cardInfo__img">
+          <div class="cardInfo__img_helper">
+            <div class="slick-slider">
+              <div><img ng-src="/img/cards/4-1.png" alt="" /></div>
+              <div><img ng-src="/img/cards/4-2.png" alt="" /></div>
+              <div><img ng-src="/img/cards/4-3.png" alt="" /></div>
+              <div><img ng-src="/img/cards/4-4.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div> -->
+      
+    </div>
 
   </div>
 </div>
