@@ -21,7 +21,7 @@
               <span>Загруженные файлы</span>
               <ul>
                 <li ng-repeat="item in allResources" ng-class="{active : showDetails}">
-                  {{item.path.substring(21, 30)}}
+                  {{item.settings.file.path.substring(26, 45)}}
                   <i style="margin-left: 30px; cursor: pointer; font-size: 14px;"
                       ng-click="showDetails = !showDetails" ng-init="showDetails=$first">
                       +

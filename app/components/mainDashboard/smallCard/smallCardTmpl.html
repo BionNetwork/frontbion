@@ -14,10 +14,12 @@
                         ng-show="index == 2 || index == 4"
                     ></high-chart-line>
                     <high-chart-pie
-                        pie-data='pieData'
                         legend='resize ? legend2 : legend'
-                        title=""
                         ng-show="index == 1 || index == 3"
+                        pie-layout="vertical"
+                        pie-vertical-align="middle"
+                        pie-align="right"
+                        pie-legend-width="90"
                     ></high-chart-pie>
                 </div>
             </div>

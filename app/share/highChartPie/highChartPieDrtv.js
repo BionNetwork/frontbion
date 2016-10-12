@@ -10,18 +10,37 @@
         pieData: '=?',
         title: '@',
         legend: '=?',
+        pieLayout: '@',
+        pieVerticalAlign: '@',
+        pieAlign: '@',
+        pieLegendWidth: '@'
       },
       restrict: 'E',
       controller: 'highChartPieCtrl',
       templateUrl: 'share/highChartPie/highChartPieTmpl.html',
       link: function (scope, element) {
         Highcharts.chart(element[0], {
-          // colors: ['#395C9B', '#923532', '#7B972E', '#6A538D', '#3B83A1', '#CB7221', '#F2E200'],
+          colors: ["rgb(33, 187, 239)", "rgb(156, 205, 100)", "rgb(72, 165, 234)"],
           title: {
               y: -10,
-              text: scope.title
+              text: ''
           },
-          legend: scope.legend,
+          legend: {
+              layout: scope.pieLayout,//"horizontal" or "vertical"
+              verticalAlign: scope.pieVerticalAlign,//top, middle or bottom
+              animation: false,
+              align: scope.pieAlign, //left, center and right.
+              width: +scope.pieLegendWidth,//width 90 or 300px
+              margin: 5,
+              symbolWidth: 10,
+              symbolHeight: 10,
+              itemStyle: {
+                  fontWeight: 'normal',
+                  fontSize: '12px',
+                  color: '#727272'
+              },
+              itemMarginBottom: 5
+          },
           chart: {
               plotBackgroundColor: null,
               plotBorderWidth: null,
@@ -53,9 +72,22 @@
                 }
             },
             series: [{
-                data: scope.pieData
+                data: [
+                    {
+                        name: "Microsoft Internet Explorer",
+                        y: 56.33
+                    }, {
+                        name: "Chrome",
+                        y: 24.03,
+                    }, {
+                        name: "Firefox",
+                        y: 10.38
+                    }
+                  ]
             }]
         });
+
+
       }
     };
   }
