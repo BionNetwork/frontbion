@@ -10,6 +10,11 @@
     $scope.footNumber = 1;
     $scope.footNumberText = 1;
     $scope.osNumber = 1;
+    $scope.showLabel = false;
+    $scope.showScale = false;
+    $scope.showOs = false;
+    $scope.periodString = '';
+
     $scope.minusNumber = function (name) {
       if (name == 'periodNumber') {
         if ($scope.periodNumber > 0) {
@@ -53,6 +58,28 @@
             $scope.osNumber = $scope.osNumber + 1;
         }
       }
+    };
+
+    $scope.onSendSettings = function (activeActivationId, key) {
+      // console.log(activationId);
+      let value = {
+        label:{
+          show: $scope.showLabel,
+          periodNumber: $scope.periodString,
+          textNumber: $scope.periodNumber
+        },
+        scale:{
+          show: $scope.showScale,
+          step: $scope.footNumber,
+          textNumber: $scope.footNumberText
+        },
+        axis:{
+          show: $scope.showOs,
+          size: $scope.osNumber
+        },
+      };
+      console.log(value);
+      // $scope.sendGraphSettings(activeActivationId, key, value);
     };
 
   }

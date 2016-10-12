@@ -12,7 +12,8 @@
         content: '=?',
         iconName: '@',
         showIcon: '=',
-        onChange: '=?'
+        onChange: '=?',
+        activeActivastionId: '=?',
       },
       restrict: 'E',
       controller: 'graphicSettingsPopoverCtrl',

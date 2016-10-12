@@ -8,7 +8,8 @@
     return {
       scope: {
         breadcrumbs: '=?',
-        cardKey: '=?'
+        cardKey: '=?',
+        activeActivastionId: '=?'
       },
       restrict: 'E',
       controller: 'graphicSettingsCtrl',

@@ -6,17 +6,17 @@
 		</i>
 		<div class="dropmodal__content">
 				<div class="dropdown2">
-					<div class="titler" ng-class="{ 'titler_active' : showTitle}">
+					<div class="titler" ng-class="{ 'titler_active' : showLabel}">
 						<div class="titler_name">
 							<span>{{title}}</span>
 						</div>
 						<div class="titler_line">
 						</div>
-						<button class="titler_eye" ng-click="showTitle = !showTitle">
+						<button class="titler_eye" ng-click="showLabel = !showLabel">
 						</button>
 					</div>
-					<div class="period" ng-class="{ 'period_active' : showTitle}">
-						<input type="text" class="dropdown1_input" placeholder="Период"></input>
+					<div class="period" ng-class="{ 'period_active' : showLabel}">
+						<input type="text" class="dropdown1_input" ng-model="periodString" placeholder="Период"></input>
 						<div class="plusminus-low">
 							<div class="plusminus-center">
 								<span class="plusminus-indicator">Текст:</span>
@@ -71,7 +71,7 @@
 							</div>
 					</div>
 					<div class="dropdown1_save">
-						<button class="button_saver">Сохранить</button>
+						<button class="button_saver" ng-click="onSendSettings(activeActivastionId, iconName)">Сохранить</button>
 						<button class="button_canceler" ng-click="closeDropContent()">Отмена</button>
 					</div>
 				</div>
