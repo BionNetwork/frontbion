@@ -44,12 +44,12 @@
             <div class="col-xs-7 graphic-set_center">
               <div class="col-xs-12">
                 <div class="row panel_tools">
-                  <button class="panel_tools-button">
+                  <!-- <button class="panel_tools-button">
                     <i class="icon">
                       <svg role="img"><use xlink:href="img/svg-symbols.svg#diagram-chart"></use></svg>
                     </i>
-                  </button>
-                  <button class="panel_tools-button">
+                  </button> -->
+                  <button class="panel_tools-button" ng-click="changeChart('pie')">
                     <i class="icon">
                       <svg role="img"><use xlink:href="img/svg-symbols.svg#pie-chart"></use></svg>
                     </i>
@@ -59,7 +59,7 @@
                       <svg role="img"><use xlink:href="img/svg-symbols.svg#column-chart"></use></svg>
                     </i>
                   </button>
-                  <button class="panel_tools-button">
+                  <button class="panel_tools-button" ng-click="changeChart('line')">
                     <i class="icon">
                       <svg role="img"><use xlink:href="img/svg-symbols.svg#line-chart"></use></svg>
                     </i>
@@ -108,7 +108,13 @@
                     pie-vertical-align="bottom"
                     pie-align="center"
                     pie-legend-width="400"
+                    ng-show="choosedChart == 'pie'"
                 ></high-chart-pie>
+                <high-chart-line
+                   data='data'
+                   style="height: 100%;  width: 100%; display: inline-block;"
+                   ng-show="choosedChart == 'line'"
+               ></high-chart-line>
               </div>
             </div>
             <div class="col-xs-3 panel_right">

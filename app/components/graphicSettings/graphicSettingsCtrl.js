@@ -5,7 +5,10 @@
   .controller('graphicSettingsCtrl', ['$scope', graphicSettingsCtrl]);
 
   function graphicSettingsCtrl($scope) {
-
+      $scope.choosedChart = 'pie';
+      $scope.changeChart = function (chart) {
+        $scope.choosedChart = chart;
+      }
 
   }
 
