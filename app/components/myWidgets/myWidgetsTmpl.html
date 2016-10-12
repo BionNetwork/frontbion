@@ -1,22 +1,23 @@
-<div class="my_widgets">
-  <div class="card" ng-repeat="card in myAllCards">
-    <a class='href' ng-href="#/mywidgets/item/{{card.card.id}}"></a>
-    <div class="name">
-      {{card.card.name}}
+<div class="main-container">
+    <div class="cardWidget" ng-repeat="card in myAllCards">
+        <a class='cardWidget__href' ng-href="#/mywidgets/item/{{card.card.id}}"></a>
+        <div class="cardWidget__head">
+            <h2 class="name">
+                {{card.card.name}}
+            </h2>
+            <p class="discription">
+                {{card.card.description}}
+            </p>
+        </div>
+        <div class="cardWidget__img">
+            <img ng-src="/img/cards/4-{{$index+1}}.png" alt="" />
+        </div>
+        <div class="cardWidget__author">
+            Эттон
+        </div>
+        <div class="cardWidget__price">
+            {{card.card.rating}}
+            <span class="currency"> ₽</span>
+        </div>
     </div>
-    <div class="discription">
-      {{card.card.description}}
-    </div>
-    <div class="card_image">
-      <img ng-src="/img/cards/4-{{$index+1}}.png" alt="" />
-    </div>
-    <div class="card_footer">
-      <div class="stars">
-        Эттон
-      </div>
-      <div class="price">
-        {{card.card.rating}}руб
-      </div>
-    </div>
-  </div>
 </div>
