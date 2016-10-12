@@ -48,8 +48,18 @@
 
                     <form action="">
                         <div class="filterControl">
-                            <checkbox-select></checkbox-select>
-                            <radio-button-select></radio-button-select>
+                            <div class="item">
+                                <lable class="lable">Проект</lable>
+                                <checkbox-select></checkbox-select>
+                            </div>
+                            <div class="item">
+                                <lable class="lable">Продукты</lable>
+                                <radio-button-select></radio-button-select>
+                            </div>
+                            <div class="item itemInline">
+                                <lable class="lable">По проектам</lable>
+                                <a class="bttnToggle" ng-class="{'active' : toggleActive}" ng-click="toggleActive = !toggleActive"></a>
+                            </div>
                         </div>
                     </form>
 

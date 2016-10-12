@@ -2,11 +2,12 @@
 @import "_mixins.less";
 
 a:focus,
+label:focus,
 input:focus,
 button:focus,
 select:focus,
 textarea:focus {
-	outline: none;
+	outline: none !important;
     text-decoration: none;
 }
 a {
@@ -186,6 +187,34 @@ label {
         background: #f8f8f8;
     }
 }
+.bttnToggle {
+    width: 26px;
+    height: 11px;
+    background: #9daadd;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    position: relative;
+    border-radius: 5px;
+    &:after {
+        content: ' ';
+        width: 17px;
+        height: 17px;
+        background: #fff;
+        left: -5px;
+        top: -3px;
+        transition: transform .2s linear;
+        box-shadow: 0 1px 0 1px rgba(0,0,0,.1);
+        border-radius: 50%;
+        position: absolute;
+    }
+    &.active {
+        &:after {
+            background: #233da3;
+            transform: translate(18px);
+        }
+    }
+}
 
 .linkGroup {
     display: inline-block;
@@ -287,6 +316,76 @@ label {
     }
 }
 
+.selectBttn {
+    max-width: 50px;
+    display: inline-block;
+    label {
+        display: block;
+        color: @blue;
+        cursor: pointer;
+        font-size: 12px;
+        margin-bottom: 8px;
+        white-space: nowrap;
+        position: relative;
+        input {
+            width: 16px;
+            height: 16px;
+            border-radius: 0;
+            color: transparent;
+            display: inline-block;
+            margin: 0 10px 0 0;
+            background: none;
+            border: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            vertical-align: top;
+            outline: none;
+        }
+        .input {
+            display: block;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 1px solid @blue;
+            &:before {
+                content: '';
+                display: block;
+                .block-center;
+            }
+        }
+    }
+    &__checkbox {
+        input {
+            &:checked + .input {
+                border-color: transparent;
+                &:before {
+                    width: 22px;
+                    height: 22px;
+                    background: url(../img/icons/checked.svg) 0 0 no-repeat;
+                }
+            }
+        }
+    }
+    &__radio {
+        .input {
+            border-radius: 50%;
+        }
+        input {
+            &:checked + .input {
+                &:before {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background: @blue;
+                }
+            }
+        }
+    }
+}
+
 /* helper */
 .list-unstyled {
 	margin-bottom: 0;
@@ -329,8 +428,9 @@ svg {
         }
     }
 }
+
 .filterControl {
-    &__item {
+    .item {
         margin-bottom: 18px;
         font-size: 12px;
     }
@@ -339,75 +439,13 @@ svg {
         display: block;
         margin-bottom: 10px;
     }
-    .selectBttn {
-        max-width: 50px;
-        display: inline-block;
-        label {
-            display: block;
-            color: @blue;
-            cursor: pointer;
-            font-size: 12px;
-            margin-bottom: 8px;
-            white-space: nowrap;
-            position: relative;
-            input {
-                width: 16px;
-                height: 16px;
-                border-radius: 0;
-                color: transparent;
-                display: inline-block;
-                margin: 0 10px 0 0;
-                background: none;
-                border: none;
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                appearance: none;
-                vertical-align: top;
-                outline: none;
-            }
-            .input {
-                display: block;
-                width: 16px;
-                height: 16px;
-                position: absolute;
-                top: 0;
-                left: 0;
-                border: 1px solid @blue;
-                &:before {
-                    content: '';
-                    display: block;
-                    .block-center;
-                }
-            }
+    .itemInline {
+        .lable {
+            margin-bottom: 0;
+            margin-right: 26px;
+            display: inline-block;
+            vertical-align: middle;
         }
-        &__checkbox {
-            input {
-                &:checked + .input {
-                    border-color: transparent;
-                    &:before {
-                        width: 22px;
-                        height: 22px;
-                        background: url(../img/icons/checked.svg) 0 0 no-repeat;
-                    }
-                }
-            }
-        }
-        &__radio {
-            .input {
-                border-radius: 50%;
-            }
-            input {
-                &:checked + .input {
-                    &:before {
-                        width: 10px;
-                        height: 10px;
-                        border-radius: 50%;
-                        background: @blue;
-                    }
-                }
-            }
-        }
-
     }
 }
 
