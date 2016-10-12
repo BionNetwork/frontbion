@@ -16,12 +16,8 @@
       link: function (scope, element, attr) {
           $('.slick-slider').slick({
             dots: true,
-            infinite: true,
-            speed: 500,
-            fade: true,
-            cssEase: 'linear',
+            infinite: false,
             slidesToShow: 1,
-            adaptiveHeight: true
           });
           // element[0].querySelector('.your-class').slick();
       }
