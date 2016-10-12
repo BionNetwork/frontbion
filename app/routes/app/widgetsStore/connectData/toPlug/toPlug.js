@@ -85,7 +85,7 @@ angular.module('BIONApp')
         $scope.argumentBound = function (activationId, choosedTableResourceId, agumentId, choosedTableName, selectedColumnName) {
           $http({
             method: 'POST',
-            url: '/api/v1/activation/'+ activationId +'/resource/' + choosedTableResourceId +'/argument/'+ agumentId,
+            url: '/api/v1/activations/'+ activationId +'/resources/' + choosedTableResourceId +'/arguments/'+ agumentId,
             headers: {
               'X-AUTHORIZE-TOKEN': $scope.token,
               'Content-Type': 'application/x-www-form-urlencoded'

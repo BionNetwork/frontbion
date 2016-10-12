@@ -8,7 +8,7 @@
                     if (response.config.url.indexOf("/api/v1/cards") !== -1) {
                       return response;
                     }
-                    if (response.status === 403 || response.status === 404) {
+                    if (response.status === 403) {
 
                       window.location.hash = 'login';
                     }
