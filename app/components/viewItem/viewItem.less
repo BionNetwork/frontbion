@@ -11,7 +11,7 @@ view-item {
                 .linkGroup {
                   margin-left: 25px;
                   vertical-align: top;
-                }  
+                }
             }
             .innerBlock {
                 position: absolute;
@@ -89,4 +89,95 @@ view-item {
             }
         }
     }
+  .cardReview {
+    .head {
+      width: 100%;
+      font-size: 18px;
+      line-height: 18px;
+      font-weight: 100;
+      color: #adadad;
+      margin: 0;
+      margin-bottom: 10px;
+      margin-left: 3px;
+      text-transform: uppercase;
+      overflow: hidden;
+      position: relative;
+      top: 20px;
+      span {
+        position: relative;
+        z-index: 2;
+        padding-right: 13px;
+        display: inline-block;
+        letter-spacing: 0;
+        background: #ffffff;
+      }
+      &:after {
+        display: block;
+        content: ' ';
+        border-top: 1px solid #e1e1e1;
+        border-bottom: 1px solid #f8f8f8;
+        position: relative;
+        top: -8px;
+      }
+    }
+    &-midRate, &-userRate {
+      margin-right: 50px;
+      float: left;
+      span {
+        font-size: 12px;
+        float: left;
+      }
+      &_stars {
+        margin-left: 10px;
+        margin-right: 10px;
+        float: left;
+        width: 100px;
+        height: 16px;
+        cursor: pointer;
+        .star {
+          width: 16px;
+          height: 16px;
+          i {
+            width: 16px;
+            height: 16px;
+            svg {
+              fill: #ffa000;
+            }
+          }
+        }
+      }
+    }
+    &-userRate {
+      &_stars {
+        .star {
+          i {
+          svg {
+            fill: #acacac;
+          }
+        }
+          &:hover {
+            i {
+              svg {
+                fill: #ffa000;
+              }
+            }
+          }
+        }
+      }
+      &_submit {
+        border: 1px solid #303f9f;
+        background: #ffffff;
+        color: #303f9f;
+        font-weight: 600;
+        margin-left: 60px;
+        position: relative;
+        font-size: 13px;
+        padding-top: 2px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        top: -4px;
+      }
+    }
+  }
 }
