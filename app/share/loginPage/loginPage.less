@@ -5,13 +5,36 @@ login-page {
     .loginPage {
         &__lang {
             position: absolute;
-            right: 20px;
+            right: 35px;
             top: 20px;
+            width: 50px;
             ins {
                 color: #adadad;
                 font-size: 14px;
                 margin-right: 10px;
                 text-decoration: none;
+            }
+            button {
+              margin-bottom: 20px;
+              width: 60px;
+              height: 40px;
+              display: inline-block;
+              border: none;
+              transition: 0.2s linear;
+              opacity: 0.5;
+              &:hover, &_active {
+                opacity: 1;
+              }
+              &.ru {
+                background: url("/img/icons/flag_RUS_hover.svg") no-repeat 0px 0px;
+              }
+              &.en {
+                background: url("/img/icons/flag_ENG_hover.svg") no-repeat 0px 0px;
+              }
+              i {
+                width: 60px;
+                height: 40px;
+              }
             }
         }
         &__content {
