@@ -8,7 +8,7 @@ angular.module('BIONApp')
       abstract: true,
       url: '/connect-data',
       templateUrl: 'routes/app/myWidgets/connectData/connectData.html',
-      controller: ['$scope', '$http', '$state', function($scope, $http, $state) {
+      controller: ['$scope', '$http', '$state', '$httpParamSerializer', function($scope, $http, $state, $httpParamSerializer) {
 
         $scope.token = window.localStorage.getItem('token');
         $scope.language = window.localStorage.getItem('lang') ? window.localStorage.getItem('lang') : 'ru';
@@ -28,7 +28,11 @@ angular.module('BIONApp')
         var activations = {
           get: {
             success: function(response) {
-              $scope.activationId = response.data.data[0].id;
+              if (response.data.data.length > 0) {
+                $scope.activationId = response.data.data[0].id;
+              }else {
+                $scope.onActivateCardAgain($state.params.id);
+              }
               // console.log(response.data.data);
               // $scope.getResources(response.data.data[0].id);
             },
@@ -73,6 +77,57 @@ angular.module('BIONApp')
           }
         });
 
+        // functions
+
+        $scope.onActivateCardAgain = function (cardId) {
+          var activateAgain = {
+            get: {
+              success: function(response) {
+                // console.log(response.data.data);
+                $scope.activateCardAgain(response.data.data.id);
+              },
+              error: function(response) {
+              }
+            }
+          };
+
+          $http({
+            method: 'POST',
+            url: '/api/v1/purchases',
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded',
+              'X-AUTHORIZE-TOKEN': $scope.token
+            },
+            data: $.param({
+                  'card': cardId
+                })
+          }).then(activateAgain.get.success, activateAgain.get.error);
+
+          // functions
+                  $scope.activateCardAgain = function (id) {
+
+                    var pendingId = {
+                      get: {
+                        success: function(response) {
+                          $scope.activationId = response.data.data.id;
+
+                        },
+                        error: function(response) {
+                        }
+                      }
+                    };
+
+                    $http({
+                      method: 'POST',
+                      url: '/api/v1/purchases/' + id + '/activations',
+                      headers: {
+                        'X-AUTHORIZE-TOKEN': $scope.token
+
+                      }
+                    }).then(pendingId.get.success, pendingId.get.error);
+                  };
+
+        };
 
       }]
     });
