@@ -7,7 +7,7 @@
     <div class="topBlock">
 
       <div class="topBlock__description">
-        <span>ШАГ 2. Подключить источник данных.</span>
+        <span>ШАГ 3. Объеденить источники данных.</span>
       </div>
       <div class="linkStep" ng-init="selectedTab = 'arguments'">
         <a ng-href="#{{breadcrumbs.url}}/connect-data/arguments/{{cardKey.id}}">
@@ -43,15 +43,7 @@
           </div>
         </div>
         <div class="load_content">
-          <!-- <to-plug-load
-                parent-url='parentUrl'
-                activation-id='activationId'
-                get-resources=getResources
-                table-preview='tablePreview'
-                choosed-table-name="choosedTableName"
-                choosed-table-resource-id='choosedTableResourceId'
-                argument-bound=argumentBound
-          ></to-plug-load> -->
+          <join-data-tree></join-data-tree>
         </div>
     </div>
   </div>

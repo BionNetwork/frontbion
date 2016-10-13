@@ -12,6 +12,9 @@
           $scope.items = JSON.parse(JSON.stringify(items));
         });
       }
+
+
+
     });
 
   }
