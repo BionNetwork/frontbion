@@ -8,7 +8,8 @@
     return {
       scope: {
         cardKey: '=?',
-        breadcrumbs: '=?'
+        breadcrumbs: '=?',
+        allBoughtCards: '=?'
       },
       restrict: 'E',
       controller: 'viewItemCtrl',

@@ -33,6 +33,24 @@ angular.module('BIONApp')
           }
         }).then(cards.get.success, cards.get.error);
 
+        var boughtCard = {
+          get: {
+            success: function(response) {
+              $scope.allBoughtCards = response.data.data;
+              // console.log($scope.allCards);
+            },
+            error: function(response) {
+            }
+          }
+        };
+
+        $http({
+          method: 'GET',
+          url: '/api/v1/purchases',
+          headers: {
+            'X-AUTHORIZE-TOKEN': $scope.token
+          }
+        }).then(boughtCard.get.success, boughtCard.get.error);
 
         // functions
         $scope.$watch('changeVisibility', function () {

@@ -27,6 +27,16 @@
         }
     };
 
+    $scope.isBought = function (cardId, allBoughtCards) {
+      if (allBoughtCards && allBoughtCards.length > 0) {
+        for (var i = 0; i < allBoughtCards.length; i++) {
+          if (allBoughtCards[i].card.id == cardId) {
+            return true;
+          }
+        }
+      }
+    }
+
 
   }
 
