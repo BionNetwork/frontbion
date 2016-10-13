@@ -11,7 +11,8 @@
         cardKey: '=?',
         parentUrl: '@',
         breadcrumbs: '=?',
-        allBoundedArguments: '=?'
+        allBoundedArguments: '=?',
+        allStrings: '=?'
       },
       restrict: 'E',
       controller: 'argumentsListCtrl',

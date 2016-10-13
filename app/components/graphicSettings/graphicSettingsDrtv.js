@@ -9,7 +9,8 @@
       scope: {
         breadcrumbs: '=?',
         cardKey: '=?',
-        activeActivastionId: '=?'
+        activeActivastionId: '=?',
+        allArguments: '=?'
       },
       restrict: 'E',
       controller: 'graphicSettingsCtrl',

@@ -28,8 +28,12 @@
               </div> -->
               <div class="data-list">
                 <ul>
-                  <li><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#date"></use></svg></i>Аэропорты</li>
-                  <li><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#bol"></use></i>Аэропорты</li>
+                  <li ng-repeat="arg in allArguments">
+                    <i class="icon">
+                      <svg role="img"><use xlink:href="img/svg-symbols.svg#date"></use></svg>
+                    </i>{{arg.name}}
+                  </li>
+                  <!-- <li><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#bol"></use></i>Аэропорты</li>
                   <li><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#time"></use></i>Аэропорты</li>
                   <li><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#datetime"></use></i>Аэропорты</li>
                   <li><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#number"></use></i>Аэропорты</li>
@@ -37,7 +41,7 @@
                   <li><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#text"></use></i>Аэропорты</li>
                   <li><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#date"></use></i>Аэропорты</li>
                   <li><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#time"></use></i>Аэропорты</li>
-                  <li><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#number"></use></i>Аэропорты</li>
+                  <li><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#number"></use></i>Аэропорты</li> -->
                 </ul>
               </div>
             </div>
