@@ -10,10 +10,10 @@
         <span>ШАГ 2. Подключить источник данных.</span>
       </div>
       <div class="linkStep" ng-init="selectedTab = 'arguments'">
-        <a class="active" ng-href="#{{breadcrumbs.url}}/connect-data/arguments/{{cardKey.id}}">
+        <a ng-href="#{{breadcrumbs.url}}/connect-data/arguments/{{cardKey.id}}">
           {{allStrings.listBindings.argumentsLB}}
-        </a ng-href="#{{breadcrumbs.url}}/connect-data/join-data/{{cardKey.id}}">
-        <a>
+        </a>
+        <a class="active">
           {{allStrings.listBindings.dataSource}}
         </a>
         <a ng-href="#{{breadcrumbs.url}}/connect-data/graphic/{{cardKey.id}}">
@@ -32,20 +32,18 @@
                       ng-click="showDetails = !showDetails" ng-init="showDetails=$first">
                       +
                   </i>
-                    <to-plag-loaded-tables
+                    <join-data-loaded-tables
                         ng-show="showDetails"
                         resourse-id="item.id"
                         get-resources-tables="getResourcesTables"
-                        show-table-preview=showTablePreview
                         download-table-names='showDetails'
-                        get-table-name=getTableName
-                    ></to-plag-loaded-tables>
+                    ></join-data-loaded-tables>
                 </li>
               </ul>
           </div>
         </div>
         <div class="load_content">
-          <to-plug-load
+          <!-- <to-plug-load
                 parent-url='parentUrl'
                 activation-id='activationId'
                 get-resources=getResources
@@ -53,7 +51,7 @@
                 choosed-table-name="choosedTableName"
                 choosed-table-resource-id='choosedTableResourceId'
                 argument-bound=argumentBound
-          ></to-plug-load>
+          ></to-plug-load> -->
         </div>
     </div>
   </div>
