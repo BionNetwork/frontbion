@@ -9,7 +9,8 @@
       scope: {
         cardKey: '=?',
         breadcrumbs: '=?',
-        allBoughtCards: '=?'
+        allBoughtCards: '=?',
+        allStrings: '=?'
       },
       restrict: 'E',
       controller: 'viewItemCtrl',

@@ -6,8 +6,9 @@
   <div class="page-container">
     <div class="topBlock">
       <h1 class="topBlock__name">{{cardData.name}}</h1>
-      <a ng-href="#{{url}}/connect-data/arguments/{{cardData.id}}" class="bttn bttn--blue" ng-show="isBought(cardData.id ,allBoughtCards)">Подключить данные</a>
-      <a ng-href="" class="bttn bttn--blue" ng-hide="isBought(cardData.id, allBoughtCards)">Купить</a>
+      <a ng-href="#{{url}}/connect-data/arguments/{{cardData.id}}" class="bttn bttn--blue"
+          ng-show="isBought(cardData.id ,allBoughtCards)">{{allStrings.cardItem.dataActivation}}</a>
+      <a ng-href="" class="bttn bttn--blue" ng-hide="isBought(cardData.id, allBoughtCards)">{{allStrings.cardItem.buy}}</a>
       <div class="linkGroup" ng-init="selectedTab = 'description'">
         <span class="bttn bttn--grey" ng-class="{'active':selectedTab === 'description'}" ng-click="selectedTab = 'description'">Подробнее</span>
         <span class="bttn bttn--grey" ng-class="{'active':selectedTab === 'review'}" ng-click="selectedTab = 'review'">Отзывы</span>
