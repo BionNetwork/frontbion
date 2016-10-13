@@ -10,9 +10,15 @@
         <span>ШАГ 2. Подключить источник данных.</span>
       </div>
       <div class="linkStep" ng-init="selectedTab = 'arguments'">
-        <a class="active" ng-href="#{{breadcrumbs.url}}/connect-data/arguments/{{cardKey.id}}">Аргументы</a>
-        <a>Подключить данные</a>
-        <a ng-href="#{{breadcrumbs.url}}/connect-data/graphic/{{cardKey.id}}">График</a>
+        <a class="active" ng-href="#{{breadcrumbs.url}}/connect-data/arguments/{{cardKey.id}}">
+          {{allStrings.listBindings.argumentsLB}}
+        </a>
+        <a>
+          {{allStrings.listBindings.dataSource}}
+        </a>
+        <a ng-href="#{{breadcrumbs.url}}/connect-data/graphic/{{cardKey.id}}">
+          {{allStrings.listBindings.chart}}
+        </a>
       </div>
     </div>
     <div class="inner_content">

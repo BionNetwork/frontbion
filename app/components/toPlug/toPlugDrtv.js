@@ -18,6 +18,7 @@
         showTablePreview: '=?',
         tablePreview: '=?',
         argumentBound: '=?',
+        allStrings: '=?'
       },
       restrict: 'E',
       controller: 'toPlugCtrl',

@@ -10,7 +10,8 @@
         breadcrumbs: '=?',
         cardKey: '=?',
         activeActivastionId: '=?',
-        allArguments: '=?'
+        allArguments: '=?',
+        allStrings: '=?'
       },
       restrict: 'E',
       controller: 'graphicSettingsCtrl',

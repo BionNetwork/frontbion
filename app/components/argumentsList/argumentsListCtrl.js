@@ -8,7 +8,7 @@
 
     $scope.$watch('allStrings', function () {
       if ($scope.allStrings) {
-        console.log($scope.allStrings);
+        // console.log($scope.allStrings);
       }
     });
 

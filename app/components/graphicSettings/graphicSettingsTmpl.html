@@ -11,9 +11,15 @@
               <span>ШАГ 1. Выберите параметр к которому хотите подключить источник данных.</span>
             </div>
             <div class="linkStep">
-              <a ng-href="#{{breadcrumbs.url}}/connect-data/arguments/{{cardKey.id}}">Аргументы</a>
-              <a>Подключить данные</a>
-              <a class="active">График</a>
+              <a ng-href="#{{breadcrumbs.url}}/connect-data/arguments/{{cardKey.id}}">
+                {{allStrings.listBindings.argumentsLB}}
+              </a>
+              <a>
+                {{allStrings.listBindings.dataSource}}
+              </a>
+              <a class="active">
+                {{allStrings.listBindings.chart}}
+              </a>
             </div>
           </div>
         <div class="graphic-set_main">
