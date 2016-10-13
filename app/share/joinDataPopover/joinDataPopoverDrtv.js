@@ -10,7 +10,8 @@
         title: '@',
         placement: '@',
         content: '=?',
-        iconName: '@'
+        iconName: '@',
+        myCounter: '=?'
       },
       restrict: 'E',
       controller: 'joinDataPopoverCtrl',

@@ -41,10 +41,27 @@
 			<span class="dropmodal__content_arrow"></span>
 		</div>
 </div>
-<div class="right" style="margin-left: 213px; margin-top: -20px;" ng-show="popoverHeadShow">
-	<one-select-popover
+<div class="right" style="margin-left: 213px; margin-top: -20px; position: absolute;" ng-show="popoverHeadShow" ng-if="myCounter < 7">
+	<join-data-popover
 						title="Таблицы"
 						placement="right"
 						content="content"
-	></one-select-popover>
+						my-counter="myCounter"
+	></join-data-popover>
+</div>
+<!-- <div class="top" style="margin-left: 20px; margin-top: -50px; position: absolute;" ng-show="popoverHeadShow" ng-if="myCounter < 7">
+	<join-data-popover
+						title="Таблицы"
+						placement="right"
+						content="content"
+						my-counter="myCounter"
+	></join-data-popover>
+</div> -->
+<div class="bottom" style="margin-left: 20px; margin-top: 70px; position: absolute;" ng-show="popoverHeadShow" ng-if="myCounter < 7">
+	<join-data-popover
+						title="Таблицы"
+						placement="right"
+						content="content"
+						my-counter="myCounter"
+	></join-data-popover>
 </div>
