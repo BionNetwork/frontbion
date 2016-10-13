@@ -34,6 +34,8 @@
             return true;
           }
         }
+      }else {
+        return true;
       }
     }
 
