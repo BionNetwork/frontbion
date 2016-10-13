@@ -11,7 +11,20 @@
       },
       restrict: 'E',
       controller: 'widgetsStoreCtrl',
-      templateUrl: 'components/widgetsStore/widgetsStoreTmpl.html'
+      templateUrl: 'components/widgetsStore/widgetsStoreTmpl.html',
+      link: function (scope, element, attr) {
+          $('.slick-slider').slick({
+            dots: false,
+            centerMode: true,
+            infinite: true,
+            slidesToShow: 1,
+            draggable: true,
+            variableWidth: true,
+            autoplay: true,
+            autoplaySpeed: '20000',
+            swipe: true
+          });
+      }
     };
   }
 })();

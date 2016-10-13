@@ -423,8 +423,25 @@ svg {
         }
     }
 }
-.slick-prev:before, .slick-next:before {
-    color: @blue;
+.slick-prev, 
+.slick-next {
+    width: 40px;
+    height: 40px;
+    z-index: 20;
+}
+.slick-prev:before, 
+.slick-next:before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+}
+.slick-prev:before {
+    background: url(../img/icons/left.svg) center no-repeat;
+}
+.slick-next:before {
+    background: url(../img/icons/right.svg) center no-repeat;
 }
 
 /* component */

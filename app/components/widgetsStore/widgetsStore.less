@@ -1,3 +1,119 @@
-widgets-store{
-  
+@import "../../assets/css/_variables.less";
+widgets-store {
+	.slide-figure() {
+		position: relative;
+		margin: 0;
+	    overflow: hidden;
+	    display: inline-block;
+	}
+	.slide-title() {
+		display: block;
+	    position: absolute;
+	    font-weight: 600;
+	    letter-spacing: 1px;
+	    text-transform: uppercase;
+	}
+	.slide-img() {
+		max-width: 100%;
+	    height: auto;
+	    display: block;
+	    border-radius: @radius;
+	}
+	.slick-slide {
+		margin: 0 5px;
+	}
+	.slick-next {
+		right: 5px;
+	}
+	.slick-prev {
+		left: 5px;
+	}
+	.categoryBig {
+		overflow: hidden;
+		figure {
+			width: 600px;
+			.slide-figure;
+			span {
+				left: 34px;
+			    top: 20px;
+			    font-size: 31px;
+			    line-height: 32px;
+			    width: 290px;
+				.slide-title;
+			}
+			img {
+				.slide-img;
+			}
+		}
+	}
+	.categorySmall {
+		overflow: hidden;
+		margin-top: 25px;
+		figure {
+			width: 315px;
+			.slide-figure;
+			span {
+				left: 17px;
+			    top: 17px;
+			    font-size: 18px;
+			    line-height: 20px
+			    width: 160px;
+				.slide-title;
+			}
+			img {
+				.slide-img;
+			}
+		}
+	}
+ 	.cardCategory {
+		overflow: hidden;
+		margin-right: -10px;
+ 		&__name {
+		    font-size: 18px;
+		    line-height: 18px;
+		    font-weight: 100;
+		    color: #adadad;
+		    margin: 0;
+		    margin-bottom: 10px;
+		    margin-left: 3px;
+		    padding-top: 30px;
+		    text-transform: uppercase;
+		    overflow: hidden;
+		    &:after {
+		    	display: block;
+			    content: ' ';
+			    border-top: 1px solid #e1e1e1;
+			    border-bottom: 1px solid #f8f8f8;
+			    position: relative;
+			    top: -8px;
+			    right: 45px;
+		    }
+		    span {
+		    	background: #f1f1f1;
+			    position: relative;
+			    z-index: 2;
+			    padding-right: 13px;
+			    display: inline-block;
+			    letter-spacing: 0;
+		    }
+		    a {
+		    	color: @blue;
+		    	float: right;
+			    position: relative;
+			    z-index: 2;
+			    font-size: 14px;
+			    font-weight: 600;
+			    text-decoration: none;
+			    text-transform: none;
+			    background: #f1f1f1;
+    			padding-left: 10px;
+    			.icon {
+    				width: 6px;
+    				height: 8px;
+    				fill: @blue;
+    				margin-left: 8px;
+    			}
+		    }
+ 		}
+ 	}
 }

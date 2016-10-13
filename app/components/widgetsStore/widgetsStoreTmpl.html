@@ -1,23 +1,88 @@
 <div class="main-container">
-    <div class="cardWidget" ng-repeat="card in allCards">
-        <a class='cardWidget__href' ng-href="#/cardshop/item/{{card.id}}"></a>
-        <div class="cardWidget__head">
-            <h2 class="name">
-                {{card.name}}
-            </h2>
-            <p class="discription">
-                {{card.description}}
-            </p>
+    <div class="categoryBig">
+        <div class="slick-slider">
+            <div>
+                <figure>
+                    <span>Маркетинг</span>
+                    <img src="/img/top-nav-1.jpg" alt="">
+                </figure>
+            </div>
+            <div>
+                <figure>
+                    <span>Стратегический менеджмент</span>
+                    <img src="/img/top-nav-2.jpg" alt="">
+                </figure>
+            </div>
+            <div>
+                <figure>
+                    <span>Мониторинг и аналитика</span>
+                    <img src="/img/top-nav-3.jpg" alt="">
+                </figure>
+            </div>
+            <div>
+                <figure>
+                    <span>Управленческая отчетность</span>
+                    <img src="/img/top-nav-4.jpg" alt="">
+                </figure>
+            </div>
         </div>
-        <div class="cardWidget__img">
-            <img ng-src="/img/cards/4-2.png" alt="" />
+    </div>
+    <div class="cardCategory">
+        <h2 class="cardCategory__name"><span>Финансы / коммерческие операции</span><a href="">Все<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#ar-right"></use></svg></i></a></h2>
+        <div class="cardWidget" ng-repeat="card in allCards">
+            <a class='cardWidget__href' ng-href="#/cardshop/item/{{card.id}}"></a>
+            <div class="cardWidget__head">
+                <h2 class="name">
+                    {{card.name}}
+                </h2>
+                <p class="discription">
+                    {{card.description}}
+                </p>
+            </div>
+            <div class="cardWidget__img">
+                <img ng-src="/img/cards/4-2.png" alt="" />
+            </div>
+            <div class="cardWidget__author">
+                Эттон
+            </div>
+            <div class="cardWidget__price">
+                {{card.rating}}
+                <span class="currency"> ₽</span>
+            </div>
         </div>
-        <div class="cardWidget__author">
-            Эттон
-        </div>
-        <div class="cardWidget__price">
-            {{card.rating}}
-            <span class="currency"> ₽</span>
+    </div>
+    <div class="categorySmall">
+        <div class="slick-slider">
+            <div>
+                <figure>
+                    <span>Склад</span>
+                    <img src="/img/bottom-nav-1.jpg" alt="">
+                </figure>
+            </div>
+            <div>
+                <figure>
+                    <span>Маркетинг и реклама</span>
+                    <img src="/img/bottom-nav-2.jpg" alt="">
+                </figure>
+            </div>
+            <div>
+                <figure>
+                    <span>Персонал</span>
+                    <img src="/img/bottom-nav-3.jpg" alt="">
+                </figure>
+            </div>
+            <div>
+                <figure>
+                    <span>Продажа и сбыт</span>
+                    <img src="/img/bottom-nav-4.jpg" alt="">
+                </figure>
+            </div>
+            <div>
+                <figure>
+                    <span>Руководителю</span>
+                    <img src="/img/bottom-nav-5.jpg" alt="">
+                </figure>
+            </div>
         </div>
     </div>
 </div>
