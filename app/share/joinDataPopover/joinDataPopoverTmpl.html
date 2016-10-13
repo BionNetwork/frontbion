@@ -1,0 +1,50 @@
+<div class="dropmodal dropmodal--{{placement}}">
+
+		<span class="dropmodal__trigger" ng-click="openDropContent()">
+
+
+			<span ng-hide="popoverHeadShow">Choose</span>
+			<span ng-show="popoverHeadShow">{{popoverHeadName}}</span>
+
+
+				<i class="icon" ng-hide="upAndDown">
+					<svg role="img">
+						<use xlink:href="" ng-href="img/svg-symbols.svg#ar-down"></use>
+					</svg>
+				</i>
+
+				<i class="icon" ng-show="upAndDown">
+					<svg role="img">
+						<use xlink:href="" ng-href="img/svg-symbols.svg#ar-up"></use>
+					</svg>
+				</i>
+
+		</span>
+
+		<div class="dropmodal__content">
+			<i class="dropmodal__content_cancel icon" ng-click="closeDropContent()">
+				<svg role="img"><use xlink:href="img/svg-symbols.svg#close"></use></svg>
+			</i>
+			<h4 class="dropmodal__content_header">{{title}}</h4>
+			<ol class="dropmodal__content_item">
+				<li ng-class="{'active': popoverHeadName == item.name}" ng-repeat="item in content" ng-click="changePopoverHead(item)">
+					<a href="">
+						<span>{{item.name}}</span>
+						<i class="icon icon-checked" ng-show="popoverHeadName == item.name">
+							<svg role="img">
+								<use xlink:href="" ng-href="img/svg-symbols.svg#checked"></use>
+							</svg>
+						</i>
+					</a>
+				</li>
+			</ol>
+			<span class="dropmodal__content_arrow"></span>
+		</div>
+</div>
+<div class="right" style="margin-left: 213px; margin-top: -20px;" ng-show="popoverHeadShow">
+	<one-select-popover
+						title="Таблицы"
+						placement="right"
+						content="content"
+	></one-select-popover>
+</div>
