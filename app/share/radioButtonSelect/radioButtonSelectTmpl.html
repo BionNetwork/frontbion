@@ -1,22 +1,13 @@
 <span class="selectBttn">
     <label class="selectBttn__radio">
-        <input type="checkbox" checked name="name">
+        <input type="radio" checked name="name" ng-click="defaultRadioItem()">
         <i class="input"></i>
         <span>Все продукты</span>
     </label>
-    <label class="selectBttn__radio">
-        <input type="checkbox" name="name">
+    <label ng-repeat="item in content"
+            class="selectBttn__radio">
+        <input type="radio" name="name" ng-click="checkRadioItem(item, $index)">
         <i class="input"></i>
-        <span>Электроника</span>
-    </label>
-    <label class="selectBttn__radio">
-        <input type="checkbox" name="name">
-        <i class="input"></i>
-        <span>Одежда</span>
-    </label>
-    <label class="selectBttn__radio">
-        <input type="checkbox" name="name">
-        <i class="input"></i>
-        <span>Бижутерия</span>
+        <span>{{item.name}}</span>
     </label>
 </span>

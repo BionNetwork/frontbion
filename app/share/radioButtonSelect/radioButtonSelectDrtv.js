@@ -7,7 +7,7 @@
   function radioButtonSelect() {
     return {
       scope: {
-
+        content: '=?'
       },
       restrict: 'E',
       controller: 'radioButtonSelectCtrl',

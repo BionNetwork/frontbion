@@ -7,7 +7,7 @@
   function checkboxSelect() {
     return {
       scope: {
-
+        content: '=?',
       },
       restrict: 'E',
       controller: 'checkboxSelectCtrl',

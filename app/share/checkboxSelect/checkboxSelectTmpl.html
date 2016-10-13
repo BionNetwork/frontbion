@@ -1,15 +1,17 @@
 <span class="selectBttn">
     <label class="selectBttn__checkbox">
-        <input type="checkbox" checked name="name">
+        <input type="checkbox" ng-checked="selectedObject.length == 0"
+               ng-click="checkDefaultItem(content)" name="name">
         <i class="input"></i>
         <span>Все проекты</span>
     </label>
-    <label class="selectBttn__checkbox">
-        <input type="checkbox" name="name">
+    <label ng-repeat="item in content" class="selectBttn__checkbox">
+        <input type="checkbox" ng-click="checkItem(item)"
+               ng-checked="item.selected" name="name">
         <i class="input"></i>
-        <span>Альт</span>
+        <span>{{item.name}}</span>
     </label>
-    <label class="selectBttn__checkbox">
+    <!-- <label class="selectBttn__checkbox">
         <input type="checkbox" name="name">
         <i class="input"></i>
         <span>Базис</span>
@@ -18,5 +20,5 @@
         <input type="checkbox" name="name">
         <i class="input"></i>
         <span>Мегаполис</span>
-    </label>
+    </label> -->
 </span>
