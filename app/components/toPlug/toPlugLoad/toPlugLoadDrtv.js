@@ -19,7 +19,7 @@
       controller: 'toPlugLoadCtrl',
       templateUrl: 'components/toPlug/toPlugLoad/toPlugLoadTmpl.html',
       link: function (scope, element, attr) {
-            $(".table").niceScroll();
+            $(".scrollbar").niceScroll();
       }
     };
   }

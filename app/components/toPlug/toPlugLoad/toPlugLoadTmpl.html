@@ -1,39 +1,56 @@
-<div class="list_sources">
-  <ul>
-    <li><span class="glyphicon glyphicon-film"></span></li>
-    <li><span class="glyphicon glyphicon-film"></span></li>
-    <li><span class="glyphicon glyphicon-film"></span></li>
-    <li><span class="glyphicon glyphicon-film"></span></li>
-    <li><span class="glyphicon glyphicon-film"></span></li>
-  </ul>
-</div>
+<ul class="sourceSelect__list list-unstyled">
+    <li>
+      <a class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#file"></use></svg></a>
+    </li>
+    <li>
+      <a class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#db"></use></svg></a>
+    </li>
+    <li>
+      <a class="icon"><span class="google-drive"></span></a>
+    </li>
+    <li>
+      <a class="icon"><span class="dropbox"></span></a>
+    </li>
+    <li>
+      <a class="icon"><span class="yandex-drive"></span></a>
+    </li>
+</ul>
 <div ng-show="!tablePreview"
-    class='dropbox' ngf-drop ngf-select ng-model="files" class="drop-box"
+    class='fileDrop' ngf-drop ngf-select ng-model="files" class="drop-box"
     ngf-drag-over-class="'dragover'" ngf-multiple="true" ngf-allow-dir="true"
     accept="application/vnd.ms-excel"
     ngf-pattern="'application/vnd.ms-excel'">
-    Перетащите файл в выделеную область для добавления
+    <div class="fileDrop__helper">
+      <a class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#dnd"></use></svg></a>
+      Перетащите файл в выделеную область для добавления
+    </div>
 </div>
-<div class="table" ng-show="tablePreview" style="height: 300px; overflow-y: scroll;" >
-  <table style="width: 100%; ">
-    <thead>
-      <tr>
-        <th ng-repeat="(key, value) in tablePreview[0]"
-            ng-click="onSelectedColumn($index, key)"
-            ng-class="{selected_column : $index == selectedColumn}">
-          {{key}}
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="items in tablePreview">
-        <td ng-repeat="item in items"
-            ng-class="{'selected_column_tbody' : $index == selectedColumn}">
-          {{item}}
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<div class="table-wrap" ng-show="tablePreview">
+  <div class="table">
+    <div class="table__helper scrollbar">
+      <table>
+        <thead>
+          <tr>
+            <th ng-repeat="(key, value) in tablePreview[0]"
+                ng-click="onSelectedColumn($index, key)"
+                ng-class="{selected_column : $index == selectedColumn}">
+                <div class="table__fixed">
+                  <span>{{key}}</span>
+                </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="items in tablePreview">
+            <td ng-repeat="item in items"
+                ng-class="{'selected_column_tbody' : $index == selectedColumn}">
+              {{item}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
 <div class="choose_column" ng-show="showChooseColumn" style="border: solid 2px red; width: 200px;">
   <a ng-href="#{{parentUrl}}/connect-data/arguments/{{cardId}}" ng-click="onChooseColumn()">Выбрать колонку</a>
