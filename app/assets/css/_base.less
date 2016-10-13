@@ -403,6 +403,30 @@ svg {
     display: none !important;
 }
 
+/* slide */
+.slick-dots {
+    li {
+        margin: 0;
+        button {
+            &:before {
+                font-size: 10px;
+                color: @blue;
+            }
+        }
+        &.slick-active {
+            button {
+                &:before {
+                    opacity: 1;
+                    color: @blue;
+                }
+            }
+        }
+    }
+}
+.slick-prev:before, .slick-next:before {
+    color: @blue;
+}
+
 /* component */
 .filterList {
     li {

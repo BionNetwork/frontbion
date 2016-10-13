@@ -16,13 +16,11 @@
       </div>
     </div>
     <div class="innerBlock">
-        <div class="cardInfo">
+        <div class="cardInfo" ng-show="selectedTab === 'description'">
             <div class="cardInfo__description">
                 <div class="item">
                   <h2 class="head"><span>Описание</span></h2>
-                  <p class="text" ng-show="selectedTab === 'description'">{{cardData.description_long}}</p>
-                  <!-- <span ng-show="selectedTab === 'review'"></span> -->
-                  <!-- <span ng-show="selectedTab === 'same'"></span> -->
+                  <p class="text">{{cardData.description_long}}</p>
                 </div>
             </div>
             <div class="cardInfo__img">
@@ -33,6 +31,12 @@
                   <div><img ng-src="/img/cards/4-4.png" alt="" /></div>
                 </div>
             </div>
+        </div>
+        <div class="cardReview" ng-show="selectedTab === 'review'">
+          
+        </div>
+        <div class="cardSame" ng-show="selectedTab === 'same'">
+          
         </div>
     </div>
 
