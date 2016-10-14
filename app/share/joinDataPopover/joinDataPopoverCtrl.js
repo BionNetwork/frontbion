@@ -17,6 +17,7 @@
         };
 
         $scope.changeHeadIcon = function (name) {
+          console.log(name);
           $scope.iconName = name;
         }
 
