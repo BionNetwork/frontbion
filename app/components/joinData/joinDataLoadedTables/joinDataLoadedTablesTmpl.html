@@ -3,7 +3,7 @@
 			ng-click='onShowTablePreview(value)'>
 			<div class="event a" id="a" draggable="true">
 				<span class="joinName">{{value.substring(0, 8)}}/{{resourseName.substring(26, 35)}}</span>
-				<span class="iconJoin iconJoin-left">
+				<span class="iconJoin iconJoin-left" ng-class="{'active' : showFillOrNot}">
 					<!-- <i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#cell-none"></use></svg></i> -->
 					<join-data-popover
 						title="Таблицы"
@@ -11,33 +11,37 @@
 						content="contentSecond2"
 						my-counter="myCounter"
 						icon-name="cell-none"
+						ng-click="fillOrNot()"
 					></join-data-popover>
 				</span>
-				<span class="iconJoin iconJoin-top">
+				<span class="iconJoin iconJoin-top" ng-class="{'active' : showFillOrNotNone}">
 					<join-data-popover
 						title="Таблицы"
 						placement="left"
 						content="contentSecond2"
 						my-counter="myCounter"
 						icon-name="cell-none"
+						ng-click="fillOrNotNone()"
 					></join-data-popover>
 				</span>
-				<span class="iconJoin iconJoin-right">
+				<span class="iconJoin iconJoin-right" ng-class="{'active' : showFillOrNotRight}">
 					<join-data-popover
 						title="Таблицы"
 						placement="left"
 						content="contentSecond2"
 						my-counter="myCounter"
 						icon-name="cell-none"
+						ng-click="fillOrNotRight()"
 					></join-data-popover>
 				</span>
-				<span class="iconJoin iconJoin-bottom">
+				<span class="iconJoin iconJoin-bottom" ng-class="{'active' : showFillOrNotBottom}">
 					<join-data-popover
 						title="Таблицы"
 						placement="left"
 						content="contentSecond2"
 						my-counter="myCounter"
 						icon-name="cell-none"
+						ng-click="fillOrNotBottom()"
 					></join-data-popover>
 				</span>
 			</div>

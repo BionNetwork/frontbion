@@ -12,7 +12,19 @@
       { name: 'table'},
       { name: 'table'},
       { name: 'table'},
-    ]
+    ];
+    $scope.fillOrNot = function () {
+      $scope.showFillOrNot = true;
+    };
+    $scope.fillOrNotNone = function () {
+      $scope.showFillOrNotNone = true;
+    };
+    $scope.fillOrNotRight = function () {
+      $scope.showFillOrNotRight = true;
+    };
+    $scope.fillOrNotBottom = function () {
+      $scope.showFillOrNotBottom = true;
+    };
     // $(function () {
     //   $(".dragg").draggable();
     // });
