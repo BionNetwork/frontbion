@@ -60,6 +60,108 @@ view-item {
             }
         }
     }
+    .modalOverlay {
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      transition: 0.2s linear;
+      .modalReviews {
+        background-color: #fcfcfc;
+        position: relative;
+        border-radius: 4px;
+        box-shadow: 0 0 20px #333;
+        margin: 80px auto;
+        overflow: hidden;
+        left: 0;
+        right: 0;
+        width: 500px;
+        height: 450px;
+        &_head {
+          width: 100%;
+          color: #1a1a1a;
+          background: #f5f5f5;
+          height: 43px;
+          position: relative;
+          border-bottom: 1px solid #e6e6e6;
+          p {
+            line-height: 41px!important;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: .14px;
+            line-height: 18.432px;
+            text-align: center;
+            width: 100%!important;
+            margin: 0;
+          }
+          .close {
+            width: 40px;
+            height: 40px;
+            margin: 0;
+            line-height: 1;
+            position: relative;
+            top: -40px;
+            border: 1px solid transparent;
+            float: right;
+            background-color: transparent;
+            text-align: center;
+            padding: 0;
+            cursor: pointer;
+            color: transparent;
+            font-size: 14px;
+            font-weight: 400;
+            border-radius: 50%;
+            transition: 0.2s linear;
+            i {
+              width: 18px;
+              height: 18px
+            }
+          }
+        }
+        &_body {
+          padding-left: 15px;
+          padding-right: 15px;
+          padding-bottom: 15px;
+          .cardReview-userRate {
+            position: relative;
+            width: 100%;
+            top: -10px;
+            padding-bottom: 10px;
+            &_submit {
+              margin-left: 40px;
+              top: -4px;
+            }
+            .review {
+              width: 100%;
+              input {
+                margin-top: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border-top: 1px solid #e8e8e8;
+                border-bottom: 1px solid #e8e8e8;
+                width: 100%;
+                border-left-color: transparent;
+                border-right-color: transparent;
+              }
+              textarea {
+                width: 100%;
+                height: 285px;
+                border: none;
+                resize: none;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #e8e8e8;
+                border-left-color: transparent;
+                border-right-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
     .cardInfo {
         padding-right: 50%;
         height: 100%;
@@ -215,6 +317,11 @@ view-item {
         padding-left: 10px;
         padding-right: 10px;
         top: -4px;
+        transition: 0.2s linear;
+        &:hover {
+          border: 1px solid #303f9f + #505050;
+          color: #303f9f + #505050;
+        }
       }
     }
   }

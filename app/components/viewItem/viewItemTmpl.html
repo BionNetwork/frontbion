@@ -75,6 +75,33 @@
           <h2 class="head">
             <span>Отзывы</span>
           </h2>
+        <!--modalReviews-->
+        <div class="modalOverlay" style="display: none;">
+          <div class="modalReviews">
+            <div class="modalReviews_head">
+              <p>Отзыв</p>
+                <button class="close"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#close"></use></i></button>
+            </div>
+            <div class="modalReviews_body">
+              <div class="cardReview-userRate">
+                <div class="cardReview-userRate_stars">
+                  <a class="star"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#star"></use></i></a>
+                  <a class="star"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#star"></use></i></a>
+                  <a class="star"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#star"></use></i></a>
+                  <a class="star"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#star"></use></i></a>
+                  <a class="star"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#star"></use></i></a>
+                </div>
+                <span>Оценить приложение</span>
+                <button class="cardReview-userRate_submit">Оставить отзыв</button>
+                <div class="review">
+                  <input class="review-title_input" placeholder="Заголовок"/>
+                  <textarea class="teview-title_text" placeholder="Текст отзыва"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--modalReviews end-->
         </div>
         <div class="cardSame" ng-show="selectedTab === 'same'">
 
