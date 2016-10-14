@@ -12,6 +12,44 @@ view-item {
                   margin-left: 25px;
                   vertical-align: top;
                 }
+                &__right {
+                  position: absolute;
+                  right: 0;
+                  padding-right: 40px;
+                  top: 0;
+                  padding-top: 53px;
+                  .cardAction {
+                    position: absolute;
+                    right: 18px;
+                    top: -10px;
+                    .icon {
+                      fill: @blue;
+                    }
+                  }
+                  .cardReview-midRate_stars {
+                    margin: 0;
+                    float: none;
+                    display: inline-block;
+                    vertical-align: sub;
+                    width: auto;
+                    height: 12px;
+                    .star {
+                      height: auto;
+                      width: auto;
+                      i {
+                        width: 12px;
+                        height: 12px;
+                      }
+                    }
+                  }
+                  .cardProperties {
+                    color: #adadad;
+                    font-size: 10px;
+                    font-weight: 400;
+                    margin-left: 36px;
+                    line-height: 12px;
+                  }
+                }
             }
             .innerBlock {
                 position: absolute;
@@ -23,7 +61,7 @@ view-item {
         }
     }
     .cardInfo {
-        padding-right: 643px;
+        padding-right: 50%;
         height: 100%;
         &__description {
             overflow-y: auto;
@@ -31,7 +69,7 @@ view-item {
             left: 0;
             top: 0;
             bottom: 10px;
-            right: 625px;
+            right: 50%;
             padding-right: 13px;
             .item {
                 margin-bottom: 24px;
@@ -73,7 +111,7 @@ view-item {
             }
         }
         &__img {
-            width: 600px;
+            width: 50%;
             min-height: 314px;
             position: absolute;
             right: 0;
