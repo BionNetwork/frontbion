@@ -39,7 +39,7 @@
     //           draggable.swap(droppable);
     //       }
     //   });
-    $(document).ready(function(){
+    // $(document).ready(function(){
     		$('.event').on("dragstart", function (event) {
     			  var dt = event.originalEvent.dataTransfer;
     			  dt.setData('Text', $(this).attr('id'));
@@ -52,7 +52,7 @@
     		// 	  de.appendTo($(this));
     		//    };
     	  //  });
-    })
+    // })
 
     // $scope.$watch('downloadTableNames', function() {
     //   if ($scope.downloadTableNames && !$scope.items) {

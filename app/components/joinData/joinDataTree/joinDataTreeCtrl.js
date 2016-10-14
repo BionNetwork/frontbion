@@ -24,7 +24,7 @@
       		   event.preventDefault();
       		   if (event.type === 'drop') {
       			  var data = event.originalEvent.dataTransfer.getData('Text',$(this).attr('id'));
-              var an = $('#'+data).detach();
+              var an = $('#a').detach();
       			  // var de=$('#'+data).detach();
 
       			  an.appendTo($(this));
