@@ -23,16 +23,22 @@ join-data-tree{
                 text-overflow: ellipsis;
             }
             .iconJoin {
+                opacity: 0;
+                transition: @speed;
                 width: @iconJoin-width;
                 height: @iconJoin-height;
                 display: block;
                 position: absolute;
+                &:hover {
+                    opacity: 1;
+                }
                 .dropmodal__trigger {
                     .icon {
                         width: @iconJoin-width;
                         height: @iconJoin-height;
                         display: block;
-                        fill: @grey-border;
+                        fill: #041cb9;
+                        fill-opacity: .8;
                     }
                 }
                 &-left {

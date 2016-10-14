@@ -1,9 +1,13 @@
+@import "../../assets/css/_variables.less";
 join-data-popover{
 	.dropmodal {
 		&__content {
 			left: -4px;
 			min-width: 480px;
     		max-width: inherit;
+    		&_arrow {
+    			pointer-events: visible;
+    		}
 			&_join {
 				padding: 13px;
 				.joinHeader {
@@ -18,7 +22,9 @@ join-data-popover{
 					    .icon {
 					    	width: 40px;
 					    	height: 30px;
-					    	fill: #adadad;
+					    	// fill: #adadad;
+					    	fill: #041cb9;
+					    	fill-opacity: .8;
 					    }
 					    span {
 					    	display: block;
