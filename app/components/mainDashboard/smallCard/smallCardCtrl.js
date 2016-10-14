@@ -7,59 +7,7 @@
   function mainDashboardSmallCardCtrl($scope) {
     // console.log('mainDashboardSmallCardCtrl');
 
-    $scope.data = {
-          title: {
-              text: ''
-          },
-          xAxis: {
-              categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-                  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-          },
-
-          series: [{
-              data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
-          }]
-      };
-      $scope.pieData = [
-          {
-              name: "Microsoft Internet Explorer",
-              y: 56.33
-          }, {
-              name: "Chrome",
-              y: 24.03,
-          }, {
-              name: "Firefox",
-              y: 10.38
-          }
-        ];
-
-      $scope.legend = {
-          layout: 'vertical',
-          verticalAlign: 'middle',
-          animation: false,
-          align: 'right',
-          width: 90,
-          margin: 5,
-          symbolWidth: 10,
-          symbolHeight: 10,
-          itemStyle: {
-              fontWeight: 'normal',
-              fontSize: '10px',
-              color: '#727272'
-          },
-          itemMarginBottom: 5
-      };
-      $scope.legend2 = {
-          margin: 5,
-          symbolWidth: 10,
-          symbolHeight: 10,
-          itemStyle: {
-              fontWeight: 'normal',
-              fontSize: '10px',
-              color: '#727272'
-          },
-          itemMarginBottom: 5
-      };
+  
 
       $scope.changeGrath = function functionName(index) {
         $scope.index = 2;

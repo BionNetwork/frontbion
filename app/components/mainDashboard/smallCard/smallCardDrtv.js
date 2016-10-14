@@ -12,7 +12,9 @@
       },
       restrict: 'E',
       controller: 'mainDashboardSmallCardCtrl',
-      templateUrl: 'components/mainDashboard/smallCard/smallCardTmpl.html'
+      templateUrl: 'components/mainDashboard/smallCard/smallCardTmpl.html',
+      link: function (scope, element, attr) {
+      }
     };
   }
 })();

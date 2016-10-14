@@ -1,5 +1,5 @@
-<div class="cardWrap" ng-style="{width: index == 2 || index == 4 ? '610px' : '300px'}" ng-class="{cardOpen : resize}">
-    <div class="card" ng-style="{width: index == 2 || index == 4 ? '610px' : '300px'}">
+<div class="cardWrap" ng-style="{width: data.size == 2 ? '610px' : '300px'}" ng-class="{cardOpen : resize}">
+    <div class="card" ng-style="{width: data.size == 2 ? '610px' : '300px'}">
         <div class="cardContainer">
             <div class="card__head">
                 <span>Chart Title</span>
@@ -11,11 +11,10 @@
                 <div class="card__chart_wrap">
                     <high-chart-line
                         data='data'
-                        ng-show="index == 2 || index == 4"
+                        ng-show="data.charts[0] == 'line'"
                     ></high-chart-line>
                     <high-chart-pie
-                        legend='resize ? legend2 : legend'
-                        ng-show="index == 1 || index == 3"
+                        ng-show="data.charts[0] == 'pie'"
                         pie-layout="vertical"
                         pie-vertical-align="middle"
                         pie-align="right"

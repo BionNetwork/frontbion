@@ -74,11 +74,11 @@
               {
                 colors: ["rgb(33, 187, 239)", "rgb(156, 205, 100)", "rgb(72, 165, 234)"],
                   title: {
-                      text: 'Monthly Average Temperature',
+                      text: '',
                       x: -20 //center
                   },
                   subtitle: {
-                      text: 'Source: WorldClimate.com',
+                      text: '',
                       x: -20
                   },
                   xAxis: {

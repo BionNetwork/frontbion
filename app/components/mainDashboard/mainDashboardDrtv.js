@@ -7,7 +7,7 @@
   function mainDashboard() {
     return {
       scope: {
-
+        dashboardCards: '=?'
       },
       restrict: 'E',
       controller: 'mainDashboardCtrl',
