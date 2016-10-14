@@ -33,18 +33,19 @@
           <tr>
             <th ng-repeat="(key, value) in tablePreview[0]"
                 ng-click="onSelectedColumn($index, key)"
-                ng-class="{selected_column : $index == selectedColumn}">
+                ng-class="{activeCol : $index == selectedColumn}">
                 <div class="table__fixed">
                   <span>{{key}}</span>
                 </div>
+                <span class="table__textHelper">{{key}}</span>
             </th>
           </tr>
         </thead>
         <tbody>
           <tr ng-repeat="items in tablePreview">
             <td ng-repeat="item in items"
-                ng-class="{'selected_column_tbody' : $index == selectedColumn}">
-              {{item}}
+                ng-class="{'activeColBody' : $index == selectedColumn}">
+                <span>{{item}}</span>
             </td>
           </tr>
         </tbody>
@@ -52,6 +53,6 @@
     </div>
   </div>
 </div>
-<div class="choose_column" ng-show="showChooseColumn" style="border: solid 2px red; width: 200px;">
-  <a ng-href="#{{parentUrl}}/connect-data/arguments/{{cardId}}" ng-click="onChooseColumn()">Выбрать колонку</a>
+<div class="bttnSelectCol" ng-show="showChooseColumn">
+  <a class="bttn bttn--blue" ng-href="#{{parentUrl}}/connect-data/arguments/{{cardId}}" ng-click="onChooseColumn()">Выбрать колонку</a>
 </div>

@@ -74,18 +74,18 @@ to-plug-load{
         right: 5px;
     }
     .table {
-        height: calc(~"100% - 5px");
+        height: 100%;
         position: relative;
         padding-top: 50px;
         margin-bottom: 0;
-        overflow-y: hidden;
-        overflow-x: auto;
+        overflow: hidden;
         width: auto;
+        max-width: inherit;
         &__helper {
-            overflow-y: auto;
-            overflow-x: hidden !important;
+            overflow: hidden;
             height: 100%;
             width: 100%;
+            padding-left: 1px;
             table {
                 border-spacing: 0;
                 color: #000;
@@ -109,6 +109,19 @@ to-plug-load{
                     &:first-child {
                         border-left: none;
                     }
+                    span {
+                        display: block;
+                        min-width: 100px;
+                        max-width: 200px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+                td {
+                    &.activeColBody {
+                        border-left: 2px solid #6b75b8!important;
+                        border-right: 2px solid #6b75b8!important;
+                    }
                 }
                 th {
                     cursor: pointer;
@@ -119,10 +132,18 @@ to-plug-load{
                     padding: 0;
                     height: 0;
                     line-height: 0;
-                    padding-top: 0;
-                    padding-bottom: 0;
                     border: none;
                     white-space: nowrap;
+                    &.activeCol {
+                        background: @blue!important;
+                        color: #fff;
+                        .table__fixed {
+                            border-color: #6b75b8!important;
+                            border-left: 1px solid #6b75b8!important;
+                            border-bottom-color: @blue!important;
+                            background: @blue!important;
+                        }
+                    }
                 }
             }
         }
@@ -131,8 +152,8 @@ to-plug-load{
             margin-right: -50px;
             background: inherit;
             padding: 9px 22px 10px 10px;
-            height: 49px;
-            line-height: 1;
+            height: 50px;
+            line-height: normal;
             top: 0;
             width: 140px;
             border-bottom: 2px solid #f3f3f3;
@@ -141,13 +162,21 @@ to-plug-load{
             &:first-child {
                 border-left: none;
             }
-            span {
-                display: block;
-                min-width: 100px;
-                max-width: 200px;
-                overflow: hidden;
-                text-overflow: ellipsis;
+            &:hover {
+                background: #b3bae8;
+                border-color: #b3bae8;
             }
         }
+        &__textHelper {
+            width: 140px;
+            visibility: hidden;
+        }
+    }
+    .bttnSelectCol {
+        position: absolute;
+        background: #fff;
+        left: 210px;
+        bottom: 0;
+        padding: 5px;
     }
 }
