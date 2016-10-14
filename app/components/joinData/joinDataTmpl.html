@@ -21,29 +21,34 @@
         </a>
       </div>
     </div>
-    <div class="inner_content">
-        <div class="loaded">
-          <div class="list">
-              <span>Загруженные файлы</span>
-              <ul>
+    <div class="innerBlock">
+        <div class="sourceFile-wrap">
+          <div class="sourceFile">
+              <span class="sourceFile__head">Загруженные файлы</span>
+              <ul class="sourceFile__list list-unstyled scrollbar">
                 <li ng-repeat="item in allResources" ng-class="{active : showDetails}">
-                  {{item.settings.file.path.substring(26, 45)}}
-                  <i style="margin-left: 30px; cursor: pointer; font-size: 14px;"
-                      ng-click="showDetails = !showDetails" ng-init="showDetails=$first">
-                      +
+                  <i class="icon icon-doc" ng-click="showDetails = !showDetails" ng-init="showDetails=$first">
+                    <svg role="img"><use xlink:href="img/svg-symbols.svg#xls"></use></svg>
                   </i>
-                    <join-data-loaded-tables
-                        ng-show="true"
-                        resourse-id="item.id"
-                        get-resources-tables="getResourcesTables"
-                        download-table-names='showDetails'
-                        resourse-name="item.settings.file.path"
-                    ></join-data-loaded-tables>
+                  <a>
+                    <span>{{item.settings.file.path.substring(26, 45)}}</span>
+                  </a>
+                  <i class="icon icon-arrow" ng-click="showDetails = !showDetails" ng-init="showDetails=$first">
+                    <svg role="img"><use xlink:href="img/svg-symbols.svg#ar-down"></use></svg>
+                  </i>
+                  
+                  <join-data-loaded-tables
+                      ng-show="true"
+                      resourse-id="item.id"
+                      get-resources-tables="getResourcesTables"
+                      download-table-names='showDetails'
+                      resourse-name="item.settings.file.path"
+                  ></join-data-loaded-tables>
                 </li>
               </ul>
           </div>
         </div>
-        <div class="load_content">
+        <div class="sourceSelect">
           <join-data-tree></join-data-tree>
         </div>
     </div>
