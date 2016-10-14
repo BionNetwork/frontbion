@@ -12,7 +12,7 @@
             {name: $scope.allStrings.header.menu.desktop, url: '/dashboard'},
             {name: $scope.allStrings.header.menu.myWidgets, url: '/mywidgets/view'},
             {name: $scope.allStrings.header.menu.widgetsStore, url: '/cardshop/view'},
-            {name: $scope.allStrings.header.menu.language, url: ''},
+            {name: $scope.allStrings.header.menu.language },
             {name: "Выход", url: '/login'}
         ];
 
