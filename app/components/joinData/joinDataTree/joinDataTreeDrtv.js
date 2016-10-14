@@ -7,7 +7,7 @@
   function joinDataTree() {
     return {
       scope: {
-
+        
       },
       restrict: 'E',
       controller: 'joinDataTreeCtrl',

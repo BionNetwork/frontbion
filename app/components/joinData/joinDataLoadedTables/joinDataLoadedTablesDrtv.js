@@ -16,6 +16,7 @@
       templateUrl: 'components/joinData/joinDataLoadedTables/joinDataLoadedTablesTmpl.html',
       link: function(scope, element, attrs){
           // console.log(scope.resourseId);
+
   			}
     };
   }
