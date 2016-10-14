@@ -2,7 +2,7 @@
 
 		<span class="dropmodal__trigger" ng-click="openDropContent()">
 
-			<i class="icon"><svg role="img"><use xlink:href="" ng-href="img/svg-symbols.svg#cell-none"></use></svg></i>
+			<i class="icon"><svg role="img"><use xlink:href="" ng-href="img/svg-symbols.svg#{{iconName}}"></use></svg></i>
 
 		</span>
 
@@ -14,22 +14,26 @@
 			<div class="dropmodal__content_join">
 				<div class="joinHeader">
 					<a class="bindCell">
-						<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#cell-none"></use></svg></i>
+						<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#cell-none"
+							ng-click="changeHeadIcon('cell-none')"></use></svg></i>
 						<span>Inner</span>
 					</a>
 					<a class="bindCell">
-						<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#cell-left"></use></svg></i>
+						<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#cell-left"
+							ng-click="changeHeadIcon('cell-left')"></use></svg></i>
 						<span>Left</span>
 					</a>
 					<a class="bindCell">
-						<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#cell-right"></use></svg></i>
+						<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#cell-right"
+							ng-click="changeHeadIcon('cell-right')"></use></svg></i>
 						<span>Right</span>
 					</a>
 					<a class="bindCell">
-						<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#cell-full"></use></svg></i>
+						<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#cell-full"
+							ng-click="changeHeadIcon('cell-full')"></use></svg></i>
 						<span>Full Outer</span>
 					</a>
-					<a class="bttn bttn--blue">СВЯЗАТЬ</a>
+					<a class="bttn bttn--blue" ng-click="closeDropContent()">СВЯЗАТЬ</a>
 				</div>
 				<div class="joinTable">
 					<table>

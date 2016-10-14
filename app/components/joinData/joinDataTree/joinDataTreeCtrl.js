@@ -17,7 +17,12 @@
       			  var data = event.originalEvent.dataTransfer.getData('Text',$(this).attr('id'));
               var an = data ? $('#' + data).detach() : $('#a').detach();
               console.log();
-              $('table .i').css("display", "inline-block")
+              $timeout(function () {
+                console.log($('table #a'));
+                $('table #a').attr('draggable',false);
+              }, 0)
+              $('table .i').css("display", "inline-block");
+              // $('table #a').setAttribute('draggable',false);
               // var an = $('#a').detach();
       			  // var de=$('#'+data).detach();
 

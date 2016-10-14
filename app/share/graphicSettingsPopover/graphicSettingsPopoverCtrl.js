@@ -9,6 +9,7 @@
     $scope.showLegend = true;
     $scope.onColorChange = function (item) {
       console.log(item);
+
     };
 
     // $scope.click = function() {

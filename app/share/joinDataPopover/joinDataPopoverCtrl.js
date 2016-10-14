@@ -16,6 +16,10 @@
           $scope.upAndDown = false;
         };
 
+        $scope.changeHeadIcon = function (name) {
+          $scope.iconName = name;
+        }
+
 
   }
 

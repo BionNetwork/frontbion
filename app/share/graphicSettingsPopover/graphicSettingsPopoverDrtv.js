@@ -67,6 +67,10 @@
             scope.getChoosedColorsOn(defaultColors, true);
           };
 
+          scope.onClickClose = function (item) {
+            element[0].querySelector('.dropmodal').classList.remove("dropmodal--active");
+          };
+
           element.bind('click', function(event) {
              event.stopPropagation();
           });

@@ -11,7 +11,8 @@
         placement: '@',
         content: '=?',
         iconName: '@',
-        myCounter: '=?'
+        myCounter: '=?',
+        iconName: '@'
       },
       restrict: 'E',
       controller: 'joinDataPopoverCtrl',
