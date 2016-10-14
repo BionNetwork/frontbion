@@ -11,24 +11,29 @@ join-data-tree{
             border: none;
         }
         .event {
-        	display:block;
             text-align: center;
-            line-height: 50px;
-        	// background: @grey;
-        	height: 100%;
         	width: 100%;
+            height: 50px;
             font-weight: 500;
             position: relative;
+            .joinName {
+                overflow: hidden;
+                line-height: 50px;
+                display: inline-block;
+                text-overflow: ellipsis;
+            }
             .iconJoin {
                 width: @iconJoin-width;
                 height: @iconJoin-height;
                 display: block;
                 position: absolute;
-                .icon {
-                    width: @iconJoin-width;
-                    height: @iconJoin-height;
-                    display: block;
-                    fill: @grey-border;
+                .dropmodal__trigger {
+                    .icon {
+                        width: @iconJoin-width;
+                        height: @iconJoin-height;
+                        display: block;
+                        fill: @grey-border;
+                    }
                 }
                 &-left {
                     top: 50%;

@@ -1,27 +1,42 @@
 <ol class="list-unstyled">
 	<li draggable="true" class="dragg" ng-repeat="(value, key) in items"
 			ng-click='onShowTablePreview(value)'>
-			<span class="event a" id="a" draggable="true">
+			<div class="event a" id="a" draggable="true">
+				<span class="joinName">{{value.substring(0, 8)}}/{{resourseName.substring(26, 35)}}</span>
 				<span class="iconJoin iconJoin-left">
 					<!-- <i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#cell-none"></use></svg></i> -->
 					<join-data-popover
-					          title="Таблицы"
-					          placement="left"
-					          content="contentSecond2"
-					          my-counter="myCounter"
+						title="Таблицы"
+						placement="left"
+						content="contentSecond2"
+						my-counter="myCounter"
 					></join-data-popover>
 				</span>
 				<span class="iconJoin iconJoin-top">
-					<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#cell-none"></use></svg></i>
+					<join-data-popover
+						title="Таблицы"
+						placement="left"
+						content="contentSecond2"
+						my-counter="myCounter"
+					></join-data-popover>
 				</span>
 				<span class="iconJoin iconJoin-right">
-					<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#cell-none"></use></svg></i>
+					<join-data-popover
+						title="Таблицы"
+						placement="left"
+						content="contentSecond2"
+						my-counter="myCounter"
+					></join-data-popover>
 				</span>
 				<span class="iconJoin iconJoin-bottom">
-					<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#cell-none"></use></svg></i>
+					<join-data-popover
+						title="Таблицы"
+						placement="left"
+						content="contentSecond2"
+						my-counter="myCounter"
+					></join-data-popover>
 				</span>
-				{{value.substring(0, 8)}}/{{resourseName.substring(26, 35)}}
-			</span>
+			</div>
 	</li>
 </ol>
 <!-- <ul>

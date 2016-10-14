@@ -2,11 +2,7 @@
 
 		<span class="dropmodal__trigger" ng-click="openDropContent()">
 
-				<i class="icon">
-					<svg role="img">
-						<use xlink:href="" ng-href="img/svg-symbols.svg#cell-none"></use>
-					</svg>
-				</i>
+			<i class="icon"><svg role="img"><use xlink:href="" ng-href="img/svg-symbols.svg#cell-none"></use></svg></i>
 
 		</span>
 
@@ -15,18 +11,59 @@
 				<svg role="img"><use xlink:href="img/svg-symbols.svg#close"></use></svg>
 			</i>
 			<h4 class="dropmodal__content_header">{{title}}</h4>
-			<ol class="dropmodal__content_item">
-				<li ng-class="{'active': popoverHeadName == item.name}" ng-repeat="item in content" ng-click="changePopoverHead(item)">
-					<a href="">
-						<span>{{item.name}}</span>
-						<i class="icon icon-checked" ng-show="popoverHeadName == item.name">
-							<svg role="img">
-								<use xlink:href="" ng-href="img/svg-symbols.svg#checked"></use>
-							</svg>
-						</i>
+			<div class="dropmodal__content_join">
+				<div class="joinHeader">
+					<a class="bindCell">
+						<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#cell-none"></use></svg></i>
+						<span>Inner</span>
 					</a>
-				</li>
-			</ol>
+					<a class="bindCell">
+						<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#cell-left"></use></svg></i>
+						<span>Left</span>
+					</a>
+					<a class="bindCell">
+						<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#cell-right"></use></svg></i>
+						<span>Right</span>
+					</a>
+					<a class="bindCell">
+						<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#cell-full"></use></svg></i>
+						<span>Full Outer</span>
+					</a>
+					<a class="bttn bttn--blue">СВЯЗАТЬ</a>
+				</div>
+				<div class="joinTable">
+					<table>
+						<thead>
+							<tr>
+								<th><span>Данные</span></th>
+								<th><span>CF факт</span></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><span>Наименование столбца 1</span></td>
+								<td><span>Наименование столбца 1</span></td>
+							</tr>
+							<tr>
+								<td><span>Наименование столбца 1</span></td>
+								<td><span>Наименование столбца 1</span></td>
+							</tr>
+							<tr>
+								<td><span>Наименование столбца 1</span></td>
+								<td><span>Наименование столбца 1</span></td>
+							</tr>
+							<tr>
+								<td><span>Наименование столбца 1</span></td>
+								<td><span>Наименование столбца 1</span></td>
+							</tr>
+							<tr>
+								<td><span>Наименование столбца 1</span></td>
+								<td><span>Наименование столбца 1</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
 			<span class="dropmodal__content_arrow"></span>
 		</div>
 </div>

@@ -1,3 +1,79 @@
 join-data-popover{
-
+	.dropmodal {
+		&__content {
+			left: -4px;
+			min-width: 480px;
+    		max-width: inherit;
+			&_join {
+				padding: 13px;
+				.joinHeader {
+					padding-bottom: 20px;
+					.bindCell {
+					    display: inline-block;
+					    text-align: center;
+					    color: #adadad;
+					    cursor: pointer;
+					    vertical-align: middle;
+					    text-decoration: none;
+					    .icon {
+					    	width: 40px;
+					    	height: 30px;
+					    	fill: #adadad;
+					    }
+					    span {
+					    	display: block;
+						    font-size: 10px;
+						    line-height: 1px;
+					    }
+					}
+				    .bttn {
+				    	float: right;
+						margin-top: 9px
+				    }
+				}
+				.joinTable {
+					position: relative;
+    				overflow: hidden;
+    				table {
+    					border-spacing: 0;
+					    color: #000;
+					    font-size: 12px;
+					    line-height: 14px;
+					    font-weight: 400;
+					    margin-right: 12px;
+					    tr:nth-child(odd) {
+					    	td {
+						    	background: #f7f7ff;
+					    	}
+						}
+					    th,
+					    td {
+					    	width: auto;
+					    	height: auto;
+					    	text-align: left;
+						    padding: 6px 12px;
+						    border-right: 1px solid #f2f2f2;
+						    border-left: 1px solid #f2f2f2;
+						    width: 1px;
+						    &:first-child {
+						    	border-left: none;
+						    }
+						    span {
+						    	display: block;
+							    width: 202px;
+							    overflow: hidden;
+							    text-overflow: ellipsis;
+						    }
+					    }
+					    th {
+					    	font-weight: 600;
+						    white-space: nowrap;
+						    border-top: 1px solid #f2f2f2;
+						    border-bottom: 1px solid #f2f2f2;
+					    }
+    				}
+				}
+			}
+		}
+	}
 }
