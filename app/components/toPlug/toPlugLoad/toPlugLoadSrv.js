@@ -8,7 +8,6 @@
 
     this.addFiles = function(files, activationId, getResources) {
       var fileData = files[0] || files;
-      console.log(fileData);
 
       if (!fileData) {
         alert("Только файлы эксель");
