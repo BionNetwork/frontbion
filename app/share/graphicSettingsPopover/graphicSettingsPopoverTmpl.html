@@ -14,7 +14,7 @@
 			                          </div>
 			                          <div class="titler_line">
 			                          </div>
-			                          <button class="titler_eye" ng-click="showLegend = !showLegend">
+			                          <button class="titler_eye" ng-click="onClickShowLegend()">
 																	<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#eye"></use></svg></i>
 			                          </button>
 			                        </div>
@@ -23,6 +23,7 @@
 			                          <div class="col-input">
 			                            <input placeholder="Color"/>
 			                              <color-popover
+																			color-name="rgb(33, 187, 239)"
 																			labelName=""
 																			on-color-change="onColorChange"
 																			on-click-change-color="onClickChangeColor"
@@ -33,6 +34,7 @@
 			                          <div class="col-input">
 			                            <input placeholder="Color"/>
 			                              <color-popover
+																			color-name="rgb(156, 205, 100)"
 																			labelName=""
 																			on-color-change="onColorChange"
 																			on-click-change-color="onClickChangeColor"
@@ -43,6 +45,7 @@
 			                          <div class="col-input">
 			                            <input placeholder="Color"/>
 			                              <color-popover
+																			color-name="rgb(72, 165, 234)"
 																			labelName=""
 																			on-color-change="onColorChange"
 																			on-click-change-color="onClickChangeColor"

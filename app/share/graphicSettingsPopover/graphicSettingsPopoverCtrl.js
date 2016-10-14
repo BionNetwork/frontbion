@@ -6,6 +6,7 @@
 
   function graphicSettingsPopoverCtrl($scope, $state) {
     // console.log('simplePopoverCtrl');
+    $scope.showLegend = true;
     $scope.onColorChange = function (item) {
       console.log(item);
     };

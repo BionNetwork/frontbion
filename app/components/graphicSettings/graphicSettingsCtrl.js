@@ -22,8 +22,8 @@
        }
 
 
-      $scope.getChoosedColorsOn = function (colors) {
-          $scope.myFn(colors);
+      $scope.getChoosedColorsOn = function (colors, legend) {
+          $scope.myFn(colors, legend);
       };
 
 

@@ -8,7 +8,8 @@
     return {
       scope: {
         onColorChange: '=?',
-        onClickChangeColor: '=?'
+        onClickChangeColor: '=?',
+        colorName: '@'
       },
       restrict: 'E',
       controller: 'colorPopoverCtrl',

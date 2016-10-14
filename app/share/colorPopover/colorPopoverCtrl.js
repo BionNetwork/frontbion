@@ -7,7 +7,7 @@
   function colorPopoverCtrl($scope, $state) {
     // console.log('colorPopoverCtrl');
     $scope.color = {
-      "background-color" : 'red'
+      "background-color" : $scope.colorName
     }
 
     $scope.chooseColorsObj = [

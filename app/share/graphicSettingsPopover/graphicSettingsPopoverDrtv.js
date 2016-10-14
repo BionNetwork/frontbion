@@ -29,8 +29,20 @@
               colors.push(colorsElement[i].style.backgroundColor)
             }
             // console.log(colors);
-            scope.getChoosedColorsOn(colors);
+            scope.getChoosedColorsOn(colors, scope.showLegend);
 
+          };
+
+          scope.onClickShowLegend = function () {
+            scope.showLegend = !scope.showLegend;
+            var colorsElement = element[0].getElementsByClassName('col-indicator');
+            var colors = [];
+            for (var i = 0; i < colorsElement.length; i++) {
+
+              colors.push(colorsElement[i].style.backgroundColor)
+            }
+            // console.log(colors);
+            scope.getChoosedColorsOn(colors, scope.showLegend);
           };
 
           scope.openDropContent = function () {
@@ -51,6 +63,8 @@
 
           scope.closeDropContent = function () {
             element[0].querySelector('.dropmodal').classList.remove("dropmodal--active");
+            let defaultColors = ["rgb(33, 187, 239)", "rgb(156, 205, 100)", "rgb(72, 165, 234)"];
+            scope.getChoosedColorsOn(defaultColors, true);
           };
 
           element.bind('click', function(event) {

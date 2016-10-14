@@ -14,7 +14,6 @@
         pieVerticalAlign: '@',
         pieAlign: '@',
         pieLegendWidth: '@',
-        getChartColors: '=?',
         onAction: '=?'
       },
       restrict: 'E',
@@ -22,7 +21,7 @@
       templateUrl: 'share/highChartPie/highChartPieTmpl.html',
       link: function (scope, element) {
 
-        scope.onAction = function(colors) {
+        scope.onAction = function(colors, legend) {
           // scope.getChartColors = ["red", "rgb(156, 205, 100)", "red"]
           console.log(colors);
           Highcharts.chart(element[0], {
@@ -32,6 +31,7 @@
                 text: ''
             },
             legend: {
+                enabled: legend,
                 layout: scope.pieLayout,//"horizontal" or "vertical"
                 verticalAlign: scope.pieVerticalAlign,//top, middle or bottom
                 animation: false,
@@ -97,7 +97,7 @@
 
         var getChartColors = scope.getChartColors ? scope.getChartColors : ["rgb(33, 187, 239)", "rgb(156, 205, 100)", "rgb(72, 165, 234)"];
         Highcharts.chart(element[0], {
-          colors: getChartColors,
+          colors: ["rgb(33, 187, 239)", "rgb(156, 205, 100)", "rgb(72, 165, 234)"],
           title: {
               y: -10,
               text: ''
