@@ -1,7 +1,11 @@
 <ul>
 	<li draggable="true" class="dragg" ng-repeat="(value, key) in items"
 			ng-click='onShowTablePreview(value)'>
-			<strong class="event a" id="a" draggable="true">{{value.substring(0, 8)}}/{{resourseName.substring(26, 35)}}</strong>
+			<strong class="event a" id="a" draggable="true">
+				<i class="i" style="display: none">0 </i>
+				{{value.substring(0, 8)}}/{{resourseName.substring(26, 35)}}
+				<i class="i" style="display: none">0 </i>
+			</strong>
 	</li>
 </ul>
 <!-- <ul>
