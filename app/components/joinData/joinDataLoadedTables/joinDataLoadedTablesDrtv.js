@@ -9,7 +9,8 @@
       scope: {
         getResourcesTables: '=?',
         resourseId: '=?',
-        downloadTableNames: '='
+        downloadTableNames: '=',
+        resourseName: '=?'
       },
       restrict: 'E',
       controller: 'joinDataLoadedTablesCtrl',
