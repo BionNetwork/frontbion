@@ -7,8 +7,6 @@
   function joinDataPopoverCtrl($scope, $state) {
         $scope.popoverHeadName = "Choose";
         $scope.popoverHeadShow = false;
-        $scope.myCounter++;
-        console.log($scope.myCounter++);
 
 
         $scope.changePopoverHead = function (item) {

@@ -2,20 +2,9 @@
 
 		<span class="dropmodal__trigger" ng-click="openDropContent()">
 
-
-			<span ng-hide="popoverHeadShow">Choose</span>
-			<span ng-show="popoverHeadShow">{{popoverHeadName}}</span>
-
-
-				<i class="icon" ng-hide="upAndDown">
+				<i class="icon">
 					<svg role="img">
-						<use xlink:href="" ng-href="img/svg-symbols.svg#ar-down"></use>
-					</svg>
-				</i>
-
-				<i class="icon" ng-show="upAndDown">
-					<svg role="img">
-						<use xlink:href="" ng-href="img/svg-symbols.svg#ar-up"></use>
+						<use xlink:href="" ng-href="img/svg-symbols.svg#cell-none"></use>
 					</svg>
 				</i>
 
@@ -40,28 +29,4 @@
 			</ol>
 			<span class="dropmodal__content_arrow"></span>
 		</div>
-</div>
-<div class="right" style="margin-left: 213px; margin-top: -20px; position: absolute;" ng-show="popoverHeadShow" ng-if="myCounter < 7">
-	<join-data-popover
-						title="Таблицы"
-						placement="right"
-						content="content"
-						my-counter="myCounter"
-	></join-data-popover>
-</div>
-<!-- <div class="top" style="margin-left: 20px; margin-top: -50px; position: absolute;" ng-show="popoverHeadShow" ng-if="myCounter < 7">
-	<join-data-popover
-						title="Таблицы"
-						placement="right"
-						content="content"
-						my-counter="myCounter"
-	></join-data-popover>
-</div> -->
-<div class="bottom" style="margin-left: 20px; margin-top: 70px; position: absolute;" ng-show="popoverHeadShow" ng-if="myCounter < 7">
-	<join-data-popover
-						title="Таблицы"
-						placement="right"
-						content="content"
-						my-counter="myCounter"
-	></join-data-popover>
 </div>

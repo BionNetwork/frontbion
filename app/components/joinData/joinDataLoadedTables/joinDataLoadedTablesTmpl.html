@@ -3,7 +3,13 @@
 			ng-click='onShowTablePreview(value)'>
 			<span class="event a" id="a" draggable="true">
 				<span class="iconJoin iconJoin-left">
-					<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#cell-none"></use></svg></i>
+					<!-- <i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#cell-none"></use></svg></i> -->
+					<join-data-popover
+					          title="Таблицы"
+					          placement="left"
+					          content="contentSecond2"
+					          my-counter="myCounter"
+					></join-data-popover>
 				</span>
 				<span class="iconJoin iconJoin-top">
 					<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#cell-none"></use></svg></i>
@@ -14,9 +20,7 @@
 				<span class="iconJoin iconJoin-bottom">
 					<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#cell-none"></use></svg></i>
 				</span>
-				<i class="i" style="display: none">0 </i>
 				{{value.substring(0, 8)}}/{{resourseName.substring(26, 35)}}
-				<i class="i" style="display: none">0 </i>
 			</span>
 	</li>
 </ol>

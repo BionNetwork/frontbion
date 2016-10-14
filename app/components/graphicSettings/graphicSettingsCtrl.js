@@ -23,9 +23,7 @@
 
 
       $scope.getChoosedColorsOn = function (colors) {
-        // console.log(colors);
-          // $scope.setColor(colors);
-          $scope.myFn('123');
+          $scope.myFn(colors);
       };
 
 
