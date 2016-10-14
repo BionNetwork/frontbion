@@ -5,7 +5,7 @@
   .controller('graphicSettingsCtrl', ['$scope', graphicSettingsCtrl]);
 
   function graphicSettingsCtrl($scope) {
-      $scope.choosedChart = 'pie';
+      $scope.choosedChart = 'column';
       $scope.changeChart = function (chart) {
         $scope.choosedChart = chart;
       }
@@ -23,7 +23,7 @@
 
 
       $scope.getChoosedColorsOn = function (colors, legend) {
-          $scope.myFn(colors, legend);
+          $scope.changeIssues(colors, legend);
       };
 
 

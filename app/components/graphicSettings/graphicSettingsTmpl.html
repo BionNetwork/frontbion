@@ -119,17 +119,19 @@
                     pie-align="center"
                     pie-legend-width="400"
                     ng-show="choosedChart == 'pie'"
-                    on-action=myFn
+                    on-action=changeIssues
                 ></high-chart-pie>
                 <high-chart-line
                    data='data'
                    style="height: 100%;  width: 100%; display: inline-block;"
                    ng-show="choosedChart == 'line'"
+                   on-action-line=changeIssues
                ></high-chart-line>
                 <high-chart-column
                    data='data'
                    style="height: 100%;  width: 100%; display: inline-block;"
                    ng-show="choosedChart == 'column'"
+                   on-action-column=changeIssues
                ></high-chart-column>
                 <high-chart-map
                    data='data'
