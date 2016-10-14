@@ -18,7 +18,7 @@
     //      }
     //  });
     // })
-    $timeout(function() {
+    // $timeout(function() {
       $(document).ready(function(){
       	    $('table td').on("dragenter dragover drop", function (event) {
       		   event.preventDefault();
@@ -31,7 +31,7 @@
       		   };
       	   });
       })
-    }, 3000)
+    // }, 3000)
 
 
     $scope.contentSecond = [
