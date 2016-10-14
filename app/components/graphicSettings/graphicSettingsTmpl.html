@@ -119,6 +119,8 @@
                     pie-align="center"
                     pie-legend-width="400"
                     ng-show="choosedChart == 'pie'"
+                    get-chart-colors="chartColors"
+                    on-action=myFn
                 ></high-chart-pie>
                 <high-chart-line
                    data='data'
@@ -145,6 +147,7 @@
                       placement="left"
                       icon-name="legend"
                       active-activastion-id='activeActivastionId'
+                      get-choosed-colors-on=getChoosedColorsOn
                   ></graphic-settings-popover>
                   <graphic-settings-popover2
                       title="Ось Y"

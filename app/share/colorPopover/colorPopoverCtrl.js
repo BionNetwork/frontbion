@@ -29,13 +29,6 @@
       {name: 'sunrise', color: '#fa7147'},
     ];
 
-    $scope.chooseColors = function (color, index) {
-      $scope.color = {
-        "background-color" : color
-      }
-      $scope.currentIndex = index;
-      $scope.onColorChange(color)
-    };
 
   }
 

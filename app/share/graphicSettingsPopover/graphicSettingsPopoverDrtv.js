@@ -14,20 +14,23 @@
         showIcon: '=',
         onChange: '=?',
         activeActivastionId: '=?',
+        getChoosedColorsOn: '=?',
       },
       restrict: 'E',
       controller: 'graphicSettingsPopoverCtrl',
       templateUrl: 'share/graphicSettingsPopover/graphicSettingsPopoverTmpl.html',
       link: function(scope, element, attrs){
-          scope.click = function() {
+          scope.onClickChangeColor = function() {
             // console.log(element[0].getElementsByClassName('col-indicator').style);
-            var a = element[0].getElementsByClassName('col-indicator');
-            var l = [];
-            for (var i = 0; i < a.length; i++) {
+            var colorsElement = element[0].getElementsByClassName('col-indicator');
+            var colors = [];
+            for (var i = 0; i < colorsElement.length; i++) {
 
-              l.push(a[i].style.backgroundColor)
+              colors.push(colorsElement[i].style.backgroundColor)
             }
-            console.log(l);
+            // console.log(colors);
+            scope.getChoosedColorsOn(colors);
+
           };
 
           scope.openDropContent = function () {

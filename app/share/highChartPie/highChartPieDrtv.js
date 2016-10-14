@@ -13,14 +13,19 @@
         pieLayout: '@',
         pieVerticalAlign: '@',
         pieAlign: '@',
-        pieLegendWidth: '@'
+        pieLegendWidth: '@',
+        getChartColors: '=?',
+        myAction: '=?'
       },
       restrict: 'E',
       controller: 'highChartPieCtrl',
       templateUrl: 'share/highChartPie/highChartPieTmpl.html',
       link: function (scope, element) {
+        
+
+        var colors = scope.chartColors ? scope.chartColors : ["rgb(33, 187, 239)", "rgb(156, 205, 100)", "rgb(72, 165, 234)"];
         Highcharts.chart(element[0], {
-          colors: ["rgb(33, 187, 239)", "rgb(156, 205, 100)", "rgb(72, 165, 234)"],
+          colors: scope.getChartColors,
           title: {
               y: -10,
               text: ''
