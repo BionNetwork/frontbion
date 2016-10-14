@@ -1,11 +1,23 @@
 <ol class="list-unstyled">
 	<li draggable="true" class="dragg" ng-repeat="(value, key) in items"
 			ng-click='onShowTablePreview(value)'>
-			<strong class="event a" id="a" draggable="true">
+			<span class="event a" id="a" draggable="true">
+				<span class="iconJoin iconJoin-left">
+					<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#cell-none"></use></svg></i>
+				</span>
+				<span class="iconJoin iconJoin-top">
+					<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#cell-none"></use></svg></i>
+				</span>
+				<span class="iconJoin iconJoin-right">
+					<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#cell-none"></use></svg></i>
+				</span>
+				<span class="iconJoin iconJoin-bottom">
+					<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#cell-none"></use></svg></i>
+				</span>
 				<i class="i" style="display: none">0 </i>
 				{{value.substring(0, 8)}}/{{resourseName.substring(26, 35)}}
 				<i class="i" style="display: none">0 </i>
-			</strong>
+			</span>
 	</li>
 </ol>
 <!-- <ul>

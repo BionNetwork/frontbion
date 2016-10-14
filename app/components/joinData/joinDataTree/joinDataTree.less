@@ -1,19 +1,58 @@
+@import "../../../assets/css/_variables.less";
 join-data-tree{
-  table {
-    border: none;
-  }
-  table th,table td{
-  	height: 50px;
-  	width: 200px;
-    border: none;
-
-  }
-  table strong{
-  	display:block;
-    text-align: center;
-    line-height: 50px;
-  	background-color: #09C;
-  	height: 100%;
-  	width: 100%;
-  }
+    @iconJoin-width: 40px;
+    @iconJoin-height: 30px;
+    .tableTree {
+        border: none;
+        th,
+        td {
+            height: 50px;
+            width: 200px;
+            border: none;
+        }
+        .event {
+        	display:block;
+            text-align: center;
+            line-height: 50px;
+        	// background: @grey;
+        	height: 100%;
+        	width: 100%;
+            font-weight: 500;
+            position: relative;
+            .iconJoin {
+                width: @iconJoin-width;
+                height: @iconJoin-height;
+                display: block;
+                position: absolute;
+                .icon {
+                    width: @iconJoin-width;
+                    height: @iconJoin-height;
+                    display: block;
+                    fill: @grey-border;
+                }
+                &-left {
+                    top: 50%;
+                    left: -@iconJoin-width / 2;
+                    margin-top: -@iconJoin-height / 2;
+                }
+                &-top {
+                    top: -@iconJoin-height / 2;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                }
+                &-right {
+                    top: 50%;
+                    right: -@iconJoin-width / 2;
+                    margin-top: -@iconJoin-height / 2;
+                }
+                &-bottom {
+                    bottom: -@iconJoin-height / 2;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                }
+            }
+        }
+    }
 }
