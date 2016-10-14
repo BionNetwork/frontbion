@@ -7,7 +7,8 @@
   function toPlugLoadSrv($http) {
 
     this.addFiles = function(files, activationId, getResources) {
-      var fileData = files[0];
+      var fileData = files[0] || files;
+      console.log(fileData);
 
       if (!fileData) {
         alert("Только файлы эксель");
@@ -17,6 +18,7 @@
       var myData = new FormData();
       myData.append('resource_file', fileData);
       myData.append('activation_id', activationId);
+      myData.append('connection_type', 'Excel');
 
       fetch('/api/v1/resources', {
         method: "POST",
