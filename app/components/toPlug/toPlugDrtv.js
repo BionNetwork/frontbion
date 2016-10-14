@@ -22,7 +22,10 @@
       },
       restrict: 'E',
       controller: 'toPlugCtrl',
-      templateUrl: 'components/toPlug/toPlugTmpl.html'
+      templateUrl: 'components/toPlug/toPlugTmpl.html',
+      link: function (scope, element, attr) {
+            $(".scrollbar").niceScroll();
+      }
     };
   }
 })();
