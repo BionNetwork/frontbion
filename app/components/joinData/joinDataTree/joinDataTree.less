@@ -2,8 +2,13 @@
 join-data-tree{
     @iconJoin-width: 40px;
     @iconJoin-height: 30px;
+    .tableTreeWrap {
+        padding-top: 20px;
+        height: calc(~"100vh - 255px");
+    }
     .tableTree {
         border: none;
+        height: 100%;
         th,
         td {
             height: 50px;
@@ -12,15 +17,20 @@ join-data-tree{
         }
         .event {
             text-align: center;
-        	width: 100%;
-            height: 50px;
+        	width: 200px;
+            height: 60px;
             font-weight: 500;
             position: relative;
             .joinName {
+                width: 155px;
+                text-align: center;
                 overflow: hidden;
-                line-height: 50px;
+                height: 30px;
+                margin-top: 15px;
+                padding: 4px;
                 display: inline-block;
                 text-overflow: ellipsis;
+                border: 1px solid @grey-border;
             }
             .iconJoin {
                 opacity: 0;

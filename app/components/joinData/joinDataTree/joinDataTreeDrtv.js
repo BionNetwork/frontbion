@@ -14,6 +14,7 @@
       templateUrl: 'components/joinData/joinDataTree/joinDataTreeTmpl.html',
       link: function(scope, element, attrs){
           // console.log(scope.resourseId);
+          $(".scrollbar").niceScroll();
   			}
     };
   }
