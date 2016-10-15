@@ -8,11 +8,15 @@
     // console.log('colorPopoverCtrl');
     $scope.selectedObject = [];
     $scope.allAtOne = {};
+    // rempve selected checboxes
+    for (var i = 0; i < $scope.content.length; i++) {
+      $scope.content[i].selected = false;
+    }
 
     $scope.checkItem = function (item) {
       item.selected = !item.selected;
       if ($scope.selectedObject.indexOf(item.name) == -1 && item.selected) {
-        $scope.selectedObject.push(item.name)
+        $scope.selectedObject.push(item.value)
       }
       if (!item.selected) {
         var index = $scope.selectedObject.indexOf(item.name);
@@ -20,9 +24,10 @@
       }
       $scope.allAtOne = {
         values: $scope.selectedObject,
-        name: '$scope.title'
+        type: 'checkbox'
       }
       // console.log($scope.allAtOne);
+      $scope.getCheckedItemsForFilter($scope.allAtOne)
 
     };
 
@@ -32,8 +37,8 @@
       }
       if ($scope.selectedObject.length != 0) {
 
-        $scope.selectedObject = []
-        console.log($scope.selectedObject);
+        $scope.selectedObject = [];
+        $scope.getCheckedItemsForFilter("null")
       }
     };
 

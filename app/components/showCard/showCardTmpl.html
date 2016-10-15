@@ -16,6 +16,7 @@
                            style="height: 530px;  width: 800px;display: inline-block;"
                            ng-show="chart == 'line'"
                            filter-data="chartData"
+                           on-filter-line=onFilterChartLine
                        ></high-chart-line>
                        <high-chart-pie
                            title="name"
@@ -27,12 +28,14 @@
                            pie-align="center"
                            pie-legend-width="400"
                            filter-data="chartData"
+                           on-filter=onFilterChartPie
                        ></high-chart-pie>
                        <high-chart-column
                           style="height: 530px;  width: 800px; display: inline-block;"
                           filter-data="chartData"
                           ng-show="chart == 'column'"
                           data='data'
+                          on-filter=onFilterChart
                       ></high-chart-column>
                    </div>
                 </div>
@@ -62,18 +65,21 @@
 
                     <form action="">
                         <div class="filterControl">
-                            <div class="item">
-                                <lable class="lable">Проект</lable>
-                                <checkbox-select content="contentForth"></checkbox-select>
+                            <div class="item" ng-show="data.filters[0].type == 'checkbox'">
+                                <lable class="lable">{{data.filters[0].name}}</lable>
+                                <checkbox-select
+                                        content="data.filters[0].values"
+                                        get-checked-items-for-filter=getCheckedItemsForFilter
+                                ></checkbox-select>
                             </div>
-                            <div class="item">
+                            <div class="item" ng-show="data.filters[0].type == 'radiobutton'">
                                 <lable class="lable">Продукты</lable>
                                 <radio-button-select content='contentFive'></radio-button-select>
                             </div>
-                            <div class="item itemInline">
+                            <!-- <div class="item itemInline">
                                 <lable class="lable">По проектам</lable>
                                 <a class="bttnToggle" ng-class="{'active' : toggleActive}" ng-click="toggleActive = !toggleActive"></a>
-                            </div>
+                            </div> -->
                         </div>
                     </form>
 

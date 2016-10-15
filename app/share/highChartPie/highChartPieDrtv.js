@@ -14,6 +14,7 @@
         pieAlign: '@',
         pieLegendWidth: '@',
         onAction: '=?',
+        onFilter: '=?',
         data: '=?',
         filterData: '=?'
       },
@@ -197,6 +198,65 @@
                     ]
               }]
           });
+        };
+
+        scope.onFilter = function (data) {
+            var filteredSeries = scope.getPieData(data).series;
+            Highcharts.chart(element[0], {
+              colors: ["rgb(33, 187, 239)", "rgb(156, 205, 100)", "rgb(72, 165, 234)"],
+              title: {
+                  y: -10,
+                  text: ''
+              },
+              legend: {
+                  layout: scope.pieLayout,//"horizontal" or "vertical"
+                  verticalAlign: scope.pieVerticalAlign,//top, middle or bottom
+                  animation: false,
+                  align: scope.pieAlign, //left, center and right.
+                  width: +scope.pieLegendWidth,//width 90 or 300px
+                  margin: 5,
+                  symbolWidth: 10,
+                  symbolHeight: 10,
+                  itemStyle: {
+                      fontWeight: 'normal',
+                      fontSize: '12px',
+                      color: '#727272'
+                  },
+                  itemMarginBottom: 5
+              },
+              chart: {
+                  plotBackgroundColor: null,
+                  plotBorderWidth: null,
+                  plotShadow: false,
+                  type: 'pie',
+                  spacing: [0,0,0,0],
+                  animation: false,
+                  width: null,
+                  height: null
+                },
+                plotOptions: {
+                    series: {
+                        animation: true
+                    },
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: false
+                        },
+                        innerSize: '60%',
+                        showInLegend: true,
+                        minSize: 176,
+                        states: {
+                            hover: {
+                                halo: {size: 2}
+                            }
+                        }
+                    }
+                },
+                series: filteredSeries
+            });
+
         };
 
 

@@ -9,6 +9,7 @@
       scope: {
         data: '=?',
         onActionLine: '=?',
+        onFilterLine: '=?',
         filterData: '=?'
       },
       restrict: 'E',
@@ -60,7 +61,7 @@
           var lineSeries = scope.filterData ? scope.getLineData(scope.filterData).series : defaultLineSeries;
           var lineSeriesxAxis = scope.filterData ? scope.getLineData(scope.filterData).xAxis : defaultLinexAxis;
           var lineSeriesyAxis = scope.filterData ? scope.getLineData(scope.filterData).yAxis : defaultLineyAxis;
-          
+
 
           Highcharts.chart(element[0],
               {
@@ -142,6 +143,37 @@
                 }
             );
           };
+
+          scope.onFilterLine = function (data) {
+            console.log(data);
+            var newSeries = scope.getLineData(data);
+            console.log(newSeries);
+            Highcharts.chart(element[0],
+                {
+                  colors: ["rgb(33, 187, 239)", "rgb(156, 205, 100)", "rgb(72, 165, 234)"],
+                    title: {
+                        text: '',
+                        x: -20 //center
+                    },
+                    subtitle: {
+                        text: '',
+                        x: -20
+                    },
+                    xAxis: newSeries.yAxis,
+                    yAxis: newSeries.xAxis,
+                    tooltip: {
+                        valueSuffix: '°C'
+                    },
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom',
+                        borderWidth: 0
+                    },
+                    series: newSeries.series
+                }
+            );
+          }
       }
     };
   }

@@ -8,6 +8,7 @@
     return {
       scope: {
         content: '=?',
+        getCheckedItemsForFilter: '=?'
       },
       restrict: 'E',
       controller: 'checkboxSelectCtrl',
