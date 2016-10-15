@@ -6,6 +6,7 @@
 
   function myWidgetsCtrl($scope) {
     // console.log('myWidgetsCtrl');
+    $scope.idEnglish = window.localStorage.getItem('lang') == 'en' ? false : true;
   }
 
 })();

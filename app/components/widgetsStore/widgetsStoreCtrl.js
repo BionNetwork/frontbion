@@ -6,6 +6,7 @@
 
   function widgetsStoreCtrl($scope) {
     // console.log('widgetsStoreCtrl');
+    $scope.idEnglish = window.localStorage.getItem('lang') == 'en' ? false : true;
     $scope.ruString = {
       mark: 'Маркетинг',
       strat: 'Стратегический менеджмент',

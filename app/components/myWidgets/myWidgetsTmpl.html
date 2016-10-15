@@ -17,7 +17,8 @@
         </div>
         <div class="cardWidget__price">
             {{card.card.rating}}
-            <span class="currency"> ₽</span>
+            <span class="currency" ng-if="idEnglish"> ₽</span>
+            <span ng-if="!idEnglish">$</span>
         </div>
     </div>
 </div>
