@@ -151,13 +151,13 @@
                       get-choosed-colors-on=getChoosedColorsOn
                   ></graphic-settings-popover>
                   <graphic-settings-popover2
-                      title="Ось Y"
+                      title="Axis Y"
                       placement="left"
                       icon-name="axis-y"
                       active-activastion-id='activeActivastionId'
                   ></graphic-settings-popover2>
                   <graphic-settings-popover2
-                      title="Ось X"
+                      title="Axis X"
                       placement="left"
                       icon-name="axis-x"
                       active-activastion-id='activeActivastionId'
@@ -169,18 +169,18 @@
                   <div class="col-xs-12 filter-title">
                     <p>
                       <i class="ico_addfilter"></i>
-                      <span>Фильтры</span>
+                      <span>{{graphString.filters}}</span>
                     </p>
                   </div>
                   <div class="col-xs-12 panel_tools-filter_filters">
                     <p>
-                      Период:
+                      {{graphString.period}}:
                     </p>
                     <p>
-                      Прогноз на 2017:
+                      {{graphString.prog}} 2017:
                     </p>
                     <p>
-                      Факт:
+                      {{graphString.fact}}:
                     </p>
                   </div>
                 </div>

@@ -5,6 +5,22 @@
   .controller('graphicSettingsCtrl', ['$scope', graphicSettingsCtrl]);
 
   function graphicSettingsCtrl($scope) {
+
+      $scope.graphStringRu = {
+        filters: 'Фильтры',
+        period: 'Период',
+        prog: 'Прогноз на',
+        fact: 'Факт'
+      };
+      $scope.graphStringEng = {
+        filters: 'Filters',
+        period: 'Period',
+        prog: 'Forecast',
+        fact: 'Fact'
+      };
+      $scope.graphString = window.localStorage.getItem('lang') == 'en' ? $scope.graphStringEng : $scope.graphStringRu;
+
+
       $scope.choosedChart = 'pie';
       $scope.changeChart = function (chart) {
         $scope.choosedChart = chart;

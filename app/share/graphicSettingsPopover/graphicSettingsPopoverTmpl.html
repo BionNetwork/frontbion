@@ -10,7 +10,7 @@
 			                      <div class="dropright">
 			                        <div class="titler" ng-class="{'titler_active' : showLegend}">
 			                          <div class="titler_name">
-			                            <span>Легенда</span>
+			                            <span>{{legendString.legend}}</span>
 			                          </div>
 			                          <div class="titler_line">
 			                          </div>
@@ -55,9 +55,9 @@
 
 			                      </div>
 			                      <div class="dropdown1_save">
-			                        <button class="button_saver" ng-click="onClickClose()">Сохранить</button>
+			                        <button class="button_saver" ng-click="onClickClose()">{{legendString.save}}</button>
 			                        <!-- <button class="button_saver" ng-click="closeDropContent()">Сохранить</button> -->
-			                        <button class="button_canceler" ng-click="closeDropContent()">Отмена</button>
+			                        <button class="button_canceler" ng-click="closeDropContent()">{{legendString.cancel}}</button>
 			                      </div>
 			<!-- <span class="dropmodal__content_arrow"></span> -->
 		</div>

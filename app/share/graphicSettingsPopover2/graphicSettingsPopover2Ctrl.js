@@ -6,6 +6,30 @@
 
   function graphicSettingsPopover2Ctrl($scope, $state) {
     // console.log('simplePopoverCtrl');
+    $scope.osStringRu = {
+      period: 'Период',
+      text: 'Текст',
+      scale: 'Шкала',
+      step: 'Шаг',
+      os: 'Ось',
+      lineSize: 'Толщина линии',
+      save: 'Сохранить',
+      cancel: 'Отменить'
+    };
+    $scope.osStringEng = {
+      period: 'Period',
+      text: 'Text',
+      scale: 'Scale',
+      step: 'Step',
+      os: 'Axis',
+      lineSize: 'Line size',
+      save: 'Save',
+      cancel: 'Cancel'
+    };
+    $scope.osString = window.localStorage.getItem('lang') == 'en' ? $scope.osStringEng : $scope.osStringRu;
+
+
+
     $scope.periodNumber = 1;
     $scope.footNumber = 1;
     $scope.footNumberText = 1;

@@ -17,10 +17,10 @@
 						</button>
 					</div>
 					<div class="period" ng-class="{ 'period_active' : showLabel}">
-						<input type="text" class="dropdown1_input" ng-model="periodString" placeholder="Период"></input>
+						<input type="text" class="dropdown1_input" ng-model="periodString" placeholder="{{osString.period}}"></input>
 						<div class="plusminus-low">
 							<div class="plusminus-center">
-								<span class="plusminus-indicator">Текст:</span>
+								<span class="plusminus-indicator">{{osString.text}}:</span>
 								<button class="button_minus" ng-click="minusNumber('periodNumber')"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#minus"></use></svg></i></button>
 								<span class="plusminus-indicator">{{periodNumber}}s</span>
 								<button class="button_plus" ng-click="addNumber('periodNumber')"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#plus"></use></svg></i></button>
@@ -29,7 +29,7 @@
 					</div>
 					<div class="titler" ng-class="{ 'titler_active' : showScale}">
 						<div class="titler_name">
-							<span>Шкала</span>
+							<span>{{osString.scale}}</span>
 						</div>
 						<div class="titler_line">
 						</div>
@@ -40,7 +40,7 @@
 					<div class="period" ng-class="{ 'period_active' : showScale}">
 						<div class="plusminus-left">
 							<div class="plusminus-center">
-								<span class="plusminus-indicator">Шаг:</span>
+								<span class="plusminus-indicator">{{osString.step}}:</span>
 								<button class="button_minus" ng-click="minusNumber('footNumber')"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#minus"></use></svg></i></button>
 								<span class="plusminus-indicator">{{footNumber}}s</span>
 								<button class="button_plus" ng-click="addNumber('footNumber')"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#plus"></use></svg></i></button>
@@ -48,7 +48,7 @@
 						</div>
 						<div class="plusminus-right">
 							<div class="plusminus-center">
-									<span class="plusminus-indicator">Текст:</span>
+									<span class="plusminus-indicator">{{osString.text}}:</span>
 								<button class="button_minus" ng-click="minusNumber('footNumberText')"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#minus"></use></svg></i></button>
 								<span class="plusminus-indicator">{{footNumberText}}s</span>
 								<button class="button_plus" ng-click="addNumber('footNumberText')"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#plus"></use></svg></i></button>
@@ -57,7 +57,7 @@
 					</div>
 					<div class="titler" ng-class="{ 'titler_active' : showOs}">
 						<div class="titler_name">
-							<span>Ось</span>
+							<span>{{osString.os}}</span>
 						</div>
 						<div class="titler_line">
 						</div>
@@ -67,7 +67,7 @@
 					</div>
 					<div class="period" ng-class="{ 'period_active' : showOs}">
 							<div class="plusminus">
-								<span class="plusminus-indicator">Толщина линии:</span>
+								<span class="plusminus-indicator">{{osString.lineSize}}:</span>
 								<button class="button_minus" ng-click="minusNumber('osNumber')"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#minus"></use></svg></i></button>
 								<span class="plusminus-indicator">{{osNumber}}s</span>
 								<button class="button_plus" ng-click="addNumber('osNumber')"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#plus"></use></svg></i></button>
@@ -75,8 +75,8 @@
 					</div>
 					<div class="dropdown1_save">
 						<!-- <button class="button_saver" ng-click="onSendSettings(activeActivastionId, iconName)">Сохранить</button> -->
-						<button class="button_saver" ng-click="closeDropContent()">Сохранить</button>
-						<button class="button_canceler" ng-click="closeDropContent()">Отмена</button>
+						<button class="button_saver" ng-click="closeDropContent()">{{osString.save}}</button>
+						<button class="button_canceler" ng-click="closeDropContent()">{{osString.cancel}}</button>
 					</div>
 				</div>
 			<!-- <span class="dropmodal__content_arrow"></span> -->
