@@ -6,7 +6,7 @@
 
   function joinDataCtrl($scope) {
     // console.log($scope.parentUrl);
-
+    // $scope.stepJoin = window.localStorage.getItem('lang') == 'en' ? 'STEP 3: Merge Data Sources.' : 'ШАГ 3. Объеденить источники данных.';
     $scope.onShowRes = $scope.onShowRes || function() {
       console.error('Define onShowRes function in toPlug route');
     }

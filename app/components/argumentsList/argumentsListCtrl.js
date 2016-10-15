@@ -5,7 +5,8 @@
   .controller('argumentsListCtrl', ['$scope', argumentsListCtrl]);
 
   function argumentsListCtrl($scope) {
-
+    $scope.mainParams = window.localStorage.getItem('lang') == 'en' ? 'MAIN SETTINGS' : 'ОСНОВНЫЕ ПАРАМЕТРЫ';
+    $scope.addColumn = window.localStorage.getItem('lang') == 'en' ? 'Add the value of the column' : 'Добавьте колонку со значением';
     $scope.$watch('allStrings', function () {
       if ($scope.allStrings) {
         // console.log($scope.allStrings);

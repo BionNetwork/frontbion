@@ -23,13 +23,13 @@
     </div>
 
     <div class="series">
-      <h2 class="series__head">ОСНОВНЫЕ ПАРАМЕТРЫ</h2>
+      <h2 class="series__head">{{mainParams}}</h2>
       <ul class="series__variabless">
         <li ng-repeat="argument in allArguments">
             <i class="icon series__variabless_checked" ng-show="argument.id == isArgumentBound(allBoundedArguments, argument.id)">
               <svg role="img"><use xlink:href="img/svg-symbols.svg#checked-light"></use></svg>
             </i>
-            <span>Добавьте колонку со значением {{argument.name}}</span>
+            <span>{{addColumn}} {{argument.name}}</span>
             <a href="#{{ parentUrl }}/connect-data/toplug/{{cardKey.id}}?agumentId={{argument.id}}"></a>
             <div class="icon series__variabless_info">
               <simple-popover

@@ -24,7 +24,7 @@
     <div class="innerBlock">
         <div class="sourceFile-wrap">
           <div class="sourceFile">
-              <span class="sourceFile__head">Загруженные файлы</span>
+              <span class="sourceFile__head">{{allStrings.listBindings.downloadedSources}}</span>
               <ul class="sourceFile__list list-unstyled scrollbar">
                 <li ng-repeat="item in allResources" ng-class="{active : showDetails}">
                   <i class="icon icon-doc" ng-click="showDetails = !showDetails" ng-init="showDetails=$first">
@@ -36,7 +36,7 @@
                   <i class="icon icon-arrow" ng-click="showDetails = !showDetails" ng-init="showDetails=$first">
                     <svg role="img"><use xlink:href="img/svg-symbols.svg#ar-down"></use></svg>
                   </i>
-                  
+
                   <join-data-loaded-tables
                       ng-show="true"
                       resourse-id="item.id"
