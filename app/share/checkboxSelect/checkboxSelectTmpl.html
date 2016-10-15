@@ -3,7 +3,7 @@
         <input type="checkbox" ng-checked="selectedObject.length == 0"
                ng-click="checkDefaultItem(content)" name="name">
         <i class="input"></i>
-        <span>Все проекты</span>
+        <span>{{allProjectString}}</span>
     </label>
     <label ng-repeat="item in content" class="selectBttn__checkbox">
         <input type="checkbox" ng-click="checkItem(item)"

@@ -22,9 +22,9 @@
 		<div class="pageMenu pageMenu--main" ng-show="showDashboardList">
 			<div class="pageMenu__drop">
 				<one-select-popover
-					title="Рабочие столы"
+					title="dashboardTitle"
 					placement="right"
-					content="contentSecond"
+					content="dashboardContent"
 				></one-select-popover>
 			</div>
 		</div>
@@ -57,9 +57,9 @@
 			</div>
 			<div class="pageMenu__drop">
 				<one-select-popover
-					title="Тип карточек"
+					title="widgetsTitle"
 					placement="right"
-					content="contentThird"
+					content="widgetsContent"
 				></one-select-popover>
 			</div>
 		</div>
@@ -71,18 +71,18 @@
 
 			<div class="searchPanel">
 				<form action="">
-					<a href="" class="bttn bttn--blue">Сбросить фильтры</a>
+					<a href="" class="bttn bttn--blue">{{resetFilters}}</a>
 					<div class="searchPanel__drop">
 						<one-select-popover
-							title="Любая цена"
+							title="priceTitle"
 							placement="right"
-							content="contentFourth"
+							content="contentPrice"
 						></one-select-popover>
 					</div>
 					<div class="searchPanel__input">
 						<i class="icon icon-search"><svg role="img"><use xlink:href="img/svg-symbols.svg#search"></use></svg></i>
 						<a class="icon icon-cancel"><svg role="img"><use xlink:href="img/svg-symbols.svg#close"></use></svg></a>
-						<input type="text" placeholder="Поиск по моим карточкам">
+						<input type="text" placeholder="{{searchMyCards}}">
 					</div>
 				</form>
 			</div>

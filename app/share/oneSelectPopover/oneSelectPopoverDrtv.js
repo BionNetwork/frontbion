@@ -7,7 +7,7 @@
   function oneSelectPopover($document) {
     return {
       scope: {
-        title: '@',
+        title: '=?',
         placement: '@',
         content: '=?',
         iconName: '@'

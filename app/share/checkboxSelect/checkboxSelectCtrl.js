@@ -6,6 +6,7 @@
 
   function checkboxSelectCtrl($scope, $state) {
     // console.log('colorPopoverCtrl');
+    $scope.allProjectString = window.localStorage.getItem('lang') == 'en' ? 'All projects' : 'Все проекты';
     $scope.selectedObject = [];
     $scope.allAtOne = {};
     // rempve selected checboxes
@@ -26,8 +27,13 @@
         values: $scope.selectedObject,
         type: 'checkbox'
       }
+      if ($scope.selectedObject.length == 0) {
+          $scope.getCheckedItemsForFilter("null")
+      }
       // console.log($scope.allAtOne);
-      $scope.getCheckedItemsForFilter($scope.allAtOne)
+      if ($scope.selectedObject.length != 0) {
+          $scope.getCheckedItemsForFilter($scope.allAtOne)
+      }
 
     };
 

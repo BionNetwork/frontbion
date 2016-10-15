@@ -18,15 +18,33 @@
 
       }
     });
-    $scope.contentSecond = [
+
+    $scope.contentSecondRu = [
         {name: "Прибыль по проектам"}
     ];
-    $scope.contentThird = [
+    $scope.contentSecondEng = [
+        {name: "Profit project"}
+    ];
+    $scope.dashboardContent = window.localStorage.getItem('lang') == 'en' ? $scope.contentSecondEng : $scope.contentSecondRu;
+    $scope.dashboardTitle = window.localStorage.getItem('lang') == 'en' ? 'Desktops' : 'Рабочие столы';
+    $scope.widgetsTitle = window.localStorage.getItem('lang') == 'en' ? 'Type of card' : 'Тип карточек';
+    $scope.priceTitle = window.localStorage.getItem('lang') == 'en' ? 'Any price' : 'Любая цена';
+    $scope.resetFilters = window.localStorage.getItem('lang') == 'en' ? 'Reset filters' : 'Сбросить фильтры';
+    $scope.searchMyCards = window.localStorage.getItem('lang') == 'en' ? 'Search my cards' : 'Поиск по моим карточкам';
+    $scope.widgetsContentRu = [
         {name: "Все типы приложений"}
     ];
-    $scope.contentFourth = [
+    $scope.widgetsContentEng = [
+        {name: "All types of applications"}
+    ];
+    $scope.widgetsContent = window.localStorage.getItem('lang') == 'en' ? $scope.widgetsContentEng : $scope.widgetsContentRu;
+    $scope.contentPriceRu = [
         {name: "Любая цена"}
     ];
+    $scope.contentPriceEng = [
+        {name: "Any price"}
+    ];
+    $scope.contentPrice = window.localStorage.getItem('lang') == 'en' ? $scope.contentPriceEng : $scope.contentPriceRu;
     // functions
     $scope.onChange = function (item) {
       if (item == 'English' || item == 'Русский') {
