@@ -14,13 +14,14 @@
         pieAlign: '@',
         pieLegendWidth: '@',
         onAction: '=?',
-        data: '=?'
+        data: '=?',
+        filterData: '=?'
       },
       restrict: 'E',
       controller: 'highChartPieCtrl',
       templateUrl: 'share/highChartPie/highChartPieTmpl.html',
       link: function (scope, element) {
-        console.log(scope.data);
+
         var defaultPieSeries = [
               {
                   name: "Microsoft Internet Explorer",
@@ -33,25 +34,7 @@
                   y: 10.38
               }
         ];
-
-        // var pieSeries = scope.data.series ? scope.data.series : defaultPieSeries;
-        scope.filterData = function (pieSeries, pieData) {
-          var series = [...pieSeries.y];
-          var data = [...pieData];
-          return {
-              y: series.map(s => ({
-                  data: data.map(row => row[s.index]),
-                  name: s.header
-              })),
-              x: {
-                  name: pieSeries.x.header,
-                  data: data.map(row => row[pieSeries.x.index])
-              }
-          }
-        };
-
-        var filteredData = scope.filterData(scope.data.series, scope.data.data);
-
+        // functions
         scope.getPieData = function (d) {
             let data = d.y.map((yData, index) => {
                 return {
@@ -77,24 +60,7 @@
                 // }
             }
         };
-        let b = scope.getPieData(filteredData);
-        console.log(b.series);
-        let a = [{
-            data: [
-                {
-                    name: "Microsoft Internet Explorer",
-                    y: 56.33
-                }, {
-                    name: "Chrome",
-                    y: 24.03,
-                }, {
-                    name: "Firefox",
-                    y: 10.38
-                }
-              ]
-        }];
-        console.log(a);
-
+        var data = scope.data ? scope.getPieData(scope.filterData).series : defaultPieSeries;
 
 
         scope.onAction = function(colors, legend) {
@@ -224,7 +190,7 @@
                     }
                 }
             },
-            series: b.series
+            series: data
         });
 
 
