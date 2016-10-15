@@ -9,6 +9,7 @@
     $scope.data = $scope.dashboardCards.find(function (item) {
       return item.id == $state.params.id;
     });
+
     $scope.listOfFilters = [];
 
     $scope.showClickedItems = function (item) {
@@ -57,7 +58,7 @@
         {name: "Бижутерия"}
     ];
 
-    $scope.chart = 'line';
+    $scope.chart = $scope.data.charts[0];
     $scope.changeChart = function (type) {
       $scope.chart = type;
     };

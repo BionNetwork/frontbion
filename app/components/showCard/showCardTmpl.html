@@ -28,22 +28,35 @@
                            pie-legend-width="400"
                            filter-data="chartData"
                        ></high-chart-pie>
+                       <high-chart-column
+                          style="height: 530px;  width: 800px; display: inline-block;"
+                          filter-data="chartData"
+                          ng-show="chart == 'column'"
+                          data='data'
+                      ></high-chart-column>
                    </div>
                 </div>
 
                 <div class="card__filter">
                     <div class="filterList">
                         <ul class="list-unstyled">
-                            <li>
-                                <a ng-click="changeChart('pie')" class="active">
-                                    <i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#pie-chart"></use></svg></i>
+                            <li ng-repeat="item in data.charts">
+                                <a ng-click="changeChart(item)" class="active">
+                                    <i class="icon">
+                                      <svg role="img"><use xlink:href="" ng-href="img/svg-symbols.svg#{{item}}-chart"></use></svg>
+                                    </i>
+                                </a>
+                            </li>
+                            <!-- <li>
+                                <a ng-click="changeChart('column')">
+                                    <i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#column-chart"></use></svg></i>
                                 </a>
                             </li>
                             <li>
                                 <a ng-click="changeChart('line')">
                                     <i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#line-chart"></use></svg></i>
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
 

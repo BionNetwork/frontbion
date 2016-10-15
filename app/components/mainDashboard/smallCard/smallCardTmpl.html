@@ -23,6 +23,11 @@
                         data="data"
                         filter-data="chartData"
                     ></high-chart-pie>
+                    <high-chart-column
+                       filter-data="chartData"
+                       ng-show="data.charts[0] == 'column'"
+                       data='data'
+                   ></high-chart-column>
                 </div>
             </div>
         </div>
