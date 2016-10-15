@@ -6,8 +6,8 @@
 			placement="right"
 			content="contentLang"
 		></one-select-popover> -->
-		<button class="ru"></button>
-		<button class="en"></button>
+		<button class="ru" ng-click="changeLang('ru')"></button>
+		<button class="en" ng-click="changeLang('en')"></button>
 	</div>
 	<div class="loginPage__content">
 		<div class="loginPage__logo">
@@ -16,30 +16,30 @@
 		<div class="loginPage__form">
 			<form action="">
 				<h2>
-                  Для входа укажите ваш логин и пароль
+                  {{string.onEnter}}
                   <i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#user"></use></svg></i>
                 </h2>
                 <div class="textField">
                     <input type="text" name="name" ng-model="user" required>
                     <span></span>
-                    <label>Ваш логин</label>
+                    <label>{{string.login}}</label>
                 </div>
                 <div class="textField">
                 	<input type="password" name="name" ng-model="pass" required>
                     <span></span>
                     <i class="icon icon-eye"><svg role="img"><use xlink:href="img/svg-symbols.svg#eye"></use></svg></i>
-                  <label>Ваш пароль</label>
+                  <label>{{string.pass}}</label>
                 </div>
                 <div class="actionsField">
                 	<button class="bttnForm" type="submit" name="button"
 													ng-click='onLoginPage(user, pass)'
-													ng-submit='onLoginPage(user, pass)'>ВОЙТИ</button>
+													ng-submit='onLoginPage(user, pass)'>{{string.enter}}</button>
                 </div>
 			</form>
 		</div>
-		<div class="loginPage__link">
+		<!-- <div class="loginPage__link">
 			<a href="">Забыли пароль</a>
 			<a href="">Новый пользователь</a>
-		</div>
+		</div> -->
 	</div>
 </div>
