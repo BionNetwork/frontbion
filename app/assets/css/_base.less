@@ -41,6 +41,7 @@ label {
             &__description {
                 font-size: 12px;
                 color: @grey-text;
+                display: none;
             }
             .linkStep {
                 position: absolute;
@@ -143,6 +144,7 @@ label {
         padding: 0 12px;
         font-size: 13px;
         font-weight: 600;
+        background: #fff;
         &:active,
         &:hover {
             color: #fff;
@@ -487,13 +489,12 @@ svg {
 }
 
 .cardWidget {
-    width: 255px;
-    height: 320px;
+   .card-widget-size;
     background: #fff;
     padding-top: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    margin: 0 10px 10px 0;
+    margin: 0 10px 7px 0;
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -502,8 +503,7 @@ svg {
     transition: box-shadow @speed;
     border: 1px solid lighten(@grey-border, 20%);
     &__href {
-        width: 255px;
-        height: 320px;
+        .card-widget-size;
         position: absolute;
         margin: 0;
         padding: 0;
@@ -574,29 +574,8 @@ svg {
             font-family: sans-serif;
         }
     }
-    &:after,
-    &:before {
-        content: '';
-        height: 2px;
-        width: 0;
-        bottom: 0;
-        position: absolute;
-        background: @blue;
-        transition: @speed;
-    }
-    &:before {
-        left: 50%;
-    }
-    &:after {
-        right: 50%;
-    }
     &:hover{
-        box-shadow: @shadow;
-        &:after,
-        &:before {
-            width: 50%;
-            width: calc(~"50% + 1px");
-        }
+        box-shadow: 2px 2px 2px 1px rgba(0,0,0,.2);
     }
 }
 
@@ -645,6 +624,9 @@ svg {
             ol {
                 margin-left: 5px;
                 margin-right: -20px;
+                li {
+                    cursor: pointer;
+                }
                 .iconJoin {
                     display: none;
                 }

@@ -15,7 +15,10 @@
       },
       restrict: 'E',
       controller: 'graphicSettingsCtrl',
-      templateUrl: 'components/graphicSettings/graphicSettingsTmpl.html'
+      templateUrl: 'components/graphicSettings/graphicSettingsTmpl.html',
+      link: function (scope, element, attr) {
+            $(".scrollbar").niceScroll();
+      }
     };
   }
 })();
