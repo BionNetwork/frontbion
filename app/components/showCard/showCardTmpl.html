@@ -35,7 +35,7 @@
                           filter-data="chartData"
                           ng-show="chart == 'column'"
                           data='data'
-                          on-filter=onFilterChart
+                          on-filter-column=onFilterChartColumn
                       ></high-chart-column>
                    </div>
                 </div>
@@ -65,7 +65,7 @@
 
                     <form action="">
                         <div class="filterControl">
-                            <div class="item" ng-show="data.filters[0].type == 'checkbox'">
+                            <div class="item" ng-if="data.filters[0].type == 'checkbox'">
                                 <lable class="lable">{{data.filters[0].name}}</lable>
                                 <checkbox-select
                                         content="data.filters[0].values"

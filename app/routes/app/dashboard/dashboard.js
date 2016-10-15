@@ -123,7 +123,7 @@ angular.module('BIONApp')
                 name: "По проектам",
                 nameEng: "For projects",
                 showPreview: true,
-                type: "simpleCheckbox",
+                type: "simpleCheckbo",
                 filterType: "groupBy",
                 groupBy: "projects",
                 value: false

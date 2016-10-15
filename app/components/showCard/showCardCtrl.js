@@ -97,22 +97,15 @@
                  data: data.map(row => row[$scope.data.series.x.index])
              }
          };
-         if ($scope.chart == 'pie') {
             $scope.onFilterChartPie(newDataForChart);
-         }
-         if ($scope.chart == 'line') {
             $scope.onFilterChartLine(newDataForChart);
-         }
-        //  console.log(newDataForChart);
+            $scope.onFilterChartColumn(newDataForChart);
       };
       if (filter == 'null') {
         var initalState = $scope.filterData($scope.data.series, $scope.data.data);
-        if ($scope.chart == 'pie') {
           $scope.onFilterChartPie(initalState);
-        }
-        if ($scope.chart == 'line') {
           $scope.onFilterChartLine(initalState);
-        }
+          $scope.onFilterChartColumn(initalState);
       }
     };
 

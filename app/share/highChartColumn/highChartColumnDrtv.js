@@ -9,6 +9,7 @@
       scope: {
         data: '=?',
         onActionColumn: '=?',
+        onFilterColumn: '=?',
         filterData: '=?'
       },
       restrict: 'E',
@@ -162,6 +163,43 @@
                     data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3, 51.2]
 
                 }]
+              }
+            );
+          };
+
+          scope.onFilterColumn = function (data) {
+            // console.log(data);
+            var newSeries = scope.getColumnData(data);
+            // console.log(newSeries);
+            Highcharts.chart(element[0],
+              {
+                colors: ["rgb(33, 187, 239)", "rgb(156, 205, 100)", "rgb(72, 165, 234)"],
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: ''
+                },
+                subtitle: {
+                    text: ''
+                },
+                xAxis: newSeries.xAxis,
+                yAxis: newSeries.yAxis,
+                tooltip: {
+                    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                        '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+                    footerFormat: '</table>',
+                    shared: true,
+                    useHTML: true
+                },
+                plotOptions: {
+                    column: {
+                        pointPadding: 0.2,
+                        borderWidth: 0
+                    }
+                },
+                series: newSeries.series
               }
             );
           };

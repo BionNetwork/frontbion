@@ -145,9 +145,9 @@
           };
 
           scope.onFilterLine = function (data) {
-            console.log(data);
+            // console.log(data);
             var newSeries = scope.getLineData(data);
-            console.log(newSeries);
+            // console.log(newSeries);
             Highcharts.chart(element[0],
                 {
                   colors: ["rgb(33, 187, 239)", "rgb(156, 205, 100)", "rgb(72, 165, 234)"],
@@ -173,7 +173,7 @@
                     series: newSeries.series
                 }
             );
-          }
+          };
       }
     };
   }
