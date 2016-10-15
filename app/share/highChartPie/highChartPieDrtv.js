@@ -7,19 +7,95 @@
   function highChartPie() {
     return {
       scope: {
-        pieData: '=?',
         title: '@',
         legend: '=?',
         pieLayout: '@',
         pieVerticalAlign: '@',
         pieAlign: '@',
         pieLegendWidth: '@',
-        onAction: '=?'
+        onAction: '=?',
+        data: '=?'
       },
       restrict: 'E',
       controller: 'highChartPieCtrl',
       templateUrl: 'share/highChartPie/highChartPieTmpl.html',
       link: function (scope, element) {
+        console.log(scope.data);
+        var defaultPieSeries = [
+              {
+                  name: "Microsoft Internet Explorer",
+                  y: 56.33
+              }, {
+                  name: "Chrome",
+                  y: 24.03,
+              }, {
+                  name: "Firefox",
+                  y: 10.38
+              }
+        ];
+
+        // var pieSeries = scope.data.series ? scope.data.series : defaultPieSeries;
+        scope.filterData = function (pieSeries, pieData) {
+          var series = [...pieSeries.y];
+          var data = [...pieData];
+          return {
+              y: series.map(s => ({
+                  data: data.map(row => row[s.index]),
+                  name: s.header
+              })),
+              x: {
+                  name: pieSeries.x.header,
+                  data: data.map(row => row[pieSeries.x.index])
+              }
+          }
+        };
+
+        var filteredData = scope.filterData(scope.data.series, scope.data.data);
+
+        scope.getPieData = function (d) {
+            let data = d.y.map((yData, index) => {
+                return {
+                    name: yData.name,
+                    y: yData.data.reduce((v1, d) => v1 + d, 0)
+                }
+            })
+            let total = data.reduce((v1, d) => v1 + d.y, 0);
+
+            return {
+                series: [{
+                    name: null,
+                    colorByPoint: true,
+                    data: data
+                }],
+                // title: {
+                //     align: 'center',
+                //     verticalAlign: 'middle',
+                //     text: `<span class="donut-title">${(total / 1000000).toFixed(3).replace('.',',')}<small></small></span>`,
+                //     useHTML: true,
+                //     width: 80,
+                //     // x: -10
+                // }
+            }
+        };
+        let b = scope.getPieData(filteredData);
+        console.log(b.series);
+        let a = [{
+            data: [
+                {
+                    name: "Microsoft Internet Explorer",
+                    y: 56.33
+                }, {
+                    name: "Chrome",
+                    y: 24.03,
+                }, {
+                    name: "Firefox",
+                    y: 10.38
+                }
+              ]
+        }];
+        console.log(a);
+
+
 
         scope.onAction = function(colors, legend) {
           // scope.getChartColors = ["red", "rgb(156, 205, 100)", "red"]
@@ -148,20 +224,7 @@
                     }
                 }
             },
-            series: [{
-                data: [
-                    {
-                        name: "Microsoft Internet Explorer",
-                        y: 56.33
-                    }, {
-                        name: "Chrome",
-                        y: 24.03,
-                    }, {
-                        name: "Firefox",
-                        y: 10.38
-                    }
-                  ]
-            }]
+            series: b.series
         });
 
 
