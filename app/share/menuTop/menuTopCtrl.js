@@ -6,6 +6,7 @@
 
   function menuTopCtrl($scope, $state, $window) {
     // console.log($scope.allStrings.header.menu.desktop);
+    $scope.exitString = window.localStorage.getItem('lang') == 'en' ? "Exit" : "Выход";
     $scope.$watch('allStrings' ,function () {
       if ($scope.allStrings) {
         $scope.menuPopoverContent = [
@@ -13,7 +14,7 @@
             {name: $scope.allStrings.header.menu.myWidgets, url: '/mywidgets/view'},
             {name: $scope.allStrings.header.menu.widgetsStore, url: '/cardshop/view'},
             {name: $scope.allStrings.header.menu.language },
-            {name: "Выход", url: '/login'}
+            {name: $scope.exitString, url: '/login'}
         ];
 
       }
