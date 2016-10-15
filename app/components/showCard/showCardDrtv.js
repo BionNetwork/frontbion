@@ -7,11 +7,15 @@
   function showCard() {
     return {
       scope: {
-        params: '=?'
+        params: '=?',
+        dashboardCards: '=?'
       },
       restrict: 'E',
       controller: 'showCardCtrl',
-      templateUrl: 'components/showCard/showCardTmpl.html'
+      templateUrl: 'components/showCard/showCardTmpl.html',
+      link: function (scope, element, attr) {
+        // console.log(scope.dashboardCards);
+      }
     };
   }
 })();

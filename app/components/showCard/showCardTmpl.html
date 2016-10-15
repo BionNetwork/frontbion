@@ -15,9 +15,9 @@
                            data='data'
                            style="height: 530px;  width: 800px;display: inline-block;"
                            ng-show="chart == 'line'"
+                           filter-data="chartData"
                        ></high-chart-line>
                        <high-chart-pie
-                           pie-data='pieData'
                            title="name"
                            legend='legend'
                            style="height: 530px;  width: 800px; display: inline-block;"
@@ -26,6 +26,7 @@
                            pie-vertical-align="bottom"
                            pie-align="center"
                            pie-legend-width="400"
+                           filter-data="chartData"
                        ></high-chart-pie>
                    </div>
                 </div>

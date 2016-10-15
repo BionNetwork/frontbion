@@ -4,7 +4,7 @@
             <div class="card__head">
                 <span>Chart Title</span>
             </div>
-            <a ng-href="#/show/{{index}}" class="resizeBttn">
+            <a ng-href="#/show/{{data.id}}" class="resizeBttn">
                 <i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#expand"></use></svg></i>
             </a>
             <div class="card__chart">
@@ -12,6 +12,7 @@
                     <high-chart-line
                         data='data'
                         ng-show="data.charts[0] == 'line'"
+                        filter-data="chartData"
                     ></high-chart-line>
                     <high-chart-pie
                         ng-show="data.charts[0] == 'pie'"

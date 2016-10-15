@@ -2,10 +2,13 @@
   'use strict';
   angular
   .module('BIONApp')
-  .controller('showCardCtrl', ['$scope', showCardCtrl]);
+  .controller('showCardCtrl', ['$scope', '$state', showCardCtrl]);
 
-  function showCardCtrl($scope) {
+  function showCardCtrl($scope, $state) {
     // console.log('showCardCtrl');
+    $scope.data = $scope.dashboardCards.find(function (item) {
+      return item.id == $state.params.id;
+    });
     $scope.listOfFilters = [];
 
     $scope.showClickedItems = function (item) {
@@ -54,10 +57,28 @@
         {name: "Бижутерия"}
     ];
 
-    $scope.chart = 'pie';
+    $scope.chart = 'line';
     $scope.changeChart = function (type) {
       $scope.chart = type;
     };
+
+    $scope.filterData = function (pieSeries, pieData) {
+      var series = [...pieSeries.y];
+      var data = [...pieData];
+      return {
+          y: series.map(s => ({
+              data: data.map(row => row[s.index]),
+              name: s.header
+          })),
+          x: {
+              name: pieSeries.x.header,
+              data: data.map(row => row[pieSeries.x.index])
+          }
+      }
+    };
+
+    $scope.chartData = $scope.filterData($scope.data.series, $scope.data.data);
+    // console.log($scope.chartData);
 
 
   }
