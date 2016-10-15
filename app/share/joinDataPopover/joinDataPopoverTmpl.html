@@ -10,7 +10,7 @@
 			<i class="dropmodal__content_cancel icon" ng-click="closeDropContent()">
 				<svg role="img"><use xlink:href="img/svg-symbols.svg#close"></use></svg>
 			</i>
-			<h4 class="dropmodal__content_header">{{title}}</h4>
+			<h4 class="dropmodal__content_header">{{stringTitle}}</h4>
 			<div class="dropmodal__content_join">
 				<div class="joinHeader">
 					<a class="bindCell" ng-click="changeHeadIcon('cell-none')">
@@ -29,9 +29,9 @@
 						<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#cell-full"></use></svg></i>
 						<span>Full Outer</span>
 					</a>
-					<a class="bttn bttn--blue" ng-click="closeDropContent()">СВЯЗАТЬ</a>
+					<a class="bttn bttn--blue" ng-click="closeDropContent()">{{stringJoin}}</a>
 				</div>
-				<div class="joinTable">
+				<div class="joinTable hide">
 					<table>
 						<thead>
 							<tr>
