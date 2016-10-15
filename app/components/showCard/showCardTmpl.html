@@ -13,7 +13,7 @@
                    <div class="card__chart_wrap">
                         <high-chart-line
                            data='data'
-                           style="height: 530px;  width: 800px;display: inline-block;"
+                           style="height: 100%;  width: 100%;display: inline-block;"
                            ng-show="chart == 'line'"
                            filter-data="chartData"
                            on-filter-line=onFilterChartLine
@@ -21,7 +21,7 @@
                        <high-chart-pie
                            title="name"
                            legend='legend'
-                           style="height: 530px;  width: 800px; display: inline-block;"
+                           style="height: 100%;  width: 100%; display: inline-block;"
                            ng-show="chart == 'pie'"
                            pie-layout="horizontal"
                            pie-vertical-align="bottom"
@@ -31,7 +31,7 @@
                            on-filter=onFilterChartPie
                        ></high-chart-pie>
                        <high-chart-column
-                          style="height: 530px;  width: 800px; display: inline-block;"
+                          style="height: 100%;  width: 100%; display: inline-block;"
                           filter-data="chartData"
                           ng-show="chart == 'column'"
                           data='data'

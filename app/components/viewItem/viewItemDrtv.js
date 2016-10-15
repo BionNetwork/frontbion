@@ -21,6 +21,7 @@
             infinite: false,
             slidesToShow: 1,
           });
+          $(".scrollbar").niceScroll();
           // element[0].querySelector('.your-class').slick();
       }
     };
