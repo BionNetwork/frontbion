@@ -14,6 +14,7 @@
         choosedTableName: '=?',
         choosedTableResourceId: '=?',
         argumentBound: '=?',
+        allStrings: '=?',
       },
       restrict: 'E',
       controller: 'toPlugLoadCtrl',
