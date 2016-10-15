@@ -11,11 +11,11 @@
                 <div class="card__chart_wrap">
                     <high-chart-line
                         data='data'
-                        ng-show="data.charts[0] == 'line'"
+                        ng-if="data.charts[0] == 'line'"
                         filter-data="chartData"
                     ></high-chart-line>
                     <high-chart-pie
-                        ng-show="data.charts[0] == 'pie'"
+                        ng-if="data.charts[0] == 'pie'"
                         pie-layout="vertical"
                         pie-vertical-align="middle"
                         pie-align="right"
@@ -25,7 +25,7 @@
                     ></high-chart-pie>
                     <high-chart-column
                        filter-data="chartData"
-                       ng-show="data.charts[0] == 'column'"
+                       ng-if="data.charts[0] == 'column'"
                        data='data'
                    ></high-chart-column>
                 </div>
