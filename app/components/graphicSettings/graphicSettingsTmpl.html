@@ -125,6 +125,8 @@
                    style="height: 100%;  width: 100%; display: inline-block;"
                    ng-show="choosedChart == 'column'"
                    on-action-column=changeIssuesColumn
+                   on-action-axis=changeIssuesAxisColumn
+                   on-action-axis-x=changeIssuesAxisColumnX
                ></high-chart-column>
                 <high-chart-map
                    data='data'

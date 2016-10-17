@@ -21,7 +21,7 @@
       $scope.graphString = window.localStorage.getItem('lang') == 'en' ? $scope.graphStringEng : $scope.graphStringRu;
 
 
-      $scope.choosedChart = 'line';
+      $scope.choosedChart = 'column';
       $scope.changeChart = function (chart) {
         $scope.choosedChart = chart;
       }
@@ -49,14 +49,27 @@
 
       $scope.getChoosedAxisOn = function (title, showLabel, periodString, periodNumber, showScale,
         footNumber, footNumberText, showOs, osNumber) {
-        if (title == 'Axis Y') {
-          $scope.changeIssuesAxisLine(title, showLabel, periodString, periodNumber, showScale,
-            footNumber, footNumberText, showOs, osNumber);
-        }
-        if (title == 'Axis X') {
-          $scope.changeIssuesAxisLineX(title, showLabel, periodString, periodNumber, showScale,
-            footNumber, footNumberText, showOs, osNumber);
-        }
+          if ($scope.choosedChart == 'line') {
+            if (title == 'Axis Y') {
+              $scope.changeIssuesAxisLine(title, showLabel, periodString, periodNumber, showScale,
+                footNumber, footNumberText, showOs, osNumber);
+            }
+            if (title == 'Axis X') {
+              $scope.changeIssuesAxisLineX(title, showLabel, periodString, periodNumber, showScale,
+                footNumber, footNumberText, showOs, osNumber);
+            }
+          }
+          if ($scope.choosedChart == 'column') {
+            if (title == 'Axis Y') {
+              $scope.changeIssuesAxisColumn(title, showLabel, periodString, periodNumber, showScale,
+                footNumber, footNumberText, showOs, osNumber);
+            }
+            if (title == 'Axis X') {
+              $scope.changeIssuesAxisColumnX(title, showLabel, periodString, periodNumber, showScale,
+                footNumber, footNumberText, showOs, osNumber);
+            }
+          }
+
       };
 
 
