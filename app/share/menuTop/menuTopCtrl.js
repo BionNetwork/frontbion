@@ -65,6 +65,9 @@
     $scope.$watch('allCategories', function () {
       if ($scope.allCategories) {
         $scope.allCategories.unshift($scope.widgetsContent);
+        $scope.newCat = $scope.allCategories.filter(function (item) {
+          return item.id != 6;
+        });
       }
     });
 
