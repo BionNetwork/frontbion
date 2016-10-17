@@ -1,4 +1,55 @@
 @import "../../assets/css/_variables.less";
 my-widgets {
-  
+  .cardCategory {
+		overflow: hidden;
+		margin-right: -10px;
+ 		&__name {
+ 			padding-right: 10px;
+		    font-size: 18px;
+		    line-height: 18px;
+		    font-weight: 100;
+		    color: #adadad;
+		    margin: 0;
+		    margin-bottom: 10px;
+		    margin-left: 3px;
+		    padding-top: 30px;
+		    text-transform: uppercase;
+		    overflow: hidden;
+		    &:after {
+		    	display: block;
+			    content: ' ';
+			    border-top: 1px solid #e1e1e1;
+			    border-bottom: 1px solid #f8f8f8;
+			    position: relative;
+			    top: -8px;
+			    right: 45px;
+		    }
+		    span {
+		    	background: #f1f1f1;
+			    position: relative;
+			    z-index: 2;
+			    padding-right: 13px;
+			    display: inline-block;
+			    letter-spacing: 0;
+		    }
+		    a {
+		    	color: @blue;
+		    	float: right;
+			    position: relative;
+			    z-index: 2;
+			    font-size: 14px;
+			    font-weight: 600;
+			    text-decoration: none;
+			    text-transform: none;
+			    background: #f1f1f1;
+    			padding-left: 10px;
+    			.icon {
+    				width: 6px;
+    				height: 8px;
+    				fill: @blue;
+    				margin-left: 8px;
+    			}
+		    }
+ 		}
+ 	}
 }

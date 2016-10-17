@@ -56,8 +56,6 @@ angular.module('BIONApp')
                 return cat.id == item.id;
             });
           }
-          // console.log(a);
-          // $scope.myFN = $scope.onFilterByCategory(item);
         };
 
 

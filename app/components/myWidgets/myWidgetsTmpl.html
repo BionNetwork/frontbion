@@ -1,24 +1,31 @@
 <div class="main-container">
-    <div class="cardWidget" ng-repeat="card in myAllCards">
-        <a class='cardWidget__href' ng-href="#/mywidgets/item/{{card.card.id}}"></a>
-        <div class="cardWidget__head">
-            <h2 class="name">
-                {{card.card.name}}
-            </h2>
-            <p class="discription">
-                {{card.card.description}}
-            </p>
-        </div>
-        <div class="cardWidget__img">
-            <img ng-src="/img/cards/4-{{$index+1}}.png" alt="" />
-        </div>
-        <div class="cardWidget__author">
-            {{card.card.author}}
-        </div>
-        <div class="cardWidget__price">
-            {{card.card.rating}}
-            <span class="currency" ng-if="idEnglish"> ₽</span>
-            <span ng-if="!idEnglish">$</span>
-        </div>
+    <div class="cardCategory" ng-repeat="category in allCategoriesForCards" ng-if="category.id != 0 && category.id != 6">
+      <h2 class="cardCategory__name"><span>{{category.name}}</span>
+        <a href=""><i class="icon"><svg role="img">
+          <use xlink:href="img/svg-symbols.svg#ar-right"></use></svg></i>
+        </a>
+      </h2>
+      <div class="cardWidget" ng-repeat="card in getCategoryOfCard(myAllCards, category.id)">
+          <a class='cardWidget__href' ng-href="#/mywidgets/item/{{card.card.id}}"></a>
+          <div class="cardWidget__head">
+              <h2 class="name">
+                  {{card.card.name}}
+              </h2>
+              <p class="discription">
+                  {{card.card.description}}
+              </p>
+          </div>
+          <div class="cardWidget__img">
+              <img ng-src="/img/cards/4-{{$index+1}}.png" alt="" />
+          </div>
+          <div class="cardWidget__author">
+              {{card.card.author}}
+          </div>
+          <div class="cardWidget__price">
+              {{card.card.rating}}
+              <span class="currency" ng-if="idEnglish"> ₽</span>
+              <span ng-if="!idEnglish">$</span>
+          </div>
+      </div>
     </div>
 </div>

@@ -7,7 +7,8 @@
   function myWidgets() {
     return {
       scope: {
-        myAllCards: '=?'
+        myAllCards: '=?',
+        allCategoriesForCards: '=?',
       },
       restrict: 'E',
       controller: 'myWidgetsCtrl',
