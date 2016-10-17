@@ -32,12 +32,14 @@
     $scope.priceTitle = window.localStorage.getItem('lang') == 'en' ? 'Any price' : 'Любая цена';
     $scope.resetFilters = window.localStorage.getItem('lang') == 'en' ? 'Reset filters' : 'Сбросить фильтры';
     $scope.searchMyCards = window.localStorage.getItem('lang') == 'en' ? 'Search my cards' : 'Поиск по моим карточкам';
-    $scope.widgetsContentRu = [
-        {name: "Все типы приложений"}
-    ];
-    $scope.widgetsContentEng = [
-        {name: "All types of applications"}
-    ];
+    $scope.widgetsContentRu = {
+      name: "Все типы приложений",
+      id: 0
+    };
+    $scope.widgetsContentEng = {
+      name: "All types of applications",
+      id: 0
+    };
     $scope.widgetsContent = window.localStorage.getItem('lang') == 'en' ? $scope.widgetsContentEng : $scope.widgetsContentRu;
     $scope.contentPriceRu = [
         {name: "Любая цена"}
@@ -59,7 +61,12 @@
       };
     };
     // console.log($scope.contentSecond);
-
+    // categories
+    $scope.$watch('allCategories', function () {
+      if ($scope.allCategories) {
+        $scope.allCategories.unshift($scope.widgetsContent);
+      }
+    });
 
   }
 

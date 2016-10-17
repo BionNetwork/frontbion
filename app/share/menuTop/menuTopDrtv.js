@@ -10,7 +10,8 @@
         currentUrl: '=?',
         showDashboardList: '=',
         allStrings: '=?',
-        showSearch: '='
+        showSearch: '=',
+        allCategories: '=?',
       },
       restrict: 'E',
       controller: 'menuTopCtrl',

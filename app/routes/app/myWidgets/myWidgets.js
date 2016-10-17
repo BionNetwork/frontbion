@@ -27,6 +27,25 @@ angular.module('BIONApp')
           }
         });
 
+        var categories = {
+        get: {
+            success: function(response) {
+              $scope.allCategories = response.data.data;
+              // console.log($scope.allCards);
+            },
+            error: function(response) {
+            }
+          }
+        };
+        $http({
+        method: 'GET',
+        url: '/api/v1/cards/categories',
+        headers: {
+          'X-AUTHORIZE-TOKEN': $scope.token,
+          'Accept-Language' : $scope.language
+        }
+        }).then(categories.get.success, categories.get.error);
+
         // functions
 
         $scope.changeVisibility = function (item) {

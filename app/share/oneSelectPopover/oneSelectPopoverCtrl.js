@@ -5,7 +5,11 @@
   .controller('oneSelectPopoverCtrl', ['$scope', '$state', oneSelectPopoverCtrl]);
 
   function oneSelectPopoverCtrl($scope, $state) {
-        $scope.popoverHeadName = $scope.content[0].name;
+        $scope.$watch('content', function () {
+          if ($scope.content) {
+              $scope.popoverHeadName = $scope.content[0].name;
+          }
+        });
 
 
         $scope.changePopoverHead = function (item) {
