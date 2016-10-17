@@ -12,18 +12,18 @@
 						</div>
 						<div class="titler_line">
 						</div>
-						<button class="titler_eye" ng-click="showLabel = !showLabel">
+						<button class="titler_eye" ng-click="showLabel = !showLabel; onChangeAxisSettings()">
 							<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#eye"></use></svg></i>
 						</button>
 					</div>
 					<div class="period" ng-class="{ 'period_active' : showLabel}">
-						<input type="text" class="dropdown1_input" ng-model="periodString" placeholder="{{osString.period}}"></input>
+						<input type="text" class="dropdown1_input" ng-change="onChangeAxisSettings()" ng-model="periodString" placeholder="{{osString.period}}"></input>
 						<div class="plusminus-low">
 							<div class="plusminus-center">
 								<span class="plusminus-indicator">{{osString.text}}:</span>
-								<button class="button_minus" ng-click="minusNumber('periodNumber')"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#minus"></use></svg></i></button>
-								<span class="plusminus-indicator">{{periodNumber}}s</span>
-								<button class="button_plus" ng-click="addNumber('periodNumber')"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#plus"></use></svg></i></button>
+								<button class="button_minus" ng-click="minusNumber('periodNumber'); onChangeAxisSettings()"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#minus"></use></svg></i></button>
+								<span class="plusminus-indicator">{{periodNumber}}px</span>
+								<button class="button_plus" ng-click="addNumber('periodNumber'); onChangeAxisSettings()"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#plus"></use></svg></i></button>
 							</div>
 						</div>
 					</div>
@@ -33,7 +33,7 @@
 						</div>
 						<div class="titler_line">
 						</div>
-						<button class="titler_eye" ng-click="showScale = !showScale">
+						<button class="titler_eye" ng-click="showScale = !showScale; onChangeAxisSettings()">
 							<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#eye"></use></svg></i>
 						</button>
 					</div>
@@ -41,17 +41,17 @@
 						<div class="plusminus-left">
 							<div class="plusminus-center">
 								<span class="plusminus-indicator">{{osString.step}}:</span>
-								<button class="button_minus" ng-click="minusNumber('footNumber')"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#minus"></use></svg></i></button>
+								<button class="button_minus" ng-click="minusNumber('footNumber');onChangeAxisSettings()"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#minus"></use></svg></i></button>
 								<span class="plusminus-indicator">{{footNumber}}s</span>
-								<button class="button_plus" ng-click="addNumber('footNumber')"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#plus"></use></svg></i></button>
+								<button class="button_plus" ng-click="addNumber('footNumber'); onChangeAxisSettings()"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#plus"></use></svg></i></button>
 							</div>
 						</div>
 						<div class="plusminus-right">
 							<div class="plusminus-center">
 									<span class="plusminus-indicator">{{osString.text}}:</span>
-								<button class="button_minus" ng-click="minusNumber('footNumberText')"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#minus"></use></svg></i></button>
+								<button class="button_minus" ng-click="minusNumber('footNumberText'); onChangeAxisSettings()"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#minus"></use></svg></i></button>
 								<span class="plusminus-indicator">{{footNumberText}}s</span>
-								<button class="button_plus" ng-click="addNumber('footNumberText')"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#plus"></use></svg></i></button>
+								<button class="button_plus" ng-click="addNumber('footNumberText'); onChangeAxisSettings()"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#plus"></use></svg></i></button>
 							</div>
 						</div>
 					</div>
@@ -61,16 +61,16 @@
 						</div>
 						<div class="titler_line">
 						</div>
-						<button class="titler_eye" ng-click="showOs = !showOs">
+						<button class="titler_eye" ng-click="showOs = !showOs; onChangeAxisSettings()">
 							<i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#eye"></use></svg></i>
 						</button>
 					</div>
 					<div class="period" ng-class="{ 'period_active' : showOs}">
 							<div class="plusminus">
 								<span class="plusminus-indicator">{{osString.lineSize}}:</span>
-								<button class="button_minus" ng-click="minusNumber('osNumber')"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#minus"></use></svg></i></button>
+								<button class="button_minus" ng-click="minusNumber('osNumber'); onChangeAxisSettings()"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#minus"></use></svg></i></button>
 								<span class="plusminus-indicator">{{osNumber}}s</span>
-								<button class="button_plus" ng-click="addNumber('osNumber')"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#plus"></use></svg></i></button>
+								<button class="button_plus" ng-click="addNumber('osNumber'); onChangeAxisSettings()"><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#plus"></use></svg></i></button>
 							</div>
 					</div>
 					<div class="dropdown1_save">

@@ -14,6 +14,7 @@
         showIcon: '=',
         onChange: '=?',
         activeActivastionId: '=?',
+        getChoosedAxisOn: '=?',
       },
       restrict: 'E',
       controller: 'graphicSettingsPopover2Ctrl',

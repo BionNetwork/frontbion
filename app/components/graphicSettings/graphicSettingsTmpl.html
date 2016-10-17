@@ -110,19 +110,21 @@
                     pie-align="center"
                     pie-legend-width="400"
                     ng-show="choosedChart == 'pie'"
-                    on-action=changeIssues
+                    on-action=changeIssuesPie
                 ></high-chart-pie>
                 <high-chart-line
                    data='data'
                    style="height: 100%;  width: 100%; display: inline-block;"
                    ng-show="choosedChart == 'line'"
-                   on-action-line=changeIssues2
+                   on-action-line=changeIssuesLine
+                   on-action-axis=changeIssuesAxisLine
+                   on-action-axis-x=changeIssuesAxisLineX
                ></high-chart-line>
                 <high-chart-column
                    data='data'
                    style="height: 100%;  width: 100%; display: inline-block;"
                    ng-show="choosedChart == 'column'"
-                   on-action-column=changeIssues3
+                   on-action-column=changeIssuesColumn
                ></high-chart-column>
                 <high-chart-map
                    data='data'
@@ -146,12 +148,16 @@
                       placement="left"
                       icon-name="axis-y"
                       active-activastion-id='activeActivastionId'
+                      get-choosed-axis-on=getChoosedAxisOn
+                      get-choosed-axis-on-x=getChoosedAxisOnX
                   ></graphic-settings-popover2>
                   <graphic-settings-popover2
                       title="Axis X"
                       placement="left"
                       icon-name="axis-x"
                       active-activastion-id='activeActivastionId'
+                      get-choosed-axis-on=getChoosedAxisOn
+                      get-choosed-axis-on-x=getChoosedAxisOnX
                   ></graphic-settings-popover2>
                 </div>
               </div>

@@ -48,7 +48,7 @@ angular.module('BIONApp')
           $scope.showSearch = item;
         };
         $scope.filterByCategory = function (item) {
-          console.log(item);
+          // console.log(item);
           if (item.id == 0) {
             $scope.allCategoriesForCards = $scope.allCategories;
           }else if (item.id > 0) {

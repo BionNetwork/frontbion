@@ -30,9 +30,9 @@
 
 
 
-    $scope.periodNumber = 1;
+    $scope.periodNumber = 12;
     $scope.footNumber = 1;
-    $scope.footNumberText = 1;
+    $scope.footNumberText = 12;
     $scope.osNumber = 1;
     $scope.showLabel = false;
     $scope.showScale = false;
@@ -63,7 +63,7 @@
     };
     $scope.addNumber = function (name) {
       if (name == 'periodNumber') {
-        if ($scope.periodNumber < 10) {
+        if ($scope.periodNumber < 24) {
             $scope.periodNumber = $scope.periodNumber + 1;
         }
       }
@@ -73,7 +73,7 @@
         }
       }
       if (name == 'footNumberText') {
-        if ($scope.footNumberText < 10) {
+        if ($scope.footNumberText < 24) {
             $scope.footNumberText = $scope.footNumberText + 1;
         }
       }
@@ -104,6 +104,18 @@
       };
       console.log(value, key);
       // $scope.sendGraphSettings(activeActivationId, key, value);
+    };
+    $scope.onChangeAxisSettings = function functionName() {
+      //  console.log($scope.showLabel); //showlabel
+      //  console.log($scope.periodString); //period
+      //  console.log($scope.periodNumber); //periodnumber
+      //  console.log($scope.showScale); //showScale
+      //  console.log($scope.footNumber); //footNumber
+      //  console.log($scope.footNumberText); //footNumber
+      //  console.log($scope.showOs); //showOs
+      //  console.log($scope.osNumber); //osNumber
+        $scope.getChoosedAxisOn($scope.title, $scope.showLabel, $scope.periodString, $scope.periodNumber, $scope.showScale,
+          $scope.footNumber, $scope.footNumberText, $scope.showOs, $scope.osNumber)
     };
 
   }
