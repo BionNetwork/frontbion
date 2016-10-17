@@ -26,6 +26,7 @@ angular.module('BIONApp')
         get: {
             success: function(response) {
               $scope.allCategories = response.data.data;
+              $scope.allCategoriesForCards = response.data.data;
               // console.log($scope.allCards);
             },
             error: function(response) {
@@ -45,6 +46,18 @@ angular.module('BIONApp')
 
         $scope.changeVisibility = function (item) {
           $scope.showSearch = item;
+        };
+        $scope.filterByCategory = function (item) {
+          console.log(item);
+          if (item.id == 0) {
+            $scope.allCategoriesForCards = $scope.allCategories;
+          }else if (item.id > 0) {
+            $scope.allCategoriesForCards = $scope.allCategories.filter(function (cat) {
+                return cat.id == item.id;
+            });
+          }
+          // console.log(a);
+          // $scope.myFN = $scope.onFilterByCategory(item);
         };
 
 

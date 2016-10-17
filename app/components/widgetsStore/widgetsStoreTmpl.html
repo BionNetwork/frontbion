@@ -27,7 +27,7 @@
             </div>
         </div>
     </div>
-    <div class="cardCategory" ng-repeat="category in allCategories" ng-if="category.id != 0">
+    <div class="cardCategory" ng-repeat="category in allCategoriesForCards" ng-if="category.id != 0">
         <h2 class="cardCategory__name"><span>{{category.name}}</span><a href=""><i class="icon"><svg role="img"><use xlink:href="img/svg-symbols.svg#ar-right"></use></svg></i></a></h2>
         <div class="cardWidget" ng-repeat="card in getCategoryOfCard(allCards, category.id)">
             <a class='cardWidget__href' ng-href="#/cardshop/item/{{card.id}}"></a>

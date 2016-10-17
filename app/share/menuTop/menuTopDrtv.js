@@ -12,6 +12,7 @@
         allStrings: '=?',
         showSearch: '=',
         allCategories: '=?',
+        filterByCategory: '=?',
       },
       restrict: 'E',
       controller: 'menuTopCtrl',

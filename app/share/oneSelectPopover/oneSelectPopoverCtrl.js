@@ -18,6 +18,12 @@
           $scope.upAndDown = false;
         };
 
+        $scope.onClickItem = function (item) {
+          if ($scope.onChange) {
+            $scope.onChange(item);
+          }
+        };
+
 
   }
 

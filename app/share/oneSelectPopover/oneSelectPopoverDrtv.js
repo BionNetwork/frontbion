@@ -10,7 +10,8 @@
         title: '=?',
         placement: '@',
         content: '=?',
-        iconName: '@'
+        iconName: '@',
+        onChange: '=?',
       },
       restrict: 'E',
       controller: 'oneSelectPopoverCtrl',
