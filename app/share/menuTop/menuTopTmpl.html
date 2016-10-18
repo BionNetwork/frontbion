@@ -83,7 +83,7 @@
 					<div class="searchPanel__input">
 						<i class="icon icon-search"><svg role="img"><use xlink:href="img/svg-symbols.svg#search"></use></svg></i>
 						<a class="icon icon-cancel"><svg role="img"><use xlink:href="img/svg-symbols.svg#close"></use></svg></a>
-						<input type="text" placeholder="{{searchMyCards}}">
+						<input type="text" ng-change="onTypingSearch(searchCards)" ng-model="searchCards.name" placeholder="{{searchMyCards}}">
 					</div>
 				</form>
 			</div>

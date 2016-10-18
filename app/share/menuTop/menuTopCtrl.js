@@ -60,6 +60,7 @@
         }
       };
     };
+
     // console.log($scope.contentSecond);
     // categories
     $scope.$watch('allCategories', function () {

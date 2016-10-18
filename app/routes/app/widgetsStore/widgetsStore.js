@@ -58,6 +58,11 @@ angular.module('BIONApp')
           }
         };
 
+        $scope.onTypingSearch = function (text) {
+          console.log(text);
+          $scope.searchCard = text;
+        };
+
 
       }]
     });

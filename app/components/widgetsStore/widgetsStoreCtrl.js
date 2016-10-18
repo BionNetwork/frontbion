@@ -36,6 +36,12 @@
     $scope.string = window.localStorage.getItem('lang') == 'en' ? $scope.engString : $scope.ruString;
 
     $scope.getCategoryOfCard = function (cards, id) {
+      if (id == 0 && cards) {
+        var newCards = cards.filter(function (item) {
+          return (item.id == 0) ;
+        });
+        return newCards;
+      }
       if (id == 1 && cards) {
         var newCards = cards.filter(function (item) {
           return (item.id == 13 || item.id == 6 || item.id == 12 || item.id == 8 || item.id == 24) ;
@@ -63,6 +69,12 @@
       if (id == 5 && cards) {
         var newCards = cards.filter(function (item) {
           return (item.id == 11 || item.id == 10) ;
+        });
+        return newCards;
+      }
+      if (id == 6 && cards) {
+        var newCards = cards.filter(function (item) {
+          return (item.id == 0) ;
         });
         return newCards;
       }

@@ -13,6 +13,7 @@
         showSearch: '=',
         allCategories: '=?',
         filterByCategory: '=?',
+        onTypingSearch: '=?',
       },
       restrict: 'E',
       controller: 'menuTopCtrl',

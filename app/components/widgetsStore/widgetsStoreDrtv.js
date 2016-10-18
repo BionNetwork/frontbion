@@ -8,7 +8,8 @@
     return {
       scope: {
         allCards: '=?',
-        allCategoriesForCards: '=?'
+        allCategoriesForCards: '=?',
+        searchCard: '=?',
       },
       restrict: 'E',
       controller: 'widgetsStoreCtrl',
