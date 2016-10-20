@@ -8,7 +8,7 @@ angular.module('BIONApp')
       abstract: true,
       url: '/cardshop',
       templateUrl: 'routes/app/widgetsStore/widgetsStore.html',
-      controller: ['$scope', '$http', '$state', function($scope, $http, $state) {
+      controller: ['$scope', '$http', '$state', '$httpParamSerializer', function($scope, $http, $state, $httpParamSerializer) {
         $scope.currentUrl = '/cardshop'
         $scope.showSearch = true;
         $scope.token = window.localStorage.getItem('token');

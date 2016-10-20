@@ -4,12 +4,13 @@ var proxy = require('http-proxy-middleware');
 var app = express();
 
 app.use('/api/', proxy({
-  target: 'http://api.dev.bion-demo.etton.ru/',
+  // target: 'http://api.dev.bion-demo.etton.ru/',
+  target: 'http://bion.etton.ru/',
   ///target: 'http://localhost:8080/',
   xfwd: true,
   headers: {
-    'Host':'api.dev.bion-demo.etton.ru',
-    'Origin':'http://api.dev.bion-demo.etton.ru/'
+    'Host':'bion.etton.ru',
+    'Origin':'http://bion.etton.ru/'
   },
   logLevel:'debug'
 }));
