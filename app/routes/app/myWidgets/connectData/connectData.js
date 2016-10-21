@@ -8,7 +8,7 @@ angular.module('BIONApp')
       abstract: true,
       url: '/connect-data',
       templateUrl: 'routes/app/myWidgets/connectData/connectData.html',
-      controller: ['$scope', '$http', '$state', '$httpParamSerializer', function($scope, $http, $state, $httpParamSerializer) {
+      controller: ['$scope', '$http', '$state', '$httpParamSerializer', '$window', function($scope, $http, $state, $httpParamSerializer, $window) {
 
         $scope.token = window.localStorage.getItem('token');
         $scope.language = window.localStorage.getItem('lang') ? window.localStorage.getItem('lang') : 'ru';
