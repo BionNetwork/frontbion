@@ -16,8 +16,11 @@ angular.module('BIONApp')
         var card = {
           get: {
             success: function(response) {
-              $scope.cardKey = response.data.data;
               // console.log(response.data.data);
+              if (response.status == 403) {
+                $window.location.href = "#"+$scope.breadcrumbs.url+"/view";
+              }
+              $scope.cardKey = response.data.data;
               $scope.allArguments = response.data.data.arguments;
               // console.log($scope.allCards);
             },
@@ -43,7 +46,7 @@ angular.module('BIONApp')
 
         $http({
           method: 'GET',
-          url: '/api/v1/cards/'+ $state.params.id,
+          url: '/api/v1/cards/'+ $state.params.id +'/purchased',
           headers: {
             'X-AUTHORIZE-TOKEN': $scope.token,
             'Accept-Language' : $scope.language

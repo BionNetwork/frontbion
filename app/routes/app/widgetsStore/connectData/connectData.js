@@ -8,7 +8,7 @@ angular.module('BIONApp')
       abstract: true,
       url: '/connect-data',
       templateUrl: 'routes/app/widgetsStore/connectData/connectData.html',
-      controller: ['$scope', '$http', '$state', function($scope, $http, $state) {
+      controller: ['$scope', '$http', '$state', '$window', function($scope, $http, $state, $window) {
 
         $scope.token = window.localStorage.getItem('token');
         $scope.language = window.localStorage.getItem('lang') ? window.localStorage.getItem('lang') : 'ru';
@@ -16,6 +16,9 @@ angular.module('BIONApp')
         var card = {
           get: {
             success: function(response) {
+              if (response.status == 403) {
+                $window.location.href = "#"+$scope.breadcrumbs.url+"/view";
+              }
               $scope.cardKey = response.data.data;
               // console.log(response.data.data);
               $scope.allArguments = response.data.data.arguments;
@@ -41,7 +44,7 @@ angular.module('BIONApp')
 
         $http({
           method: 'GET',
-          url: '/api/v1/cards/'+ $state.params.id,
+          url: '/api/v1/cards/'+ $state.params.id +'/purchased',
           headers: {
             'X-AUTHORIZE-TOKEN': $scope.token,
             'Accept-Language' : $scope.language
