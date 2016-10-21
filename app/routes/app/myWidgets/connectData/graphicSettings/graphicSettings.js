@@ -39,9 +39,6 @@ angular.module('BIONApp')
         // functions start
 
         $scope.getDataForCharts = function (activeActivations) {
-          if (activeActivations.length == 0) {
-            // break;
-          };
           var boundedActiveArguments = {
             get: {
               success: function(response) {
@@ -70,10 +67,13 @@ angular.module('BIONApp')
                     for (var l = 0; l < a.length; l++) {
                       var b = data[i];
                       if (data[i].column_name == a[l].orig_column) {
-                          queriesObject.push({data: data[i], click_column: a[l].click_column})
+                          queriesObject.push({data: data[i],
+                                              click_column: a[l].click_column,
+                                              type: a[l].type})
                       }
                     }
                   }
+                  console.log(queriesObject);
                   $scope.getQuery(queriesObject, id);
                 },
                 error: function(response) {
@@ -92,39 +92,37 @@ angular.module('BIONApp')
         };
 
         $scope.getQuery = function (data, id) {
-          console.log(data);
-          console.log(id);
-
           var query = {
           get: {
               success: function(response) {
-                // $scope.allCategories = response.data.data;
-                // $scope.allCategoriesForCards = response.data.data;
                 console.log(response.data.data);
               },
               error: function(response) {
               }
             }
           };
-          var i = {
+
+          let queryJson = {
             "dims": [
-              {
-                name: 'data',
-                type: 'TextDim',
-                field: 'c_16_105_4336658476196458068_8540502850571451334'
-              }
             ]
           };
+          for (var i = 0; i < data.length; i++) {
+            queryJson.dims.push({
+              name: "data"+data[i].data.argument,
+              type: 'TextDim',
+              field: data[i].click_column
+            })
+          }
 
           $http({
             method: 'POST',
-            url: '/api/v1/activations/16/query',
+            url: '/api/v1/activations/'+ id +'/query',
             headers: {
               'X-AUTHORIZE-TOKEN': $scope.token,
               'Content-Type': 'application/json',
             },
             data: {
-                  query: JSON.stringify(i)
+                  query: JSON.stringify(queryJson)
             }
           }).then(query.get.success, query.get.error);
 
