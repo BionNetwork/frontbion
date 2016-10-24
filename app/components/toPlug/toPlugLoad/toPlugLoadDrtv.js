@@ -15,6 +15,7 @@
         choosedTableResourceId: '=?',
         argumentBound: '=?',
         allStrings: '=?',
+        loadExcelFiles: '=?'
       },
       restrict: 'E',
       controller: 'toPlugLoadCtrl',

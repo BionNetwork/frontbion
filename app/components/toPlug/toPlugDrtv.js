@@ -18,7 +18,8 @@
         showTablePreview: '=?',
         tablePreview: '=?',
         argumentBound: '=?',
-        allStrings: '=?'
+        allStrings: '=?',
+        loadExcelFiles: '=?'
       },
       restrict: 'E',
       controller: 'toPlugCtrl',

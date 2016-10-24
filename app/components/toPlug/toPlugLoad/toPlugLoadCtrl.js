@@ -25,8 +25,9 @@
       if (!files) {
         return;
       } else {
-        console.log(files)
-        $toPlugLoadSrv.addFiles(files, $scope.activationId, $scope.getResources);
+        // console.log(files)
+        $scope.loadExcelFiles(files, $scope.activationId)
+        // $toPlugLoadSrv.addFiles(files, $scope.activationId, $scope.getResources);
       }
     };
 

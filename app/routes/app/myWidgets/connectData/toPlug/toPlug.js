@@ -102,6 +102,26 @@ angular.module('BIONApp')
           });
         };
 
+        $scope.loadExcelFiles = function (file, id) {
+          var fd = new FormData();
+          fd.append('resource_file', file[0]);
+          fd.append('activation_id', id);
+          fd.append('connection_type', 'Excel');
+
+          $http.post('/api/v1/resources', fd, {
+            headers: {
+              'Content-Type': undefined,
+              'X-AUTHORIZE-TOKEN': $scope.token
+            },
+            transformRequest: angular.identity
+          }).success(function (response) {
+            $scope.getResources(id);
+          }).error(function(response){
+            console.log(response, 'error');
+          });
+
+        };
+
         // end functions
 
 

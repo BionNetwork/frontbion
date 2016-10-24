@@ -10,7 +10,7 @@
       var fileData = files[0] || files;
 
       if (!fileData) {
-        alert("Только файлы эксель");
+        // alert("Только файлы эксель");
         return;
       }
 
