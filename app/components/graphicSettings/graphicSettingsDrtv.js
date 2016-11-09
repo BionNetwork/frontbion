@@ -11,7 +11,9 @@
         cardKey: '=?',
         activeActivastionId: '=?',
         allArguments: '=?',
-        allStrings: '=?'
+        allStrings: '=?',
+        graphicSettingsData: '=?',
+        graphicSettingsSeries: '=?'
       },
       restrict: 'E',
       controller: 'graphicSettingsCtrl',

@@ -60,36 +60,68 @@
                   }
               }
           };
-          var lineSeries = scope.filterData ? scope.getLineData(scope.filterData).series : defaultLineSeries;
-          var lineSeriesxAxis = scope.filterData ? scope.getLineData(scope.filterData).xAxis : defaultLinexAxis;
-          var lineSeriesyAxis = scope.filterData ? scope.getLineData(scope.filterData).yAxis : defaultLineyAxis;
+          // var lineSeries = scope.filterData ? scope.getLineData(scope.filterData).series : defaultLineSeries;
+          // var lineSeriesxAxis = scope.filterData ? scope.getLineData(scope.filterData).xAxis : defaultLinexAxis;
+          // var lineSeriesyAxis = scope.filterData ? scope.getLineData(scope.filterData).yAxis : defaultLineyAxis;
 
+          scope.$watch('filterData', function() {
+            if (scope.filterData) {
+              var lineSeries = scope.getLineData(scope.filterData).series;
+              var lineSeriesxAxis = scope.getLineData(scope.filterData).xAxis;
+              var lineSeriesyAxis = scope.getLineData(scope.filterData).yAxis;
+              Highcharts.chart(element[0],
+                  {
+                    colors: ["rgb(33, 187, 239)", "rgb(156, 205, 100)", "rgb(72, 165, 234)"],
+                      title: {
+                          text: '',
+                          x: -20 //center
+                      },
+                      subtitle: {
+                          text: '',
+                          x: -20
+                      },
+                      xAxis: lineSeriesxAxis,
+                      yAxis: lineSeriesyAxis,
+                      tooltip: {
+                          valueSuffix: '°C'
+                      },
+                      legend: {
+                          layout: 'horizontal',
+                          align: 'center',
+                          verticalAlign: 'bottom',
+                          borderWidth: 0
+                      },
+                      series: lineSeries
+                  }
+              );
+            }
+          })
 
-          Highcharts.chart(element[0],
-              {
-                colors: ["rgb(33, 187, 239)", "rgb(156, 205, 100)", "rgb(72, 165, 234)"],
-                  title: {
-                      text: '',
-                      x: -20 //center
-                  },
-                  subtitle: {
-                      text: '',
-                      x: -20
-                  },
-                  xAxis: lineSeriesxAxis,
-                  yAxis: lineSeriesyAxis,
-                  tooltip: {
-                      valueSuffix: '°C'
-                  },
-                  legend: {
-                      layout: 'horizontal',
-                      align: 'center',
-                      verticalAlign: 'bottom',
-                      borderWidth: 0
-                  },
-                  series: lineSeries
-              }
-          );
+          // Highcharts.chart(element[0],
+          //     {
+          //       colors: ["rgb(33, 187, 239)", "rgb(156, 205, 100)", "rgb(72, 165, 234)"],
+          //         title: {
+          //             text: '',
+          //             x: -20 //center
+          //         },
+          //         subtitle: {
+          //             text: '',
+          //             x: -20
+          //         },
+          //         xAxis: lineSeriesxAxis,
+          //         yAxis: lineSeriesyAxis,
+          //         tooltip: {
+          //             valueSuffix: '°C'
+          //         },
+          //         legend: {
+          //             layout: 'horizontal',
+          //             align: 'center',
+          //             verticalAlign: 'bottom',
+          //             borderWidth: 0
+          //         },
+          //         series: lineSeries
+          //     }
+          // );
 
           scope.onActionLine = function (colors, legend) {
             scope.colorss = colors;

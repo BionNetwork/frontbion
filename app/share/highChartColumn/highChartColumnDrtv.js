@@ -61,42 +61,80 @@
                   }
               }
           };
-          var columnSeries = scope.filterData ? scope.getColumnData(scope.filterData).series : defaultColumnSeries;
-          var columnSeriesxAxis = scope.filterData ? scope.getColumnData(scope.filterData).xAxis : defaultColumnxAxis;
-          var columnSeriesyAxis = scope.filterData ? scope.getColumnData(scope.filterData).yAxis : defaultColumnyAxis;
+          // var columnSeries = scope.filterData ? scope.getColumnData(scope.filterData).series : defaultColumnSeries;
+          // var columnSeriesxAxis = scope.filterData ? scope.getColumnData(scope.filterData).xAxis : defaultColumnxAxis;
+          // var columnSeriesyAxis = scope.filterData ? scope.getColumnData(scope.filterData).yAxis : defaultColumnyAxis;
 
-
-          Highcharts.chart(element[0],
-            {
-              colors: ["rgb(33, 187, 239)", "rgb(156, 205, 100)", "rgb(72, 165, 234)"],
-              chart: {
-                  type: 'column'
-              },
-              title: {
-                  text: ''
-              },
-              subtitle: {
-                  text: ''
-              },
-              xAxis: columnSeriesxAxis,
-              yAxis: columnSeriesyAxis,
-              tooltip: {
-                  headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-                  pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                      '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
-                  footerFormat: '</table>',
-                  shared: true,
-                  useHTML: true
-              },
-              plotOptions: {
-                  column: {
-                      pointPadding: 0.2,
-                      borderWidth: 0
-                  }
-              },
-              series: columnSeries
+          scope.$watch('filterData', function() {
+            if (scope.filterData) {
+              var columnSeries = scope.getColumnData(scope.filterData).series;
+              var columnSeriesxAxis = scope.getColumnData(scope.filterData).xAxis;
+              var columnSeriesyAxis = scope.getColumnData(scope.filterData).yAxis;
+              Highcharts.chart(element[0],
+                {
+                  colors: ["rgb(33, 187, 239)", "rgb(156, 205, 100)", "rgb(72, 165, 234)"],
+                  chart: {
+                      type: 'column'
+                  },
+                  title: {
+                      text: ''
+                  },
+                  subtitle: {
+                      text: ''
+                  },
+                  xAxis: columnSeriesxAxis,
+                  yAxis: columnSeriesyAxis,
+                  tooltip: {
+                      headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                      pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                          '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+                      footerFormat: '</table>',
+                      shared: true,
+                      useHTML: true
+                  },
+                  plotOptions: {
+                      column: {
+                          pointPadding: 0.2,
+                          borderWidth: 0
+                      }
+                  },
+                  series: columnSeries
+                }
+              );
             }
-          );
+          })
+
+          // Highcharts.chart(element[0],
+          //   {
+          //     colors: ["rgb(33, 187, 239)", "rgb(156, 205, 100)", "rgb(72, 165, 234)"],
+          //     chart: {
+          //         type: 'column'
+          //     },
+          //     title: {
+          //         text: ''
+          //     },
+          //     subtitle: {
+          //         text: ''
+          //     },
+          //     xAxis: columnSeriesxAxis,
+          //     yAxis: columnSeriesyAxis,
+          //     tooltip: {
+          //         headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+          //         pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+          //             '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+          //         footerFormat: '</table>',
+          //         shared: true,
+          //         useHTML: true
+          //     },
+          //     plotOptions: {
+          //         column: {
+          //             pointPadding: 0.2,
+          //             borderWidth: 0
+          //         }
+          //     },
+          //     series: columnSeries
+          //   }
+          // );
 
           scope.onActionColumn = function (colors, legend) {
             scope.legendDef = legend;

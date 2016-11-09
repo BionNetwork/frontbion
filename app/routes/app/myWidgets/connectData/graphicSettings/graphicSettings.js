@@ -98,6 +98,23 @@ angular.module('BIONApp')
           get: {
               success: function(response) {
                 console.log(response.data.data);
+                $scope.graphicSettingsData = response.data.data.data;
+                $scope.graphicSettingsSeries = {
+                  x: {
+                      index: 0,
+                      header: 'Date'
+                  },
+                  y: [
+
+                  ]
+                };
+                for (var i = 0; i < response.data.data.fields.length; i++) {
+                  $scope.graphicSettingsSeries.y.push({
+                        index: i+1,
+                        header: response.data.data.fields[i]
+                  })
+                };
+
               },
               error: function(response) {
               }
@@ -113,13 +130,14 @@ angular.module('BIONApp')
             ],
           };
           for (var i = 0; i < data.length; i++) {
-            console.log(data[i]);
             if (data[i].type == 'timestamp' && queryJson.dims.length == 0) {
               queryJson.dims.push({
                 field: data[i].click_column,
                 type: 'date',
                 name: "date",
-                order: '1'
+                order: '1',
+                interval: "toStartOfMonth",
+                order_by: "like"
               })
             }
             if (data[i].type == 'text' && data[i].data.column_name == 'Организация') {

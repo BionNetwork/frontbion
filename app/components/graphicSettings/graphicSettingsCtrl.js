@@ -72,7 +72,31 @@
 
       };
 
+      $scope.filterData = function (pieSeries, pieData) {
+        var series = [...pieSeries.y];
+        var data = [...pieData];
+        return {
+            y: series.map(s => ({
+                data: data.map(row => row[s.index]),
+                name: s.header
+            })),
+            x: {
+                name: pieSeries.x.header,
+                data: data.map(row => row[pieSeries.x.index])
+            }
+        }
+      };
 
+      $scope.$watch('graphicSettingsData', function() {
+        if ($scope.graphicSettingsData) {
+          $scope.$watch('graphicSettingsSeries', function () {
+            if ($scope.graphicSettingsSeries) {
+              // console.log($scope.filterData($scope.graphicSettingsSeries, $scope.graphicSettingsData));
+              $scope.chartData = $scope.filterData($scope.graphicSettingsSeries, $scope.graphicSettingsData);
+            }
+          })
+        }
+      });
 
   }
 
