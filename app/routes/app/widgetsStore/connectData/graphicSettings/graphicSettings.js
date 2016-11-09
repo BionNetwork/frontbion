@@ -102,7 +102,7 @@ angular.module('BIONApp')
               }
             };
 
-            let queryJson = {
+            var queryJson = {
               "dims": [
               ]
             };

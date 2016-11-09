@@ -43,7 +43,7 @@ angular.module('BIONApp')
             get: {
               success: function(response) {
                 // $scope.argumentsForQuery(response.data.data, activeActivations[0].id);
-                $scope.argumentsForQuery(response.data.data, 19);
+                $scope.argumentsForQuery(response.data.data, 48);
               },
               error: function(response) {
               }
@@ -51,7 +51,7 @@ angular.module('BIONApp')
           };
           $http({
             method: 'GET',
-            url: '/api/v1/activations/' + 19 + '/bonds',
+            url: '/api/v1/activations/' + 48 + '/bonds',
             // url: '/api/v1/activations/' + activeActivations[0].id + '/bonds',
             headers: {
               'X-AUTHORIZE-TOKEN': $scope.token
@@ -104,17 +104,44 @@ angular.module('BIONApp')
             }
           };
 
-          let queryJson = {
+          var queryJson = {
+            "transform": "true",
             "dims": [
-            ]
+            ],
+            "measures" : [
+
+            ],
           };
           for (var i = 0; i < data.length; i++) {
-            queryJson.dims.push({
-              name: "data"+data[i].data.argument,
-              type: 'TextDim',
-              field: data[i].click_column
-            })
+            console.log(data[i]);
+            if (data[i].type == 'timestamp' && queryJson.dims.length == 0) {
+              queryJson.dims.push({
+                field: data[i].click_column,
+                type: 'date',
+                name: "date",
+                order: '1'
+              })
+            }
+            if (data[i].type == 'text' && data[i].data.column_name == 'Организация') {
+              queryJson.dims.push({
+                field: data[i].click_column,
+                type: 'text',
+                name: "org",
+                order: '2'
+              })
+            }
+            if (data[i].type == 'double precision') {
+              queryJson.measures.push({
+                field: data[i].click_column,
+                type: 'field',
+                "agg_type": "sum",
+                name: "remain",
+                order: '3'
+              })
+            }
           }
+
+          console.log(queryJson);
 
           $http({
             method: 'POST',

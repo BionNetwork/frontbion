@@ -86,7 +86,7 @@
 
     $scope.onSendSettings = function (activeActivationId, key) {
       // console.log(activationId);
-      let value = {
+      var value = {
         label:{
           show: $scope.showLabel,
           periodNumber: $scope.periodString,

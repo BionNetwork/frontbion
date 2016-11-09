@@ -49,7 +49,7 @@
 
             element[0].querySelector('.dropmodal').classList.toggle("dropmodal--active");
             // scope.upAndDown = !scope.upAndDown;
-            let allModals = document.getElementsByClassName('dropmodal');
+            var allModals = document.getElementsByClassName('dropmodal');
             for (var i = 0; i < allModals.length; i++) {
               // console.log(allModals[i]);
               if (allModals[i].classList.length == 3 && element[0].querySelector('.dropmodal') != allModals[i]) {
@@ -63,7 +63,7 @@
 
           scope.closeDropContent = function () {
             element[0].querySelector('.dropmodal').classList.remove("dropmodal--active");
-            let defaultColors = ["rgb(33, 187, 239)", "rgb(156, 205, 100)", "rgb(72, 165, 234)"];
+            var defaultColors = ["rgb(33, 187, 239)", "rgb(156, 205, 100)", "rgb(72, 165, 234)"];
             scope.getChoosedColorsOn(defaultColors, true);
           };
 

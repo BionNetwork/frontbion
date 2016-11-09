@@ -42,13 +42,13 @@
         ];
         // functions
         scope.getPieData = function (d) {
-            let data = d.y.map((yData, index) => {
+            var data = d.y.map((yData, index) => {
                 return {
                     name: yData.name,
                     y: yData.data.reduce((v1, d) => v1 + d, 0)
                 }
             })
-            let total = data.reduce((v1, d) => v1 + d.y, 0);
+            var total = data.reduce((v1, d) => v1 + d.y, 0);
 
             return {
                 series: [{
