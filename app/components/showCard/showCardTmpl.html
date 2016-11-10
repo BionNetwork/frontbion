@@ -12,7 +12,6 @@
                 <div class="card__chart">
                    <div class="card__chart_wrap">
                         <high-chart-line
-                           data='data'
                            style="height: 100%;  width: 100%;display: inline-block;"
                            ng-show="chart == 'line'"
                            filter-data="chartData"
@@ -34,7 +33,6 @@
                           style="height: 100%;  width: 100%; display: inline-block;"
                           filter-data="chartData"
                           ng-show="chart == 'column'"
-                          data='data'
                           on-filter-column=onFilterChartColumn
                       ></high-chart-column>
                    </div>

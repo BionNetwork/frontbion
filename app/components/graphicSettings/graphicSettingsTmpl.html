@@ -101,7 +101,6 @@
               </div>
               <div class="col-xs-12 graphic-set_center_graphic">
                 <high-chart-pie
-                    pie-data=''
                     filter-data="chartData"
                     legend=''
                     title=""
@@ -110,23 +109,22 @@
                     pie-vertical-align="bottom"
                     pie-align="center"
                     pie-legend-width="400"
-                    ng-if="choosedChart == 'pie'"
+                    ng-show="choosedChart == 'pie'"
                     on-action=changeIssuesPie
+                    on-filter=onFilterChartPie
                 ></high-chart-pie>
                 <high-chart-line
-                   data='data'
                    filter-data="chartData"
                    style="height: 100%;  width: 100%; display: inline-block;"
-                   ng-if="choosedChart == 'line'"
+                   ng-show="choosedChart == 'line'"
                    on-action-line=changeIssuesLine
                    on-action-axis=changeIssuesAxisLine
                    on-action-axis-x=changeIssuesAxisLineX
                ></high-chart-line>
                 <high-chart-column
-                   data='data'
                    filter-data="chartData"
                    style="height: 100%;  width: 100%; display: inline-block;"
-                   ng-if="choosedChart == 'column'"
+                   ng-show="choosedChart == 'column'"
                    on-action-column=changeIssuesColumn
                    on-action-axis=changeIssuesAxisColumn
                    on-action-axis-x=changeIssuesAxisColumnX
@@ -188,6 +186,12 @@
                     </p>
                   </div>
                 </div>
+                <one-select-popover
+        					title="intervalTitle"
+        					placement="right"
+        					content="intervalContent"
+                  on-change=onFilterOneSelect
+        				></one-select-popover>
               </div>
             </div>
           </div>

@@ -75,7 +75,7 @@ angular.module('BIONApp')
                       }
                     }
                   }
-                  console.log(queriesObject);
+                  // console.log(queriesObject);
                   $scope.getQuery(queriesObject, id);
                 },
                 error: function(response) {
@@ -97,7 +97,7 @@ angular.module('BIONApp')
           var query = {
           get: {
               success: function(response) {
-                console.log(response.data.data);
+                // console.log(response.data.data);
                 $scope.graphicSettingsData = response.data.data.data;
                 $scope.graphicSettingsSeries = {
                   x: {
@@ -137,7 +137,7 @@ angular.module('BIONApp')
                 name: "date",
                 order: '1',
                 interval: "toStartOfMonth",
-                order_by: "desc"
+                order_by: "asc"
               })
             }
             if (data[i].type == 'text' && data[i].data.column_name == 'Организация') {
@@ -159,7 +159,7 @@ angular.module('BIONApp')
             }
           }
 
-          console.log(queryJson);
+          // console.log(queryJson);
 
           $http({
             method: 'POST',

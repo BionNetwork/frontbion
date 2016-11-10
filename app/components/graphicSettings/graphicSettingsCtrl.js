@@ -2,9 +2,24 @@
   'use strict';
   angular
   .module('BIONApp')
-  .controller('graphicSettingsCtrl', ['$scope', graphicSettingsCtrl]);
+  .controller('graphicSettingsCtrl', ['$scope', 'filterOneSelectServ', graphicSettingsCtrl]);
 
-  function graphicSettingsCtrl($scope) {
+  function graphicSettingsCtrl($scope, filterOneSelectServ) {
+      $scope.intervalTitle = 'Интервал';
+      $scope.intervalContent = [
+          { name: "Выбрать интревал", query: null, type: "interval" },
+          { name: "Месяц", query: "toStartOfMonth", type: "interval" },
+          { name: "Квартал", query: "toStartOfQuarter", type: "interval" },
+          { name: "Год", query: "toStartOfYear", type: "interval" },
+      ];
+      $scope.onFilterOneSelect = function (query) {
+        var newDataForChart = $scope.filterData($scope.graphicSettingsSeries, $scope.graphicSettingsData);
+        console.log(filterOneSelectServ.onInterval(query));;
+        // if ($scope.choosedChart == 'pie') {
+        //   $scope.onFilterChartPie(newDataForChart)
+        //   // console.log();
+        // }
+      }
 
       $scope.graphStringRu = {
         filters: 'Фильтры',
@@ -21,7 +36,7 @@
       $scope.graphString = window.localStorage.getItem('lang') == 'en' ? $scope.graphStringEng : $scope.graphStringRu;
 
 
-      $scope.choosedChart = 'column';
+      $scope.choosedChart = 'pie';
       $scope.changeChart = function (chart) {
         $scope.choosedChart = chart;
       }
@@ -97,7 +112,7 @@
           })
         }
       });
-
+      
   }
 
 })();
