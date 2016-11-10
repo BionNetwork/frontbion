@@ -137,7 +137,7 @@ angular.module('BIONApp')
                 name: "date",
                 order: '1',
                 interval: "toStartOfMonth",
-                order_by: "like"
+                order_by: "desc"
               })
             }
             if (data[i].type == 'text' && data[i].data.column_name == 'Организация') {

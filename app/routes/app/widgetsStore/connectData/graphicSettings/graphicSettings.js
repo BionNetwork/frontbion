@@ -74,7 +74,7 @@ angular.module('BIONApp')
                       }
                     }
                     console.log(queriesObject);
-                    $scope.getQuery(queriesObject, id);
+                    $scope.getQuery(queriesObject, 48);
                   },
                   error: function(response) {
                   }
@@ -82,7 +82,7 @@ angular.module('BIONApp')
               };
               $http({
                 method: 'POST',
-                url: '/api/v1/activations/'+ id +'/data',
+                url: '/api/v1/activations/'+ 48 +'/data',
                 headers: {
                   'X-AUTHORIZE-TOKEN': $scope.token
                 }
@@ -96,6 +96,22 @@ angular.module('BIONApp')
             get: {
                 success: function(response) {
                   console.log(response.data.data);
+                  $scope.graphicSettingsData = response.data.data.data;
+                  $scope.graphicSettingsSeries = {
+                    x: {
+                        index: 0,
+                        header: 'Date'
+                    },
+                    y: [
+
+                    ]
+                  };
+                  for (var i = 0; i < response.data.data.fields.length; i++) {
+                    $scope.graphicSettingsSeries.y.push({
+                          index: i+1,
+                          header: response.data.data.fields[i]
+                    })
+                  };
                 },
                 error: function(response) {
                 }
@@ -103,16 +119,44 @@ angular.module('BIONApp')
             };
 
             var queryJson = {
+              "transform": "true",
               "dims": [
-              ]
+              ],
+              "measures" : [
+
+              ],
             };
             for (var i = 0; i < data.length; i++) {
-              queryJson.dims.push({
-                name: "data"+data[i].data.argument,
-                type: 'TextDim',
-                field: data[i].click_column
-              })
+              if (data[i].type == 'timestamp' && queryJson.dims.length == 0) {
+                queryJson.dims.push({
+                  field: data[i].click_column,
+                  type: 'date',
+                  name: "date",
+                  order: '1',
+                  interval: "toStartOfMonth",
+                  order_by: "desc"
+                })
+              }
+              if (data[i].type == 'text' && data[i].data.column_name == 'Организация') {
+                queryJson.dims.push({
+                  field: data[i].click_column,
+                  type: 'text',
+                  name: "org",
+                  order: '2'
+                })
+              }
+              if (data[i].type == 'double precision') {
+                queryJson.measures.push({
+                  field: data[i].click_column,
+                  type: 'field',
+                  "agg_type": "sum",
+                  name: "remain",
+                  order: '3'
+                })
+              }
             }
+
+            console.log(queryJson);
 
             $http({
               method: 'POST',
