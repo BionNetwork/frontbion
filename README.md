@@ -2,5 +2,5 @@
 
 ### Начало работы?
 1. npm start
-2. http://localhost:4000/
-3. profit!)
+2. node integration.js
+3. http://localhost:4000/
