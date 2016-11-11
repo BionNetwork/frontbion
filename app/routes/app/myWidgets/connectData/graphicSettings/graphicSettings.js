@@ -42,8 +42,8 @@ angular.module('BIONApp')
           var boundedActiveArguments = {
             get: {
               success: function(response) {
-                // $scope.argumentsForQuery(response.data.data, activeActivations[0].id);
-                $scope.argumentsForQuery(response.data.data, 48);
+                $scope.argumentsForQuery(response.data.data, activeActivations[0].id);
+                // $scope.argumentsForQuery(response.data.data, 48);
               },
               error: function(response) {
               }
@@ -51,8 +51,8 @@ angular.module('BIONApp')
           };
           $http({
             method: 'GET',
-            url: '/api/v1/activations/' + 48 + '/bonds',
-            // url: '/api/v1/activations/' + activeActivations[0].id + '/bonds',
+            // url: '/api/v1/activations/' + 48 + '/bonds',
+            url: '/api/v1/activations/' + activeActivations[0].id + '/bonds',
             headers: {
               'X-AUTHORIZE-TOKEN': $scope.token
             }
@@ -158,7 +158,10 @@ angular.module('BIONApp')
               })
             }
           }
-
+          $scope.forFiltering = {
+            data: data,
+            id: id
+          };
           // console.log(queryJson);
 
           $http({

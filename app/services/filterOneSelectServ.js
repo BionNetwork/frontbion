@@ -6,17 +6,16 @@
 
       var token = window.localStorage.getItem('token');
 
-      this.getActiveActivationSrv = function () {
+      this.getNewDataForChartSrv = function (queryJson, id) {
         var deferred = $q.defer();
         $http({
-          method: 'GET',
-          url: '/api/v1/activations',
+          method: 'POST',
+          url: '/api/v1/activations/'+ id +'/query',
           headers: {
             'X-AUTHORIZE-TOKEN': token
           },
-          params: {
-            card_id: $state.params.id,
-            activation_status: 'active'
+          data: {
+                query: JSON.stringify(queryJson)
           }
         }).success(function (data) {
           deferred.resolve(data);
@@ -26,48 +25,47 @@
         return deferred.promise;
       };
 
-      this.getActiveActivationBoundsSrv = function () {
-        var getPromise = function() {
-        //create the promise, this will be returned from this function
-            var promise = $http({
-                method: 'GET',
-                url: '/api/v1/activations',
-                headers: {
-                  'X-AUTHORIZE-TOKEN': token
-                },
-                params: {
-                  card_id: $state.params.id,
-                  activation_status: 'active'
-                }
-            });
-        //on error do some logging here
-            promise.error(function(data, status, headers, config) {
-                $log.warn(data, status, headers, config);
-            });
+      this.onInterval = function (query, items) {
+        var data = items.data;
+        var queryJson = {
+          "transform": "true",
+          "dims": [
+          ],
+          "measures" : [
 
-            return promise;
+          ],
         };
-
-        return {
-            getPromise: getPromise
+        for (var i = 0; i < data.length; i++) {
+          if (data[i].type == 'timestamp' && queryJson.dims.length == 0) {
+            queryJson.dims.push({
+              field: data[i].click_column,
+              type: 'date',
+              name: "date",
+              order: '1',
+              interval: query.query,
+              order_by: "asc"
+            })
+          }
+          if (data[i].type == 'text' && data[i].data.column_name == 'Организация') {
+            queryJson.dims.push({
+              field: data[i].click_column,
+              type: 'text',
+              name: "org",
+              order: '2'
+            })
+          }
+          if (data[i].type == 'double precision') {
+            queryJson.measures.push({
+              field: data[i].click_column,
+              type: 'field',
+              "agg_type": "sum",
+              name: "remain",
+              order: '3'
+            })
+          }
         }
-      }
 
-      this.onInterval = function (query) {
-        // var activeActivations = this.getActiveActivationSrv();
-        // this.getActiveActivationSrv();
-        // console.log(activeActivations);
-        // var a = this.getActiveActivationSrv();
-        // var b = this.s(a);
-        // console.log(b);
-        // this.getActiveActivationSrv().then(function () {
-        //   return '1';
-        // });
-
-        this.getActiveActivationBoundsSrv().getPromise().then(function (data) {
-          console.log(data);
-          return data
-        })
+        return this.getNewDataForChartSrv(queryJson, items.id);
 
 
         // return query;

@@ -13,7 +13,8 @@
         allArguments: '=?',
         allStrings: '=?',
         graphicSettingsData: '=?',
-        graphicSettingsSeries: '=?'
+        graphicSettingsSeries: '=?',
+        forFiltering: '=?'
       },
       restrict: 'E',
       controller: 'graphicSettingsCtrl',

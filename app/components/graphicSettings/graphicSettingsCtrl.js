@@ -14,11 +14,26 @@
       ];
       $scope.onFilterOneSelect = function (query) {
         var newDataForChart = $scope.filterData($scope.graphicSettingsSeries, $scope.graphicSettingsData);
-        console.log(filterOneSelectServ.onInterval(query));;
-        // if ($scope.choosedChart == 'pie') {
-        //   $scope.onFilterChartPie(newDataForChart)
-        //   // console.log();
-        // }
+        filterOneSelectServ.onInterval(query, $scope.forFiltering).then(function (items) {
+          var graphicSettingsSeries = {
+            x: {
+                index: 0,
+                header: 'Date'
+            },
+            y: [
+
+            ]
+          };
+          for (var i = 0; i < items.data.fields.length; i++) {
+            graphicSettingsSeries.y.push({
+                  index: i+1,
+                  header: items.data.fields[i]
+            })
+          };
+          
+          $scope.chartData = $scope.filterData(graphicSettingsSeries, items.data.data);
+
+        })
       }
 
       $scope.graphStringRu = {
@@ -112,7 +127,7 @@
           })
         }
       });
-      
+
   }
 
 })();

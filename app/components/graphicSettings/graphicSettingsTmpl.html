@@ -109,14 +109,14 @@
                     pie-vertical-align="bottom"
                     pie-align="center"
                     pie-legend-width="400"
-                    ng-show="choosedChart == 'pie'"
+                    ng-if="choosedChart == 'pie'"
                     on-action=changeIssuesPie
                     on-filter=onFilterChartPie
                 ></high-chart-pie>
                 <high-chart-line
                    filter-data="chartData"
                    style="height: 100%;  width: 100%; display: inline-block;"
-                   ng-show="choosedChart == 'line'"
+                   ng-if="choosedChart == 'line'"
                    on-action-line=changeIssuesLine
                    on-action-axis=changeIssuesAxisLine
                    on-action-axis-x=changeIssuesAxisLineX
@@ -124,7 +124,7 @@
                 <high-chart-column
                    filter-data="chartData"
                    style="height: 100%;  width: 100%; display: inline-block;"
-                   ng-show="choosedChart == 'column'"
+                   ng-if="choosedChart == 'column'"
                    on-action-column=changeIssuesColumn
                    on-action-axis=changeIssuesAxisColumn
                    on-action-axis-x=changeIssuesAxisColumnX
@@ -132,7 +132,7 @@
                 <high-chart-map
                    data='data'
                    style="height: 100%;  width: 100%; display: inline-block;"
-                   ng-show="choosedChart == 'map'"
+                   ng-if="choosedChart == 'map'"
                ></high-chart-map>
               </div>
             </div>

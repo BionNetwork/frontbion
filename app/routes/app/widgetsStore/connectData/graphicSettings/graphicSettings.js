@@ -73,8 +73,8 @@ angular.module('BIONApp')
                         }
                       }
                     }
-                    console.log(queriesObject);
-                    $scope.getQuery(queriesObject, 48);
+                    // console.log(queriesObject);
+                    $scope.getQuery(queriesObject, id);
                   },
                   error: function(response) {
                   }
@@ -82,7 +82,7 @@ angular.module('BIONApp')
               };
               $http({
                 method: 'POST',
-                url: '/api/v1/activations/'+ 48 +'/data',
+                url: '/api/v1/activations/'+ id +'/data',
                 headers: {
                   'X-AUTHORIZE-TOKEN': $scope.token
                 }
@@ -95,7 +95,7 @@ angular.module('BIONApp')
             var query = {
             get: {
                 success: function(response) {
-                  console.log(response.data.data);
+                  // console.log(response.data.data);
                   $scope.graphicSettingsData = response.data.data.data;
                   $scope.graphicSettingsSeries = {
                     x: {
@@ -155,8 +155,11 @@ angular.module('BIONApp')
                 })
               }
             }
-
-            console.log(queryJson);
+            $scope.forFiltering = {
+              data: data,
+              id: id
+            };
+            // console.log(queryJson);
 
             $http({
               method: 'POST',
