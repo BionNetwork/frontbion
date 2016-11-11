@@ -7,7 +7,7 @@
   function graphicSettingsCtrl($scope, filterOneSelectServ) {
       $scope.intervalTitle = 'Интервал';
       $scope.intervalContent = [
-          { name: "Выбрать интревал", query: null, type: "interval" },
+          // { name: "Выбрать интревал", query: null, type: "interval" },
           { name: "Месяц", query: "toStartOfMonth", type: "interval" },
           { name: "Квартал", query: "toStartOfQuarter", type: "interval" },
           { name: "Год", query: "toStartOfYear", type: "interval" },
@@ -30,7 +30,7 @@
                   header: items.data.fields[i]
             })
           };
-          
+
           $scope.chartData = $scope.filterData(graphicSettingsSeries, items.data.data);
 
         })

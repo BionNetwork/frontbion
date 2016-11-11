@@ -64,11 +64,8 @@
             })
           }
         }
-
+        console.log(queryJson);
         return this.getNewDataForChartSrv(queryJson, items.id);
-
-
-        // return query;
 
       };
 

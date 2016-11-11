@@ -2,9 +2,9 @@
   'use strict';
   angular
   .module('BIONApp')
-  .controller('argumentsListCtrl', ['$scope', argumentsListCtrl]);
+  .controller('argumentsListCtrl', ['$scope', 'acivateWidgetDataServ', argumentsListCtrl]);
 
-  function argumentsListCtrl($scope) {
+  function argumentsListCtrl($scope, acivateWidgetDataServ) {
     $scope.mainParams = window.localStorage.getItem('lang') == 'en' ? 'MAIN SETTINGS' : 'ОСНОВНЫЕ ПАРАМЕТРЫ';
     $scope.addColumn = window.localStorage.getItem('lang') == 'en' ? 'Add the value of the column' : 'Добавьте колонку со значением';
     $scope.$watch('allStrings', function () {
@@ -23,6 +23,11 @@
       }else {
         return 0;
       }
+    };
+
+    $scope.onClickActivateWidgetData = function (id) {
+      // console.log(id);
+      acivateWidgetDataServ.activateWidgetData(id);
     };
 
 
