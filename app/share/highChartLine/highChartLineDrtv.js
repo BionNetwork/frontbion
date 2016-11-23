@@ -71,7 +71,7 @@
               var lineSeriesyAxis = scope.getLineData(scope.filterData).yAxis;
               Highcharts.chart(element[0],
                   {
-                    colors: ["rgb(33, 187, 239)", "rgb(156, 205, 100)", "rgb(72, 165, 234)"],
+                    colors: ["#4bc2ed", "#ffbb71", "#ff818b", '#6adc53', '#8b56c6'],
                       title: {
                           text: '',
                           x: -20 //center
@@ -236,7 +236,7 @@
             // console.log(newSeries);
             Highcharts.chart(element[0],
                 {
-                  colors: ["rgb(33, 187, 239)", "rgb(156, 205, 100)", "rgb(72, 165, 234)"],
+                  colors: ["#4bc2ed", "#ffbb71", "#ff818b", '#6adc53', '#8b56c6'],
                     title: {
                         text: '',
                         x: -20 //center
@@ -263,7 +263,7 @@
 
           scope.onActionAxis = function (title, showLabel, periodString, periodNumber, showScale,
             footNumber, footNumberText, showOs, osNumber) {
-            var defColors = scope.colorss ? scope.colorss : ["rgb(33, 187, 239)", "rgb(156, 205, 100)", "rgb(72, 165, 234)"];
+            var defColors = scope.colorss ? scope.colorss : ["#4bc2ed", "#ffbb71", "#ff818b", '#6adc53', '#8b56c6'];
             var defLegend = scope.legendDef ? scope.legendDef : true;
             var enableAxis = showLabel ? "middle" : periodString = null;
             var osWidth = showOs ? osNumber : 0;

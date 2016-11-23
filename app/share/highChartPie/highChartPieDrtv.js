@@ -67,13 +67,13 @@
         };
         // var data = scope.filterData ? scope.getPieData(scope.filterData).series : defaultPieSeries;
 
-        var getChartColors = scope.getChartColors ? scope.getChartColors : ["rgb(33, 187, 239)", "rgb(156, 205, 100)", "rgb(72, 165, 234)"];
+        var getChartColors = scope.getChartColors ? scope.getChartColors : ["#4bc2ed", "#ffbb71", "#ff818b", '#6adc53', '#8b56c6'];
 
         scope.$watch('filterData', function() {
           if (scope.filterData) {
             var data = scope.getPieData(scope.filterData).series;
             Highcharts.chart(element[0], {
-              colors: ["rgb(33, 187, 239)", "rgb(156, 205, 100)", "rgb(72, 165, 234)"],
+              colors: ["#4bc2ed", "#ffbb71", "#ff818b", '#6adc53', '#8b56c6'],
               title: {
                   y: -10,
                   text: ''
@@ -262,7 +262,7 @@
         scope.onFilter = function (data) {
             var filteredSeries = scope.getPieData(data).series;
             Highcharts.chart(element[0], {
-              colors: ["rgb(33, 187, 239)", "rgb(156, 205, 100)", "rgb(72, 165, 234)"],
+              colors: ["#4bc2ed", "#ffbb71", "#ff818b", '#6adc53', '#8b56c6'],
               title: {
                   y: -10,
                   text: ''
